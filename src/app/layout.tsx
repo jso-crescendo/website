@@ -2,7 +2,7 @@ import './globals.css';
 
 import {Lora, Montserrat} from 'next/font/google';
 
-import {NavBar} from '../components/nav-bar';
+import {NavBar} from '@/components/nav-bar';
 
 export const metadata = {
   title: 'JSO Crescendo',

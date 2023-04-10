@@ -4,9 +4,9 @@ import classNames from 'classnames';
 import Link from 'next/link';
 import React from 'react';
 
-import {useToggle} from '../hooks/useToggle';
-import {BurgerIcon} from './icons/burger';
-import {Logo} from './icons/logo';
+import {useToggle} from '@/hooks/useToggle';
+import {BurgerIcon} from '@/icons/burger';
+import {Logo} from '@/icons/logo';
 
 const NavLink: React.FC<{href: string; text: string}> = ({href, text}) => (
   <Link href={href} className="block py-2 hover:text-accent-main md:p-4">
