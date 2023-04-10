@@ -28,10 +28,10 @@ module.exports = {
     },
     extend: {
       textColor: {
-        onBackground: '#212121',
-        onPrimary: '#c9c9dd',
-        onSecondary: '#e5efcf',
-        onAccent: '#dff1ba',
+        "on-background": '#212121',
+        "on-primary": '#c9c9dd',
+        "on-secondary": '#e5efcf',
+        "on-accent": '#dff1ba',
       },
     },
   },

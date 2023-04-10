@@ -16,7 +16,7 @@ const NavLink: React.FC<{href: string; text: string}> = ({href, text}) => (
 export const NavBar: React.FC = () => {
   const [responsiveMenuOpen, toggleMenu] = useToggle(false);
   return (
-    <nav className="flex w-full flex-wrap items-center justify-between bg-white p-4 text-lg text-gray-700 md:py-0">
+    <nav className="flex w-full flex-wrap items-center justify-between p-4 text-lg  md:py-0">
       <Link href="/" className="block w-40 py-2">
         <Logo role="link" />
       </Link>
@@ -32,7 +32,7 @@ export const NavBar: React.FC = () => {
           hidden: !responsiveMenuOpen,
         })}
       >
-        <ul className="pt-4 text-base text-gray-700 md:flex md:justify-between md:pt-0">
+        <ul className="pt-4 text-base md:flex md:justify-between md:pt-0">
           {[
             ['Orchester', '/orchester'],
             ['Konzerte', '/konzerte'],

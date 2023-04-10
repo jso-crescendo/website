@@ -26,7 +26,7 @@ export default function RootLayout({children}: {children: React.ReactNode}) {
       lang="en"
       className={`${loraFont.variable} ${montserratFont.variable}`}
     >
-      <body className="container mx-auto">
+      <body className="container mx-auto bg-background text-on-background">
         <header>
           <NavBar />
         </header>
