@@ -23,14 +23,17 @@ const montserratFont = Montserrat({
 export default function RootLayout({children}: {children: React.ReactNode}) {
   return (
     <html
-      lang="en"
+      lang="de-CH"
       className={`${loraFont.variable} ${montserratFont.variable}`}
     >
-      <body className="container mx-auto bg-background text-on-background">
+      <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      </head>
+      <body className="w-screen container mx-auto min-h-screen bg-background text-on-background overflow-x-hidden">
         <header>
           <NavBar />
         </header>
-        <main className='p-4'>{children}</main>
+        <main className="p-4">{children}</main>
         <footer>Yep definitely something should go here</footer>
       </body>
     </html>

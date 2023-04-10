@@ -9,10 +9,11 @@ export default function Home() {
   return (
     <>
       <h1 className="font-serif text-4xl leading-normal md:text-5xl lg:text-6xl">
-        Jugendsinfonieorchester Crescendo
+        Jugend&shy;sinfonie&shy;orchester Crescendo
       </h1>
+
       <ImageSection
-        title="Frühlingskonzerte"
+        title="Frühlings&shy;konzerte"
         image={{src: FlyerImage, alt: 'Flyer FrühlingsKonzerte'}}
         link={{
           href: '/konzerte',
@@ -30,7 +31,10 @@ export default function Home() {
       </ImageSection>
       <ImageSection
         title="Über uns"
-        image={{src: AboutUsImage, alt: 'Orchester in der Tonhalle. Käthi Schmid Lauber dirigiert'}}
+        image={{
+          src: AboutUsImage,
+          alt: 'Orchester in der Tonhalle. Käthi Schmid Lauber dirigiert',
+        }}
         link={{
           href: '/orcherster',
           text: 'Mehr erfahren',
@@ -42,10 +46,12 @@ export default function Home() {
         Filmmusik. Weit und breit einzigartig ist das JSO Crescendo insofern,
         dass es nicht nur ein Orchester, sondern auch ein Chor ist.
       </ImageSection>
-
       <ImageSection
         title="Nächste Konzerte"
-        image={{src: KonzerteImage, alt: 'Orchester spielt in der Tonhalle Zürich.'}}
+        image={{
+          src: KonzerteImage,
+          alt: 'Orchester spielt in der Tonhalle Zürich.',
+        }}
         link={{
           href: '/konzerte',
           text: 'Weitere Informationen',
@@ -56,4 +62,3 @@ export default function Home() {
     </>
   );
 }
-

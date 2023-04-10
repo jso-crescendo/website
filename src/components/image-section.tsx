@@ -26,14 +26,14 @@ export const ImageSection: React.FC<ImageSectionProps> = ({
 }) => (
   <section
     id={toKebabCase(title)}
-    className="flex flex-col gap-8 pt-8 md:h-screen md:flex-row odd:flex-row-reverse mb-8"
+    className="my-8 flex flex-col justify-between gap-8 md:odd:flex-row-reverse md:flex-row"
   >
     <Image
       src={image.src}
       alt={image.alt}
-      className="w-full object-contain md:w-1/2"
+      className="w-full rounded-lg object-contain md:w-5/12"
     />
-    <div className="my-auto w-full md:w-1/2">
+    <div className="my-auto w-full ">
       <h2 className="font-serif text-5xl">{title}</h2>
       {textOnly ? <p className="text-justify">{children}</p> : children}
       {link && (
