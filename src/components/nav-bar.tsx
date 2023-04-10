@@ -5,7 +5,7 @@ import Link from 'next/link';
 import React from 'react';
 
 import {useToggle} from '@/hooks/useToggle';
-import {BurgerIcon} from '@/icons/burger';
+import {Burger} from '@/icons/burger';
 import {Logo} from '@/icons/logo';
 
 const NavLink: React.FC<{href: string; text: string}> = ({href, text}) => (
@@ -16,12 +16,12 @@ const NavLink: React.FC<{href: string; text: string}> = ({href, text}) => (
 export const NavBar: React.FC = () => {
   const [responsiveMenuOpen, toggleMenu] = useToggle(false);
   return (
-    <nav className="flex w-full flex-wrap items-center justify-between p-4 text-lg  md:py-0">
+    <nav className="flex w-full flex-wrap items-center justify-between p-4 text-lg md:py-0">
       <Link href="/" className="block w-40 py-2">
         <Logo role="link" />
       </Link>
 
-      <BurgerIcon
+      <Burger
         className="block h-6 w-6 cursor-pointer md:hidden"
         onClick={toggleMenu}
         role="button"

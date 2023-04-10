@@ -1,6 +1,6 @@
 import React, {SVGAttributes} from 'react';
 
-export const BurgerIcon: React.FC<SVGAttributes<SVGElement>> = (props) => (
+export const Burger: React.FC<SVGAttributes<SVGElement>> = (props) => (
   <svg
     fill="currentColor"
     viewBox="0 0 20 20"

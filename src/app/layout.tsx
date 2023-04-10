@@ -30,7 +30,7 @@ export default function RootLayout({children}: {children: React.ReactNode}) {
         <header>
           <NavBar />
         </header>
-        <main>{children}</main>
+        <main className='p-4'>{children}</main>
         <footer>Yep definitely something should go here</footer>
       </body>
     </html>
