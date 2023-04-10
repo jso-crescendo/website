@@ -26,7 +26,7 @@ export const ImageSection: React.FC<ImageSectionProps> = ({
 }) => (
   <section
     id={toKebabCase(title)}
-    className="my-8 flex flex-col justify-between gap-8 md:odd:flex-row-reverse md:flex-row"
+    className="py-8 flex flex-col justify-between gap-8 md:odd:flex-row-reverse md:flex-row"
   >
     <Image
       src={image.src}
