@@ -18,7 +18,7 @@ export default function Home() {
         title="Frühlings&shy;konzerte"
         image={{src: FlyerImage, alt: 'Flyer FrühlingsKonzerte'}}
         link={{
-          href: '/konzerte',
+          href: '/konzerte/frühlingskonzerte-23',
           text: 'Weitere Informationen',
         }}
       >
@@ -61,7 +61,7 @@ export default function Home() {
         textOnly={false}
       >
         {CONCERTS.map((c) => (
-          <a key={c.id} className='pb-4 hover:text-secondary-main' href="#">
+          <a key={c.id} className='pb-4 hover:text-primary-main' href={`/konzerte/${c.id}`}>
             <hgroup className='pb-2'>
               <h3 className='font-serif text-2xl'>{c.name}</h3>
               <p className='text-sm'>{c.subtitle}</p>

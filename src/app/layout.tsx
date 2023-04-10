@@ -7,6 +7,7 @@ import {NavBar} from '@/components/nav-bar';
 export const metadata = {
   title: 'JSO Crescendo',
   description: 'TODO make a description',
+  viewport: 'width=device-width, initial-scale=1.0',
 };
 
 const loraFont = Lora({
@@ -26,10 +27,7 @@ export default function RootLayout({children}: {children: React.ReactNode}) {
       lang="de-CH"
       className={`${loraFont.variable} ${montserratFont.variable}`}
     >
-      <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      </head>
-      <body className="w-screen container mx-auto min-h-screen bg-background text-on-background overflow-x-hidden">
+      <body className="container mx-auto min-h-screen w-screen overflow-x-hidden bg-background text-on-background">
         <header>
           <NavBar />
         </header>
