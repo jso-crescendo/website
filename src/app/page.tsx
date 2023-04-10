@@ -1,5 +1,3 @@
-import Image from 'next/image';
-
 import {ImageSection} from '@/components/image-section';
 import KonzerteImage from '@/images/2019_jubilaeumskonzert_tonhalle.jpg';
 import AboutUsImage from '@/images/2022_fruehling_blech.jpg';

@@ -9,7 +9,7 @@ import {Burger} from '@/icons/burger';
 import {Logo} from '@/icons/logo';
 
 const NavLink: React.FC<{href: string; text: string}> = ({href, text}) => (
-  <Link href={href} className="block py-2 hover:text-accent-main md:p-4">
+  <Link href={href} className="block py-2 hover:text-primary-main md:p-4">
     {text}
   </Link>
 );
