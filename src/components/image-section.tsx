@@ -2,7 +2,7 @@ import Image, {StaticImageData} from 'next/image';
 
 import {toKebabCase} from '../utils/toKebabCase';
 import {LinkButton} from './link-button';
-import { Text } from './text';
+import {Text} from './text';
 
 interface ImageSectionProps {
   title: string;
@@ -10,7 +10,7 @@ interface ImageSectionProps {
   image: {
     src: StaticImageData;
     alt: string;
-    priority?: boolean
+    priority?: boolean;
   };
   textOnly?: boolean;
   children?: React.ReactNode;
@@ -37,11 +37,12 @@ export const ImageSection: React.FC<ImageSectionProps> = ({
       alt={image.alt}
       priority={image.priority}
       className="w-full rounded-lg object-contain md:w-5/12"
+      placeholder="blur"
     />
     <div className="my-auto w-full ">
-      <hgroup >
+      <hgroup>
         <h2 className="font-serif text-5xl">{title}</h2>
-        {subtitle && <p className="text-lg pb-4">{subtitle}</p>}
+        {subtitle && <p className="pb-4 text-lg">{subtitle}</p>}
       </hgroup>
       {textOnly ? <Text>{children}</Text> : children}
       {link && (

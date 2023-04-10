@@ -23,6 +23,7 @@ export default function Orchester() {
         alt="Orchester in Tonhalle bei Konzert"
         className="w-full rounded-lg py-4"
         priority
+        placeholder="blur"
       />
       <Text className="mb-4">
         Das Jugendsinfonieorchester Crescendo besteht seit 34 Jahren, immer
@@ -42,7 +43,11 @@ export default function Orchester() {
         beim Strassenmusizieren an.
       </Text>
       <ImageSection
-        image={{src: ChorImage, alt: 'Das Crescendo singt als Chor', priority: true}}
+        image={{
+          src: ChorImage,
+          alt: 'Das Crescendo singt als Chor',
+          priority: true,
+        }}
         title="Das Crescendo als Chor"
       >
         Weit und breit einzigartig ist das JSO Crescendo insofern, dass es nicht
@@ -52,7 +57,10 @@ export default function Orchester() {
         grosse Chorwerke zur Aufführung bringt.
       </ImageSection>
       <ImageSection
-        image={{src: KonzertreiseImage, alt: 'Das Orchester in Bulgarien am Meer'}}
+        image={{
+          src: KonzertreiseImage,
+          alt: 'Das Orchester in Bulgarien am Meer',
+        }}
         title="Konzertreisen"
       >
         Ein fester Bestandteil des JSO Crescendo sind die Konzertreisen. Alle

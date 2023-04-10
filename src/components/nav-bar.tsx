@@ -18,7 +18,7 @@ export const NavBar: React.FC = () => {
   return (
     <nav className="flex w-full flex-wrap items-center justify-between p-4 text-lg md:py-0">
       <Link href="/" className="block w-40 py-2">
-        <Logo role="link" />
+        <Logo role="link" className="hover:stroke-primary-main" />
       </Link>
 
       <Burger
