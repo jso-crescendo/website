@@ -1,4 +1,4 @@
-import React, { SVGAttributes } from "react";
+import React, {SVGAttributes} from 'react';
 
 export const Logo: React.FC<SVGAttributes<SVGElement>> = (props) => (
   <svg
