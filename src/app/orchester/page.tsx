@@ -41,7 +41,7 @@ export default function Orchester() {
         beim Strassenmusizieren an.
       </Text>
       <ImageSection
-        image={{src: ChorImage, alt: 'TODO'}}
+        image={{src: ChorImage, alt: 'Das Crescendo singt als Chor'}}
         title="Das Crescendo als Chor"
       >
         Weit und breit einzigartig ist das JSO Crescendo insofern, dass es nicht
@@ -51,7 +51,7 @@ export default function Orchester() {
         grosse Chorwerke zur Aufführung bringt.
       </ImageSection>
       <ImageSection
-        image={{src: KonzertreiseImage, alt: 'TODO'}}
+        image={{src: KonzertreiseImage, alt: 'Das Orchester in Bulgarien am Meer'}}
         title="Konzertreisen"
       >
         Ein fester Bestandteil des JSO Crescendo sind die Konzertreisen. Alle
@@ -59,7 +59,7 @@ export default function Orchester() {
         auf der ganzen Welt
       </ImageSection>
       <ImageSection
-        image={{src: KaethiImage, alt: 'TODO'}}
+        image={{src: KaethiImage, alt: 'Portrait Foto von Käthi Schmid Lauber'}}
         title="Käthi Schmid Lauber"
         subtitle="Dirigentin"
       >
@@ -91,7 +91,7 @@ export default function Orchester() {
         Reitunfall tödlich verunglückte.
       </ImageSection>
       <ImageSection
-        image={{src: NoeliImage, alt: 'TODO'}}
+        image={{src: NoeliImage, alt: 'Portrait Foto von Noëlie Nyffeler'}}
         title="Noëlie Nyffeler"
         subtitle="Konzertmeisterin"
       >
@@ -108,7 +108,7 @@ export default function Orchester() {
         der Universität mit.
       </ImageSection>
       <ImageSection
-        image={{src: SponsorenImage, alt: 'TODO'}}
+        image={{src: SponsorenImage, alt: 'Orchestermitglieder beim spielen'}}
         title="Sponsoren"
       >
         In den Programmheften unserer Konzerte bieten wir Platz für Ihre
@@ -116,7 +116,7 @@ export default function Orchester() {
         Programmheft abdrucken? Melden Sie sich beim Marketing-Team.
       </ImageSection>
       <ImageSection
-        image={{src: GoennerImage, alt: 'TODO'}}
+        image={{src: GoennerImage, alt: 'Orchestermitglieder beim spielen'}}
         title="Gönner"
         textOnly={false}
       >
@@ -139,7 +139,7 @@ export default function Orchester() {
         </section>
       </ImageSection>{' '}
       <ImageSection
-        image={{src: MitgliedWerdenImage, alt: 'TODO'}}
+        image={{src: MitgliedWerdenImage, alt: 'Noten auf einem Notenständer'}}
         title="Mitglied werden"
         textOnly={false}
       >
