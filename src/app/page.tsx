@@ -14,7 +14,11 @@ export default function Home() {
 
       <ImageSection
         title="Frühlings&shy;konzerte"
-        image={{src: FlyerImage, alt: 'Flyer FrühlingsKonzerte'}}
+        image={{
+          src: FlyerImage,
+          alt: 'Flyer FrühlingsKonzerte',
+          priority: true,
+        }}
         link={{
           href: '/konzerte/frühlingskonzerte-23',
           text: 'Weitere Informationen',
@@ -34,6 +38,7 @@ export default function Home() {
         image={{
           src: AboutUsImage,
           alt: 'Orchester in der Tonhalle. Käthi Schmid Lauber dirigiert',
+          priority: true,
         }}
         link={{
           href: '/orcherster',
@@ -59,14 +64,18 @@ export default function Home() {
         textOnly={false}
       >
         {CONCERTS.map((c) => (
-          <a key={c.id} className='pb-4 hover:text-primary-main' href={`/konzerte/${c.id}`}>
-            <hgroup className='pb-2'>
-              <h3 className='font-serif text-2xl'>{c.name}</h3>
-              <p className='text-sm'>{c.subtitle}</p>
+          <a
+            key={c.id}
+            className="pb-4 hover:text-primary-main"
+            href={`/konzerte/${c.id}`}
+          >
+            <hgroup className="pb-2">
+              <h3 className="font-serif text-2xl">{c.name}</h3>
+              <p className="text-sm">{c.subtitle}</p>
             </hgroup>
-            <ul className='pl-2'>
+            <ul className="pl-2">
               {c.dates?.map((d) => (
-                <li key={d.dateISO} className='text-base'>
+                <li key={d.dateISO} className="text-base">
                   {d.dateString} - {d.location}
                 </li>
               ))}

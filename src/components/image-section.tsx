@@ -10,6 +10,7 @@ interface ImageSectionProps {
   image: {
     src: StaticImageData;
     alt: string;
+    priority?: boolean
   };
   textOnly?: boolean;
   children?: React.ReactNode;
@@ -34,6 +35,7 @@ export const ImageSection: React.FC<ImageSectionProps> = ({
     <Image
       src={image.src}
       alt={image.alt}
+      priority={image.priority}
       className="w-full rounded-lg object-contain md:w-5/12"
     />
     <div className="my-auto w-full ">

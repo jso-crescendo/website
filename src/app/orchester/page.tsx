@@ -22,6 +22,7 @@ export default function Orchester() {
         src={OrchesterWideImage}
         alt="Orchester in Tonhalle bei Konzert"
         className="w-full rounded-lg py-4"
+        priority
       />
       <Text className="mb-4">
         Das Jugendsinfonieorchester Crescendo besteht seit 34 Jahren, immer
@@ -41,7 +42,7 @@ export default function Orchester() {
         beim Strassenmusizieren an.
       </Text>
       <ImageSection
-        image={{src: ChorImage, alt: 'Das Crescendo singt als Chor'}}
+        image={{src: ChorImage, alt: 'Das Crescendo singt als Chor', priority: true}}
         title="Das Crescendo als Chor"
       >
         Weit und breit einzigartig ist das JSO Crescendo insofern, dass es nicht
