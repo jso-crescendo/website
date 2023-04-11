@@ -1,19 +1,8 @@
 import Image from 'next/image';
 
-import {ImageSection} from '@/components/image-section';
-import {Text} from '@/components/text';
 import {CONCERTS} from '@/data/conerts';
-import OrchesterWideImage from '@/images/2019_jubliaeumskonzert_tonhalle_wide.jpg';
-import KonzertreiseImage from '@/images/2019_konzertreise_bulgarien.jpg';
-import ChorImage from '@/images/2021_herbstkonzert_chor.jpg';
-import SponsorenImage from '@/images/2022_fruehling_bass.jpg';
-import GoennerImage from '@/images/2022_fruehling_blech.jpg';
-import MitgliedWerdenImage from '@/images/backgrounds/scores_1.jpg';
-import KaethiImage from '@/images/people/kaethi.jpg';
-import NoeliImage from '@/images/people/noelie.jpg';
 
 import {LinkButton} from '../../components/link-button';
-import {Burger} from '../../icons/burger';
 
 export default function Orchester() {
   return (
@@ -22,7 +11,10 @@ export default function Orchester() {
         Konzerte
       </h1>
 
-      <section id="konzerte" className="flex flex-row gap-8 justify-center">
+      <section
+        id="konzerte"
+        className="flex flex-row items-start justify-center gap-8"
+      >
         {CONCERTS.map((c) => (
           <div
             key={c.id}
