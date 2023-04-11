@@ -1,6 +1,7 @@
 import Image from 'next/image';
 
 import {ImageSection} from '@/components/image-section';
+import {Text} from '@/components/text';
 import OrchesterWideImage from '@/images/2019_jubliaeumskonzert_tonhalle_wide.jpg';
 import KonzertreiseImage from '@/images/2019_konzertreise_bulgarien.jpg';
 import ChorImage from '@/images/2021_herbstkonzert_chor.jpg';
@@ -9,8 +10,6 @@ import GoennerImage from '@/images/2022_fruehling_blech.jpg';
 import MitgliedWerdenImage from '@/images/backgrounds/scores_1.jpg';
 import KaethiImage from '@/images/people/kaethi.jpg';
 import NoeliImage from '@/images/people/noelie.jpg';
-
-import {Text} from '../../components/text';
 
 export default function Orchester() {
   return (
