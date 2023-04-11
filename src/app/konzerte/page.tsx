@@ -18,16 +18,17 @@ import {Burger} from '../../icons/burger';
 export default function Orchester() {
   return (
     <>
-      <h1 className="text-center font-serif text-3xl leading-normal md:text-4xl lg:text-5xl">
+      <h1 className="mb-8 text-center font-serif text-3xl leading-normal md:text-4xl lg:text-5xl">
         Konzerte
       </h1>
 
-      <section
-        id="konzerte"
-        className="grid gap-8 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3"
-      >
+      <section id="konzerte" className="flex flex-row gap-8 justify-center">
         {CONCERTS.map((c) => (
-          <div key={c.id} id={c.id} className="block rounded-lg shadow">
+          <div
+            key={c.id}
+            id={c.id}
+            className="block rounded-lg shadow sm:w-full md:w-1/2 lg:w-1/3"
+          >
             <Image
               src={c.image}
               alt="Konzert teaser bild"
