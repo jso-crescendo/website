@@ -1,7 +1,7 @@
 import {ImageSection} from '@/components/image-section';
-import KonzerteImage from '@/images/2019_jubilaeumskonzert_tonhalle.jpg';
 import AboutUsImage from '@/images/2022_fruehling_blech.jpg';
 import FlyerImage from '@/images/flyer/flyer_fruehlingskonzert_2023.webp';
+import KonzerteImage from '@/images/people/kaethi_2.jpg';
 
 import {CONCERTS} from '../data/conerts';
 
@@ -63,25 +63,27 @@ export default function Home() {
         }}
         textOnly={false}
       >
-        {CONCERTS.map((c) => (
-          <a
-            key={c.id}
-            className="pb-4 hover:text-primary-main"
-            href={`/konzerte/${c.id}`}
-          >
-            <hgroup className="pb-2">
-              <h3 className="font-serif text-2xl">{c.name}</h3>
-              <p className="text-sm">{c.subtitle}</p>
-            </hgroup>
-            <ul className="pl-2">
-              {c.dates?.map((d) => (
-                <li key={d.dateISO} className="text-base">
-                  {d.dateString} - {d.location}
-                </li>
-              ))}
-            </ul>
-          </a>
-        ))}
+        <div className='flex flex-col gap-4 pt-4'>
+          {CONCERTS.map((c) => (
+            <a
+              key={c.id}
+              className="hover:text-primary-main"
+              href={`/konzerte/${c.id}`}
+            >
+              <hgroup className="pb-2">
+                <h3 className="font-serif text-2xl">{c.name}</h3>
+                <p className="text-sm">{c.subtitle}</p>
+              </hgroup>
+              <ul className="pl-2">
+                {c.dates?.map((d) => (
+                  <li key={d.dateISO} className="text-base">
+                    {d.dateString} - {d.location}
+                  </li>
+                ))}
+              </ul>
+            </a>
+          ))}
+        </div>
       </ImageSection>
     </>
   );
