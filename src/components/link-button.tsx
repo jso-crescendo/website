@@ -23,7 +23,7 @@ export const LinkButton: React.FC<
       {
         'bg-primary-main text-on-primary hover:bg-primary-darker focus:ring-primary-lighter':
           type === 'primary',
-        'bg-secondary-main text-on-secondary hover:bg-secondary-darker focus:ring-secondary-lighter':
+        ' text-primary-main ring-primary-lighter ring-4 hover:text-primary-darker focus:ring-secondary-darker':
           type === 'secondary',
       },
       className,

@@ -1,3 +1,5 @@
+const colors = require('tailwindcss/colors')
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: ['./src/**/*.{js,ts,jsx,tsx}'],
@@ -48,6 +50,15 @@ module.exports = {
         'on-secondary': '#e5efcf',
         'on-accent': '#dff1ba',
       },
+      aspectRatio: {
+        '3/2': '3 / 2',
+      },
+      width: {
+        '3/10': '30%',
+      },
+      backgroundColor:{
+        neutral: colors.neutral
+      }
     },
   },
 };

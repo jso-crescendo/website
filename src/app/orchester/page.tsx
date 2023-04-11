@@ -146,7 +146,7 @@ export default function Orchester() {
             Konto: 80-51631-7
           </Text>
         </section>
-      </ImageSection>{' '}
+      </ImageSection>
       <ImageSection
         image={{src: MitgliedWerdenImage, alt: 'Noten auf einem Notenständer'}}
         title="Mitglied werden"
