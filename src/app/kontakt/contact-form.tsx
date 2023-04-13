@@ -22,7 +22,7 @@ export const ContactForm: React.FC = () => {
   return (
     <form
       name="kontaktformular"
-      className="rounded-lg p-4 shadow sm:w-full md:w-1/2"
+      className="rounded-lg p-4 shadow w-full lg:w-1/2"
       onSubmit={onSubmit}
     >
       <legend className="pb-4 font-serif text-2xl">Kontaktformular</legend>

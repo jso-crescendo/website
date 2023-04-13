@@ -19,10 +19,10 @@ export const Button: React.FC<
       'focus:outline-none focus:ring-4',
       {
         'bg-primary-main text-on-primary hover:bg-primary-darker focus:ring-primary-lighter':
-          variant === 'primary',
+          variant === 'primary' && !disabled,
         ' text-primary-main ring-4 ring-primary-lighter hover:text-primary-darker hover:ring-primary-darker focus:ring-secondary-darker':
-          variant === 'secondary',
-          "bg-neutral-300 text-on-background hover:bg-neutral-300": disabled
+          variant === 'secondary' && !disabled,
+        'bg-neutral-300 text-on-background cursor-not-allowed': disabled,
       },
       className,
     )}
