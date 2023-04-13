@@ -24,7 +24,7 @@ export const TextArea = forwardRef<HTMLTextAreaElement, Props>(
         className="block w-full rounded-lg border border-neutral-300  bg-neutral-50 p-2.5 text-sm text-neutral-900 focus:border-primary-main focus:ring-primary-main"
       />
       {errorMessage && (
-        <span className="ml-2 text-sm text-error">{errorMessage}</span>
+        <span className="ml-2 text-sm text-error-main">{errorMessage}</span>
       )}
     </div>
   ),

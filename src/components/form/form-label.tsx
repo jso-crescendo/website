@@ -12,6 +12,6 @@ export const FormLabel: React.FC<Props> = ({
     htmlFor={id}
     className="mb-2 block font-sans text-on-background"
   >
-    {label}{required && <span className="text-error">*</span>}
+    {label}{required && <span className="text-error-main">*</span>}
   </label>
 );

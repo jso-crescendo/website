@@ -1,4 +1,4 @@
-const colors = require('tailwindcss/colors')
+const colors = require('tailwindcss/colors');
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
@@ -8,7 +8,16 @@ module.exports = {
       transparent: 'transparent',
       background: '#FDFDFD',
       neutral: colors.neutral,
-      error: "#ff0000",
+      error: {
+        lighter: '#ef4444',
+        main: '#dc2626',
+        darker: '#b91c1c',
+      },
+      success: {
+        lighter: '#ef4444',
+        main: '#dc2626',
+        darker: '#b91c1c',
+      },
       primary: {
         lighter: '#5045c4',
         main: '#2417b5',
@@ -57,7 +66,7 @@ module.exports = {
       },
       width: {
         '3/10': '30%',
-      }
+      },
     },
   },
 };

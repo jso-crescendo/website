@@ -55,6 +55,7 @@ export const ContactForm: React.FC = () => {
   if (!loaded) {
     return <div>loading</div>;
   }
+
   switch (formState) {
     case 'ready':
       return <Form onSubmit={handleSubmit} />;
@@ -63,7 +64,7 @@ export const ContactForm: React.FC = () => {
     case 'submitted':
       return <div>success</div>;
     case 'error':
-      return <div>error</div>
+      return <div>error</div>;
   }
 };
 
