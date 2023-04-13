@@ -7,6 +7,8 @@ module.exports = {
     colors: {
       transparent: 'transparent',
       background: '#FDFDFD',
+      neutral: colors.neutral,
+      error: "#ff0000",
       primary: {
         lighter: '#5045c4',
         main: '#2417b5',
@@ -55,9 +57,6 @@ module.exports = {
       },
       width: {
         '3/10': '30%',
-      },
-      backgroundColor:{
-        neutral: colors.neutral
       }
     },
   },

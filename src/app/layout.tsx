@@ -3,6 +3,7 @@ import './globals.css';
 import {Lora, Montserrat} from 'next/font/google';
 
 import {NavBar} from '@/components/nav-bar';
+import classNames from 'classnames';
 
 export const metadata = {
   title: 'JSO Crescendo',
@@ -14,18 +15,20 @@ const loraFont = Lora({
   variable: '--font-lora',
   subsets: ['latin'],
   display: 'swap',
+  preload: true
 });
 const montserratFont = Montserrat({
   variable: '--font-montserrat',
   subsets: ['latin'],
   display: 'swap',
+  preload: true
 });
 
 export default function RootLayout({children}: {children: React.ReactNode}) {
   return (
     <html
       lang="de-CH"
-      className={`${loraFont.variable} ${montserratFont.variable}`}
+      className={classNames(loraFont.variable, montserratFont.variable)}
     >
       <body className="container mx-auto min-h-screen w-screen overflow-x-hidden bg-background text-on-background">
         <header>
