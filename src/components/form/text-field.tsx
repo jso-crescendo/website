@@ -3,6 +3,7 @@ import {forwardRef} from 'react';
 
 interface TextFieldProps {
   label: string;
+  errorMessage?: string;
 }
 
 type Props = TextFieldProps &
@@ -12,7 +13,7 @@ type Props = TextFieldProps &
   >;
 
 export const TextField = forwardRef<HTMLInputElement, Props>(
-  ({label, id, required, ...inputProps}, ref) => (
+  ({label, errorMessage, id, required, ...inputProps}, ref) => (
     <div className="mb-6">
       <FormLabel id={id} label={label} required={required} />
       <input
@@ -22,6 +23,9 @@ export const TextField = forwardRef<HTMLInputElement, Props>(
         required={required}
         className="block w-full rounded-lg border border-neutral-300  bg-neutral-50 p-2.5 text-sm text-neutral-900 focus:border-primary-main focus:ring-primary-main"
       />
+      {errorMessage && (
+        <span className="ml-2 text-sm text-error">{errorMessage}</span>
+      )}
     </div>
   ),
 );

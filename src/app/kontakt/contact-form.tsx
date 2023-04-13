@@ -10,33 +10,45 @@ interface FormData {
   email: string;
   message: string;
 }
-
+const EMAIL_PATTERN = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 export const ContactForm: React.FC = () => {
   const {
     register,
     handleSubmit,
-    formState: {isValid},
-  } = useForm<FormData>();
+    formState: {isValid, errors},
+  } = useForm<FormData>({mode: "onChange",reValidateMode: 'onChange'});
   const onSubmit = handleSubmit((data) => console.log(data));
-
+  console.log(errors);
   return (
     <form
       name="kontaktformular"
-      className="rounded-lg p-4 shadow w-full lg:w-1/2"
+      className="w-full rounded-lg p-4 shadow lg:w-1/2"
       onSubmit={onSubmit}
     >
       <legend className="pb-4 font-serif text-2xl">Kontaktformular</legend>
       <TextField
-        {...register('name', {required: true})}
+        {...register('name', {required: 'Bitte gebe einen Namen ein'})}
         label="Name"
         required
+        errorMessage={errors.name?.message}
       />
-      <TextField {...register('email')} label="Email" type="email" />
+      <TextField
+        {...register('email', {
+          pattern: {
+            value: EMAIL_PATTERN,
+            message: 'Bitte gebe eine gültige Email ein',
+          },
+        })}
+        label="Email"
+        type="email"
+        errorMessage={errors.email?.message}
+      />
       <TextArea
-        {...register('message', {required: true})}
+        {...register('message', {required: 'Bitte gebe eine Nachricht ein'})}
         label="Nachricht"
         rows={5}
         required
+        errorMessage={errors.message?.message}
       />
       <Button
         type="submit"
