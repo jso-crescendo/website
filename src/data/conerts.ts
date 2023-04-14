@@ -1,6 +1,6 @@
 import {StaticImageData} from 'next/image';
 
-import HerbstKonzertImage from '@/images/2021_herbstkonzert_chor_2.jpg';
+import HerbstKonzertImage from '@/images/2021_herbstkonzert_chor_2_sm.webp';
 import FruehlingsKonzertImage from '@/images/flyer/flyer_fruehlingkonzert_2023_sm.webp';
 
 export interface ConcertLocation {

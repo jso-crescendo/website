@@ -1,10 +1,10 @@
 import Image from 'next/image';
 
 import {ImageSection} from '@/components/image-section';
-import AboutUsImage from '@/images/2022_fruehling_blech.jpg';
-import BgImage from '@/images/2022_waedenswil_2.jpg';
+import AboutUsImage from '@/images/2022_fruehling_blech_sm.webp';
+import BgImage from '@/images/2022_waedenswil_2_xl.webp';
 import FlyerImage from '@/images/flyer/flyer_fruehlingskonzert_2023.webp';
-import KonzerteImage from '@/images/people/kaethi_2.jpg';
+import KonzerteImage from '@/images/people/kaethi_2_sm.webp';
 
 import {ContentContainer} from '../components/contentContainer';
 import {CONCERTS} from '../data/conerts';

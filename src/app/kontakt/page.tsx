@@ -1,7 +1,8 @@
-import {ContactForm} from './contact-form';
-import {ContentContainer} from '../../components/contentContainer';
 import {ImageSection} from '@/components/image-section';
-import VorstandImage from '@/images/people/vorstand.jpg';
+import VorstandImage from '@/images/people/vorstand_sm.webp';
+
+import {ContentContainer} from '../../components/contentContainer';
+import {ContactForm} from './contact-form';
 
 const VORSTAND = [
   {

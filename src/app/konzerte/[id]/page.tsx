@@ -1,7 +1,7 @@
 import Image from 'next/image';
 
-import DateImage from '@/images/backgrounds/harp.jpg';
-import ProgrammImage from '@/images/backgrounds/scores_2.jpg';
+import DateImage from '@/images/backgrounds/harp_sm.webp';
+import ProgrammImage from '@/images/backgrounds/scores_2_sm.webp';
 
 import {ContentContainer} from '../../../components/contentContainer';
 import {ImageSection} from '../../../components/image-section';
