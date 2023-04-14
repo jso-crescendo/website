@@ -1,12 +1,14 @@
+import Image from 'next/image';
+
+import {ImageSection} from '@/components/image-section';
 import AboutUsImage from '@/images/2022_fruehling_blech.jpg';
 import BgImage from '@/images/2022_waedenswil_2.jpg';
+import FlyerImage from '@/images/flyer/flyer_fruehlingskonzert_2023.webp';
+import KonzerteImage from '@/images/people/kaethi_2.jpg';
+
+import {ContentContainer} from '../components/contentContainer';
 import {CONCERTS} from '../data/conerts';
 import {ChevronDown} from '../icons/chevron-down';
-import {ContentContainer} from '../components/contentContainer';
-import FlyerImage from '@/images/flyer/flyer_fruehlingskonzert_2023.webp';
-import Image from 'next/image';
-import {ImageSection} from '@/components/image-section';
-import KonzerteImage from '@/images/people/kaethi_2.jpg';
 
 export default function Home() {
   return (
@@ -71,7 +73,7 @@ export default function Home() {
             priority: true,
           }}
           link={{
-            href: '/orcherster',
+            href: '/orchester',
             text: 'Mehr erfahren',
           }}
         >
