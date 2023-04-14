@@ -3,9 +3,7 @@ import {Instagram} from '@/icons/instagram';
 import {Youtube} from '@/icons/youtube';
 
 import {Email} from '../icons/email';
-import {Button} from './button';
 import {LinkButton} from './link-button';
-import {Text} from './text';
 
 const FooterSection: React.FC<{title: string; children: React.ReactNode}> = ({
   title,

@@ -27,7 +27,7 @@ export interface Concert {
 
 export const CONCERTS: Concert[] = [
   {
-    id: 'frühlingskonzerte-23',
+    id: 'fruehlingskonzerte-23',
     name: 'Frühlingskonzerte',
     image: FruehlingsKonzertImage,
     program: [
