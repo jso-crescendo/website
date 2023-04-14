@@ -1,5 +1,5 @@
 import {ContactForm} from './contact-form';
-import { ContentContainer } from '../../components/contentContainer';
+import {ContentContainer} from '../../components/contentContainer';
 import {ImageSection} from '@/components/image-section';
 import VorstandImage from '@/images/people/vorstand.jpg';
 

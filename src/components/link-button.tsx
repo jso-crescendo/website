@@ -1,18 +1,21 @@
-import classNames from 'classnames';
-import Link from 'next/link';
-
 import {ArrowRight} from '../icons/arrow-right';
+import Link from 'next/link';
+import {UrlObject} from 'url';
+import classNames from 'classnames';
 
 interface LinkProps {
   type: 'primary' | 'secondary';
-  href: string;
+  href: string | {pathname: string; hash: string};
   text: string;
 }
 export const LinkButton: React.FC<
   LinkProps &
-    React.DetailedHTMLProps<
-      React.AnchorHTMLAttributes<HTMLAnchorElement>,
-      HTMLAnchorElement
+    Omit<
+      React.DetailedHTMLProps<
+        React.AnchorHTMLAttributes<HTMLAnchorElement>,
+        HTMLAnchorElement
+      >,
+      'href'
     >
 > = ({href, text, type, className}) => (
   <Link
@@ -23,7 +26,7 @@ export const LinkButton: React.FC<
       {
         'bg-primary-main text-on-primary hover:bg-primary-darker focus:ring-primary-lighter':
           type === 'primary',
-        ' text-primary-main ring-primary-lighter ring-4 hover:text-primary-darker focus:ring-secondary-darker hover:ring-primary-darker':
+        ' text-primary-main ring-4 ring-primary-lighter hover:text-primary-darker hover:ring-primary-darker focus:ring-secondary-darker':
           type === 'secondary',
       },
       className,

@@ -1,6 +1,7 @@
 import AboutUsImage from '@/images/2022_fruehling_blech.jpg';
 import BgImage from '@/images/2022_waedenswil_2.jpg';
 import {CONCERTS} from '../data/conerts';
+import {ChevronDown} from '../icons/chevron-down';
 import {ContentContainer} from '../components/contentContainer';
 import FlyerImage from '@/images/flyer/flyer_fruehlingskonzert_2023.webp';
 import Image from 'next/image';
@@ -21,12 +22,26 @@ export default function Home() {
           className="absolute left-1/2 top-1/2 font-serif text-4xl leading-normal text-background md:text-5xl lg:text-6xl"
           style={{transform: 'translate(-50%, -50%)'}}
         >
-          <span className='block xl:hidden'>JSO Crescendo</span>
-          <span className='hidden xl:block'>Jugend&shy;sinfonie&shy;orchester<br/>Crescendo</span>
+          <span className="block xl:hidden" aria-hidden="false">
+            JSO Crescendo
+          </span>
+          <span className="hidden xl:block">
+            Jugend&shy;sinfonie&shy;orchester
+            <br />
+            Crescendo
+          </span>
         </h1>
+
+        <a
+          className="absolute left-1/2 top-3/4 h-24 w-24 rounded-full border-2 border-double text-background hover:text-neutral-200"
+          style={{transform: 'translate(-50%, -50%)'}}
+          href="#content"
+        >
+          <ChevronDown />
+        </a>
       </div>
 
-      <ContentContainer>
+      <ContentContainer id="content">
         <ImageSection
           title="Frühlings&shy;konzerte"
           image={{
