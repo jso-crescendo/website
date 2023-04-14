@@ -1,6 +1,10 @@
-import Image from 'next/image'
+import Image from 'next/image';
+
+import DateImage from '@/images/backgrounds/harp.jpg';
+import ProgrammImage from '@/images/backgrounds/scores_2.jpg';
 
 import {ContentContainer} from '../../../components/contentContainer';
+import {ImageSection} from '../../../components/image-section';
 import {CONCERTS} from '../../../data/conerts';
 
 export async function generateStaticParams() {
@@ -15,7 +19,44 @@ export default function KonzertPage({params}: {params: {id: string}}) {
       <h1 className="mb-8 text-center font-serif text-3xl leading-normal md:text-4xl lg:text-5xl">
         {concert.name}
       </h1>
-      <Image src={concert.image} alt="" aria-hidden="true" className='mx-auto'/>
+      <Image
+        src={concert.image}
+        alt=""
+        aria-hidden="true"
+        className="mx-auto rounded-lg"
+        priority
+      />
+      <ImageSection
+        title="Programm"
+        image={{src: ProgrammImage, alt: ''}}
+        textOnly={false}
+      >
+        <ol className="list-disc pl-4">
+          {concert.program?.map((p) => (
+            <li key={p.name}>
+              <span className="font-serif text-lg">{p.name}</span>
+              <span className="text-sm"> - {p.composer}</span>
+            </li>
+          ))}
+        </ol>
+      </ImageSection>
+
+      <ImageSection
+        title="Datum"
+        image={{src: DateImage, alt: ''}}
+        textOnly={false}
+      >
+        <ol className="list-disc pl-4">
+          {concert.dates?.map((d) => (
+            <li key={d.dateISO}>
+              <a href={d.googleMapsLink} className='hover:text-primary-main'>
+                <span className="font-serif text-lg">{d.location}</span>
+                <span className="text-sm"> - {d.dateString}</span>
+              </a>
+            </li>
+          ))}
+        </ol>
+      </ImageSection>
     </ContentContainer>
   );
 }
