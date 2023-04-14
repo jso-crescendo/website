@@ -10,7 +10,7 @@ const FooterSection: React.FC<{title: string; children: React.ReactNode}> = ({
   title,
   children,
 }) => (
-  <div className="flex w-1/3 flex-col place-items-start gap-2">
+  <div className="flex w-full md:w-1/3 flex-col place-items-start gap-2">
     <h4 className="mb-2 font-serif text-xl">{title}</h4>
     {children}
   </div>
@@ -52,8 +52,8 @@ const CurveSVG: React.FC = () => (
 );
 
 export const Footer: React.FC = () => (
-  <footer className="bg-accent-main p-4 text-background relative pt-24">
-    <div className='absolute w-full overflow-hidden top-0 left-0 text-background' aria-hidden="true">
+  <footer className="bg-accent-main p-4 text-background relative pt-4 md:pt-24">
+    <div className='absolute w-full overflow-hidden top-0 left-0 text-background hidden md:block' aria-hidden="true">
       <CurveSVG/>
     </div>
     <div className="container mx-auto mb-4 flex flex-col gap-8 md:flex-row md:justify-start">
