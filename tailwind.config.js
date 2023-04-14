@@ -14,9 +14,9 @@ module.exports = {
         darker: '#b91c1c',
       },
       success: {
-        lighter: '#ef4444',
-        main: '#dc2626',
-        darker: '#b91c1c',
+        lighter: '#70e000',
+        main: '#38b000',
+        darker: '#008000',
       },
       primary: {
         lighter: '#5045c4',

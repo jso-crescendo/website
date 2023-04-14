@@ -1,9 +1,13 @@
 'use client';
 
-import {Fragment, useCallback, useState} from 'react';
 import {addDoc, collection, serverTimestamp} from 'firebase/firestore/lite';
+import { useCallback, useState } from 'react';
 
 import {Button} from '../../components/button';
+import {Error as ErrorIcon} from '../../icons/error';
+import {Info} from '../../icons/info';
+import {Loader} from '../../components/loader';
+import {Text} from '../../components/text';
 import {TextArea} from '../../components/form/text-area';
 import {TextField} from '../../components/form/text-field';
 import {useFirestore} from '../../hooks/useFirebase';
@@ -21,6 +25,7 @@ export const ContactForm: React.FC = () => {
   const [formState, setFormState] = useState<
     'ready' | 'submitting' | 'submitted' | 'error'
   >('ready');
+
   const storeContactRequest = useCallback(
     async (name: string, email: string | undefined, message: string) => {
       if (!loaded) {
@@ -51,20 +56,29 @@ export const ContactForm: React.FC = () => {
     },
     [storeContactRequest],
   );
-
+  
   if (!loaded) {
-    return <div>loading</div>;
+    return (
+      <form
+        name="kontaktformular"
+        className="relative block h-96 w-full items-center rounded-lg p-4 shadow-md lg:w-1/2"
+      >
+        <legend className="pb-4 font-serif text-2xl opacity-20">
+          Kontaktformular
+        </legend>
+        <Loader />
+      </form>
+    );
   }
 
   switch (formState) {
     case 'ready':
       return <Form onSubmit={handleSubmit} />;
     case 'submitting':
-      return <div>submitting</div>;
     case 'submitted':
-      return <div>success</div>;
+      return <SuccessCard />;
     case 'error':
-      return <div>error</div>;
+      return <ErrorCard />;
   }
 };
 
@@ -80,10 +94,8 @@ const Form: React.FC<{
   return (
     <form
       name="kontaktformular"
-      className="w-full rounded-lg p-4 shadow lg:w-1/2"
-      onSubmit={handleSubmit((data) => {
-        onSubmit(data);
-      })}
+      className="w-full rounded-lg p-4 shadow-md lg:w-1/2"
+      onSubmit={handleSubmit(onSubmit)}
     >
       <legend className="pb-4 font-serif text-2xl">Kontaktformular</legend>
       <TextField
@@ -120,3 +132,26 @@ const Form: React.FC<{
     </form>
   );
 };
+const SuccessCard: React.FC = () => (
+  <div className="flex w-full flex-row items-center gap-4 rounded-lg bg-success-darker p-8 text-background shadow-md lg:w-1/2">
+    <Info className="m-2 h-14" />
+    <div>
+      <h3 className="pb-2 font-serif text-2xl">Erfolg</h3>
+      <Text>Vielen Dank für deine Nachricht</Text>
+    </div>
+  </div>
+);
+const ErrorCard: React.FC = () => (
+  <div className="flex w-full flex-row items-center gap-4 rounded-lg bg-error-lighter p-8 text-background shadow-md lg:w-1/2">
+    <ErrorIcon className="m-2 h-14" />
+    <div>
+      <h3 className="pb-2 font-serif text-2xl">
+        Es ist ein Fehler aufgetreten
+      </h3>
+      <Text>
+        Bitte kontaktiere uns per{' '}
+        <a href="mailto:kontakt@jso-crescendo.ch">Mail</a>
+      </Text>
+    </div>
+  </div>
+);
