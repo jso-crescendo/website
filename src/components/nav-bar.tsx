@@ -1,11 +1,12 @@
 'use client';
 
-import {Burger} from '@/icons/burger';
-import Link from 'next/link';
-import {Logo} from '@/icons/logo';
-import React from 'react';
 import classNames from 'classnames';
+import Link from 'next/link';
+import React from 'react';
+
 import {useToggle} from '@/hooks/useToggle';
+import {Burger} from '@/icons/burger';
+import {Logo} from '@/icons/logo';
 
 const NavLink: React.FC<{href: string; text: string}> = ({href, text}) => (
   <Link href={href} className="block py-2 hover:text-primary-main md:p-4">
@@ -35,7 +36,6 @@ export const NavBar: React.FC = () => {
           {[
             ['Orchester', '/orchester'],
             ['Konzerte', '/konzerte'],
-            ['Galerie', '/galerie'],
             ['Kontakt', '/kontakt'],
           ].map(([name, href]) => (
             <li key={name} onClick={toggleMenu}>

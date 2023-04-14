@@ -1,17 +1,17 @@
 'use client';
 
 import {addDoc, collection, serverTimestamp} from 'firebase/firestore/lite';
-import { useCallback, useState } from 'react';
+import {useCallback, useState} from 'react';
+import {useForm} from 'react-hook-form';
 
 import {Button} from '../../components/button';
-import {Error as ErrorIcon} from '../../icons/error';
-import {Info} from '../../icons/info';
-import {Loader} from '../../components/loader';
-import {Text} from '../../components/text';
 import {TextArea} from '../../components/form/text-area';
 import {TextField} from '../../components/form/text-field';
+import {Loader} from '../../components/loader';
+import {Text} from '../../components/text';
 import {useFirestore} from '../../hooks/useFirebase';
-import {useForm} from 'react-hook-form';
+import {Error as ErrorIcon} from '../../icons/error';
+import {Info} from '../../icons/info';
 
 interface FormData {
   name: string;
@@ -56,7 +56,7 @@ export const ContactForm: React.FC = () => {
     },
     [storeContactRequest],
   );
-  
+
   if (!loaded) {
     return (
       <form

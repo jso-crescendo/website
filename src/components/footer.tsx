@@ -1,10 +1,11 @@
-import {Button} from './button';
-import {Email} from '../icons/email';
 import {Facebook} from '@/icons/facebook';
 import {Instagram} from '@/icons/instagram';
+import {Youtube} from '@/icons/youtube';
+
+import {Email} from '../icons/email';
+import {Button} from './button';
 import {LinkButton} from './link-button';
 import {Text} from './text';
-import {Youtube} from '@/icons/youtube';
 
 const FooterSection: React.FC<{title: string; children: React.ReactNode}> = ({
   title,
@@ -66,23 +67,42 @@ export const Footer: React.FC = () => (
           text="kontakt@jso-crescendo.ch"
           href="mailto:kontakt@jso-crescendo.ch"
         />
-        <LinkButton text="Zum Kontaktformular" type="primary" href="/kontakt" />
+        <LinkButton
+          text="Zum Kontaktformular"
+          type="primary"
+          href="/kontakt"
+          className="mt-4"
+        />
       </FooterSection>
       <FooterSection title="Folge uns">
         <IconLink
           icon={<Instagram className="h-8 w-8" />}
           text="Instagram"
-          href="mailto:kontakt@jso-crescendo.ch"
+          href="https://www.instagram.com/jsocrescendo"
         />
         <IconLink
           icon={<Facebook className="h-8 w-8" />}
           text="Facebook"
-          href="mailto:kontakt@jso-crescendo.ch"
+          href="https://www.facebook.com/jugendsinfonieorchestercrescendo/"
         />
         <IconLink
           icon={<Youtube className="h-8 w-8" />}
           text="Youtube"
-          href="mailto:kontakt@jso-crescendo.ch"
+          href="https://www.youtube.com/@jso-crescendo"
+        />
+      </FooterSection>
+      <FooterSection title="Newsletter">
+        <p className='text-sm text-justify'>
+          Verpassen Sie keine wichtigen Updates zu unseren aufregenden Konzerten
+          und spannenden Projekten, indem Sie unseren Newsletter abonnieren!
+          Bleiben Sie immer up-to-date und erhalten Sie exklusive Informationen
+          direkt in Ihr Postfach.
+        </p>
+        <LinkButton
+          text="Jetzt anmelden"
+          type="primary"
+          href="/newsletter"
+          className="mt-4"
         />
       </FooterSection>
     </div>

@@ -1,6 +1,8 @@
-import {CONCERTS} from '@/data/conerts';
-import { ContentContainer } from '../../components/contentContainer';
 import Image from 'next/image';
+
+import {CONCERTS} from '@/data/conerts';
+
+import { ContentContainer } from '../../components/contentContainer';
 import {LinkButton} from '../../components/link-button';
 
 export default function Orchester() {
@@ -36,7 +38,7 @@ export default function Orchester() {
                   <h3 className="py-4 text-center text-lg">Programm</h3>
                   <ul>
                     {c.program.map((p) => (
-                      <li className="flex flex-col pb-2">
+                      <li key={p.name} className="flex flex-col pb-2">
                         <span className="text-base">{p.name}</span>
                         <span className="text-sm">{p.composer}</span>
                       </li>
@@ -49,7 +51,7 @@ export default function Orchester() {
                   <h3 className="py-4 text-center text-lg">Daten</h3>
                   <ul>
                     {c.dates.map((d) => (
-                      <li className="flex flex-col pb-2">
+                      <li key={d.dateISO} className="flex flex-col pb-2">
                         <span className="text-base">{d.location}</span>
                         <span className="text-sm">{d.dateString}</span>
                       </li>
