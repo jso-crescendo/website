@@ -12,7 +12,7 @@ export default function Orchester() {
 
       <section
         id="konzerte"
-        className="flex flex-row items-start justify-center gap-8"
+        className="flex flex-col md:flex-row items-start justify-center gap-8"
       >
         {CONCERTS.map((c) => (
           <div

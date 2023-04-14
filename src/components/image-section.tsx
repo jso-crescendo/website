@@ -1,8 +1,8 @@
 import Image, {StaticImageData} from 'next/image';
 
-import {toKebabCase} from '../utils/toKebabCase';
 import {LinkButton} from './link-button';
 import {Text} from './text';
+import {toKebabCase} from '../utils/toKebabCase';
 
 interface ImageSectionProps {
   title: string;
@@ -30,7 +30,7 @@ export const ImageSection: React.FC<ImageSectionProps> = ({
 }) => (
   <section
     id={toKebabCase(title)}
-    className="flex flex-col justify-between gap-8 py-8 md:flex-row md:odd:flex-row-reverse"
+    className="flex flex-col justify-between gap-8 pt-4 pb-8 md:flex-row md:even:flex-row-reverse"
   >
     <Image
       src={image.src}

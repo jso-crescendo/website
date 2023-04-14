@@ -1,12 +1,11 @@
 'use client';
 
-import classNames from 'classnames';
-import Link from 'next/link';
-import React from 'react';
-
-import {useToggle} from '@/hooks/useToggle';
 import {Burger} from '@/icons/burger';
+import Link from 'next/link';
 import {Logo} from '@/icons/logo';
+import React from 'react';
+import classNames from 'classnames';
+import {useToggle} from '@/hooks/useToggle';
 
 const NavLink: React.FC<{href: string; text: string}> = ({href, text}) => (
   <Link href={href} className="block py-2 hover:text-primary-main md:p-4">
@@ -16,7 +15,7 @@ const NavLink: React.FC<{href: string; text: string}> = ({href, text}) => (
 export const NavBar: React.FC = () => {
   const [responsiveMenuOpen, toggleMenu] = useToggle(false);
   return (
-    <nav className="flex w-full flex-wrap items-center justify-between p-4 text-lg md:py-0">
+    <nav className="flex w-full flex-wrap items-center justify-between py-2 px-4 text-lg md:py-0">
       <Link href="/" className="block w-40 py-2">
         <Logo role="link" className="hover:stroke-primary-main" />
       </Link>
@@ -39,7 +38,7 @@ export const NavBar: React.FC = () => {
             ['Galerie', '/galerie'],
             ['Kontakt', '/kontakt'],
           ].map(([name, href]) => (
-            <li key={name}>
+            <li key={name} onClick={toggleMenu}>
               <NavLink href={href} text={name} />
             </li>
           ))}

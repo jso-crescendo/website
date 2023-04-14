@@ -16,7 +16,7 @@ export default function Home() {
           src={BgImage}
           alt="Hintergrundbild Orchester"
           priority
-          className="h-screen object-cover"
+          className="h-screen object-cover brightness-75"
         />
         <h1
           className="absolute left-1/2 top-1/2 font-serif text-4xl leading-normal text-background md:text-5xl lg:text-6xl"

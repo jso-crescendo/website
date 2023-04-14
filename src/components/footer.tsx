@@ -10,7 +10,7 @@ const FooterSection: React.FC<{title: string; children: React.ReactNode}> = ({
   title,
   children,
 }) => (
-  <div className="flex w-full md:w-1/3 flex-col place-items-start gap-2">
+  <div className="flex w-full flex-col place-items-start gap-2 md:w-1/3">
     <h4 className="mb-2 font-serif text-xl">{title}</h4>
     {children}
   </div>
@@ -52,9 +52,12 @@ const CurveSVG: React.FC = () => (
 );
 
 export const Footer: React.FC = () => (
-  <footer className="bg-accent-main p-4 text-background relative pt-4 md:pt-24">
-    <div className='absolute w-full overflow-hidden top-0 left-0 text-background hidden md:block' aria-hidden="true">
-      <CurveSVG/>
+  <footer className="relative bg-accent-main p-4 pt-4 text-background md:pt-24">
+    <div
+      className="absolute left-0 top-0 hidden w-full overflow-hidden text-background md:block"
+      aria-hidden="true"
+    >
+      <CurveSVG />
     </div>
     <div className="container mx-auto mb-4 flex flex-col gap-8 md:flex-row md:justify-start">
       <FooterSection title="Kontakt">
@@ -63,7 +66,6 @@ export const Footer: React.FC = () => (
           text="kontakt@jso-crescendo.ch"
           href="mailto:kontakt@jso-crescendo.ch"
         />
-        <span className="w-full text-center text-sm">oder</span>
         <LinkButton text="Zum Kontaktformular" type="primary" href="/kontakt" />
       </FooterSection>
       <FooterSection title="Folge uns">
