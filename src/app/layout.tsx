@@ -1,10 +1,11 @@
 import './globals.css';
 
+import classNames from 'classnames';
 import {Lora, Montserrat} from 'next/font/google';
 
-import {Footer} from '../components/footer';
 import {NavBar} from '@/components/nav-bar';
-import classNames from 'classnames';
+
+import {Footer} from '../components/footer';
 
 export const metadata = {
   title: 'JSO Crescendo',
@@ -31,11 +32,11 @@ export default function RootLayout({children}: {children: React.ReactNode}) {
       lang="de-CH"
       className={classNames(loraFont.variable, montserratFont.variable)}
     >
-      <body className="min-h-screen w-screen overflow-x-hidden bg-background text-on-background">
+      <body className="min-h-screen w-screen overflow-x-hidden bg-background text-on-background flex flex-col">
         <header className="container mx-auto ">
           <NavBar />
         </header>
-        <main>{children}</main>
+        <main className='grow'>{children}</main>
         <Footer />
       </body>
     </html>
