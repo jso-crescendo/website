@@ -52,7 +52,7 @@ export default function Home() {
             priority: true,
           }}
           link={{
-            href: '/konzerte/frühlingskonzerte-23',
+            href: '/konzerte/fruehlingskonzerte-23',
             text: 'Weitere Informationen',
           }}
         >
