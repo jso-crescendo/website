@@ -7,7 +7,7 @@ import FlyerImage from '@/images/flyer/flyer_fruehlingskonzert_2023.webp';
 import KonzerteImage from '@/images/people/kaethi_2_sm.webp';
 
 import {ContentContainer} from '../components/contentContainer';
-import {CONCERTS} from '../data/conerts';
+import {CONCERTS} from '../data/concerts';
 import {ChevronDown} from '../icons/chevron-down';
 
 export default function Home() {

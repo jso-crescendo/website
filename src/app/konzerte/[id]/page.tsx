@@ -5,7 +5,7 @@ import ProgrammImage from '@/images/backgrounds/scores_2_sm.webp';
 
 import {ContentContainer} from '../../../components/contentContainer';
 import {ImageSection} from '../../../components/image-section';
-import {CONCERTS} from '../../../data/conerts';
+import {CONCERTS} from '../../../data/concerts';
 
 export async function generateStaticParams() {
   return CONCERTS.map((c) => ({id: c.id}));
@@ -49,7 +49,7 @@ export default function KonzertPage({params}: {params: {id: string}}) {
         <ol className="list-disc pl-4">
           {concert.dates?.map((d) => (
             <li key={d.dateISO}>
-              <a href={d.googleMapsLink} className='hover:text-primary-main'>
+              <a href={d.googleMapsLink} className="hover:text-primary-main">
                 <span className="font-serif text-lg">{d.location}</span>
                 <span className="text-sm"> - {d.dateString}</span>
               </a>

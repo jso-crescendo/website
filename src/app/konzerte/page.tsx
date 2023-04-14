@@ -1,6 +1,6 @@
 import Image from 'next/image';
 
-import {CONCERTS} from '@/data/conerts';
+import {CONCERTS} from '@/data/concerts';
 
 import {ContentContainer} from '../../components/contentContainer';
 import {LinkButton} from '../../components/link-button';
