@@ -1,12 +1,11 @@
-import Image from 'next/image';
-
 import {CONCERTS} from '@/data/conerts';
-
+import { ContentContainer } from '../../components/contentContainer';
+import Image from 'next/image';
 import {LinkButton} from '../../components/link-button';
 
 export default function Orchester() {
   return (
-    <>
+    <ContentContainer>
       <h1 className="mb-8 text-center font-serif text-3xl leading-normal md:text-4xl lg:text-5xl">
         Konzerte
       </h1>
@@ -68,6 +67,6 @@ export default function Orchester() {
           </div>
         ))}
       </section>
-    </>
+    </ContentContainer>
   );
 }

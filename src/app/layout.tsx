@@ -35,7 +35,7 @@ export default function RootLayout({children}: {children: React.ReactNode}) {
         <header className="container mx-auto ">
           <NavBar />
         </header>
-        <main className="container mx-auto p-4">{children}</main>
+        <main>{children}</main>
         <Footer />
       </body>
     </html>

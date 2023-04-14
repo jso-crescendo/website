@@ -1,7 +1,7 @@
+import {ContactForm} from './contact-form';
+import { ContentContainer } from '../../components/contentContainer';
 import {ImageSection} from '@/components/image-section';
 import VorstandImage from '@/images/people/vorstand.jpg';
-
-import {ContactForm} from './contact-form';
 
 const VORSTAND = [
   {
@@ -48,7 +48,7 @@ const VORSTAND = [
 
 export default function Orchester() {
   return (
-    <>
+    <ContentContainer>
       <ImageSection
         image={{
           src: VorstandImage,
@@ -64,6 +64,6 @@ export default function Orchester() {
       <section className="flex flex-row justify-center">
         <ContactForm />
       </section>
-    </>
+    </ContentContainer>
   );
 }
