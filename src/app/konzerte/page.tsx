@@ -23,7 +23,7 @@ export default function Orchester() {
             className="block rounded-lg shadow sm:w-full md:w-1/2 lg:w-1/3"
           >
             <Image
-              src={c.image}
+              src={c.image_sm}
               alt="Konzert teaser bild"
               className="aspect-3/2 rounded-t-lg object-cover"
             />

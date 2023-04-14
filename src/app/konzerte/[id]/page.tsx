@@ -20,7 +20,7 @@ export default function KonzertPage({params}: {params: {id: string}}) {
         {concert.name}
       </h1>
       <Image
-        src={concert.image}
+        src={concert.image_lg}
         alt=""
         aria-hidden="true"
         className="mx-auto rounded-lg"

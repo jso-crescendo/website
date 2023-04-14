@@ -1,7 +1,9 @@
 import {StaticImageData} from 'next/image';
 
-import HerbstKonzertImage from '@/images/2021_herbstkonzert_chor_2_sm.webp';
-import FruehlingsKonzertImage from '@/images/flyer/flyer_fruehlingkonzert_2023_sm.webp';
+import HerbstKonzertImage_lg from '@/images/2021_herbstkonzert_chor_2_md.webp';
+import HerbstKonzertImage_sm from '@/images/2021_herbstkonzert_chor_2_sm.webp';
+import FruehlingsKonzertImage_sm from '@/images/flyer/flyer_fruehlingkonzert_2023_sm.webp';
+import FruehlingsKonzertImage_lg from '@/images/flyer/flyer_fruehlingskonzert_2023.webp';
 
 export interface ConcertLocation {
   location: string;
@@ -20,7 +22,8 @@ export interface Concert {
   name: string;
   subtitle?: string;
   description?: string;
-  image: StaticImageData;
+  image_sm: StaticImageData;
+  image_lg: StaticImageData;
   dates?: ConcertLocation[];
   program?: ProgramItem[];
 }
@@ -29,7 +32,8 @@ export const CONCERTS: Concert[] = [
   {
     id: 'fruehlingskonzerte-23',
     name: 'Frühlingskonzerte',
-    image: FruehlingsKonzertImage,
+    image_sm: FruehlingsKonzertImage_sm,
+    image_lg: FruehlingsKonzertImage_lg,
     program: [
       {
         name: 'Il pirata - Sinfonia',
@@ -64,7 +68,8 @@ export const CONCERTS: Concert[] = [
     id: 'herbstkonzerte-23',
     name: 'Herbstkonzerte',
     subtitle: 'mit dem Projektchor Canturicum',
-    image: HerbstKonzertImage,
+    image_sm: HerbstKonzertImage_sm,
+    image_lg: HerbstKonzertImage_lg,
     program: [
       {
         name: 'Requiem',
