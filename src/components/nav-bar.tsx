@@ -16,7 +16,7 @@ const NavLink: React.FC<{href: string; text: string}> = ({href, text}) => (
 export const NavBar: React.FC = () => {
   const [responsiveMenuOpen, toggleMenu] = useToggle(false);
   return (
-    <nav className="flex w-full flex-wrap items-center justify-between py-2 px-4 text-lg md:py-0">
+    <nav className="flex w-full flex-wrap items-center justify-between px-4 py-2 text-lg md:py-0">
       <Link href="/" className="block w-40 py-2">
         <Logo role="link" className="hover:stroke-primary-main" />
       </Link>

@@ -22,7 +22,7 @@ export const Button: React.FC<
           variant === 'primary' && !disabled,
         ' text-primary-main ring-4 ring-primary-lighter hover:text-primary-darker hover:ring-primary-darker focus:ring-secondary-darker':
           variant === 'secondary' && !disabled,
-        'bg-neutral-300 text-on-background cursor-not-allowed': disabled,
+        'cursor-not-allowed bg-neutral-300 text-on-background': disabled,
       },
       className,
     )}

@@ -1,8 +1,8 @@
 import {ContentContainer} from '../../../components/contentContainer';
 import {CONCERTS} from '../../../data/conerts';
 
-export async function generateStaticParams(){
-  return CONCERTS.map(c => c.id);
+export async function generateStaticParams() {
+  return CONCERTS.map((c) => c.id);
 }
 
 export default function KonzertPage({params}: {params: {id: string}}) {

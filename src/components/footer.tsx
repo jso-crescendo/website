@@ -1,3 +1,4 @@
+/* eslint-disable tailwindcss/no-arbitrary-value */
 import {Facebook} from '@/icons/facebook';
 import {Instagram} from '@/icons/instagram';
 import {Youtube} from '@/icons/youtube';
@@ -51,7 +52,7 @@ const CurveSVG: React.FC = () => (
 );
 
 export const Footer: React.FC = () => (
-  <footer className="relative bg-accent-main p-4 pt-4 text-background md:pt-24">
+  <footer className="relative bg-accent-main p-4 text-background md:pt-24">
     <div
       className="absolute left-0 top-0 hidden w-full overflow-hidden text-background md:block"
       aria-hidden="true"
@@ -90,7 +91,7 @@ export const Footer: React.FC = () => (
         />
       </FooterSection>
       <FooterSection title="Newsletter">
-        <p className='text-sm text-justify'>
+        <p className="text-justify text-sm">
           Verpassen Sie keine wichtigen Updates zu unseren aufregenden Konzerten
           und spannenden Projekten, indem Sie unseren Newsletter abonnieren!
           Bleiben Sie immer up-to-date und erhalten Sie exklusive Informationen

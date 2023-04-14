@@ -38,7 +38,7 @@ export const ContactForm: React.FC = () => {
         createdAt: serverTimestamp(),
       });
     },
-    [firestore],
+    [firestore, loaded],
   );
 
   const handleSubmit = useCallback(

@@ -1,5 +1,6 @@
-import {FormLabel} from './form-label';
 import {forwardRef} from 'react';
+
+import {FormLabel} from './form-label';
 
 interface TextAreaProps {
   label: string;

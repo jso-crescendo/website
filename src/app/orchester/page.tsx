@@ -1,5 +1,5 @@
 import ChorImage from '@/images/2021_herbstkonzert_chor.jpg';
-import { ContentContainer } from '../../components/contentContainer';
+import {ContentContainer} from '../../components/contentContainer';
 import GoennerImage from '@/images/2022_fruehling_blech.jpg';
 import Image from 'next/image';
 import {ImageSection} from '@/components/image-section';

@@ -7,7 +7,8 @@ export const Error: React.FC<SVGAttributes<SVGElement>> = (props) => (
     strokeWidth={1.5}
     viewBox="0 0 24 24"
     xmlns="http://www.w3.org/2000/svg"
-    aria-hidden="true" {...props}
+    aria-hidden="true"
+    {...props}
   >
     <path
       strokeLinecap="round"

@@ -17,4 +17,3 @@ export const Email: React.FC<SVGAttributes<SVGElement>> = (props) => (
     />
   </svg>
 );
-

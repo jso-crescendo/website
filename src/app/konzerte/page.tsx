@@ -2,7 +2,7 @@ import Image from 'next/image';
 
 import {CONCERTS} from '@/data/conerts';
 
-import { ContentContainer } from '../../components/contentContainer';
+import {ContentContainer} from '../../components/contentContainer';
 import {LinkButton} from '../../components/link-button';
 
 export default function Orchester() {
@@ -14,7 +14,7 @@ export default function Orchester() {
 
       <section
         id="konzerte"
-        className="flex flex-col md:flex-row items-start justify-center gap-8"
+        className="flex flex-col items-start justify-center gap-8 md:flex-row"
       >
         {CONCERTS.map((c) => (
           <div
