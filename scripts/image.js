@@ -38,7 +38,7 @@ async function convertToWebp(imagePath, width, suffix) {
 
 // Function to get all image files in a folder
 function getImageFiles(folderPath) {
-  const imageExtensions = ['.jpg', '.jpeg', '.png', '.gif', '.webp'];
+  const imageExtensions = ['.jpg', '.jpeg', '.png', '.gif'];
   return fs
     .readdirSync(folderPath)
     .filter((file) =>
