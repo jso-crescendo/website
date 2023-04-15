@@ -29,8 +29,9 @@ export default function Orchester() {
         }}
       >
         Seit 2006 führt das JSO Crescendo regelmässig Chorwerke mit dem
-        Projektchor Canturicum auf. Dieser Chor wurde von Käthi Schmid Lauber
-        eigens dazu gegründet, im Mai 2006 die "Messe solennelle" von Ch. Gounod
+        Projektchor Canturicum auf. Dieser Chor wurde von Käthi Schmid Laub
+        er
+        eigens dazu gegründet, im Mai 2006 die &quot;Messe solennelle&quot; von Ch. Gounod
         aufzuführen. Der Erfolg dieses Projektes, u.a. das Konzert in der
         ausverkauften Tonhalle, war so durchschlagend, dass 2007, 2009, 2012,
         2015, 2018 und 2019 weitere Projekte realisiert wurden. Es singen

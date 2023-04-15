@@ -32,11 +32,11 @@ export default function RootLayout({children}: {children: React.ReactNode}) {
       lang="de-CH"
       className={classNames(loraFont.variable, montserratFont.variable)}
     >
-      <body className="min-h-screen w-screen overflow-x-hidden bg-background text-on-background flex flex-col">
+      <body className="flex min-h-screen w-screen flex-col overflow-x-hidden bg-background text-on-background">
         <header className="container mx-auto ">
           <NavBar />
         </header>
-        <main className='grow'>{children}</main>
+        <main className="grow">{children}</main>
         <Footer />
       </body>
     </html>

@@ -5,7 +5,10 @@ import {NewsletterForm} from './newsletter-form';
 export default function Newsletter() {
   return (
     <ContentContainer>
-      <ImageSection title="Newsletter" image={{src: NewsLetterImage, alt: "newsletter bild", priority: true}}>
+      <ImageSection
+        title="Newsletter"
+        image={{src: NewsLetterImage, alt: 'newsletter bild', priority: true}}
+      >
         Verpassen Sie keine wichtigen Updates zu unseren aufregenden Konzerten
         und spannenden Projekten, indem Sie unseren Newsletter abonnieren!
         Bleiben Sie immer up-to-date und erhalten Sie exklusive Informationen
