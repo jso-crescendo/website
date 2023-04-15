@@ -1,6 +1,5 @@
 import {StaticImageData} from 'next/image';
 
-import HerbstKonzertImage_lg from '@/images/2021_herbstkonzert_chor_2_md.webp';
 import HerbstKonzertImage_sm from '@/images/2021_herbstkonzert_chor_2_sm.webp';
 import FruehlingsKonzertImage_sm from '@/images/flyer/flyer_fruehlingkonzert_2023_sm.webp';
 import FruehlingsKonzertImage_lg from '@/images/flyer/flyer_fruehlingskonzert_2023.webp';
@@ -23,7 +22,7 @@ export interface Concert {
   subtitle?: string;
   description?: string;
   image_sm: StaticImageData;
-  image_lg: StaticImageData;
+  image_lg?: StaticImageData;
   dates?: ConcertLocation[];
   program?: ProgramItem[];
 }
@@ -69,7 +68,6 @@ export const CONCERTS: Concert[] = [
     name: 'Herbstkonzerte',
     subtitle: 'mit dem Projektchor Canturicum',
     image_sm: HerbstKonzertImage_sm,
-    image_lg: HerbstKonzertImage_lg,
     program: [
       {
         name: 'Requiem',

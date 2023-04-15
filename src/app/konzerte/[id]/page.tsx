@@ -19,13 +19,15 @@ export default function KonzertPage({params}: {params: {id: string}}) {
       <h1 className="mb-8 text-center font-serif text-3xl leading-normal md:text-4xl lg:text-5xl">
         {concert.name}
       </h1>
-      <Image
-        src={concert.image_lg}
-        alt=""
-        aria-hidden="true"
-        className="mx-auto rounded-lg"
-        priority
-      />
+      {concert.image_lg && (
+        <Image
+          src={concert.image_lg}
+          alt=""
+          aria-hidden="true"
+          className="mx-auto rounded-lg"
+          priority
+        />
+      )}
       <ImageSection
         title="Programm"
         image={{src: ProgrammImage, alt: ''}}
