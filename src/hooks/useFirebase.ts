@@ -1,8 +1,7 @@
-import {Firestore, getFirestore} from 'firebase/firestore/lite';
-import {ReCaptchaV3Provider, initializeAppCheck} from 'firebase/app-check';
-import {useEffect, useState} from 'react';
-
 import {initializeApp} from 'firebase/app';
+import {ReCaptchaV3Provider, initializeAppCheck} from 'firebase/app-check';
+import {Firestore, getFirestore} from 'firebase/firestore/lite';
+import {useEffect, useState} from 'react';
 
 interface LoadingFirestore {
   loaded: false;
@@ -21,12 +20,12 @@ export const useFirestore = (
   useEffect(() => {
     setTimeout(() => {
       const app = initializeApp({
-        apiKey: 'AIzaSyBOJJXAEm6EkNHO36Ae1QTUxu3RY2X6qkc',
-        authDomain: 'jso-crescendo-dev.firebaseapp.com',
-        projectId: 'jso-crescendo-dev',
-        storageBucket: 'jso-crescendo-dev.appspot.com',
-        messagingSenderId: '742818647671',
-        appId: '1:742818647671:web:c974570a1d8041a7c38072',
+        apiKey: "AIzaSyAH3_d1pgiUrUcqUFXCVVES0jOC9gRcUuA",
+        authDomain: "jso-crescendo.firebaseapp.com",
+        projectId: "jso-crescendo",
+        storageBucket: "jso-crescendo.appspot.com",
+        messagingSenderId: "961926671229",
+        appId: "1:961926671229:web:8afb1fac0557968af67a14"
       });
       initializeAppCheck(app, {
         provider: new ReCaptchaV3Provider(
