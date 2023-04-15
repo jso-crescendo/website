@@ -2,6 +2,7 @@ import './globals.css';
 
 import classNames from 'classnames';
 import {Lora, Montserrat} from 'next/font/google';
+import Script from 'next/script';
 
 import {NavBar} from '@/components/nav-bar';
 
@@ -32,6 +33,11 @@ export default function RootLayout({children}: {children: React.ReactNode}) {
       lang="de-CH"
       className={classNames(loraFont.variable, montserratFont.variable)}
     >
+      <Script
+        strategy="afterInteractive"
+        data-website-id="a8b60da8-33ab-4d43-b88b-e6923f956f7b"
+        src="https://analytics.jso-crescendo.ch/umami.js"
+      />
       <body className="flex min-h-screen w-screen flex-col overflow-x-hidden bg-background text-on-background">
         <header className="container mx-auto ">
           <NavBar />
