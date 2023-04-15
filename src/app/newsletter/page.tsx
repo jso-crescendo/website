@@ -1,8 +1,7 @@
 import {ContentContainer} from '../../components/contentContainer';
 import {ImageSection} from '../../components/image-section';
-import {Text} from '../../components/text';
 import NewsLetterImage from '../../images/backgrounds/letter_sm.webp';
-import {NewsletterForm} from '../canturicum/newsletter-form';
+import {NewsletterForm} from './newsletter-form';
 export default function Newsletter() {
   return (
     <ContentContainer>

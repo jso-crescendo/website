@@ -1,109 +1,99 @@
 import Image from 'next/image';
 
+import CanturicumImage from '@/images/2019_canturicum_md.webp';
+import KonzertImage from '@/images/2019_jubilaeumskonzert_tonhalle_md.webp';
+
 import {ContentContainer} from '../../components/contentContainer';
+import {ImageSection} from '../../components/image-section';
 import {LinkButton} from '../../components/link-button';
 import {Text} from '../../components/text';
+import {CONCERTS} from '../../data/concerts';
 
 export default function Orchester() {
   return (
     <ContentContainer>
       <h1 className="mb-8 text-center font-serif text-3xl leading-normal md:text-4xl lg:text-5xl">
-        Canturicum - Cherubini Requiem
+        Chorprojekt Cherubini November 2023
       </h1>
-
       <Text>
-        Liebe ehemalige und neue Canturicum-Sänger:innen, liebe Eltern und
-        Freunde des JSO Crescendo
-        <br />
-        <br />
-        Kaum zu glauben, aber es sind bereits vier Jahre seit dem letzten
-        Chorkonzert zum 30-jährigen Bestehen vom Jugendsinfonieorchester
-        Crescendo vergangen. Kein Wunder, dass es mich seit einiger Zeit wieder
-        gelüstet, ein neues Projekt anzugehen. Ganz neu ist das gewählte Werk
-        allerdings nicht. 2012 haben wir das Requiem von Cherubini schon einmal
-        zusammen musiziert. Dies hat zwei Gründe: zum einen ist es für mich das
-        schönste Requiem, welches ich kenne (und nicht so oft gespielt wird, wie
-        das von Mozart), zum andern möchte ich diese Aufführungen Anina widmen,
-        die 2012 zum ersten Mal die wichtige Stelle als Konzertmeisterin im JSO
-        Crescendo übernommen hatte und dieser 7 Jahre treu geblieben ist.
-        <br />
-        <br />
         Cherubini komponierte das Werk 1816. Es zeigt alle Facetten von
-        absoluter Schlichtheit bis zu opernhafter Dramaturgie.
+        absoluter Schlichtheit bis zu opernhafter Dramaturgie. Zusätzlich werden
+        wir wie 2018 noch ein kurzes Werk für Doppelchor singen.
       </Text>
       <br />
+      <ImageSection
+        title="Projektchor Canturicum"
+        image={{
+          src: CanturicumImage,
+          alt: 'Projektchor Canturicum in der Tonhalle',
+        }}
+      >
+        Seit 2006 führt das JSO Crescendo regelmässig Chorwerke mit dem
+        Projektchor Canturicum auf. Dieser Chor wurde von Käthi Schmid Lauber
+        eigens dazu gegründet, im Mai 2006 die "Messe solennelle" von Ch. Gounod
+        aufzuführen. Der Erfolg dieses Projektes, u.a. das Konzert in der
+        ausverkauften Tonhalle, war so durchschlagend, dass 2007, 2009, 2012,
+        2015, 2018 und 2019 weitere Projekte realisiert wurden. Es singen
+        jeweils zwischen 80 und 120 Sänger:innen, aus den Singwochen, Eltern,
+        Ehemalige und Freunde vom JSO Crescendo mit.
+      </ImageSection>
+      <ImageSection
+        title="Konzerte"
+        image={{
+          src: KonzertImage,
+          alt: '',
+        }}
+        textOnly={false}
+      >
+        <ol className="list-disc pl-4">
+          {CONCERTS.filter((c) => c.id == 'herbstkonzerte-23')[0].dates?.map(
+            (d) => (
+              <li key={d.dateISO}>
+                <a href={d.googleMapsLink} className="hover:text-primary-main">
+                  <span className="font-serif text-lg">{d.location}</span>
+                  <span className="text-sm"> - {d.dateString}</span>
+                </a>
+              </li>
+            ),
+          )}
+        </ol>
+      </ImageSection>
       <Text>
         Diese Einladung richtet sich an Sänger:innen, die gerne die Gelegenheit
         wahrnehmen möchten, ein Konzertprogramm mit einem jungen, dynamischen
-        Sinfonieorchester zu erarbeiten. Voraussetzung ist für mich nicht in
-        erster Linie eine gute Stimmausbildung, sondern die Bereitschaft, sich
-        geistig auf meine Bilder zur Musik und Tongestaltung einzulassen. Dieses
-        wunderbare Chorwerk wird dem Chor viel an Stimm- und Klangbeherrschung
-        abverlangen. Es ist mir ein grosses Anliegen, alle Nuancen von dieser
-        wunderbaren Musik voll ausreizen zu können dies sicher oft mit
+        Sinfonieorchester zu erarbeiten. Voraussetzung ist nicht in erster Linie
+        eine gute Stimmausbildung, sondern die Bereitschaft, sich geistig auf
+        Bilder zur Musik- und Tongestaltung einzulassen. Dieses wunderbare
+        Chorwerk wird dem Chor viel an Stimm- und Klangbeherrschung abverlangen.
+        Es ist ein grosses Anliegen der Dirigentin, alle Nuancen von dieser
+        wunderbaren Musik voll ausreizen zu können - dies sicher oft mit
         Forderungen, die nicht unbedingt einer konventionellen Vorstellung von
-        Chorarbeit entsprechen. Es freut mich besonders, dass bei diesem Projekt
-        die Kantorei Wetzikon mitsingen wird. Daher wird ein Teil der
-        Probearbeit in Wetzikon stattfinden.
+        Chorarbeit entsprechen. Meine Erfahrungen mit der individuell gewählten
+        Probeart waren durchwegs positiv.
+      </Text>
+      <ul className="list-disc pl-8">
+        <li>im ad hoc-Chor am Montag in Wetzikon</li>
+        <li>
+          Dienstag oder Donnerstag in Zürich (Tag richtet sich nach den
+          Anmeldungen)
+        </li>
+        <li>
+          im Selbststudium mit Beteiligung an den Gesamtproben und den
+          Probetagen.
+        </li>
+      </ul>
+      <br />{' '}
+      <Text>
+        Für Probearbeit, Noten und Übdateien wird ein Unkostenbeitrag erhoben.
+        Zusätzlich werden gemäss Anmeldung noch die Kosten für die Übernachtung
+        und Verpflegung am Probewochenende dazu kommen.
       </Text>
       <br />
-      <Text>
-        Der Projektchor Canturicum wurde von mir gegründet, im Mai 2006 die
-        ‚Messe solennelle’ von Charles Gounod aufzuführen. Der Erfolg dieses
-        Projektes – u. a. das Konzert in der ausverkauften Tonhalle – war so
-        durchschlagend, dass 2007 bereits ein zweites Programm mit der ‚Messe in
-        d’ von Johann Nepomuk Hummel und 2009 der ‚Lobgesang’ von Felix
-        Mendelssohn (wieder vor ausverkaufter Tonhalle) aufgeführt wurden. Es
-        folgten 2012 unser Cherubini-Requiem, 2015 ‘Die letzten Dinge’ von Louis
-        Spohr, 2018 Mendelssohns ‘Psalm 42’ und 2019 ‘Die Könige von Israel’ von
-        Ferdinand Ries (Jubiläumskonzert wieder vor ausverkaufter Tonhalle). Es
-        sangen jeweils zwischen 80 und 120 Sänger:innen, aus den Singwochen,
-        Eltern, Ehemalige und Freunde des JSO Crescendo mit.
-      </Text>
-      <br />
-      <Text>
-        Meine Erfahrungen mit der individuell gewählten Probeart waren durchwegs
-        positiv
-        <ul className="list-disc pl-4">
-          <li>
-            im ad hoc-Chor am Montag in Wetzikon oder Donnerstag in Zürich,
-          </li>
-          <li>
-            im Selbststudium mit Beteiligung an den Gesamtproben und den
-            Probetagen.
-          </li>
-        </ul>
-        Daher möchte ich wieder jedem selbst überlassen, wie viele Wochenproben
-        besucht werden. Es ist allerdings sehr wünschenswert, dass vor allem
-        diejenigen, die sich selbstständig vorbereiten, möglichst bei allen
-        Probetagen und am Probewochenende dabei sind (bei Terminproblemen können
-        je nachdem mit Rücksprache andere Abmachungen getroffen werden).
-      </Text>
-      <br />
-      <Text>
-        Diese eher unübliche Art ein Chorwerk einzustudieren, hat sich sehr
-        bewährt und gibt praktisch allen Interessierten die Möglichkeit, bei
-        diesem Projekt mitzumachen. Damit die gemeinsame Probezeit vor allem für
-        das musikalische Ausarbeiten verwendet werden kann, ist es wichtig, dass
-        jede:r Sänger:in den Text zu Beginn der Probenarbeit sehr präsent hat.
-        Ich werde das Notenmaterial möglichst detailliert bezeichnet zur
-        Verfügung stellen, dazu wird es auch Übungs-Aufnahmen geben. Der
-        Unkostenbeitrag am Projekt beträgt pro Sänger:in Fr. 80.-. Dazu kommen
-        bei entsprechender Teilnahme die Kosten für die Übernachtung und
-        Verpflegung am Probewochenende.
-      </Text>
-      <Text>
-        Bitte sendet dieses Schreiben doch an interessierte Chorsänger:innen
-        weiter. Das Werk fragt nach einem grossen Chor!
-        <br />
-        Ich freue mich wieder einmal unglaublich auf diese musikalische Arbeit
-        und bin gespannt, mit wem ich dieses, bestimmt wieder grossartige
-        Erlebnis teilen darf.
-        <br />
-        Mit herzlichen, musikalischen Grüssen
-        <br />
-        Käthi Schmid Lauber
-      </Text>
+      <LinkButton
+        text="Jetzt anmelden"
+        href="https://forms.gle/y8RseozTuqxr6wVVA"
+        type="primary"
+      />
     </ContentContainer>
   );
 }

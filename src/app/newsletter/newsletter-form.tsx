@@ -5,7 +5,6 @@ import {useCallback, useState} from 'react';
 import {useForm} from 'react-hook-form';
 
 import {Button} from '../../components/button';
-import {TextArea} from '../../components/form/text-area';
 import {TextField} from '../../components/form/text-field';
 import {Loader} from '../../components/loader';
 import {Text} from '../../components/text';
@@ -62,7 +61,7 @@ export const NewsletterForm: React.FC = () => {
         className="relative block h-96 w-full items-center rounded-lg p-4 shadow-md lg:w-1/2"
       >
         <legend className="pb-4 font-serif text-2xl opacity-20">
-          NewsLetter
+          Newsletter
         </legend>
         <Loader />
       </form>
@@ -95,7 +94,7 @@ const Form: React.FC<{
       className="w-full rounded-lg p-4 shadow-md lg:w-1/2"
       onSubmit={handleSubmit(onSubmit)}
     >
-      <legend className="pb-4 font-serif text-2xl">Kontaktformular</legend>
+      <legend className="pb-4 font-serif text-2xl">Newsletter</legend>
       <TextField
         {...register('name', {required: 'Bitte gebe einen Namen ein'})}
         label="Name"

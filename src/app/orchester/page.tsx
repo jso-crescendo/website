@@ -66,7 +66,17 @@ export default function Orchester() {
       >
         Ein fester Bestandteil des JSO Crescendo sind die Konzertreisen. Alle
         zwei Jahre konzertieren wir während zwei Wochen an verschiedenen Orten
-        auf der ganzen Welt
+        auf der ganzen Welt.
+        <br />
+        Diesen Sommer fahren wir für zwei Wochen nach Italien und spielen dort
+        gesamthaft sechs Konzerte. Die erste Woche werden wir im heissen Süden
+        von Italien verbringen, die zweite Woche führt uns nach Florenz an das
+        «Festival Orchestre Giovanili». Zwischen Üben und Konzertieren gibt es
+        Zeit für Spiele, zum Jammen, Baden und Tanzen, um neue Freundschaften zu
+        schliessen sowie alte zu besiegeln. Somit stellt die Reise in unser
+        Nachbarland nicht nur eine kulturelle Erfahrung auf internationalen
+        Bühnen dar, sondern schenkt den jungen Leuten gemeinsame, unvergessliche
+        Momente.
       </ImageSection>
       <ImageSection
         image={{src: KaethiImage, alt: 'Portrait Foto von Käthi Schmid Lauber'}}
@@ -123,7 +133,7 @@ export default function Orchester() {
       >
         In den Programmheften unserer Konzerte bieten wir Platz für Ihre
         Werbung. Möchten Sie Ihr Logo oder Ihren Firmennamen in unserem
-        Programmheft abdrucken? Melden Sie sich beim Marketing-Team.
+        Programmheft abdrucken? Melden Sie sich beim uns.
       </ImageSection>
       <ImageSection
         image={{src: GoennerImage, alt: 'Orchestermitglieder beim spielen'}}
@@ -133,8 +143,7 @@ export default function Orchester() {
         <Text>
           Möchten Sie engagierte junge Musiker unterstützen? Wir freuen uns über
           Ihr Interesse an der Jugend- und Kulturförderung und sind dankbar für
-          Ihren Beitrag. Werden Sie Gönner und melden Sie sich bei Salome
-          Kurmann.
+          Ihren Beitrag.
         </Text>
         <section className="pt-4">
           <h5 className="text-xl">Kontodaten</h5>
@@ -143,7 +152,8 @@ export default function Orchester() {
             <br />
             8000 Zürich
             <br />
-            IBAN: CH 16 0900 0000 8005 1631 7<br />
+            IBAN: CH 16 0900 0000 8005 1631 7
+            <br />
             Konto: 80-51631-7
           </Text>
         </section>
