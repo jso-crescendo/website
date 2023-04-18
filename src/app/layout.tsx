@@ -1,16 +1,15 @@
 import './globals.css';
 
-import classNames from 'classnames';
 import {Lora, Montserrat} from 'next/font/google';
-import Script from 'next/script';
-
-import {NavBar} from '@/components/nav-bar';
 
 import {Footer} from '../components/footer';
+import {NavBar} from '@/components/nav-bar';
+import Script from 'next/script';
+import classNames from 'classnames';
 
 export const metadata = {
   title: 'JSO Crescendo',
-  description: 'TODO make a description',
+  description: 'Seit 34 Jahren begeistert das Jugendsinfonieorchester Crescendo unter der Leitung von Käthi Schmid Lauber mit seinen aussergewöhnlichen Konzerten.',
   viewport: 'width=device-width, initial-scale=1.0',
 };
 
