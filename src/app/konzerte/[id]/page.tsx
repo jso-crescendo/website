@@ -1,4 +1,5 @@
 import {CONCERTS, Concert, PAST_CONCERTS} from '../../../data/concerts';
+import {Event, WithContext} from 'schema-dts';
 
 import {ContentContainer} from '../../../components/contentContainer';
 import DateImage from '@/images/backgrounds/harp_sm.webp';
@@ -17,6 +18,39 @@ const getConcert = (id: string): Concert => {
 const isPastConcert = (id: string): boolean => {
   return PAST_CONCERTS.filter((c) => c.id === id).length > 0;
 };
+
+const getJSONLD = ({
+  name,
+  description,
+  image_sm,
+  image_lg,
+  dates,
+}: Concert): WithContext<Event> => ({
+  '@context': 'https://schema.org',
+  '@type': 'MusicEvent',
+  name: `JSO Crescendo ${name}`,
+  description,
+  eventAttendanceMode: 'https://schema.org/OfflineEventAttendanceMode',
+  eventStatus: 'https://schema.org/EventScheduled',
+  startDate: dates?.find((_) => true)?.dateISO,
+  location: dates?.find((_) => true)?.location,
+  eventSchedule: dates?.map((d) => ({
+    '@type': 'Schedule',
+    startDate: d.dateISO,
+  })),
+  image: image_lg ? [image_lg.src, image_sm.src] : [image_sm.src],
+  performer: {
+    '@type': 'PerformingGroup',
+    name: 'JSO Crescendo',
+    url: 'https://jso-crescendo.ch',
+  },
+  organizer: {
+    '@type': 'Organization',
+    name: 'JSO Crescendo',
+    url: 'https://jso-crescendo.ch',
+  },
+  isAccessibleForFree: true,
+});
 
 export async function generateStaticParams() {
   return ALL_CONCERTS.map((c) => ({id: c.id}));
@@ -40,6 +74,10 @@ export default function KonzertPage({params}: {params: {id: string}}) {
       <h1 className="mb-8 text-center font-serif text-3xl leading-normal md:text-4xl lg:text-5xl">
         {concert.name}
       </h1>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{__html: JSON.stringify(getJSONLD(concert))}}
+      />
       {concert.image_lg && (
         <Image
           src={concert.image_lg}
