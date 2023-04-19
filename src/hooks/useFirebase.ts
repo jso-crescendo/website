@@ -20,12 +20,12 @@ export const useFirestore = (
   useEffect(() => {
     setTimeout(() => {
       const app = initializeApp({
-        apiKey: "AIzaSyAH3_d1pgiUrUcqUFXCVVES0jOC9gRcUuA",
-        authDomain: "jso-crescendo.firebaseapp.com",
-        projectId: "jso-crescendo",
-        storageBucket: "jso-crescendo.appspot.com",
-        messagingSenderId: "961926671229",
-        appId: "1:961926671229:web:8afb1fac0557968af67a14"
+        apiKey: 'AIzaSyAH3_d1pgiUrUcqUFXCVVES0jOC9gRcUuA',
+        authDomain: 'jso-crescendo.firebaseapp.com',
+        projectId: 'jso-crescendo',
+        storageBucket: 'jso-crescendo.appspot.com',
+        messagingSenderId: '961926671229',
+        appId: '1:961926671229:web:8afb1fac0557968af67a14',
       });
       initializeAppCheck(app, {
         provider: new ReCaptchaV3Provider(

@@ -9,7 +9,8 @@ import classNames from 'classnames';
 
 export const metadata = {
   title: 'JSO Crescendo',
-  description: 'Seit 34 Jahren begeistert das Jugendsinfonieorchester Crescendo unter der Leitung von Käthi Schmid Lauber mit seinen aussergewöhnlichen Konzerten.',
+  description:
+    'Seit 34 Jahren begeistert das Jugendsinfonieorchester Crescendo unter der Leitung von Käthi Schmid Lauber mit seinen aussergewöhnlichen Konzerten.',
   viewport: 'width=device-width, initial-scale=1.0',
 };
 

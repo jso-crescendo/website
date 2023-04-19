@@ -8,7 +8,8 @@ import {Text} from '../../components/text';
 
 export const metadata = {
   title: 'Projektchor Canturicum - JSO Crescendo',
-  description: 'Erfahre jetzt mehr über unsere Konzerte und die Möglichkeit, Teil des Projektchors zu werden.',
+  description:
+    'Erfahre jetzt mehr über unsere Konzerte und die Möglichkeit, Teil des Projektchors zu werden.',
 };
 
 export default function Orchester() {

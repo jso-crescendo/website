@@ -1,15 +1,13 @@
-import Image from 'next/image';
-
-import {ImageSection} from '@/components/image-section';
-import CanturicumImage from '@/images/2019_canturicum_md.webp';
 import AboutUsImage from '@/images/2022_fruehling_blech_sm.webp';
 import BgImage from '@/images/2022_waedenswil_2_xl.webp';
-import FlyerImage from '@/images/flyer/flyer_fruehlingskonzert_2023.webp';
-import KonzerteImage from '@/images/people/kaethi_2_sm.webp';
-
-import {ContentContainer} from '../components/contentContainer';
 import {CONCERTS} from '../data/concerts';
+import CanturicumImage from '@/images/2019_canturicum_md.webp';
 import {ChevronDown} from '../icons/chevron-down';
+import {ContentContainer} from '../components/contentContainer';
+import FlyerImage from '@/images/flyer/2023_hgn250_lg.webp';
+import Image from 'next/image';
+import {ImageSection} from '@/components/image-section';
+import KonzerteImage from '@/images/people/kaethi_2_sm.webp';
 
 export default function Home() {
   return (
@@ -46,27 +44,6 @@ export default function Home() {
 
       <ContentContainer id="content">
         <ImageSection
-          title="Frühlings&shy;konzerte"
-          image={{
-            src: FlyerImage,
-            alt: 'Flyer FrühlingsKonzerte',
-            priority: true,
-          }}
-          link={{
-            href: '/konzerte/fruehlingskonzerte-23',
-            text: 'Weitere Informationen',
-          }}
-        >
-          Das Jugendsinfonieorchester Crescendo präsentiert ein
-          abwechslungsreiches Konzertprogramm in der Pauluskirche Zürich am 15.
-          April und in der Ref. Kirche Stäfa am 16. April. Das Programm umfasst
-          Werke von Vincenzo Bellini, Antonín Dvořák, N. Vonmoss, F. Mendelssohn
-          und F. Chopin, sowie einen Solopart von Jan Zwahlen am Klavier. Das
-          Konzert wird von Käthi Schmid Lauber dirigiert und zeichnet sich durch
-          die Gesangsdarbietungen der Orchestermusiker:innen aus, darunter auch
-          rätoromanische Abendlieder und ein wehmütiges Liebeslied.
-        </ImageSection>
-        <ImageSection
           title="Projektchor Canturicum"
           image={{
             src: CanturicumImage,
@@ -79,12 +56,31 @@ export default function Home() {
         >
           Seit 2006 führt das JSO Crescendo regelmässig Chorwerke mit dem
           Projektchor Canturicum auf. Dieser Chor wurde von Käthi Schmid Lauber
-          eigens dazu gegründet, im Mai 2006 die &quot;Messe solennelle&quot; von Ch.
-          Gounod aufzuführen. Der Erfolg dieses Projektes, u.a. das Konzert in
-          der ausverkauften Tonhalle, war so durchschlagend, dass 2007, 2009,
-          2012, 2015, 2018 und 2019 weitere Projekte realisiert wurden. Es
-          singen jeweils zwischen 80 und 120 Sänger:innen, aus den Singwochen,
-          Eltern, Ehemalige und Freunde vom JSO Crescendo mit.
+          eigens dazu gegründet, im Mai 2006 die &quot;Messe solennelle&quot;
+          von Ch. Gounod aufzuführen. Der Erfolg dieses Projektes, u.a. das
+          Konzert in der ausverkauften Tonhalle, war so durchschlagend, dass
+          2007, 2009, 2012, 2015, 2018 und 2019 weitere Projekte realisiert
+          wurden. Es singen jeweils zwischen 80 und 120 Sänger:innen, aus den
+          Singwochen, Eltern, Ehemalige und Freunde vom JSO Crescendo mit.
+        </ImageSection>
+        <ImageSection
+          title="Fest&shy;konzert"
+          image={{
+            src: FlyerImage,
+            alt: 'Flyer Festkonzerte 250 Jahre Hans Georg Nägeli',
+          }}
+          link={{
+            href: 'https://www.hgn250.ch/',
+            text: 'Weitere Informationen',
+          }}
+        >
+          Am 26. Mai 2023 jährt sich der 250. Geburtstag des Verlegers,
+          Komponisten, Chorleiters und Musikpädagogen Hans Georg Nägeli. Nägeli
+          ist nicht nur der bedeutendste Kulturschaffende aus Wetzikon im
+          Zürcher Oberland, sondern auch eine ebenso vielseitige wie schillernde
+          Persönlichkeit, welche das europäische Musikwesen des frühen 19.
+          Jahrhundert prägt. Zur Aufführung gelangen Chorlieder, die
+          exemplarisch für Nägelis Schaffen und sein reiches Erbe stehen.
         </ImageSection>
         <ImageSection
           title="Über uns"
