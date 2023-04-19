@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://jso-crescendo.ch/sitemap.xml
