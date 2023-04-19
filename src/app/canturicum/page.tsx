@@ -7,7 +7,7 @@ import {LinkButton} from '../../components/link-button';
 import {Text} from '../../components/text';
 
 export const metadata = {
-  title: 'Projektchor Canturicum - JSO Crescendo',
+  title: 'Projektchor Canturicum',
   description:
     'Erfahre jetzt mehr über unsere Konzerte und die Möglichkeit, Teil des Projektchors zu werden.',
 };

@@ -9,6 +9,11 @@ import Image from 'next/image';
 import {ImageSection} from '@/components/image-section';
 import KonzerteImage from '@/images/people/kaethi_2_sm.webp';
 
+export const metadata = {
+  description:
+    'Seit 34 Jahren begeistert das Jugendsinfonieorchester Crescendo unter der Leitung von Käthi Schmid Lauber mit seinen aussergewöhnlichen Konzerten.',
+};
+
 export default function Home() {
   return (
     <>

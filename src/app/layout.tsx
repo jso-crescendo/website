@@ -8,9 +8,7 @@ import Script from 'next/script';
 import classNames from 'classnames';
 
 export const metadata = {
-  title: 'JSO Crescendo',
-  description:
-    'Seit 34 Jahren begeistert das Jugendsinfonieorchester Crescendo unter der Leitung von Käthi Schmid Lauber mit seinen aussergewöhnlichen Konzerten.',
+  title: {template: '%s | JSO Crescendo', default: 'JSO Crescendo'},
   viewport: 'width=device-width, initial-scale=1.0',
 };
 

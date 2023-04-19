@@ -1,4 +1,4 @@
-import {CONCERTS, PAST_CONCERTS} from '../../../data/concerts';
+import {CONCERTS, Concert, PAST_CONCERTS} from '../../../data/concerts';
 
 import {ContentContainer} from '../../../components/contentContainer';
 import DateImage from '@/images/backgrounds/harp_sm.webp';
@@ -8,13 +8,33 @@ import ProgrammImage from '@/images/backgrounds/scores_2_sm.webp';
 
 const ALL_CONCERTS = CONCERTS.concat(PAST_CONCERTS);
 
+const getConcert = (id: string): Concert => {
+  const concert = ALL_CONCERTS.filter((c) => c.id === id)[0];
+
+  return concert;
+};
+
+const isPastConcert = (id: string): boolean => {
+  return PAST_CONCERTS.filter((c) => c.id === id).length > 0;
+};
+
 export async function generateStaticParams() {
   return ALL_CONCERTS.map((c) => ({id: c.id}));
 }
 
+export async function generateMetadata({params}: {params: {id: string}}) {
+  const {name, description} = getConcert(params.id);
+  const isPast = isPastConcert(params.id);
+  return {
+    title: name,
+    description,
+    robots: isPast ? 'noindex' : undefined,
+  };
+}
+
 export default function KonzertPage({params}: {params: {id: string}}) {
   const {id} = params;
-  const concert = ALL_CONCERTS.filter((c) => c.id === id)[0];
+  const concert = getConcert(id);
   return (
     <ContentContainer>
       <h1 className="mb-8 text-center font-serif text-3xl leading-normal md:text-4xl lg:text-5xl">

@@ -1,9 +1,11 @@
-import Image from 'next/image';
-
 import {CONCERTS} from '@/data/concerts';
-
 import {ContentContainer} from '../../components/contentContainer';
+import Image from 'next/image';
 import {LinkButton} from '../../components/link-button';
+
+export const metadata = {
+  title: 'Konzerte',
+};
 
 export default function Orchester() {
   return (
