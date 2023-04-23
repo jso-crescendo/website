@@ -1,13 +1,15 @@
+import Image from 'next/image';
+
+import {ImageSection} from '@/components/image-section';
+import CanturicumImage from '@/images/2019_canturicum_md.webp';
 import AboutUsImage from '@/images/2022_fruehling_blech_sm.webp';
 import BgImage from '@/images/2022_waedenswil_2_xl.webp';
-import {CONCERTS} from '../data/concerts';
-import CanturicumImage from '@/images/2019_canturicum_md.webp';
-import {ChevronDown} from '../icons/chevron-down';
-import {ContentContainer} from '../components/contentContainer';
 import FlyerImage from '@/images/flyer/2023_hgn250_lg.webp';
-import Image from 'next/image';
-import {ImageSection} from '@/components/image-section';
 import KonzerteImage from '@/images/people/kaethi_2_sm.webp';
+
+import {ContentContainer} from '../components/contentContainer';
+import {CONCERTS} from '../data/concerts';
+import {ChevronDown} from '../icons/chevron-down';
 
 export const metadata = {
   description:
@@ -39,7 +41,7 @@ export default function Home() {
         </h1>
 
         <a
-          className="absolute left-1/2 top-3/4 h-24 w-24 rounded-full border-2 border-double text-background hover:text-neutral-200"
+          className="absolute left-1/2 top-3/4 h-24 w-24 rounded-full border-2 text-background hover:text-neutral-200"
           style={{transform: 'translate(-50%, -50%)'}}
           href="#content"
         >

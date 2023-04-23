@@ -1,7 +1,10 @@
-import {ContactForm} from './contact-form';
-import {ContentContainer} from '../../components/contentContainer';
 import {ImageSection} from '@/components/image-section';
 import VorstandImage from '@/images/people/vorstand_sm.webp';
+
+import {ContentContainer} from '../../components/contentContainer';
+import {Text} from '../../components/text';
+import {Email} from '../../icons/email';
+import {ContactForm} from './contact-form';
 
 const VORSTAND = [
   {
@@ -60,10 +63,26 @@ export default function Orchester() {
           priority: true,
         }}
         title="Vorstand"
+        textOnly={false}
       >
-        Für jegliche Art von Anliegen stehen Ihnen der Vorstand gerne per Mail
-        zur Verfügung. Bei spezifischen Anliegen können Sie sich auch gerne
-        direkt an einzelne Vorstandsmitglieder wenden.
+        <Text>
+          Für jegliche Art von Anliegen stehen Ihnen der Vorstand gerne per Mail
+          zur Verfügung. Bei spezifischen Anliegen können Sie sich auch gerne
+          direkt an einzelne Vorstandsmitglieder wenden.
+        </Text>
+        <ul className="pt-3">
+          {VORSTAND.map((p) => (
+            <li key={p.funktion} className="pb-2">
+              <div>
+                <span className="text-lg">{p.name}</span> -{' '}
+                <span className="text-sm">{p.funktion}</span>
+              </div>
+              <a className="pointer-cursor" href={`mailto:${p.email}`}>
+                {p.email}
+              </a>
+            </li>
+          ))}
+        </ul>
       </ImageSection>
       <section className="flex flex-row justify-center">
         <ContactForm />
