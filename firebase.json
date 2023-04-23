@@ -1,7 +1,11 @@
 {
   "hosting": {
     "public": "out",
-    "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
     "cleanUrls": true,
     "headers": [
       {
@@ -38,6 +42,10 @@
           {
             "key": "Permissions-Policy",
             "value": "accelerometer=(), ambient-light-sensor=(), autoplay=(), battery=(), camera=(), cross-origin-isolated=(), display-capture=(), document-domain=(), encrypted-media=(), execution-while-not-rendered=(), execution-while-out-of-viewport=(), fullscreen=(), geolocation=(), gyroscope=(), keyboard-map=(), magnetometer=(), microphone=(), midi=(), navigation-override=(), payment=(), picture-in-picture=(), publickey-credentials-get=(), screen-wake-lock=(), sync-xhr=(), usb=(), web-share=(), xr-spatial-tracking=()"
+          },
+          {
+            "key": "Content-Security-Policy-Report-Only",
+            "value": "default-src 'none'; form-action 'none'; frame-ancestors 'none'; report-uri https://7b4e0a451e15319a60f0c0a6009f3932.report-uri.com/r/d/csp/wizard"
           }
         ]
       },
