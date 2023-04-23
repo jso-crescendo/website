@@ -1,19 +1,23 @@
 import Image, {StaticImageData} from 'next/image';
 
+import {toKebabCase} from '../utils/toKebabCase';
 import {LinkButton} from './link-button';
 import {Text} from './text';
-import {toKebabCase} from '../utils/toKebabCase';
 
 interface ImageSectionProps {
   title: string;
   subtitle?: string;
-  image: {
+  textOnly?: boolean;
+  children?: React.ReactNode;
+  image?: {
     src: StaticImageData;
     alt: string;
     priority?: boolean;
   };
-  textOnly?: boolean;
-  children?: React.ReactNode;
+  video?: {
+    type: 'youtube';
+    videoId: string;
+  };
   link?: {
     text: string;
     href: string;
@@ -21,8 +25,9 @@ interface ImageSectionProps {
 }
 
 export const ImageSection: React.FC<ImageSectionProps> = ({
-  image,
   title,
+  image,
+  video,
   subtitle,
   textOnly = true,
   children,
@@ -32,13 +37,26 @@ export const ImageSection: React.FC<ImageSectionProps> = ({
     id={toKebabCase(title)}
     className="flex flex-col justify-between gap-8 pb-8 pt-4 md:flex-row md:even:flex-row-reverse"
   >
-    <Image
-      src={image.src}
-      alt={image.alt}
-      priority={image.priority}
-      className="w-full rounded-lg object-contain md:w-5/12"
-      placeholder="blur"
-    />
+    {image ? (
+      <Image
+        src={image.src}
+        alt={image.alt}
+        priority={image.priority}
+        className="w-full rounded-lg object-contain md:w-5/12"
+        placeholder="blur"
+      />
+    ) : (
+      video && (
+        <iframe
+          id="ytplayer"
+          className="aspect-video w-full rounded-lg object-contain md:w-5/12"
+          src={`https://www.youtube-nocookie.com/embed/${video.videoId}?hl=de-ch&modestbranding=1`}
+          title="YouTube video player"
+          allowFullScreen
+          referrerPolicy="no-referrer"
+        />
+      )
+    )}
     <div className="my-auto w-full ">
       <hgroup>
         <h2 className="font-serif text-5xl">{title}</h2>
