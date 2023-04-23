@@ -77,7 +77,7 @@ export default function Orchester() {
                 <span className="text-lg">{p.name}</span> -{' '}
                 <span className="text-sm">{p.funktion}</span>
               </div>
-              <a className="pointer-cursor" href={`mailto:${p.email}`}>
+              <a className="cursor-pointer" href={`mailto:${p.email}`}>
                 {p.email}
               </a>
             </li>
