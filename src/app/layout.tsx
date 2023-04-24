@@ -1,12 +1,11 @@
 import './globals.css';
 
-import classNames from 'classnames';
 import {Lora, Montserrat} from 'next/font/google';
-import Script from 'next/script';
-
-import {NavBar} from '@/components/nav-bar';
 
 import {Footer} from '../components/footer';
+import {NavBar} from '@/components/nav-bar';
+import Script from 'next/script';
+import classNames from 'classnames';
 
 export const metadata = {
   title: {template: '%s | JSO Crescendo', default: 'JSO Crescendo'},
@@ -32,8 +31,8 @@ export default function RootLayout({children}: {children: React.ReactNode}) {
       lang="de-CH"
       className={classNames(loraFont.variable, montserratFont.variable)}
     >
-      <Script
-        strategy="afterInteractive"
+      <script
+        async={true}
         data-website-id="07350fa3-6016-4694-a802-410a5a7aab98"
         src="https://analytics.jso-crescendo.ch/script.js"
       />
