@@ -3,7 +3,6 @@ import VorstandImage from '@/images/people/vorstand_sm.webp';
 
 import {ContentContainer} from '../../components/contentContainer';
 import {Text} from '../../components/text';
-import {Email} from '../../icons/email';
 import {ContactForm} from './contact-form';
 
 const VORSTAND = [
@@ -51,6 +50,8 @@ const VORSTAND = [
 
 export const metadata = {
   title: 'Kontakt',
+  description:
+    'Kontaktieren Sie unseren Vorstand per Kontaktformular oder E-Mail. Schreiben Sie uns - wir freuen uns auf Ihre Nachricht!',
 };
 
 export default function Orchester() {
