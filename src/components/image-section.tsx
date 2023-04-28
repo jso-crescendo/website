@@ -1,3 +1,4 @@
+import classNames from 'classnames';
 import Image, {StaticImageData} from 'next/image';
 
 import {toKebabCase} from '../utils/toKebabCase';
@@ -22,6 +23,7 @@ interface ImageSectionProps {
     text: string;
     href: string;
   };
+  noReverse?: boolean;
 }
 
 export const ImageSection: React.FC<ImageSectionProps> = ({
@@ -32,10 +34,14 @@ export const ImageSection: React.FC<ImageSectionProps> = ({
   textOnly = true,
   children,
   link,
+  noReverse,
 }) => (
   <section
     id={toKebabCase(title)}
-    className="flex flex-col justify-between gap-8 pb-8 pt-4 md:flex-row md:even:flex-row-reverse"
+    className={classNames(
+      'flex flex-col justify-between gap-8 pb-8 pt-4 md:flex-row',
+      {'md:even:flex-row-reverse': !noReverse},
+    )}
   >
     {image ? (
       <Image
@@ -57,7 +63,7 @@ export const ImageSection: React.FC<ImageSectionProps> = ({
         />
       )
     )}
-    <div className="my-auto w-full ">
+    <div className="my-auto w-full">
       <hgroup>
         <h2 className="font-serif text-5xl">{title}</h2>
         {subtitle && <p className="pb-4 text-lg">{subtitle}</p>}

@@ -56,6 +56,16 @@ export const metadata = {
 export default function Orchester() {
   return (
     <ContentContainer>
+      <section className="flex flex-col items-center pb-8">
+        <h1 className="font-serif text-5xl">Kontak&shy;tie&shy;ren sie uns</h1>
+        <Text className="lg:w-1/2 lg:text-center">
+          Unser Vorstand steht Ihnen gerne zur Verfügung und beantwortet Ihre
+          Anfragen per Kontaktformular oder E-Mail. Bei spezifischen Fragen
+          können Sie sich auch direkt an einzelne Vorstandsmitglieder wenden.
+          Wir freuen uns auf Ihre Nachricht!
+        </Text>
+      </section>
+
       <ImageSection
         image={{
           src: VorstandImage,
@@ -64,21 +74,22 @@ export default function Orchester() {
         }}
         title="Vorstand"
         textOnly={false}
+        noReverse
       >
-        <Text>
-          Für jegliche Art von Anliegen stehen Ihnen der Vorstand gerne per Mail
-          zur Verfügung. Bei spezifischen Anliegen können Sie sich auch gerne
-          direkt an einzelne Vorstandsmitglieder wenden.
-        </Text>
         <ul className="pt-3">
           {VORSTAND.map((p) => (
             <li key={p.funktion} className="pb-2">
-              <div>
-                <span className="text-lg">{p.name}</span> -{' '}
-                <span className="text-sm">{p.funktion}</span>
-              </div>
-              <a className="cursor-pointer" href={`mailto:${p.email}`}>
-                {p.email}
+              <a
+                className="cursor-pointer"
+                href={`mailto:${p.email}`}
+                data-umami-event="Kontakt Email"
+                data-umami-event-email={p.email}
+              >
+                <div>
+                  <span className="text-base font-medium">{p.name}</span> -{' '}
+                  <span className="text-sm">{p.funktion}</span>
+                </div>
+                <span className="text-sm">{p.email}</span>
               </a>
             </li>
           ))}
