@@ -33,11 +33,11 @@ export const ContactForm: React.FC = () => {
       },
       body: JSON.stringify({...data, token}),
     })
+      .then(() => {
+        setFormState('submitted');
+      })
       .catch(() => {
         setFormState('error');
-      })
-      .finally(() => {
-        setFormState('submitted');
       });
   }, []);
 
