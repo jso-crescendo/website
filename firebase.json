@@ -71,6 +71,15 @@
             "value": "inline"
           }
         ]
+      },
+      {
+        "source": "/api/**",
+        "headers": [
+          {
+            "key": "Cache-Control",
+            "value": "no-store, must-revalidate"
+          }
+        ]
       }
     ],
     "redirects": [
