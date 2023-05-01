@@ -102,7 +102,7 @@
     "rewrites": [
       {
         "source": "/api/contact/submit",
-        "function": "helloWorld",
+        "function": "contactRequest_submit",
         "region": "europe-west1"
       }
     ]
