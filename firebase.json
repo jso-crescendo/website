@@ -1,11 +1,7 @@
 {
   "hosting": {
     "public": "out",
-    "ignore": [
-      "firebase.json",
-      "**/.*",
-      "**/node_modules/**"
-    ],
+    "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
     "cleanUrls": true,
     "headers": [
       {
@@ -103,6 +99,11 @@
       {
         "source": "/api/contact/submit",
         "function": "contactRequest_submit",
+        "region": "europe-west1"
+      },
+      {
+        "source": "/api/newsletter/signup",
+        "function": "newsletter_signup",
         "region": "europe-west1"
       }
     ]
