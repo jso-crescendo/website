@@ -17,7 +17,7 @@
     "@types/react": "18.0.34",
     "@types/react-dom": "18.0.11",
     "classnames": "^2.3.2",
-    "eslint-config-next": "13.3.0",
+    "eslint-config-next": "13.3.3",
     "firebase": "^9.19.1",
     "next": "13.3.1",
     "react": "18.2.0",
