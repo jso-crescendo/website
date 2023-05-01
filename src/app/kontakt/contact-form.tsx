@@ -3,12 +3,11 @@
 import {useCallback, useState} from 'react';
 import {useForm} from 'react-hook-form';
 
-import {Turnstile} from '@marsidev/react-turnstile';
-
 import {Button} from '../../components/button';
 import {TextArea} from '../../components/form/text-area';
 import {TextField} from '../../components/form/text-field';
 import {Text} from '../../components/text';
+import {TurnstileWidget} from '../../components/turnstile-widget';
 import {Error as ErrorIcon} from '../../icons/error';
 import {Info} from '../../icons/info';
 
@@ -95,11 +94,9 @@ const Form: React.FC<{
         errorMessage={errors.message?.message}
       />
       <div className="flex justify-center">
-        <Turnstile
+        <TurnstileWidget
           id="contact-form"
-          siteKey="1x00000000000000000000AA"
-          options={{theme: 'light', language: 'de'}}
-          onSuccess={setTurnstileToken}
+          onTokenReceived={setTurnstileToken}
         />
       </div>
       <Button
