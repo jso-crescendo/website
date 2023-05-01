@@ -105,6 +105,11 @@
         "source": "/api/newsletter/signup",
         "function": "newsletter_signup",
         "region": "europe-west1"
+      },
+      {
+        "source": "/api/newsletter/confirm",
+        "function": "newsletter_confirm",
+        "region": "europe-west1"
       }
     ]
   }
