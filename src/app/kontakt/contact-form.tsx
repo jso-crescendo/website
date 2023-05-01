@@ -1,15 +1,14 @@
 'use client';
 
-import {addDoc, collection, serverTimestamp} from 'firebase/firestore/lite';
 import {useCallback, useState} from 'react';
 import {useForm} from 'react-hook-form';
+
+import {Turnstile} from '@marsidev/react-turnstile';
 
 import {Button} from '../../components/button';
 import {TextArea} from '../../components/form/text-area';
 import {TextField} from '../../components/form/text-field';
-import {Loader} from '../../components/loader';
 import {Text} from '../../components/text';
-import {useFirestore} from '../../hooks/useFirebase';
 import {Error as ErrorIcon} from '../../icons/error';
 import {Info} from '../../icons/info';
 
@@ -21,55 +20,27 @@ interface FormData {
 const EMAIL_PATTERN = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
 export const ContactForm: React.FC = () => {
-  const {loaded, firestore} = useFirestore(250);
   const [formState, setFormState] = useState<
     'ready' | 'submitting' | 'submitted' | 'error'
   >('ready');
 
-  const storeContactRequest = useCallback(
-    async (name: string, email: string | undefined, message: string) => {
-      if (!loaded) {
-        return;
-      }
-      return addDoc(collection(firestore, 'contactRequests'), {
-        name,
-        email,
-        message,
-        createdAt: serverTimestamp(),
+  const handleSubmit = useCallback((data: FormData, token: string) => {
+    setFormState('submitting');
+
+    return fetch('/api/contact/submit', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({...data, token}),
+    })
+      .catch(() => {
+        setFormState('error');
+      })
+      .finally(() => {
+        setFormState('submitted');
       });
-    },
-    [firestore, loaded],
-  );
-
-  const handleSubmit = useCallback(
-    ({name, email, message}: FormData) => {
-      return storeContactRequest(name, email, message)
-        .then(() => {
-          setFormState('submitting');
-        })
-        .catch(() => {
-          setFormState('error');
-        })
-        .finally(() => {
-          setFormState('submitted');
-        });
-    },
-    [storeContactRequest],
-  );
-
-  if (!loaded) {
-    return (
-      <form
-        name="kontaktformular"
-        className="relative block h-96 w-full items-center rounded-lg p-4 shadow-md lg:w-1/2"
-      >
-        <legend className="pb-4 font-serif text-2xl opacity-20">
-          Kontaktformular
-        </legend>
-        <Loader />
-      </form>
-    );
-  }
+  }, []);
 
   switch (formState) {
     case 'ready':
@@ -83,19 +54,20 @@ export const ContactForm: React.FC = () => {
 };
 
 const Form: React.FC<{
-  onSubmit: (data: FormData) => void;
+  onSubmit: (data: FormData, token: string) => void;
 }> = ({onSubmit}) => {
   const {
     register,
     handleSubmit,
     formState: {isValid, errors},
   } = useForm<FormData>({mode: 'onChange', reValidateMode: 'onChange'});
+  const [turnstileToken, setTurnstileToken] = useState('');
 
   return (
     <form
       name="kontaktformular"
       className="w-full rounded-lg p-4 shadow-md lg:w-1/2"
-      onSubmit={handleSubmit(onSubmit)}
+      onSubmit={handleSubmit((data) => onSubmit(data, turnstileToken))}
     >
       <legend className="pb-4 font-serif text-2xl">Kontaktformular</legend>
       <TextField
@@ -122,16 +94,25 @@ const Form: React.FC<{
         required
         errorMessage={errors.message?.message}
       />
+      <div className="flex justify-center">
+        <Turnstile
+          id="contact-form"
+          siteKey="1x00000000000000000000AA"
+          options={{theme: 'light', language: 'de'}}
+          onSuccess={setTurnstileToken}
+        />
+      </div>
       <Button
         type="submit"
         text="Absenden"
         variant="primary"
         className="float-right"
-        disabled={!isValid}
+        disabled={!isValid || !turnstileToken}
       />
     </form>
   );
 };
+
 const SuccessCard: React.FC = () => (
   <div className="flex w-full flex-row items-center gap-4 rounded-lg bg-success-darker p-8 text-background shadow-md lg:w-1/2">
     <Info className="m-2 h-14" />
@@ -141,6 +122,7 @@ const SuccessCard: React.FC = () => (
     </div>
   </div>
 );
+
 const ErrorCard: React.FC = () => (
   <div className="flex w-full flex-row items-center gap-4 rounded-lg bg-error-lighter p-8 text-background shadow-md lg:w-1/2">
     <ErrorIcon className="m-2 h-14" />
