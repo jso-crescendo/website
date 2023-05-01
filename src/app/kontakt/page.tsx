@@ -54,7 +54,7 @@ export const metadata = {
     'Kontaktieren Sie unseren Vorstand per Kontaktformular oder E-Mail. Schreiben Sie uns - wir freuen uns auf Ihre Nachricht!',
 };
 
-export default function Orchester() {
+export default function Kontakt() {
   return (
     <ContentContainer>
       <section className="flex flex-col items-center pb-8">
