@@ -1,7 +1,7 @@
 import {Turnstile} from '@marsidev/react-turnstile';
 
 const DEV_KEY = '1x00000000000000000000AA';
-const PROD_KEY = '1x00000000000000000000AA';
+const PROD_KEY = '0x4AAAAAAAEVVa8_Pjy9pzbM';
 
 export const TurnstileWidget: React.FC<{
   id: string;
