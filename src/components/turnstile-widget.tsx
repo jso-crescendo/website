@@ -10,7 +10,7 @@ export const TurnstileWidget: React.FC<{
   <Turnstile
     id={id}
     siteKey={process.env.NODE_ENV == 'production' ? PROD_KEY : DEV_KEY}
-    options={{theme: 'light', language: 'de'}}
+    options={{theme: 'light', language: 'de', action: id}}
     onSuccess={onTokenReceived}
   />
 );
