@@ -1,5 +1,6 @@
 'use client';
 
+import classNames from 'classnames';
 import {useCallback, useState} from 'react';
 import {useForm} from 'react-hook-form';
 
@@ -65,7 +66,9 @@ const Form: React.FC<{
   return (
     <form
       name="kontaktformular"
-      className="w-full rounded-lg p-4 shadow-md lg:w-1/2"
+      className={classNames('w-full rounded-lg p-4 shadow-md lg:w-1/2', {
+        'cursor-wait': isSubmitting,
+      })}
       onSubmit={handleSubmit((data) => onSubmit(data, turnstileToken))}
     >
       <legend className="pb-4 font-serif text-2xl">Kontaktformular</legend>
@@ -74,6 +77,7 @@ const Form: React.FC<{
         label="Name"
         required
         errorMessage={errors.name?.message}
+        disabled={isSubmitting}
       />
       <TextField
         {...register('email', {
@@ -85,6 +89,7 @@ const Form: React.FC<{
         label="Email"
         type="email"
         errorMessage={errors.email?.message}
+        disabled={isSubmitting}
       />
       <TextArea
         {...register('message', {required: 'Bitte gebe eine Nachricht ein'})}
@@ -92,8 +97,9 @@ const Form: React.FC<{
         rows={5}
         required
         errorMessage={errors.message?.message}
+        disabled={isSubmitting}
       />
-      <div className="flex justify-center">
+      <div className="my-2 flex justify-center">
         <TurnstileWidget
           id="contact-form"
           onTokenReceived={setTurnstileToken}
@@ -104,7 +110,8 @@ const Form: React.FC<{
         text={isSubmitting ? 'Wird gesendet...' : 'Absenden'}
         variant="primary"
         className="float-right"
-        disabled={!isValid || !turnstileToken || isSubmitting}
+        loading={isSubmitting}
+        disabled={!isValid || !turnstileToken}
       />
     </form>
   );
