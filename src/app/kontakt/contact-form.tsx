@@ -43,8 +43,8 @@ export const ContactForm: React.FC = () => {
 
   switch (formState) {
     case 'ready':
-      return <Form onSubmit={handleSubmit} />;
     case 'submitting':
+      return <Form onSubmit={handleSubmit} />;
     case 'submitted':
       return <SuccessCard />;
     case 'error':
@@ -58,7 +58,7 @@ const Form: React.FC<{
   const {
     register,
     handleSubmit,
-    formState: {isValid, errors},
+    formState: {isValid, errors, isSubmitting},
   } = useForm<FormData>({mode: 'onChange', reValidateMode: 'onChange'});
   const [turnstileToken, setTurnstileToken] = useState('');
 
@@ -101,10 +101,10 @@ const Form: React.FC<{
       </div>
       <Button
         type="submit"
-        text="Absenden"
+        text={isSubmitting ? 'Wird gesendet...' : 'Absenden'}
         variant="primary"
         className="float-right"
-        disabled={!isValid || !turnstileToken}
+        disabled={!isValid || !turnstileToken || isSubmitting}
       />
     </form>
   );
