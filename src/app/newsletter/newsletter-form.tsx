@@ -32,8 +32,8 @@ export const NewsletterForm: React.FC = () => {
       },
       body: JSON.stringify({name, email, token}),
     })
-      .then(() => {
-        setFormState('submitted');
+      .then((res: any) => {
+        setFormState(res.ok ? 'submitted' : 'error');
       })
       .catch(() => {
         setFormState('error');

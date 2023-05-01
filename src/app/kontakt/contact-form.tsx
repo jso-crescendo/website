@@ -34,8 +34,8 @@ export const ContactForm: React.FC = () => {
       },
       body: JSON.stringify({...data, token}),
     })
-      .then(() => {
-        setFormState('submitted');
+      .then((res) => {
+        setFormState(res.ok ? 'submitted':"error");
       })
       .catch(() => {
         setFormState('error');
