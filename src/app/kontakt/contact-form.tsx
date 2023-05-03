@@ -1,16 +1,17 @@
 'use client';
 
-import classNames from 'classnames';
 import {useCallback, useState} from 'react';
-import {useForm} from 'react-hook-form';
 
 import {Button} from '../../components/button';
-import {TextArea} from '../../components/form/text-area';
-import {TextField} from '../../components/form/text-field';
-import {Text} from '../../components/text';
-import {TurnstileWidget} from '../../components/turnstile-widget';
 import {Error as ErrorIcon} from '../../icons/error';
 import {Info} from '../../icons/info';
+import {StatusCard} from '../../components/status-card';
+import {Text} from '../../components/text';
+import {TextArea} from '../../components/form/text-area';
+import {TextField} from '../../components/form/text-field';
+import {TurnstileWidget} from '../../components/turnstile-widget';
+import classNames from 'classnames';
+import {useForm} from 'react-hook-form';
 
 interface FormData {
   name: string;
@@ -35,7 +36,7 @@ export const ContactForm: React.FC = () => {
       body: JSON.stringify({...data, token}),
     })
       .then((res) => {
-        setFormState(res.ok ? 'submitted':"error");
+        setFormState(res.ok ? 'submitted' : 'error');
       })
       .catch(() => {
         setFormState('error');
@@ -47,9 +48,26 @@ export const ContactForm: React.FC = () => {
     case 'submitting':
       return <Form onSubmit={handleSubmit} />;
     case 'submitted':
-      return <SuccessCard />;
+      return (
+        <StatusCard
+          intent="success"
+          title="Erfolg"
+          message="Vielen Dank für deine Nachricht."
+        />
+      );
     case 'error':
-      return <ErrorCard />;
+      return (
+        <StatusCard
+          intent="error"
+          title="Es ist ein Fehler aufgetreten"
+          message={
+            <>
+              Bitte kontaktiere uns per{' '}
+              <a href="mailto:kontakt@jso-crescendo.ch">Mail</a>
+            </>
+          }
+        />
+      );
   }
 };
 
@@ -116,28 +134,3 @@ const Form: React.FC<{
     </form>
   );
 };
-
-const SuccessCard: React.FC = () => (
-  <div className="flex w-full flex-row items-center gap-4 rounded-lg bg-success-darker p-8 text-background shadow-md lg:w-1/2">
-    <Info className="m-2 h-14" />
-    <div>
-      <h3 className="pb-2 font-serif text-2xl">Erfolg</h3>
-      <Text>Vielen Dank für deine Nachricht</Text>
-    </div>
-  </div>
-);
-
-const ErrorCard: React.FC = () => (
-  <div className="flex w-full flex-row items-center gap-4 rounded-lg bg-error-lighter p-8 text-background shadow-md lg:w-1/2">
-    <ErrorIcon className="m-2 h-14" />
-    <div>
-      <h3 className="pb-2 font-serif text-2xl">
-        Es ist ein Fehler aufgetreten
-      </h3>
-      <Text>
-        Bitte kontaktiere uns per{' '}
-        <a href="mailto:kontakt@jso-crescendo.ch">Mail</a>
-      </Text>
-    </div>
-  </div>
-);
