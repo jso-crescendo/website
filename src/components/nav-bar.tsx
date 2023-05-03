@@ -44,9 +44,6 @@ export const NavBar: React.FC = () => {
         })}
       >
         <ul className="pt-4 text-base md:flex md:justify-between md:pt-0">
-          <li onClick={toggleMenu}>
-            <CTAavLink href="/canturicum" text="Canturicum" />
-          </li>
           {[
             ['Orchester', '/orchester'],
             ['Konzerte', '/konzerte'],
@@ -56,6 +53,9 @@ export const NavBar: React.FC = () => {
               <NavLink href={href} text={name} />
             </li>
           ))}
+          <li onClick={toggleMenu}>
+            <CTAavLink href="/canturicum" text="Projektchor Canturicum" />
+          </li>
         </ul>
       </div>
     </nav>
