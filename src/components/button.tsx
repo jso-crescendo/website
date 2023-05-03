@@ -1,8 +1,4 @@
 import classNames from 'classnames';
-import Link from 'next/link';
-
-import {ArrowRight} from '../icons/arrow-right';
-import {Loader} from './loader';
 
 interface ButtonProps {
   variant: 'primary' | 'secondary';
