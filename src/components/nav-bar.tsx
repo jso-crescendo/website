@@ -20,6 +20,7 @@ const CTAavLink: React.FC<{href: string; text: string}> = ({href, text}) => (
   <Link
     href={href}
     className="mx-auto block max-w-fit rounded-xl bg-secondary-main p-2 text-on-secondary hover:bg-secondary-darker md:m-2 md:px-3 md:py-2"
+    data-umami-event="Navigation CTA Canturicum"
   >
     {text}
   </Link>
