@@ -58,7 +58,7 @@ module.exports = {
       textColor: {
         'on-background': '#212121',
         'on-primary': '#c9c9dd',
-        'on-secondary': '#e5efcf',
+        'on-secondary': '#ffffff',
         'on-accent': '#dff1ba',
       },
       aspectRatio: {

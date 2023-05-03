@@ -1,15 +1,27 @@
 'use client';
 
-import classNames from 'classnames';
-import Link from 'next/link';
-import React from 'react';
-
-import {useToggle} from '@/hooks/useToggle';
 import {Burger} from '@/icons/burger';
+import Link from 'next/link';
 import {Logo} from '@/icons/logo';
+import React from 'react';
+import classNames from 'classnames';
+import {useToggle} from '@/hooks/useToggle';
 
 const NavLink: React.FC<{href: string; text: string}> = ({href, text}) => (
-  <Link href={href} className="block py-2 hover:text-primary-main md:p-4">
+  <Link
+    href={href}
+    className="mx-auto block max-w-fit p-2 hover:text-primary-main md:p-4"
+  >
+    {text}
+  </Link>
+);
+
+const CTAavLink: React.FC<{href: string; text: string}> = ({href, text}) => (
+  <Link
+    href={href}
+    className="mx-auto block max-w-fit rounded-xl bg-secondary-main p-2 text-on-secondary hover:bg-secondary-darker md:m-2 md:px-3 md:py-2"
+    data-umami-event="Navigation CTA Canturicum"
+  >
     {text}
   </Link>
 );
@@ -42,6 +54,9 @@ export const NavBar: React.FC = () => {
               <NavLink href={href} text={name} />
             </li>
           ))}
+          <li onClick={toggleMenu}>
+            <CTAavLink href="/canturicum" text="Projektchor Canturicum" />
+          </li>
         </ul>
       </div>
     </nav>
