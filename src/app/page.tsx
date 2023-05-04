@@ -1,15 +1,13 @@
-import Image from 'next/image';
-
-import {ImageSection} from '@/components/image-section';
-import CanturicumImage from '@/images/2019_canturicum_md.webp';
 import AboutUsImage from '@/images/2022_fruehling_blech_sm.webp';
 import BgImage from '@/images/2022_waedenswil_2_xl.webp';
-import FlyerImage from '@/images/flyer/2023_hgn250_lg.webp';
-import KonzerteImage from '@/images/people/kaethi_2_sm.webp';
-
-import {ContentContainer} from '../components/contentContainer';
 import {CONCERTS} from '../data/concerts';
+import CanturicumImage from '@/images/2019_canturicum_md.webp';
 import {ChevronDown} from '../icons/chevron-down';
+import {ContentContainer} from '../components/contentContainer';
+import FlyerImage from '@/images/flyer/2023_hgn250_lg.webp';
+import Image from 'next/image';
+import {ImageSection} from '@/components/image-section';
+import KonzerteImage from '@/images/people/kaethi_2_sm.webp';
 
 export const metadata = {
   description:
@@ -115,7 +113,7 @@ export default function Home() {
             alt: 'Flyer Festkonzerte 250 Jahre Hans Georg Nägeli',
           }}
           link={{
-            href: 'https://www.hgn250.ch/',
+            href: 'https://www.hgn250.ch/veranstaltungen/festkonzert/',
             text: 'Weitere Informationen',
           }}
         >
