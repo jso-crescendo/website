@@ -90,6 +90,7 @@ const Form: React.FC<{
       <legend className="pb-4 font-serif text-2xl">Newsletter</legend>
       <TextField
         {...register('name', {required: 'Bitte gebe einen Namen ein'})}
+        id="name"
         label="Name"
         required
         errorMessage={errors.name?.message}
@@ -102,6 +103,7 @@ const Form: React.FC<{
             message: 'Bitte gebe eine gültige Email ein',
           },
         })}
+        id="email"
         label="Email"
         required
         type="email"

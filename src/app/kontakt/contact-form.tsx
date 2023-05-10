@@ -3,10 +3,7 @@
 import {useCallback, useState} from 'react';
 
 import {Button} from '../../components/button';
-import {Error as ErrorIcon} from '../../icons/error';
-import {Info} from '../../icons/info';
 import {StatusCard} from '../../components/status-card';
-import {Text} from '../../components/text';
 import {TextArea} from '../../components/form/text-area';
 import {TextField} from '../../components/form/text-field';
 import {TurnstileWidget} from '../../components/turnstile-widget';
@@ -92,6 +89,7 @@ const Form: React.FC<{
       <legend className="pb-4 font-serif text-2xl">Kontaktformular</legend>
       <TextField
         {...register('name', {required: 'Bitte gebe einen Namen ein'})}
+        id="name"
         label="Name"
         required
         errorMessage={errors.name?.message}
@@ -104,6 +102,7 @@ const Form: React.FC<{
             message: 'Bitte gebe eine gültige Email ein',
           },
         })}
+        id="email"
         label="Email"
         type="email"
         errorMessage={errors.email?.message}
@@ -111,6 +110,7 @@ const Form: React.FC<{
       />
       <TextArea
         {...register('message', {required: 'Bitte gebe eine Nachricht ein'})}
+        id="message"
         label="Nachricht"
         rows={5}
         required
