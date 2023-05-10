@@ -112,10 +112,20 @@ export default function KonzertPage({params}: {params: {id: string}}) {
           <ol className="list-disc pl-4">
             {concert.dates.map((d) => (
               <li key={d.dateISO}>
-                <a href={d.googleMapsLink} className="hover:text-primary-main">
-                  <span className="font-serif text-lg">{d.location}</span>
-                  <span className="text-sm"> - {d.dateString}</span>
-                </a>
+                {d.googleMapsLink ? (
+                  <a
+                    href={d.googleMapsLink}
+                    className="hover:text-primary-main"
+                  >
+                    <span className="font-serif text-lg">{d.location}</span>
+                    <span className="text-sm"> - {d.dateString}</span>
+                  </a>
+                ) : (
+                  <span>
+                    <span className="font-serif text-lg">{d.location}</span>
+                    <span className="text-sm"> - {d.dateString}</span>
+                  </span>
+                )}
               </li>
             ))}
           </ol>
