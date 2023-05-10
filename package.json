@@ -11,7 +11,8 @@
     "lint": "next lint",
     "prettify": "prettier --write . --ignore-path .gitignore",
     "sitemap": "sscli -v",
-    "check-updates": "npx npm-check-updates"
+    "check-updates": "npx npm-check-updates",
+    "lighthouse": "npx unlighthouse --mobile --samples 3 --enable-javascript --site \"jso-crescendo.ch\" "
   },
   "dependencies": {
     "@marsidev/react-turnstile": "^0.2.1",
