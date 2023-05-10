@@ -6,7 +6,7 @@ import {NewsletterForm} from './newsletter-form';
 export const metadata = {
   title: 'Newsletter',
   description:
-    'Bleiben Sie immer auf dem Laufenden über unsere aufregenden Konzerte und spannenden Projekte! Abonnieren Sie unseren Newsletter und verpassen Sie keine wichtigen Updates mehr. Erhalten Sie exklusive Informationen direkt in Ihr Postfach und bleiben Sie stets up-to-date!',
+    'Bleiben Sie immer auf dem Laufenden über unsere anstehenden Konzerte und spannenden Projekte! Abonnieren Sie jetzt unseren Newsletter.',
 };
 
 export default function Newsletter() {
