@@ -55,6 +55,15 @@
         ]
       },
       {
+        "source": "**/opengraph-image.*",
+        "headers": [
+          {
+            "key": "Cache-Control",
+            "value": "public, max-age=31536000, immutable"
+          }
+        ]
+      },
+      {
         "source": "/sitemap.xml",
         "headers": [
           {
@@ -102,6 +111,11 @@
         "source": "/galerie/*",
         "destination": "/",
         "type": 302
+      },
+      {
+        "source": "/intern",
+        "destination": "/",
+        "type": 301
       }
     ],
     "rewrites": [
