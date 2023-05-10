@@ -1,17 +1,16 @@
+import {Email} from '../icons/email';
 /* eslint-disable tailwindcss/no-arbitrary-value */
 import {Facebook} from '@/icons/facebook';
 import {Instagram} from '@/icons/instagram';
-import {Youtube} from '@/icons/youtube';
-
-import {Email} from '../icons/email';
 import {LinkButton} from './link-button';
+import {Youtube} from '@/icons/youtube';
 
 const FooterSection: React.FC<{title: string; children: React.ReactNode}> = ({
   title,
   children,
 }) => (
   <div className="flex w-full flex-col place-items-start gap-2 md:w-1/3">
-    <h4 className="mb-2 font-serif text-xl">{title}</h4>
+    <h2 className="mb-2 font-serif text-xl">{title}</h2>
     {children}
   </div>
 );
