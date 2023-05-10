@@ -13,6 +13,8 @@ import {Text} from '@/components/text';
 
 export const metadata = {
   title: 'Über uns',
+  description:
+    'Das JSO Crescendo - ein einzigartiges Orchester und Chor. Informieren Sie sich jetzt über uns um unsere nächsten Konzerte zu erleben oder mitzuspielen.',
 };
 
 export default function Orchester() {

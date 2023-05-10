@@ -1,12 +1,10 @@
 import './globals.css';
 
-import classNames from 'classnames';
 import {Lora, Montserrat} from 'next/font/google';
-import Script from 'next/script';
-
-import {NavBar} from '@/components/nav-bar';
 
 import {Footer} from '../components/footer';
+import {NavBar} from '@/components/nav-bar';
+import classNames from 'classnames';
 
 export const metadata = {
   title: {template: '%s | JSO Crescendo', default: 'JSO Crescendo'},
