@@ -8,7 +8,24 @@ import classNames from 'classnames';
 
 export const metadata = {
   title: {template: '%s | JSO Crescendo', default: 'JSO Crescendo'},
-  viewport: 'width=device-width, initial-scale=1.0',
+  metadataBase: new URL('https://jso-crescendo.ch'),
+  applicationName: 'JSO Crescendo',
+  viewport: {
+    width: 'device-width',
+    initialScale: 1,
+  },
+  keywords: [
+    'orchester',
+    'crescendo',
+    'Jugendsinfonieorchester',
+    'zürich',
+    'orchester mitspielen',
+  ],
+  colorScheme: 'light',
+  openGraph: {
+    locale: 'de-CH',
+    type: 'website',
+  },
 };
 
 const loraFont = Lora({
