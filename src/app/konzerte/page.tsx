@@ -5,6 +5,8 @@ import {LinkButton} from '../../components/link-button';
 
 export const metadata = {
   title: 'Konzerte',
+  description:
+    'Erleben Sie magische Konzertmomente! Erfahren Sie alles über die kommenden Auftritte vom JSO Crescendo',
 };
 
 export default function Orchester() {
