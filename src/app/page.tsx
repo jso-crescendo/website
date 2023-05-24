@@ -4,7 +4,6 @@ import {CONCERTS} from '../data/concerts';
 import CanturicumImage from '@/images/2019_canturicum_md.webp';
 import {ChevronDown} from '../icons/chevron-down';
 import {ContentContainer} from '../components/contentContainer';
-import FlyerImage from '@/images/flyer/2023_hgn250_lg.webp';
 import Image from 'next/image';
 import {ImageSection} from '@/components/image-section';
 import KonzerteImage from '@/images/people/kaethi_2_sm.webp';
@@ -106,25 +105,6 @@ export default function Home() {
           2007, 2009, 2012, 2015, 2018 und 2019 weitere Projekte realisiert
           wurden. Es singen jeweils zwischen 80 und 120 Sänger:innen, aus den
           Singwochen, Eltern, Ehemalige und Freunde vom JSO Crescendo mit.
-        </ImageSection>
-        <ImageSection
-          title="Fest&shy;konzert"
-          image={{
-            src: FlyerImage,
-            alt: 'Flyer Festkonzerte 250 Jahre Hans Georg Nägeli',
-          }}
-          link={{
-            href: 'https://www.hgn250.ch/veranstaltungen/festkonzert/',
-            text: 'Weitere Informationen',
-          }}
-        >
-          Am 26. Mai 2023 jährt sich der 250. Geburtstag des Verlegers,
-          Komponisten, Chorleiters und Musikpädagogen Hans Georg Nägeli. Nägeli
-          ist nicht nur der bedeutendste Kulturschaffende aus Wetzikon im
-          Zürcher Oberland, sondern auch eine ebenso vielseitige wie schillernde
-          Persönlichkeit, welche das europäische Musikwesen des frühen 19.
-          Jahrhundert prägt. Zur Aufführung gelangen Chorlieder, die
-          exemplarisch für Nägelis Schaffen und sein reiches Erbe stehen.
         </ImageSection>
         <ImageSection
           title="Über uns"

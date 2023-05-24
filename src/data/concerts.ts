@@ -30,21 +30,6 @@ export interface Concert {
 
 export const CONCERTS: Concert[] = [
   {
-    id: 'hgn-250',
-    name: 'Festkonzert',
-    subtitle: '250 Jahre Hans Georg Nägeli',
-    image_sm: Naegeli_sm,
-    image_lg: Naegeli_lg,
-    dates: [
-      {
-        dateISO: '2023-05-26T19:30:00+01:00',
-        dateString: '26. Mai 2023 19:30 Uhr',
-        location: 'Tonhalle Zürich',
-        googleMapsLink: 'https://goo.gl/maps/GTVVQLGhoSFmbBVaA',
-      },
-    ],
-  },
-  {
     id: 'herbstkonzerte-23',
     name: 'Herbstkonzerte',
     subtitle: 'mit dem Projektchor Canturicum',
@@ -78,6 +63,21 @@ export const CONCERTS: Concert[] = [
 ];
 
 export const PAST_CONCERTS: Concert[] = [
+  {
+    id: 'hgn-250',
+    name: 'Festkonzert',
+    subtitle: '250 Jahre Hans Georg Nägeli',
+    image_sm: Naegeli_sm,
+    image_lg: Naegeli_lg,
+    dates: [
+      {
+        dateISO: '2023-05-26T19:30:00+01:00',
+        dateString: '26. Mai 2023 19:30 Uhr',
+        location: 'Tonhalle Zürich',
+        googleMapsLink: 'https://goo.gl/maps/GTVVQLGhoSFmbBVaA',
+      },
+    ],
+  },
   {
     id: 'fruehlingskonzerte-23',
     name: 'Frühlingskonzerte',
