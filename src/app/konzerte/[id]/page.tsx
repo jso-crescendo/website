@@ -6,6 +6,7 @@ import DateImage from '@/images/backgrounds/harp_sm.webp';
 import Image from 'next/image';
 import {ImageSection} from '../../../components/image-section';
 import ProgrammImage from '@/images/backgrounds/scores_2_sm.webp';
+import {Text} from '../../../components/text';
 
 const ALL_CONCERTS = CONCERTS.concat(PAST_CONCERTS);
 
@@ -87,6 +88,7 @@ export default function KonzertPage({params}: {params: {id: string}}) {
           priority
         />
       )}
+      {concert.description && <Text>{concert.description}</Text>}
       {concert.program && (
         <ImageSection
           title="Programm"
@@ -105,7 +107,7 @@ export default function KonzertPage({params}: {params: {id: string}}) {
       )}
       {concert.dates && (
         <ImageSection
-          title="Datum"
+          title={concert.dates.length > 1 ? 'Daten' : 'Datum'}
           image={{src: DateImage, alt: ''}}
           textOnly={false}
         >

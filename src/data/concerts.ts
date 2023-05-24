@@ -98,6 +98,8 @@ export const PAST_CONCERTS: Concert[] = [
     id: 'hgn-250',
     name: 'Festkonzert',
     subtitle: '250 Jahre Hans Georg Nägeli',
+    description:
+      'Am 26. Mai 2023 jährt sich der 250. Geburtstag des Verlegers, Komponisten, Chorleiters und Musikpädagogen Hans Georg Nägeli. Nägeli ist nicht nur der bedeutendste Kulturschaffende aus Wetzikon im Zürcher Oberland, sondern auch eine ebenso vielseitige wie schillernde Persönlichkeit, welche das europäische Musikwesen des frühen 19. Jahrhundert prägt. Zur Aufführung gelangen Chorlieder, die exemplarisch für Nägelis Schaffen und sein reiches Erbe stehen.',
     image_sm: Naegeli_sm,
     image_lg: Naegeli_lg,
     dates: [
