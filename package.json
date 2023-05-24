@@ -15,9 +15,6 @@
   },
   "dependencies": {
     "@marsidev/react-turnstile": "^0.2.1",
-    "@types/node": "^20.2.3",
-    "@types/react": "^18.2.6",
-    "@types/react-dom": "^18.2.4",
     "classnames": "^2.3.2",
     "eslint-config-next": "^13.4.3",
     "next": "^13.4.3",
@@ -29,6 +26,9 @@
     "typescript": "^5.0.4"
   },
   "devDependencies": {
+    "@types/node": "^20.2.3",
+    "@types/react": "^18.2.6",
+    "@types/react-dom": "^18.2.4",
     "autoprefixer": "^10.4.14",
     "eslint": "^8.41.0",
     "eslint-plugin-tailwindcss": "^3.12.0",
