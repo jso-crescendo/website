@@ -23,7 +23,7 @@ export default function Home() {
           alt="Hintergrundbild Orchester"
           priority
           quality={100}
-          placeholder='blur'
+          placeholder="blur"
           className="h-screen object-cover brightness-75"
         />
         <h1
