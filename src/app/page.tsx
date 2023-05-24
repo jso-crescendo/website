@@ -4,7 +4,7 @@ import {CONCERTS} from '../data/concerts';
 import CanturicumImage from '@/images/2019_canturicum.webp';
 import {ChevronDown} from '../icons/chevron-down';
 import {ContentContainer} from '../components/contentContainer';
-import FlyerImage from '@/images/flyer/2023_hgn250.webp';
+import FlyerImage from '@/images/flyer/2023_hgn250_lg.webp';
 import Image from 'next/image';
 import {ImageSection} from '@/components/image-section';
 import KonzerteImage from '@/images/people/kaethi_2.webp';
@@ -22,6 +22,8 @@ export default function Home() {
           src={BgImage}
           alt="Hintergrundbild Orchester"
           priority
+          quality={100}
+          placeholder='blur'
           className="h-screen object-cover brightness-75"
         />
         <h1

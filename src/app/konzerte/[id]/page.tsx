@@ -86,6 +86,7 @@ export default function KonzertPage({params}: {params: {id: string}}) {
           aria-hidden="true"
           className="mx-auto max-h-screen rounded-lg object-contain"
           priority
+          placeholder='blur'
         />
       )}
       {concert.description && <Text>{concert.description}</Text>}

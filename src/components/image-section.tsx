@@ -1,9 +1,9 @@
-import classNames from 'classnames';
 import Image, {StaticImageData} from 'next/image';
 
-import {toKebabCase} from '../utils/toKebabCase';
 import {LinkButton} from './link-button';
 import {Text} from './text';
+import classNames from 'classnames';
+import {toKebabCase} from '../utils/toKebabCase';
 
 interface ImageSectionProps {
   title: string;

@@ -30,6 +30,7 @@ export default function Orchester() {
               src={c.image_sm}
               alt="Konzert teaser bild"
               className="aspect-3/2 rounded-t-lg object-cover"
+              placeholder='blur' priority
             />
             <div className="p-6">
               <hgroup>
