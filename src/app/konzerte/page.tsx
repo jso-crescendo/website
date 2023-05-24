@@ -52,7 +52,9 @@ export default function Orchester() {
               )}
               {c.dates && (
                 <>
-                  <h3 className="py-4 text-center text-lg">{c.dates.length > 1 ? 'Daten' : 'Datum'}</h3>
+                  <h3 className="py-4 text-center text-lg">
+                    {c.dates.length > 1 ? 'Daten' : 'Datum'}
+                  </h3>
                   <ul>
                     {c.dates.map((d) => (
                       <li key={d.dateISO} className="flex flex-col pb-2">
