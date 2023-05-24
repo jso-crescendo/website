@@ -1,6 +1,6 @@
 import FruehlingsKonzertImage_lg from '@/images/flyer/flyer_fruehlingskonzert_2023.webp';
 import FruehlingsKonzertImage_sm from '@/images/flyer/flyer_fruehlingkonzert_2023_sm.webp';
-import HerbstKonzertImage_sm from '@/images/2021_herbstkonzert_chor_2_sm.webp';
+import HerbstKonzertImage_sm from '@/images/2021_herbstkonzert_chor_2.webp';
 import Naegeli_lg from '@/images/flyer/2023_hgn250_lg.webp';
 import Naegeli_sm from '@/images/flyer/2023_hgn250_md.webp';
 import {StaticImageData} from 'next/image';

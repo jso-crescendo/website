@@ -1,9 +1,8 @@
-import {ImageSection} from '@/components/image-section';
-import VorstandImage from '@/images/people/vorstand_sm.webp';
-
-import {ContentContainer} from '../../components/contentContainer';
-import {Text} from '../../components/text';
 import {ContactForm} from './contact-form';
+import {ContentContainer} from '../../components/contentContainer';
+import {ImageSection} from '@/components/image-section';
+import {Text} from '../../components/text';
+import VorstandImage from '@/images/people/vorstand.webp';
 
 const VORSTAND = [
   {

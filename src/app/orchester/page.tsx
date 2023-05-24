@@ -1,14 +1,14 @@
-import ChorImage from '@/images/2021_herbstkonzert_chor_sm.webp';
+import ChorImage from '@/images/2021_herbstkonzert_chor.webp';
 import {ContentContainer} from '../../components/contentContainer';
-import GoennerImage from '@/images/2022_fruehling_blech_sm.webp';
+import GoennerImage from '@/images/2022_fruehling_blech.webp';
 import Image from 'next/image';
 import {ImageSection} from '@/components/image-section';
-import KaethiImage from '@/images/people/kaethi_sm.webp';
-import KonzertreiseImage from '@/images/2019_konzertreise_bulgarien_sm.webp';
-import MitgliedWerdenImage from '@/images/backgrounds/scores_1_sm.webp';
-import NoeliImage from '@/images/people/noelie_sm.webp';
-import OrchesterWideImage from '@/images/2019_jubliaeumskonzert_tonhalle_wide_lg.webp';
-import SponsorenImage from '@/images/2022_fruehling_bass_sm.webp';
+import KaethiImage from '@/images/people/kaethi.webp';
+import KonzertreiseImage from '@/images/2019_konzertreise_bulgarien.webp';
+import MitgliedWerdenImage from '@/images/backgrounds/scores_1.webp';
+import NoeliImage from '@/images/people/noelie.webp';
+import OrchesterWideImage from '@/images/2019_jubliaeumskonzert_tonhalle_wide.webp';
+import SponsorenImage from '@/images/2022_fruehling_bass.webp';
 import {Text} from '@/components/text';
 
 export const metadata = {

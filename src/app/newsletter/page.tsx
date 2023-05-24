@@ -1,6 +1,6 @@
 import {ContentContainer} from '../../components/contentContainer';
 import {ImageSection} from '../../components/image-section';
-import NewsLetterImage from '../../images/backgrounds/letter_sm.webp';
+import NewsLetterImage from '../../images/backgrounds/letter.webp';
 import {NewsletterForm} from './newsletter-form';
 
 export const metadata = {

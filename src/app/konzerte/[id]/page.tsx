@@ -2,10 +2,10 @@ import {CONCERTS, Concert, PAST_CONCERTS} from '../../../data/concerts';
 import {Event, WithContext} from 'schema-dts';
 
 import {ContentContainer} from '../../../components/contentContainer';
-import DateImage from '@/images/backgrounds/harp_sm.webp';
+import DateImage from '@/images/backgrounds/harp.webp';
 import Image from 'next/image';
 import {ImageSection} from '../../../components/image-section';
-import ProgrammImage from '@/images/backgrounds/scores_2_sm.webp';
+import ProgrammImage from '@/images/backgrounds/scores_2.webp';
 import {Text} from '../../../components/text';
 
 const ALL_CONCERTS = CONCERTS.concat(PAST_CONCERTS);

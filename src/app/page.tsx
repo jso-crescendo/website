@@ -1,13 +1,13 @@
-import AboutUsImage from '@/images/2022_fruehling_blech_sm.webp';
-import BgImage from '@/images/2022_waedenswil_2_xl.webp';
+import AboutUsImage from '@/images/2022_fruehling_blech.webp';
+import BgImage from '@/images/2022_waedenswil_2.webp';
 import {CONCERTS} from '../data/concerts';
-import CanturicumImage from '@/images/2019_canturicum_md.webp';
+import CanturicumImage from '@/images/2019_canturicum.webp';
 import {ChevronDown} from '../icons/chevron-down';
 import {ContentContainer} from '../components/contentContainer';
-import FlyerImage from '@/images/flyer/2023_hgn250_lg.webp';
+import FlyerImage from '@/images/flyer/2023_hgn250.webp';
 import Image from 'next/image';
 import {ImageSection} from '@/components/image-section';
-import KonzerteImage from '@/images/people/kaethi_2_sm.webp';
+import KonzerteImage from '@/images/people/kaethi_2.webp';
 
 export const metadata = {
   description:

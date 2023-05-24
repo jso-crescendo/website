@@ -1,8 +1,8 @@
 import {CONCERTS} from '../../data/concerts';
-import CanturicumImage from '@/images/2019_canturicum_md.webp';
+import CanturicumImage from '@/images/2019_canturicum.webp';
 import {ContentContainer} from '../../components/contentContainer';
 import {ImageSection} from '../../components/image-section';
-import KonzertImage from '@/images/2019_jubilaeumskonzert_tonhalle_md.webp';
+import KonzertImage from '@/images/2019_jubilaeumskonzert_tonhalle.webp';
 import {LinkButton} from '../../components/link-button';
 import {Text} from '../../components/text';
 
