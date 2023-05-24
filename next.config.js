@@ -4,6 +4,9 @@ const nextConfig = {
   images: {
     formats: ['image/avif', 'image/webp'],
   },
+  compiler: {
+    removeConsole: true
+  }
 };
 
 module.exports = nextConfig;
