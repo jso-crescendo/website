@@ -1,9 +1,9 @@
+import classNames from 'classnames';
 import Image, {StaticImageData} from 'next/image';
 
+import {toKebabCase} from '../utils/toKebabCase';
 import {LinkButton} from './link-button';
 import {Text} from './text';
-import classNames from 'classnames';
-import {toKebabCase} from '../utils/toKebabCase';
 
 interface ImageSectionProps {
   title: string;
@@ -44,13 +44,16 @@ export const ImageSection: React.FC<ImageSectionProps> = ({
     )}
   >
     {image ? (
-      <Image
-        src={image.src}
-        alt={image.alt}
-        priority={image.priority}
-        className="w-full rounded-lg object-contain md:w-5/12"
-        placeholder="blur"
-      />
+      <div className="relative flex-1">
+        <Image
+          src={image.src}
+          alt={image.alt}
+          priority={image.priority}
+          className="rounded-lg object-contain"
+          placeholder="blur"
+          fill
+        />
+      </div>
     ) : (
       video && (
         <iframe
@@ -63,7 +66,7 @@ export const ImageSection: React.FC<ImageSectionProps> = ({
         />
       )
     )}
-    <div className="my-auto w-full">
+    <div className="w-full md:w-7/12">
       <hgroup>
         <h2 className="font-serif text-5xl">{title}</h2>
         {subtitle && <p className="pb-4 text-lg">{subtitle}</p>}
