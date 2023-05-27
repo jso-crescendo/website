@@ -57,7 +57,7 @@ export default function Home() {
           video={{
             type: 'youtube',
             videoId: '92QqyF-wzqw',
-            vertical: true
+            vertical: true,
           }}
           link={{
             href: 'https://wemakeit.com/projects/jso-crescendo-italienreise',
@@ -134,7 +134,7 @@ export default function Home() {
           image={{
             src: KonzerteImage,
             alt: 'Orchester spielt in der Tonhalle Zürich.',
-            vertical: true
+            vertical: true,
           }}
           link={{
             href: '/konzerte',

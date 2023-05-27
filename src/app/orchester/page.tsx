@@ -28,7 +28,7 @@ export default function Orchester() {
       <Image
         src={OrchesterWideImage}
         alt="Orchester in Tonhalle bei Konzert"
-        className="w-full rounded-lg py-4"
+        className="hidden w-full rounded-lg py-4 md:block"
         priority
         placeholder="blur"
       />
@@ -121,7 +121,11 @@ export default function Orchester() {
         Reitunfall tödlich verunglückte.
       </ImageSection>
       <ImageSection
-        image={{src: NoeliImage, alt: 'Portrait Foto von Noëlie Nyffeler',            vertical: true}}
+        image={{
+          src: NoeliImage,
+          alt: 'Portrait Foto von Noëlie Nyffeler',
+          vertical: true,
+        }}
         title="Noëlie Nyffeler"
         subtitle="Konzertmeisterin"
       >
