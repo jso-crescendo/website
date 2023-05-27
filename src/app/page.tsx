@@ -53,7 +53,7 @@ export default function Home() {
 
       <ContentContainer id="content">
         <ImageSection
-          title="Konzertreise nach Italien"
+          title="Konzert&shy;reise nach Italien"
           video={{
             type: 'youtube',
             videoId: '92QqyF-wzqw',
