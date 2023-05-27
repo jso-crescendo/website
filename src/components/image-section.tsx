@@ -47,7 +47,8 @@ export const ImageSection: React.FC<ImageSectionProps> = ({
   >
     <div
       className={classNames(
-        'relative flex-1',
+        {'relative' : !!image},
+        'flex-1',
         image?.vertical || video?.vertical
           ? 'aspect-video-vertical'
           : 'aspect-video',
@@ -71,6 +72,7 @@ export const ImageSection: React.FC<ImageSectionProps> = ({
             title="YouTube video player"
             allowFullScreen
             referrerPolicy="no-referrer"
+            className='w-full h-full'
           />
         )
       )}{' '}
