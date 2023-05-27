@@ -39,33 +39,33 @@ export const ImageSection: React.FC<ImageSectionProps> = ({
   <section
     id={toKebabCase(title)}
     className={classNames(
-      'flex flex-col justify-between gap-8 pb-8 pt-4 md:flex-row',
+      'flex flex-col items-center justify-between gap-8 pb-8 pt-4 md:flex-row',
       {'md:even:flex-row-reverse': !noReverse},
     )}
-  >
+  >  <div className="relative aspect-video flex-1">
+    
     {image ? (
-      <div className="relative flex-1">
         <Image
           src={image.src}
           alt={image.alt}
           priority={image.priority}
-          className="rounded-lg object-contain"
+          className="rounded-lg object-cover"
           placeholder="blur"
           fill
+          sizes="(max-width: 768px) 100vw, 42vw"
         />
-      </div>
+     
     ) : (
       video && (
         <iframe
           id="ytplayer"
-          className="aspect-video w-full rounded-lg object-contain md:w-5/12"
-          src={`https://www.youtube-nocookie.com/embed/${video.videoId}?hl=de-ch&modestbranding=1`}
+           src={`https://www.youtube-nocookie.com/embed/${video.videoId}?hl=de-ch&modestbranding=1`}
           title="YouTube video player"
           allowFullScreen
           referrerPolicy="no-referrer"
         />
       )
-    )}
+    )} </div>
     <div className="w-full md:w-7/12">
       <hgroup>
         <h2 className="font-serif text-5xl">{title}</h2>
