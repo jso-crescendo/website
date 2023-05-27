@@ -41,14 +41,14 @@ export const ImageSection: React.FC<ImageSectionProps> = ({
   <section
     id={toKebabCase(title)}
     className={classNames(
-      'flex flex-col items-center justify-between gap-8 pb-8 pt-4 md:flex-row',
-      {'md:even:flex-row-reverse': !noReverse},
+      'flex flex-col items-center justify-between gap-8 pb-8 pt-4 lg:flex-row',
+      {'lg:even:flex-row-reverse': !noReverse},
     )}
   >
     <div
       className={classNames(
         {'relative' : !!image},
-        'flex-1',
+        'lg:flex-1 w-full lg:w-auto',
         image?.vertical || video?.vertical
           ? 'aspect-video-vertical'
           : 'aspect-video',
@@ -59,10 +59,10 @@ export const ImageSection: React.FC<ImageSectionProps> = ({
           src={image.src}
           alt={image.alt}
           priority={image.priority}
-          className="rounded-lg object-cover"
+          className="rounded-lg object-cover drop-shadow-lg"
           placeholder="blur"
           fill
-          sizes="(max-width: 768px) 100vw, 42vw"
+          sizes="(max-width: 1024px) 100vw, 42vw"
         />
       ) : (
         video && (
@@ -77,7 +77,7 @@ export const ImageSection: React.FC<ImageSectionProps> = ({
         )
       )}{' '}
     </div>
-    <div className="w-full md:w-7/12">
+    <div className="w-full lg:w-7/12">
       <hgroup>
         <h2 className="font-serif text-5xl">{title}</h2>
         {subtitle && <p className="pb-4 text-lg">{subtitle}</p>}
