@@ -1,15 +1,17 @@
-import ChorImage from '@/images/2021_herbstkonzert_chor.webp';
-import {ContentContainer} from '../../components/contentContainer';
-import GoennerImage from '@/images/2022_fruehling_blech.webp';
 import Image from 'next/image';
+
 import {ImageSection} from '@/components/image-section';
-import KaethiImage from '@/images/people/kaethi.webp';
-import KonzertreiseImage from '@/images/2019_konzertreise_bulgarien.webp';
-import MitgliedWerdenImage from '@/images/backgrounds/scores_1.webp';
-import NoeliImage from '@/images/people/noelie.webp';
-import OrchesterWideImage from '@/images/2019_jubliaeumskonzert_tonhalle_wide.webp';
-import SponsorenImage from '@/images/2022_fruehling_bass.webp';
 import {Text} from '@/components/text';
+import OrchesterWideImage from '@/images/2019_jubliaeumskonzert_tonhalle_wide.webp';
+import KonzertreiseImage from '@/images/2019_konzertreise_bulgarien.webp';
+import ChorImage from '@/images/2021_herbstkonzert_chor.webp';
+import SponsorenImage from '@/images/2022_fruehling_bass.webp';
+import GoennerImage from '@/images/2022_fruehling_blech.webp';
+import MitgliedWerdenImage from '@/images/backgrounds/scores_1.webp';
+import KaethiImage from '@/images/people/kaethi.webp';
+import NoeliImage from '@/images/people/noelie.webp';
+
+import {ContentContainer} from '../../components/contentContainer';
 
 export const metadata = {
   title: 'Über uns',
@@ -66,7 +68,7 @@ export default function Orchester() {
           src: KonzertreiseImage,
           alt: 'Das Orchester in Bulgarien am Meer',
         }}
-        title="Konzertreisen"
+        title="Konzert&shy;reisen"
       >
         Ein fester Bestandteil des JSO Crescendo sind die Konzertreisen. Alle
         zwei Jahre konzertieren wir während zwei Wochen an verschiedenen Orten
