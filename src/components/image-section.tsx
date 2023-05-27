@@ -14,10 +14,12 @@ interface ImageSectionProps {
     src: StaticImageData;
     alt: string;
     priority?: boolean;
+    vertical?: boolean;
   };
   video?: {
     type: 'youtube';
     videoId: string;
+    vertical?: boolean;
   };
   link?: {
     text: string;
@@ -42,9 +44,16 @@ export const ImageSection: React.FC<ImageSectionProps> = ({
       'flex flex-col items-center justify-between gap-8 pb-8 pt-4 md:flex-row',
       {'md:even:flex-row-reverse': !noReverse},
     )}
-  >  <div className="relative aspect-video flex-1">
-    
-    {image ? (
+  >
+    <div
+      className={classNames(
+        'relative flex-1',
+        image?.vertical || video?.vertical
+          ? 'aspect-video-vertical'
+          : 'aspect-video',
+      )}
+    >
+      {image ? (
         <Image
           src={image.src}
           alt={image.alt}
@@ -54,18 +63,18 @@ export const ImageSection: React.FC<ImageSectionProps> = ({
           fill
           sizes="(max-width: 768px) 100vw, 42vw"
         />
-     
-    ) : (
-      video && (
-        <iframe
-          id="ytplayer"
-           src={`https://www.youtube-nocookie.com/embed/${video.videoId}?hl=de-ch&modestbranding=1`}
-          title="YouTube video player"
-          allowFullScreen
-          referrerPolicy="no-referrer"
-        />
-      )
-    )} </div>
+      ) : (
+        video && (
+          <iframe
+            id="ytplayer"
+            src={`https://www.youtube-nocookie.com/embed/${video.videoId}?hl=de-ch&modestbranding=1`}
+            title="YouTube video player"
+            allowFullScreen
+            referrerPolicy="no-referrer"
+          />
+        )
+      )}{' '}
+    </div>
     <div className="w-full md:w-7/12">
       <hgroup>
         <h2 className="font-serif text-5xl">{title}</h2>

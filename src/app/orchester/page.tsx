@@ -85,7 +85,11 @@ export default function Orchester() {
         Momente.
       </ImageSection>
       <ImageSection
-        image={{src: KaethiImage, alt: 'Portrait Foto von Käthi Schmid Lauber'}}
+        image={{
+          src: KaethiImage,
+          alt: 'Portrait Foto von Käthi Schmid Lauber',
+          vertical: true,
+        }}
         title="Käthi Schmid Lauber"
         subtitle="Dirigentin"
       >
@@ -117,7 +121,7 @@ export default function Orchester() {
         Reitunfall tödlich verunglückte.
       </ImageSection>
       <ImageSection
-        image={{src: NoeliImage, alt: 'Portrait Foto von Noëlie Nyffeler'}}
+        image={{src: NoeliImage, alt: 'Portrait Foto von Noëlie Nyffeler',            vertical: true}}
         title="Noëlie Nyffeler"
         subtitle="Konzertmeisterin"
       >

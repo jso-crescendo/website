@@ -63,6 +63,7 @@ module.exports = {
       },
       aspectRatio: {
         '3/2': '3 / 2',
+        'video-vertical': '9 / 16',
       },
       width: {
         '3/10': '30%',
