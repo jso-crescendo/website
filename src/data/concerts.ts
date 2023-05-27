@@ -1,5 +1,6 @@
 import {StaticImageData} from 'next/image';
 
+import KonzertreiseImage_sm from '@/images/2019_konzertreise_bulgarien_md.webp';
 import HerbstKonzertImage_sm from '@/images/2021_herbstkonzert_chor_2_sm.webp';
 import Naegeli_lg from '@/images/flyer/2023_hgn250_lg.webp';
 import Naegeli_sm from '@/images/flyer/2023_hgn250_md.webp';
@@ -30,6 +31,36 @@ export interface Concert {
 }
 
 export const CONCERTS: Concert[] = [
+  {
+    id: 'konzertreise-23',
+    name: 'Konzertreise Italien',
+    description: `
+    Die diesjährige Konzertreise führt das JSO Crescendo Ende Juli für zwei Wochen nach Italien. Juhu! Nach einem fünf-tägigen Aufenthalt in Sorrent (Küstenstadt im Südwesten am Golf von Neapel) und zwei Konzerten fährt das Crescendo die Küste hinauf in die Hauptstadt (Rom), von wo aus es sich nach zwei Tagen und einem Konzert in die Toskana auf macht und während des sechs-tägigen Aufenthalts im Rahmen des Festival Orchestre Giovanili drei weitere Konzerte in Florenz, Montecatini Terme sowie Scarperia spielt. Natürlich werden die Crescendianer:innen neben den Aufführungen und Proben auch Zeit haben, Ausflüge zu unternehmen (bspw. nach Pompeji oder Pisa), die Gegenden zu erkunden oder auszuspannen.
+    `,
+    image_sm: KonzertreiseImage_sm,
+    dates: [
+      {
+        location: 'Frascati',
+        dateString: '30. Juli 2023',
+        dateISO: '2023-07-30',
+      },
+      {
+        location: 'Florenz',
+        dateString: '2. August: 2023',
+        dateISO: '2023-08-02',
+      },
+      {
+        location: 'Montecatini Terme Tettucio',
+        dateString: '3. August: 2023',
+        dateISO: '2023-08-03',
+      },
+      {
+        location: 'Scarperia',
+        dateString: '5. August: 2023',
+        dateISO: '2023-08-05',
+      },
+    ],
+  },
   {
     id: 'herbstkonzerte-23',
     name: 'Herbstkonzerte',
