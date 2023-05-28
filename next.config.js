@@ -15,7 +15,7 @@ const nextConfig = {
         permanent: true,
       },
       {
-        source: '/orchester/*',
+        source: '/orchester/:all*',
         destination: '/orchester',
         permanent: true,
       },
@@ -25,7 +25,7 @@ const nextConfig = {
         permanent: true,
       },
       {
-        source: '/galerie/*',
+        source: '/galerie/:all*',
         destination: '/',
         permanent: true,
       },
@@ -39,7 +39,7 @@ const nextConfig = {
   async headers() {
     return [
       {
-        source: '*',
+        source: '/:all*',
         headers: [
           {
             key: 'Strict-Transport-Security',
@@ -85,16 +85,7 @@ const nextConfig = {
             value: 'no-store, must-revalidate',
           },
         ],
-      },
-      {
-        source: '**/*.@(pdf)',
-        headers: [
-          {
-            key: 'Content-Disposition',
-            value: 'inline',
-          },
-        ],
-      },
+      }
     ];
   },
 };
