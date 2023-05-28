@@ -1,6 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: 'standalone',
+  // TODO: for use with docker use -> output: 'standalone',
   images: {
     formats: ['image/webp'],
   },
