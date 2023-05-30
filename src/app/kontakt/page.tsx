@@ -1,4 +1,3 @@
-import {ContactForm} from './contact-form';
 import {ContentContainer} from '../../components/contentContainer';
 import {ImageSection} from '@/components/image-section';
 import {Text} from '../../components/text';
@@ -95,9 +94,6 @@ export default function Kontakt() {
           ))}
         </ul>
       </ImageSection>
-      <section className="flex flex-row justify-center">
-        <ContactForm />
-      </section>
     </ContentContainer>
   );
 }

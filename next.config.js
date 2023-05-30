@@ -4,8 +4,8 @@ const nextConfig = {
   images: {
     formats: ['image/webp'],
   },
-  compiler: {
-    removeConsole: true,
+  experimental: {
+    serverActions: true
   },
   async redirects() {
     return [
@@ -85,7 +85,7 @@ const nextConfig = {
             value: 'no-store, must-revalidate',
           },
         ],
-      }
+      },
     ];
   },
 };
