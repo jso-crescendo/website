@@ -6,6 +6,7 @@ import {TextArea} from '../../../components/form/text-area';
 import {TextField} from '../../../components/form/text-field';
 import {TurnstileWidget} from '../../../components/turnstile-widget';
 import {redirect} from 'next/navigation';
+import {validateToken} from '../../../utils/turnstile';
 
 /*
 interface FormData {
@@ -22,6 +23,10 @@ export default function ContactForm({
 }) {
   async function submitContactRequest(data: FormData) {
     'use server';
+    const token = data.get('cf-turnstile-response')?.toString();
+    if (!token || !(await validateToken(token))) {
+      throw new Error('turnstile token not valid');
+    }
     /*
     {"$ACTION_ID_de1bd1ff1ba0d5196652620db8ba566d996ccd88":"",
     "name":"hjkhjk",
@@ -29,7 +34,10 @@ export default function ContactForm({
     "message":"jkhkjh",
     "cf-turnstile-response":"XXXX.DUMMY.TOKEN.XXXX"}
     */
-    console.log(JSON.stringify(Object.fromEntries(data)));
+    const name = data.get('name')?.toString();
+    const email = data.get('email')?.toString();
+    const message = data.get('message')?.toString();
+    console.log({name, email, message});
 
     await new Promise((resolve) => setTimeout(resolve, 2000));
     //throw new Error('ups');
