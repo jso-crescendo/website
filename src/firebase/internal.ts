@@ -1,15 +1,16 @@
-import admin from 'firebase-admin'
+import admin from 'firebase-admin';
 import {cert} from 'firebase-admin/app';
 
 export const initFirebase = () => {
   if (admin.apps.length === 0) {
-   admin.initializeApp({
-    credential: cert({
-      projectId: process.env.FIREBASE_PROJECT_ID,
-      clientEmail: process.env.FIREBASE_CLIENT_EMAIL,
-      privateKey: process.env.FIREBASE_PRIVATE_KEY?.replace(/\\n/g, '\n'),
-    }),
-  });}
+    admin.initializeApp({
+      credential: cert({
+        projectId: process.env.FIREBASE_PROJECT_ID,
+        clientEmail: process.env.FIREBASE_CLIENT_EMAIL,
+        privateKey: process.env.FIREBASE_PRIVATE_KEY?.replace(/\\n/g, '\n'),
+      }),
+    });
+  }
 };
 
 const PREFIX = process.env.NODE_ENV == 'production' ? '' : 'dev-';

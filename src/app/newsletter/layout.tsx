@@ -5,8 +5,7 @@ export default async function Layout(props: {
   return (
     <>
       {props.children}
-      <section className="flex flex-row justify-center">
-      {props.form}</section>
+      <section className="flex flex-row justify-center">{props.form}</section>
     </>
   );
 }

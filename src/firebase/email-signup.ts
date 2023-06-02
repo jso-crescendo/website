@@ -98,7 +98,7 @@ export const confirmCode = async (code: string) => {
     });
 
   console.info('email confirmed successfully', {code});
-  return true
+  return true;
 };
 
 const emailExists = async (email: string) => {

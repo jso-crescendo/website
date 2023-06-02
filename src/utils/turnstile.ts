@@ -7,17 +7,17 @@ export const validateToken = async (token: string): Promise<boolean> => {
     console.error('Turnstile secret not set');
     return false;
   }
-  
+
   const response = await fetch(TURNSTILE_ENDPOINT, {
     method: 'POST',
     headers: {
       'content-type': 'application/x-www-form-urlencoded',
     },
-    cache: "no-store",
+    cache: 'no-store',
     body: `secret=${encodeURIComponent(
       process.env.TURNSTILE_SECRET,
     )}&response=${encodeURIComponent(token)}`,
-  }).then(r => r.json());
+  }).then((r) => r.json());
 
   if (!response.success) {
     console.warn('token invalid', response);

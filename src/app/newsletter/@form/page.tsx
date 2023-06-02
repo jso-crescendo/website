@@ -2,7 +2,7 @@ import {StatusCard} from '../../../components/status-card';
 import {SubmitButton} from './submit-button';
 import {TextField} from '../../../components/form/text-field';
 import {TurnstileWidget} from '../../../components/turnstile-widget';
-import { createSignupRequest } from '../../../firebase/email-signup';
+import {createSignupRequest} from '../../../firebase/email-signup';
 import {redirect} from 'next/navigation';
 import {sanitize} from '../../../utils/escape';
 import {validateToken} from '../../../utils/turnstile';
@@ -21,7 +21,7 @@ export default function ContactForm({
 
     const name = sanitize(data.get('name')?.toString())!;
     const email = sanitize(data.get('email')?.toString())!;
-    
+
     if (!name || !email) {
       throw new Error('missing data');
     }

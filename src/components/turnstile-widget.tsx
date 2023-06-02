@@ -12,7 +12,7 @@ export const TurnstileWidget: React.FC<{
       data-theme="light"
       data-language="de"
     />
-    
+
     <noscript>
       Protected by{' '}
       <a href="https://www.cloudflare.com/products/turnstile">turnstile</a>.
