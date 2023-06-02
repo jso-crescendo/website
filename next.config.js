@@ -15,11 +15,6 @@ const nextConfig = {
         permanent: true,
       },
       {
-        source: '/orchester/:all*',
-        destination: '/orchester',
-        permanent: true,
-      },
-      {
         source: '/galerie',
         destination: '/',
         permanent: true,
