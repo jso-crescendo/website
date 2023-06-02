@@ -1,20 +1,11 @@
-import {Button} from '../../../components/button';
-import Script from 'next/script';
 import {StatusCard} from '../../../components/status-card';
 import {SubmitButton} from './submit-button';
 import {TextArea} from '../../../components/form/text-area';
 import {TextField} from '../../../components/form/text-field';
 import {TurnstileWidget} from '../../../components/turnstile-widget';
+import {createContactRequest} from '../../../firebase';
 import {redirect} from 'next/navigation';
 import {validateToken} from '../../../utils/turnstile';
-
-/*
-interface FormData {
-  name: string;
-  email?: string;
-  message: string;
-}
-*/
 
 export default function ContactForm({
   searchParams,
@@ -27,20 +18,16 @@ export default function ContactForm({
     if (!token || !(await validateToken(token))) {
       throw new Error('turnstile token not valid');
     }
-    /*
-    {"$ACTION_ID_de1bd1ff1ba0d5196652620db8ba566d996ccd88":"",
-    "name":"hjkhjk",
-    "email":"",
-    "message":"jkhkjh",
-    "cf-turnstile-response":"XXXX.DUMMY.TOKEN.XXXX"}
-    */
+
     const name = data.get('name')?.toString();
     const email = data.get('email')?.toString();
     const message = data.get('message')?.toString();
-    console.log({name, email, message});
 
-    await new Promise((resolve) => setTimeout(resolve, 2000));
-    //throw new Error('ups');
+    if (!name || !message) {
+      throw new Error('missing data');
+    }
+    
+    await createContactRequest({name, email, message});
     redirect('/kontakt?ok');
   }
 
