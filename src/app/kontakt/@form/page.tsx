@@ -3,9 +3,9 @@ import {SubmitButton} from './submit-button';
 import {TextArea} from '../../../components/form/text-area';
 import {TextField} from '../../../components/form/text-field';
 import {TurnstileWidget} from '../../../components/turnstile-widget';
-import {createContactRequest} from '../../../firebase';
+import {createContactRequest} from '../../../firebase/contact-request';
 import {redirect} from 'next/navigation';
-import { sanitize } from '../../../utils/escape';
+import {sanitize} from '../../../utils/escape';
 import {validateToken} from '../../../utils/turnstile';
 
 export default function ContactForm({
@@ -27,7 +27,7 @@ export default function ContactForm({
     if (!name || !message) {
       throw new Error('missing data');
     }
-    
+
     await createContactRequest({name, email, message});
     redirect('/kontakt?ok');
   }
