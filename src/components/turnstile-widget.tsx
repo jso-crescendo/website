@@ -1,5 +1,4 @@
-import Script from 'next/script';
-
+/* eslint-disable tailwindcss/no-custom-classname */
 export const TurnstileWidget: React.FC<{
   id: string;
 }> = ({id}) => (
