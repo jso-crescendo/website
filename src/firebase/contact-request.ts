@@ -1,5 +1,5 @@
+import 'server-only';
 import {COLLECTION_NAMES, initFirebase} from './internal';
-
 import admin from 'firebase-admin';
 
 interface ContactRequest {

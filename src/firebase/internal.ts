@@ -1,3 +1,4 @@
+import 'server-only';
 import admin from 'firebase-admin';
 import {cert} from 'firebase-admin/app';
 
