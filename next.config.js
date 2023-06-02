@@ -66,10 +66,9 @@ const nextConfig = {
               'accelerometer=(), ambient-light-sensor=(), autoplay=(), battery=(), camera=(), cross-origin-isolated=(), display-capture=(), document-domain=(), encrypted-media=(), execution-while-not-rendered=(), execution-while-out-of-viewport=(), fullscreen=(), geolocation=(), gyroscope=(), keyboard-map=(), magnetometer=(), microphone=(), midi=(), navigation-override=(), payment=(), picture-in-picture=(), publickey-credentials-get=(), screen-wake-lock=(), sync-xhr=(), usb=(), web-share=(), xr-spatial-tracking=()',
           },
           {
-            key: 'Content-Security-Policy-Report-Only',
-            value:
-              "default-src 'self'; script-src 'none'; script-src-elem 'self' 'unsafe-inline' https://analytics.jso-crescendo.ch/ https://challenges.cloudflare.com; style-src 'self' 'unsafe-inline'; object-src 'none'; base-uri 'self'; connect-src 'self' https://analytics.jso-crescendo.ch; font-src 'self'; frame-src 'self' https://challenges.cloudflare.com https://www.youtube-nocookie.com; img-src 'self' data:; manifest-src 'self'; media-src 'self'; report-uri https://7b4e0a451e15319a60f0c0a6009f3932.report-uri.com/r/d/csp/reportOnly; worker-src 'none';",
-          },
+            key: 'Content-Security-Policy',
+            value: ContentSecurityPolicy.replace(/\s{2,}/g, ' ').trim()
+          }
         ],
       },
       {
@@ -84,5 +83,14 @@ const nextConfig = {
     ];
   },
 };
+const ContentSecurityPolicy = `
+  default-src 'self';
+  script-src 'self' https://analytics.jso-crescendo.ch/ https://challenges.cloudflare.com;
+  connect-src 'self' https://analytics.jso-crescendo.ch;
+  frame-src 'self' https://challenges.cloudflare.com https://www.youtube-nocookie.com;
+  report-uri https://7b4e0a451e15319a60f0c0a6009f3932.report-uri.com/r/d/csp/reportOnly;
+  object-src 'none';
+  worker-src 'none';
+`;
 
 module.exports = nextConfig;
