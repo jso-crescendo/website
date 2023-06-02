@@ -4,7 +4,6 @@ import {Lora, Montserrat} from 'next/font/google';
 
 import {Footer} from '../components/footer';
 import {NavBar} from '@/components/nav-bar';
-import Script from 'next/script';
 import classNames from 'classnames';
 
 export const metadata = {
@@ -49,12 +48,18 @@ export default function RootLayout({children}: {children: React.ReactNode}) {
       className={classNames(loraFont.variable, montserratFont.variable)}
     >
       {process.env.NODE_ENV == 'production' && (
-        <Script
+        <script
+          async
+          defer
           data-website-id="07350fa3-6016-4694-a802-410a5a7aab98"
           src="https://analytics.jso-crescendo.ch/script.js"
         />
       )}
-      <Script src="https://challenges.cloudflare.com/turnstile/v0/api.js" />
+      <script
+        async
+        defer
+        src="https://challenges.cloudflare.com/turnstile/v0/api.js"
+      />
       <body className="flex min-h-screen w-screen flex-col overflow-x-hidden bg-background text-on-background">
         <header className="container mx-auto ">
           <NavBar />
