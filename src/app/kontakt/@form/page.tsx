@@ -5,6 +5,7 @@ import {TextField} from '../../../components/form/text-field';
 import {TurnstileWidget} from '../../../components/turnstile-widget';
 import {createContactRequest} from '../../../firebase';
 import {redirect} from 'next/navigation';
+import { sanitize } from '../../../utils/escape';
 import {validateToken} from '../../../utils/turnstile';
 
 export default function ContactForm({
@@ -19,9 +20,9 @@ export default function ContactForm({
       throw new Error('turnstile token not valid');
     }
 
-    const name = data.get('name')?.toString();
-    const email = data.get('email')?.toString();
-    const message = data.get('message')?.toString();
+    const name = sanitize(data.get('name')?.toString())!;
+    const email = sanitize(data.get('email')?.toString())!;
+    const message = sanitize(data.get('message')?.toString())!;
 
     if (!name || !message) {
       throw new Error('missing data');
