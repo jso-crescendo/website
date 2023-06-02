@@ -20,7 +20,7 @@ export const validateToken = async (token: string): Promise<boolean> => {
   }).then(r => r.json());
 
   if (!response.success) {
-    console.warn('invalid token', response);
+    console.warn('token invalid', response);
     return false;
   }
   console.info('token is valid');

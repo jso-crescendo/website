@@ -13,6 +13,9 @@ export const createSignupRequest = async ({name, email}: SignupRequest) => {
   if (!isEmail(email)) {
     throw new Error('invalid email');
   }
+
+  initFirebase();
+
   if (await emailExists(email)) {
     console.info('user with email already exists');
   } else {
@@ -22,7 +25,7 @@ export const createSignupRequest = async ({name, email}: SignupRequest) => {
       createdAt: admin.firestore.FieldValue.serverTimestamp(),
     };
     const confirmationCode = calculateHash({name, email, salt: srid()});
-    initFirebase();
+
     const batch = admin.firestore().batch();
 
     const mailRef = admin.firestore().collection(COLLECTION_NAMES.MAIL).doc();
@@ -80,7 +83,7 @@ export const confirmCode = async (code: string) => {
 
   if (userWithCode.empty) {
     console.info('no user with that code could be found', {code});
-    return;
+    return false;
   }
 
   await admin
@@ -93,8 +96,9 @@ export const confirmCode = async (code: string) => {
         confirmedAt: admin.firestore.FieldValue.serverTimestamp(),
       },
     });
-    
+
   console.info('email confirmed successfully', {code});
+  return true
 };
 
 const emailExists = async (email: string) => {

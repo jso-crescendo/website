@@ -1,4 +1,4 @@
-import Script from "next/script";
+import Script from 'next/script';
 
 export const TurnstileWidget: React.FC<{
   id: string;
@@ -16,5 +16,10 @@ export const TurnstileWidget: React.FC<{
       src="https://challenges.cloudflare.com/turnstile/v0/api.js"
       strategy="afterInteractive"
     />
+    <noscript>
+      Protected by{' '}
+      <a href="https://www.cloudflare.com/products/turnstile">turnstile</a>.
+      Please enable Javascript
+    </noscript>
   </>
 );

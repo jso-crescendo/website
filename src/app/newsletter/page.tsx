@@ -1,7 +1,6 @@
 import {ContentContainer} from '../../components/contentContainer';
 import {ImageSection} from '../../components/image-section';
 import NewsLetterImage from '../../images/backgrounds/letter.webp';
-import {NewsletterForm} from './newsletter-form';
 
 export const metadata = {
   title: 'Newsletter',
@@ -21,10 +20,6 @@ export default function Newsletter() {
         Bleiben Sie immer up-to-date und erhalten Sie exklusive Informationen
         direkt in Ihr Postfach.
       </ImageSection>
-
-      <section className="mt-8 flex flex-row justify-center">
-        <NewsletterForm />
-      </section>
     </ContentContainer>
   );
 }
