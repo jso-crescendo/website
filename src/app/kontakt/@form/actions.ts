@@ -2,7 +2,6 @@
 
 import {createContactRequest} from '../../../firebase/contact-request';
 import {redirect} from 'next/navigation';
-import {resolve} from 'path';
 import {sanitize} from '../../../utils/escape';
 import {validateToken} from '../../../utils/turnstile';
 
