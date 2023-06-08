@@ -48,7 +48,7 @@ export default function ContactForm({
           onSuccess={() => setIsTokenSet(true)}
         />
       </div>
-      <SubmitButton enabled={isTokenSet}/>
+      <SubmitButton enabled={isTokenSet} />
     </form>
   );
 }
