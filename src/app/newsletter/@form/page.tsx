@@ -13,6 +13,8 @@ export default function ContactForm({
 }: {
   searchParams: {[key: string]: string | string[] | undefined};
 }) {
+  const [isTokenSet, setIsTokenSet] = useState(false);
+
   if (Object.keys(searchParams).includes('ok')) {
     return (
       <StatusCard
@@ -22,7 +24,6 @@ export default function ContactForm({
       />
     );
   }
-  const [isTokenSet, setIsTokenSet] = useState(false);
 
   return (
     <form
