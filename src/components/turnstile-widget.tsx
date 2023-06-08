@@ -1,15 +1,19 @@
-/* eslint-disable tailwindcss/no-custom-classname */
+import {Turnstile} from '@marsidev/react-turnstile';
+
 export const TurnstileWidget: React.FC<{
   id: string;
-}> = ({id}) => (
+  onSuccess: (token: string) => void;
+}> = ({id, onSuccess}) => (
   <>
-    <div
+    <Turnstile
       id={id}
-      className="cf-turnstile"
-      data-sitekey={process.env.TURNSTILE_CLIENT_ID}
-      data-action={id}
-      data-theme="light"
-      data-language="de"
+      siteKey={process.env.NEXT_PUBLIC_TURNSTILE_CLIENT_ID ?? ''}
+      options={{
+        action: id,
+        language: 'de',
+        theme: 'light',
+      }}
+      onSuccess={onSuccess}
     />
 
     <noscript>

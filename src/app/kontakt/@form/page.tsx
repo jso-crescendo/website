@@ -1,37 +1,19 @@
+'use client';
+
+import {Button} from '../../../components/button';
 import {StatusCard} from '../../../components/status-card';
-import {SubmitButton} from './submit-button';
 import {TextArea} from '../../../components/form/text-area';
 import {TextField} from '../../../components/form/text-field';
 import {TurnstileWidget} from '../../../components/turnstile-widget';
-import {createContactRequest} from '../../../firebase/contact-request';
-import {redirect} from 'next/navigation';
-import {sanitize} from '../../../utils/escape';
-import {validateToken} from '../../../utils/turnstile';
+import {submitContactRequest} from './actions';
+import {experimental_useFormStatus as useFormStatus} from 'react-dom';
+import {useState} from 'react';
 
 export default function ContactForm({
   searchParams,
 }: {
   searchParams: {[key: string]: string | string[] | undefined};
 }) {
-  async function submitContactRequest(data: FormData) {
-    'use server';
-    const token = data.get('cf-turnstile-response')?.toString();
-    if (!token || !(await validateToken(token))) {
-      throw new Error('turnstile token not valid');
-    }
-
-    const name = sanitize(data.get('name')?.toString())!;
-    const email = sanitize(data.get('email')?.toString())!;
-    const message = sanitize(data.get('message')?.toString())!;
-
-    if (!name || !message) {
-      throw new Error('missing data');
-    }
-
-    await createContactRequest({name, email, message});
-    redirect('/kontakt?ok');
-  }
-
   if (Object.keys(searchParams).includes('ok')) {
     return (
       <StatusCard
@@ -41,6 +23,8 @@ export default function ContactForm({
       />
     );
   }
+
+  const [isTokenSet, setIsTokenSet] = useState(false);
 
   return (
     <form
@@ -59,9 +43,27 @@ export default function ContactForm({
         required
       />
       <div className="my-2 flex justify-center">
-        <TurnstileWidget id="contact-form" />
+        <TurnstileWidget
+          id="contact-form"
+          onSuccess={() => setIsTokenSet(true)}
+        />
       </div>
-      <SubmitButton />
+      <SubmitButton enabled={isTokenSet}/>
     </form>
   );
 }
+
+const SubmitButton = ({enabled}: {enabled: boolean}) => {
+  const {pending} = useFormStatus();
+
+  return (
+    <Button
+      type="submit"
+      text="Absenden"
+      variant="primary"
+      className="float-right"
+      loading={pending}
+      disabled={!enabled}
+    />
+  );
+};

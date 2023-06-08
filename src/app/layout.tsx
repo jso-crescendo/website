@@ -55,11 +55,6 @@ export default function RootLayout({children}: {children: React.ReactNode}) {
           src="https://analytics.jso-crescendo.ch/script.js"
         />
       )}
-      <script
-        async
-        defer
-        src="https://challenges.cloudflare.com/turnstile/v0/api.js"
-      />
       <body className="flex min-h-screen w-screen flex-col overflow-x-hidden bg-background text-on-background">
         <header className="container mx-auto ">
           <NavBar />
