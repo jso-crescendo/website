@@ -47,21 +47,21 @@ export const CONCERTS: Concert[] = [
     ],
     dates: [
       {
-        location: 'Dreifaltigkeitskirche Tann',
-        googleMapsLink: 'https://goo.gl/maps/vyJ5oA8gPmJXgQfSA',
-        dateString: '3. November 2023',
-        dateISO: '2023-11-03',
-      },
-      {
         location: 'Friedenskirche Olten',
         googleMapsLink: 'https://goo.gl/maps/uDNdqBQWePwmsLci9',
-        dateString: '4. November 2023',
-        dateISO: '2023-11-04',
+        dateString: '3. November 2023 20:00 Uhr',
+        dateISO: '2023-11-03T20:00:00+01:00',
       },
       {
-        location: 'Wird noch bekannt gegeben',
-        dateString: '5. November 2023',
-        dateISO: '2023-11-05',
+        location: 'St. Peter Zürich',
+        dateString: '4. November 2023 20:00 Uhr',
+        dateISO: '2023-11-04T20:00:00+01:00',
+      },
+      {
+        location: 'Dreifaltigkeitskirche Tann',
+        googleMapsLink: 'https://goo.gl/maps/vyJ5oA8gPmJXgQfSA',
+        dateString: '5. November 2023 16:00 Uhr',
+        dateISO: '2023-11-05T16:00:00+01:00',
       },
     ],
   },
