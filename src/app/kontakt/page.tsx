@@ -1,9 +1,7 @@
-import {ImageSection} from '@/components/image-section';
-import VorstandImage from '@/images/people/vorstand_sm.webp';
-
 import {ContentContainer} from '../../components/contentContainer';
+import {ImageSection} from '@/components/image-section';
 import {Text} from '../../components/text';
-import {ContactForm} from './contact-form';
+import VorstandImage from '@/images/people/vorstand.webp';
 
 const VORSTAND = [
   {
@@ -96,9 +94,6 @@ export default function Kontakt() {
           ))}
         </ul>
       </ImageSection>
-      <section className="flex flex-row justify-center">
-        <ContactForm />
-      </section>
     </ContentContainer>
   );
 }

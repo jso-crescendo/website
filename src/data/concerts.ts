@@ -1,10 +1,9 @@
-import {StaticImageData} from 'next/image';
-
-import HerbstKonzertImage_sm from '@/images/2021_herbstkonzert_chor_2_sm.webp';
+import FruehlingsKonzertImage_lg from '@/images/flyer/flyer_fruehlingskonzert_2023.webp';
+import FruehlingsKonzertImage_sm from '@/images/flyer/flyer_fruehlingkonzert_2023_sm.webp';
+import HerbstKonzertImage_sm from '@/images/2021_herbstkonzert_chor_2.webp';
 import Naegeli_lg from '@/images/flyer/2023_hgn250_lg.webp';
 import Naegeli_sm from '@/images/flyer/2023_hgn250_md.webp';
-import FruehlingsKonzertImage_sm from '@/images/flyer/flyer_fruehlingkonzert_2023_sm.webp';
-import FruehlingsKonzertImage_lg from '@/images/flyer/flyer_fruehlingskonzert_2023.webp';
+import {StaticImageData} from 'next/image';
 
 export interface ConcertLocation {
   location: string;
@@ -23,6 +22,10 @@ export interface Concert {
   name: string;
   subtitle?: string;
   description?: string;
+  /**
+   * used for sitemap. ISO-String
+   */
+  lastChange?: string;
   image_sm: StaticImageData;
   image_lg?: StaticImageData;
   dates?: ConcertLocation[];
@@ -32,6 +35,7 @@ export interface Concert {
 export const CONCERTS: Concert[] = [
   {
     id: 'herbstkonzerte-23',
+    lastChange: '2023-05-25T00:00:00.000Z',
     name: 'Herbstkonzerte',
     subtitle: 'mit dem Projektchor Canturicum',
     image_sm: HerbstKonzertImage_sm,

@@ -14,10 +14,12 @@ interface ImageSectionProps {
     src: StaticImageData;
     alt: string;
     priority?: boolean;
+    vertical?: boolean;
   };
   video?: {
     type: 'youtube';
     videoId: string;
+    vertical?: boolean;
   };
   link?: {
     text: string;
@@ -39,31 +41,43 @@ export const ImageSection: React.FC<ImageSectionProps> = ({
   <section
     id={toKebabCase(title)}
     className={classNames(
-      'flex flex-col justify-between gap-8 pb-8 pt-4 md:flex-row',
-      {'md:even:flex-row-reverse': !noReverse},
+      'flex flex-col items-center justify-between gap-8 pb-8 pt-4 lg:flex-row',
+      {'lg:even:flex-row-reverse': !noReverse},
     )}
   >
-    {image ? (
-      <Image
-        src={image.src}
-        alt={image.alt}
-        priority={image.priority}
-        className="w-full rounded-lg object-contain md:w-5/12"
-        placeholder="blur"
-      />
-    ) : (
-      video && (
-        <iframe
-          id="ytplayer"
-          className="aspect-video w-full rounded-lg object-contain md:w-5/12"
-          src={`https://www.youtube-nocookie.com/embed/${video.videoId}?hl=de-ch&modestbranding=1`}
-          title="YouTube video player"
-          allowFullScreen
-          referrerPolicy="no-referrer"
+    <div
+      className={classNames(
+        {relative: !!image},
+        'w-full lg:w-auto lg:flex-1',
+        image?.vertical || video?.vertical
+          ? 'aspect-video-vertical'
+          : 'aspect-video',
+      )}
+    >
+      {image ? (
+        <Image
+          src={image.src}
+          alt={image.alt}
+          priority={image.priority}
+          className="rounded-lg object-cover drop-shadow-lg"
+          placeholder="blur"
+          fill
+          sizes="(max-width: 1024px) 100vw, 42vw"
         />
-      )
-    )}
-    <div className="my-auto w-full">
+      ) : (
+        video && (
+          <iframe
+            id="ytplayer"
+            src={`https://www.youtube-nocookie.com/embed/${video.videoId}?hl=de-ch&modestbranding=1`}
+            title="YouTube video player"
+            allowFullScreen
+            referrerPolicy="no-referrer"
+            className="h-full w-full"
+          />
+        )
+      )}{' '}
+    </div>
+    <div className="w-full lg:w-7/12">
       <hgroup>
         <h2 className="font-serif text-5xl">{title}</h2>
         {subtitle && <p className="pb-4 text-lg">{subtitle}</p>}

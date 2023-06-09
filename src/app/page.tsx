@@ -1,12 +1,12 @@
-import AboutUsImage from '@/images/2022_fruehling_blech_sm.webp';
-import BgImage from '@/images/2022_waedenswil_2_xl.webp';
+import AboutUsImage from '@/images/2022_fruehling_blech.webp';
+import BgImage from '@/images/2022_waedenswil_2.webp';
 import {CONCERTS} from '../data/concerts';
-import CanturicumImage from '@/images/2019_canturicum_md.webp';
+import CanturicumImage from '@/images/2019_canturicum.webp';
 import {ChevronDown} from '../icons/chevron-down';
 import {ContentContainer} from '../components/contentContainer';
 import Image from 'next/image';
 import {ImageSection} from '@/components/image-section';
-import KonzerteImage from '@/images/people/kaethi_2_sm.webp';
+import KonzerteImage from '@/images/people/kaethi_2.webp';
 
 export const metadata = {
   description:
@@ -21,6 +21,8 @@ export default function Home() {
           src={BgImage}
           alt="Hintergrundbild Orchester"
           priority
+          quality={100}
+          placeholder="blur"
           className="h-screen object-cover brightness-75"
         />
         <h1
@@ -48,44 +50,6 @@ export default function Home() {
       </div>
 
       <ContentContainer id="content">
-        <ImageSection
-          title="Konzertreise nach Italien"
-          video={{
-            type: 'youtube',
-            videoId: '92QqyF-wzqw',
-          }}
-          link={{
-            href: 'https://wemakeit.com/projects/jso-crescendo-italienreise',
-            text: 'Jetzt unterstützen',
-          }}
-        >
-          Liebe Unterstützende
-          <br />
-          Die diesjährige Konzertreise führt das JSO Crescendo Ende Juli für
-          zwei Wochen nach Italien. Juhu! Nach einem fünf-tägigen Aufenthalt in
-          Sorrent (Küstenstadt im Südwesten am Golf von Neapel) und zwei
-          Konzerten fährt das Crescendo die Küste hinauf in die Hauptstadt
-          (Rom), von wo aus es sich nach zwei Tagen und einem Konzert in die
-          Toskana auf macht und während des sechs-tägigen Aufenthalts im Rahmen
-          des Festival Orchestre Giovanili drei weitere Konzerte in Florenz,
-          Montecatini Terme sowie Scarperia spielt. Natürlich werden die
-          Crescendianer:innen neben den Aufführungen und Proben auch Zeit haben,
-          Ausflüge zu unternehmen (bspw. nach Pompeji oder Pisa), die Gegenden
-          zu erkunden oder auszuspannen.
-          <br />
-          <br />
-          Um die Crescendianer:innen (oder deren private Sponsoren wie z.B.
-          Eltern) finanziell zu entlasten, haben wir ein wemakeit-Projekt
-          gestartet und bitten Sie nun diesem Link zu folgen und unter dem Motto
-          &bdquo;grosse Ziele erreicht man, indem man viele kleine Schritte
-          geht&rdquo; eine Zuwendung beizusteuern. Es besteht die Möglichkeit,
-          kleinere &bdquo;Belohnungen&rdquo; durch die Spende zu erhalten. Ein
-          Crescendo-Selfie aus Florenz, personalisierte Geburtstagsständchen
-          oder einen Stick mit unserem Logo? Ist alles möglich!
-          <br />
-          <br />
-          Herzlichen Dank!
-        </ImageSection>
         <ImageSection
           title="Projektchor Canturicum"
           image={{
@@ -129,6 +93,7 @@ export default function Home() {
           image={{
             src: KonzerteImage,
             alt: 'Orchester spielt in der Tonhalle Zürich.',
+            vertical: true,
           }}
           link={{
             href: '/konzerte',

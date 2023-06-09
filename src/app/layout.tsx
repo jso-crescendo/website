@@ -49,12 +49,12 @@ export default function RootLayout({children}: {children: React.ReactNode}) {
     >
       {process.env.NODE_ENV == 'production' && (
         <script
-          async={true}
+          async
+          defer
           data-website-id="07350fa3-6016-4694-a802-410a5a7aab98"
           src="https://analytics.jso-crescendo.ch/script.js"
         />
       )}
-
       <body className="flex min-h-screen w-screen flex-col overflow-x-hidden bg-background text-on-background">
         <header className="container mx-auto ">
           <NavBar />

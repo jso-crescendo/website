@@ -1,15 +1,17 @@
-import ChorImage from '@/images/2021_herbstkonzert_chor_sm.webp';
-import {ContentContainer} from '../../components/contentContainer';
-import GoennerImage from '@/images/2022_fruehling_blech_sm.webp';
 import Image from 'next/image';
+
 import {ImageSection} from '@/components/image-section';
-import KaethiImage from '@/images/people/kaethi_sm.webp';
-import KonzertreiseImage from '@/images/2019_konzertreise_bulgarien_sm.webp';
-import MitgliedWerdenImage from '@/images/backgrounds/scores_1_sm.webp';
-import NoeliImage from '@/images/people/noelie_sm.webp';
-import OrchesterWideImage from '@/images/2019_jubliaeumskonzert_tonhalle_wide_lg.webp';
-import SponsorenImage from '@/images/2022_fruehling_bass_sm.webp';
 import {Text} from '@/components/text';
+import OrchesterWideImage from '@/images/2019_jubliaeumskonzert_tonhalle_wide.webp';
+import KonzertreiseImage from '@/images/2019_konzertreise_bulgarien.webp';
+import ChorImage from '@/images/2021_herbstkonzert_chor.webp';
+import SponsorenImage from '@/images/2022_fruehling_bass.webp';
+import GoennerImage from '@/images/2022_fruehling_blech.webp';
+import MitgliedWerdenImage from '@/images/backgrounds/scores_1.webp';
+import KaethiImage from '@/images/people/kaethi.webp';
+import NoeliImage from '@/images/people/noelie.webp';
+
+import {ContentContainer} from '../../components/contentContainer';
 
 export const metadata = {
   title: 'Über uns',
@@ -26,7 +28,7 @@ export default function Orchester() {
       <Image
         src={OrchesterWideImage}
         alt="Orchester in Tonhalle bei Konzert"
-        className="w-full rounded-lg py-4"
+        className="hidden w-full rounded-lg py-4 md:block"
         priority
         placeholder="blur"
       />
@@ -66,7 +68,7 @@ export default function Orchester() {
           src: KonzertreiseImage,
           alt: 'Das Orchester in Bulgarien am Meer',
         }}
-        title="Konzertreisen"
+        title="Konzert&shy;reisen"
       >
         Ein fester Bestandteil des JSO Crescendo sind die Konzertreisen. Alle
         zwei Jahre konzertieren wir während zwei Wochen an verschiedenen Orten
@@ -83,7 +85,11 @@ export default function Orchester() {
         Momente.
       </ImageSection>
       <ImageSection
-        image={{src: KaethiImage, alt: 'Portrait Foto von Käthi Schmid Lauber'}}
+        image={{
+          src: KaethiImage,
+          alt: 'Portrait Foto von Käthi Schmid Lauber',
+          vertical: true,
+        }}
         title="Käthi Schmid Lauber"
         subtitle="Dirigentin"
       >
@@ -115,7 +121,11 @@ export default function Orchester() {
         Reitunfall tödlich verunglückte.
       </ImageSection>
       <ImageSection
-        image={{src: NoeliImage, alt: 'Portrait Foto von Noëlie Nyffeler'}}
+        image={{
+          src: NoeliImage,
+          alt: 'Portrait Foto von Noëlie Nyffeler',
+          vertical: true,
+        }}
         title="Noëlie Nyffeler"
         subtitle="Konzertmeisterin"
       >
