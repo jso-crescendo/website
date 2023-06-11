@@ -54,6 +54,7 @@ export const CONCERTS: Concert[] = [
       },
       {
         location: 'St. Peter Zürich',
+        googleMapsLink: "https://goo.gl/maps/x7tZvHs3fYddvpvy9",
         dateString: '4. November 2023 20:00 Uhr',
         dateISO: '2023-11-04T20:00:00+01:00',
       },
