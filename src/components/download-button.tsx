@@ -1,13 +1,12 @@
-import {ArrowRight} from '../icons/arrow-right';
-import Link from 'next/link';
+import {Download} from '../icons/download';
 import classNames from 'classnames';
 
 interface LinkProps {
   type: 'primary' | 'secondary';
-  href: string | {pathname: string; hash: string};
+  href: string;
   text: string;
 }
-export const LinkButton: React.FC<
+export const DownloadButton: React.FC<
   LinkProps &
     Omit<
       React.DetailedHTMLProps<
@@ -17,8 +16,7 @@ export const LinkButton: React.FC<
       'href'
     >
 > = ({href, text, type, className}) => (
-  <Link
-    type="button"
+  <a
     className={classNames(
       'inline-flex items-center rounded-lg px-5 py-2.5 text-center text-sm font-medium',
       'focus:outline-none focus:ring-4',
@@ -31,8 +29,9 @@ export const LinkButton: React.FC<
       className,
     )}
     href={href}
+    download={true}
   >
     {text}
-    <ArrowRight className="ml-2 h-5" />
-  </Link>
+    <Download className="ml-2 h-5" />
+  </a>
 );

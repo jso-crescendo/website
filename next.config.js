@@ -83,6 +83,15 @@ const nextConfig = {
           },
         ],
       },
+      {
+        source: '/canturicum/Anmeldung_Cherubini.pdf',
+        headers: [
+          {
+            key: 'Content-Disposition',
+            value: 'attachment',
+          },
+        ],
+      },
     ];
   },
 };

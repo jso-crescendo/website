@@ -1,22 +1,24 @@
 import {CONCERTS} from '../../data/concerts';
+import CanturicumChorImage from '@/images/2019_canturicum_chor.webp';
 import CanturicumImage from '@/images/2019_canturicum.webp';
+import {ConcertLocationList} from '../../components/concert-location-list';
 import {ContentContainer} from '../../components/contentContainer';
+import {DownloadButton} from '../../components/download-button';
 import {ImageSection} from '../../components/image-section';
 import KonzertImage from '@/images/2019_jubilaeumskonzert_tonhalle.webp';
-import {LinkButton} from '../../components/link-button';
 import {Text} from '../../components/text';
 
 export const metadata = {
   title: 'Projektchor Canturicum',
   description:
-    'Erfahre jetzt mehr über unsere Konzerte und die Möglichkeit, Teil des Projektchors zu werden.',
+    'Erfahre jetzt mehr über unsere Konzerte und die Möglichkeit, Teil des Projektchors Canturicum zu werden.',
 };
 
-export default function Orchester() {
+export default function Canturicum() {
   return (
     <ContentContainer>
-      <h1 className="mb-8 text-center font-serif text-3xl leading-normal md:text-4xl lg:text-5xl">
-        Chorprojekt Cherubini November 2023
+      <h1 className="mb-8 text-center font-serif text-4xl leading-normal md:text-5xl lg:text-6xl">
+        Chorprojekt Cherubini Requiem
       </h1>
       <Text>
         Cherubini komponierte das Werk 1816. Es zeigt alle Facetten von
@@ -27,7 +29,7 @@ export default function Orchester() {
       <ImageSection
         title="Projektchor Canturicum"
         image={{
-          src: CanturicumImage,
+          src: CanturicumChorImage,
           alt: 'Projektchor Canturicum in der Tonhalle',
         }}
       >
@@ -48,55 +50,56 @@ export default function Orchester() {
         }}
         textOnly={false}
       >
-        <ol className="list-disc pl-4">
-          {CONCERTS.filter((c) => c.id == 'herbstkonzerte-23')[0].dates?.map(
-            (d) => (
-              <li key={d.dateISO}>
-                <a href={d.googleMapsLink} className="hover:text-primary-main">
-                  <span className="font-serif text-lg">{d.location}</span>
-                  <span className="text-sm"> - {d.dateString}</span>
-                </a>
-              </li>
-            ),
-          )}
-        </ol>
+        <ConcertLocationList
+          locations={
+            CONCERTS.filter((c) => c.id == 'herbstkonzerte-23')[0].dates ?? []
+          }
+        />
       </ImageSection>
-      <Text>
-        Diese Einladung richtet sich an Sänger:innen, die gerne die Gelegenheit
-        wahrnehmen möchten, ein Konzertprogramm mit einem jungen, dynamischen
-        Sinfonieorchester zu erarbeiten. Voraussetzung ist nicht in erster Linie
-        eine gute Stimmausbildung, sondern die Bereitschaft, sich geistig auf
-        Bilder zur Musik- und Tongestaltung einzulassen. Dieses wunderbare
-        Chorwerk wird dem Chor viel an Stimm- und Klangbeherrschung abverlangen.
-        Es ist ein grosses Anliegen der Dirigentin, alle Nuancen von dieser
-        wunderbaren Musik voll ausreizen zu können - dies sicher oft mit
-        Forderungen, die nicht unbedingt einer konventionellen Vorstellung von
-        Chorarbeit entsprechen. Meine Erfahrungen mit der individuell gewählten
-        Probeart waren durchwegs positiv.
-      </Text>
-      <ul className="list-disc pl-8">
-        <li>im ad hoc-Chor am Montag in Wetzikon</li>
-        <li>
-          Dienstag oder Donnerstag in Zürich (Tag richtet sich nach den
-          Anmeldungen)
-        </li>
-        <li>
-          im Selbststudium mit Beteiligung an den Gesamtproben und den
-          Probetagen.
-        </li>
-      </ul>
-      <br />{' '}
-      <Text>
-        Für Probearbeit, Noten und Übdateien wird ein Unkostenbeitrag erhoben.
-        Zusätzlich werden gemäss Anmeldung noch die Kosten für die Übernachtung
-        und Verpflegung am Probewochenende dazu kommen.
-      </Text>
-      <br />
-      <LinkButton
-        text="Jetzt anmelden"
-        href="https://forms.gle/y8RseozTuqxr6wVVA"
-        type="primary"
-      />
+      <ImageSection
+        title="Mitsingen"
+        image={{
+          src: CanturicumImage,
+          alt: 'Projektchor Canturicum in der Tonhalle',
+        }}
+        textOnly={false}
+      >
+        <Text>
+          Diese Einladung richtet sich an Sänger:innen, die gerne die
+          Gelegenheit wahrnehmen möchten, ein Konzertprogramm mit einem jungen,
+          dynamischen Sinfonieorchester zu erarbeiten. Voraussetzung ist für
+          mich nicht in erster Linie eine gute Stimmausbildung, sondern die
+          Bereitschaft, sich geistig auf meine Bilder zur Musik - und
+          Tongestaltung einzulassen. Dieses wunderbare Chorwerk wird dem Chor
+          viel an Stimm- und Klangbeherrschung abverlangen. Es ist mir ein
+          grosses Anliegen, alle Nuancen von dieser wunderbaren Musik voll
+          ausreizen zu können - dies sicher oft mit Forderungen, die nicht
+          unbedingt einer konventionellen Vorstellung von Chorarbeit
+          entsprechen.
+          <br />
+          Es freut uns besonders, dass bei diesem Projekt die Kantorei Wetzikon
+          mitsingen wird. Daher wird ein Teil der Probearbeit in Wetzikon
+          stattfinden.
+        </Text>
+        <h3 className="pb-2 pt-4 font-serif text-xl md:text-2xl lg:text-3xl">
+          Anmelden
+        </h3>
+        <Text className="pb-2">
+          Anmeldung herunterladen und ausgefüllt per Email an{' '}
+          <a
+            href="mailto:kaethi.schmid@jso-crescendo.ch"
+            className="text-primary-main"
+          >
+            Käthi Schmid Lauber (kaethi.schmid@jso-crescendo.ch)
+          </a>{' '}
+          senden.
+        </Text>
+        <DownloadButton
+          text="Anmeldung herunterladen"
+          href="/canturicum/Anmeldung_Cherubini.pdf"
+          type="primary"
+        />
+      </ImageSection>
     </ContentContainer>
   );
 }

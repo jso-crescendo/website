@@ -35,9 +35,11 @@ export interface Concert {
 export const CONCERTS: Concert[] = [
   {
     id: 'herbstkonzerte-23',
-    lastChange: '2023-05-25T00:00:00.000Z',
+    lastChange: '2023-06-12T00:00:00.000Z',
     name: 'Herbstkonzerte',
     subtitle: 'mit dem Projektchor Canturicum',
+    description:
+      'Seit 2006 führt das JSO Crescendo regelmässig Chorwerke mit dem Projektchor Canturicum auf. Dieser Chor wurde von Käthi Schmid Lauber eigens dazu gegründet, im Mai 2006 die "Messe solennelle" von Ch. Gounod aufzuführen. Der Erfolg dieses Projektes, u.a. das Konzert in der ausverkauften Tonhalle, war so durchschlagend, dass 2007, 2009, 2012, 2015, 2018 und 2019 weitere Projekte realisiert wurden. Es singen jeweils zwischen 80 und 120 Sänger:innen, aus den Singwochen, Eltern, Ehemalige und Freunde vom JSO Crescendo mit.',
     image_sm: HerbstKonzertImage_sm,
     program: [
       {
@@ -54,6 +56,7 @@ export const CONCERTS: Concert[] = [
       },
       {
         location: 'St. Peter Zürich',
+        googleMapsLink: 'https://goo.gl/maps/x7tZvHs3fYddvpvy9',
         dateString: '4. November 2023 20:00 Uhr',
         dateISO: '2023-11-04T20:00:00+01:00',
       },

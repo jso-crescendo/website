@@ -5,11 +5,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
   return [
     {
       url: 'https://jso-crescendo.ch',
-      lastModified: '2023-06-03T00:00:00.000Z',
+      lastModified: '2023-06-12T00:00:00.000Z',
     },
     {
       url: 'https://jso-crescendo.ch/canturicum',
-      lastModified: '2023-06-03T00:00:00.000Z',
+      lastModified: '2023-06-12T00:00:00.000Z',
     },
     {
       url: 'https://jso-crescendo.ch/kontakt',
@@ -25,7 +25,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     {
       url: 'https://jso-crescendo.ch/konzerte',
-      lastModified: '2023-06-03T00:00:00.000Z',
+      lastModified: '2023-06-12T00:00:00.000Z',
     },
     ...CONCERTS.map((c) => ({
       url: `https://jso-crescendo.ch/konzerte/${c.id}`,

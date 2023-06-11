@@ -1,9 +1,9 @@
-import classNames from 'classnames';
 import Image, {StaticImageData} from 'next/image';
 
-import {toKebabCase} from '../utils/toKebabCase';
 import {LinkButton} from './link-button';
 import {Text} from './text';
+import classNames from 'classnames';
+import {toKebabCase} from '../utils/toKebabCase';
 
 interface ImageSectionProps {
   title: string;
@@ -79,7 +79,7 @@ export const ImageSection: React.FC<ImageSectionProps> = ({
     </div>
     <div className="w-full lg:w-7/12">
       <hgroup>
-        <h2 className="font-serif text-5xl">{title}</h2>
+        <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl">{title}</h2>
         {subtitle && <p className="pb-4 text-lg">{subtitle}</p>}
       </hgroup>
       {textOnly ? <Text>{children}</Text> : children}

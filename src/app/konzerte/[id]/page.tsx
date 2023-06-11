@@ -1,6 +1,7 @@
 import {CONCERTS, Concert, PAST_CONCERTS} from '../../../data/concerts';
 import {Event, WithContext} from 'schema-dts';
 
+import {ConcertLocationList} from '../../../components/concert-location-list';
 import {ContentContainer} from '../../../components/contentContainer';
 import DateImage from '@/images/backgrounds/harp.webp';
 import Image from 'next/image';
@@ -72,9 +73,14 @@ export default function KonzertPage({params}: {params: {id: string}}) {
   const concert = getConcert(id);
   return (
     <ContentContainer>
-      <h1 className="mb-8 text-center font-serif text-3xl leading-normal md:text-4xl lg:text-5xl">
-        {concert.name}
-      </h1>
+      <hgroup className="mb-8 text-center leading-normal ">
+        <h1 className=" font-serif text-3xl md:text-4xl lg:text-5xl">
+          {concert.name}
+        </h1>
+        {concert.subtitle && (
+          <p className="text-sm md:text-lg">{concert.subtitle}</p>
+        )}
+      </hgroup>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{__html: JSON.stringify(getJSONLD(concert))}}
@@ -112,26 +118,7 @@ export default function KonzertPage({params}: {params: {id: string}}) {
           image={{src: DateImage, alt: ''}}
           textOnly={false}
         >
-          <ol className="list-disc pl-4">
-            {concert.dates.map((d) => (
-              <li key={d.dateISO}>
-                {d.googleMapsLink ? (
-                  <a
-                    href={d.googleMapsLink}
-                    className="hover:text-primary-main"
-                  >
-                    <span className="font-serif text-lg">{d.location}</span>
-                    <span className="text-sm"> - {d.dateString}</span>
-                  </a>
-                ) : (
-                  <span>
-                    <span className="font-serif text-lg">{d.location}</span>
-                    <span className="text-sm"> - {d.dateString}</span>
-                  </span>
-                )}
-              </li>
-            ))}
-          </ol>
+          <ConcertLocationList locations={concert.dates} />
         </ImageSection>
       )}
     </ContentContainer>
