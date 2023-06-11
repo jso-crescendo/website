@@ -1,5 +1,6 @@
 import {CONCERTS} from '../../data/concerts';
 import CanturicumImage from '@/images/2019_canturicum.webp';
+import { ConcertLocationList } from '../../components/concert-location-list';
 import {ContentContainer} from '../../components/contentContainer';
 import {ImageSection} from '../../components/image-section';
 import KonzertImage from '@/images/2019_jubilaeumskonzert_tonhalle.webp';
@@ -9,14 +10,14 @@ import {Text} from '../../components/text';
 export const metadata = {
   title: 'Projektchor Canturicum',
   description:
-    'Erfahre jetzt mehr über unsere Konzerte und die Möglichkeit, Teil des Projektchors zu werden.',
+    'Erfahre jetzt mehr über unsere Konzerte und die Möglichkeit, Teil des Projektchors Canturicum zu werden.',
 };
 
-export default function Orchester() {
+export default function Canturicum() {
   return (
     <ContentContainer>
-      <h1 className="mb-8 text-center font-serif text-3xl leading-normal md:text-4xl lg:text-5xl">
-        Chorprojekt Cherubini November 2023
+      <h1 className="mb-8 text-center font-serif text-4xl leading-normal md:text-5xl lg:text-6xl">
+        Chorprojekt Cherubini Requiem
       </h1>
       <Text>
         Cherubini komponierte das Werk 1816. Es zeigt alle Facetten von
@@ -48,18 +49,11 @@ export default function Orchester() {
         }}
         textOnly={false}
       >
-        <ol className="list-disc pl-4">
-          {CONCERTS.filter((c) => c.id == 'herbstkonzerte-23')[0].dates?.map(
-            (d) => (
-              <li key={d.dateISO}>
-                <a href={d.googleMapsLink} className="hover:text-primary-main">
-                  <span className="font-serif text-lg">{d.location}</span>
-                  <span className="text-sm"> - {d.dateString}</span>
-                </a>
-              </li>
-            ),
-          )}
-        </ol>
+        <ConcertLocationList
+          locations={
+            CONCERTS.filter((c) => c.id == 'herbstkonzerte-23')[0].dates ?? []
+          }
+        />
       </ImageSection>
       <Text>
         Diese Einladung richtet sich an Sänger:innen, die gerne die Gelegenheit
@@ -85,7 +79,7 @@ export default function Orchester() {
           Probetagen.
         </li>
       </ul>
-      <br />{' '}
+      <br />
       <Text>
         Für Probearbeit, Noten und Übdateien wird ein Unkostenbeitrag erhoben.
         Zusätzlich werden gemäss Anmeldung noch die Kosten für die Übernachtung
