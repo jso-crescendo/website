@@ -86,15 +86,14 @@ export default function Canturicum() {
           Anmelden
         </h3>
         <Text className="pb-2">
-          Anmeldung herunterladen und ausgefüllt per Email an Käthi Schmid
-          Lauber (
+          Anmeldung herunterladen und ausgefüllt per Email an{' '}
           <a
             href="mailto:kaethi.schmid@jso-crescendo.ch"
             className="text-primary-main"
           >
-            kaethi.schmid@jso-crescendo.ch
-          </a>
-          ) senden.
+            Käthi Schmid Lauber (kaethi.schmid@jso-crescendo.ch)
+          </a>{' '}
+          senden.
         </Text>
         <LinkButton
           text="Anmeldung herunterladen"
