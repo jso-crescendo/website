@@ -79,7 +79,10 @@ export default function Orchesterrichtlinien() {
         </li>
         <li>
           Noten dindest du im{' '}
-          <a href="https://drive.google.com/drive/folders/0ANE3t78ktMbtUk9PVA">
+          <a
+            href="https://drive.google.com/drive/folders/0ANE3t78ktMbtUk9PVA"
+            className="text-primary-main hover:text-primary-darker"
+          >
             Google Drive
           </a>
         </li>
@@ -111,7 +114,10 @@ export default function Orchesterrichtlinien() {
         <li>
           Falls du keine Mails bekommst - oder sich deine E-Mail Adresse ändert
           - schreibe bitte an{' '}
-          <a href="florian.rohrer@jso-crescendo.ch">
+          <a
+            href="florian.rohrer@jso-crescendo.ch"
+            className="text-primary-main hover:text-primary-darker"
+          >
             florian.rohrer@jso-crescendo.ch
           </a>
           , sonst ändert sich nichts!
@@ -130,36 +136,39 @@ export default function Orchesterrichtlinien() {
       <h2 className="pb-2 pt-4 text-lg font-bold">Administration</h2>
       <ul className="list-disc pl-4">
         <li>
-          <b>Eintritt:</b>Falls du jemanden kennst, der gerne Mitglied im
+          <b>Eintritt:</b> Falls du jemanden kennst, der gerne Mitglied im
           Crescendo werden möchte, kann diese(r) sich bei Käthi melden. Bei der
           ersten Probe erhält er oder sie ein{' '}
-          <a href="https://club.spond.com/landing/signup/jsocrescendo">
+          <a
+            href="https://club.spond.com/landing/signup/jsocrescendo"
+            className="text-primary-main hover:text-primary-darker"
+          >
             digitales Mitgliederformular
           </a>
           , das man ausfüllen kann.
         </li>
         <li>
-          <b>Mitgliederbeitrag:</b>
-          Jedes Jahr wird der Mitgliederbeitrag von Fr. 100.- und ein
-          Unkostenbeitrag von 60.- fällig, welcher bis Ende Monat zu bezahlen
-          ist. Dieser ist von allen Mitgliedern zu bezahlen, welche vor den
-          Frühlingskonzerten Mitglied werden. Wird die Bezahlung versäumt,
-          behält sich das Crescendo vor, den Umtrieben entsprechende Mahnspesen
-          zu verrechnen.
+          <b>Mitgliederbeitrag:</b> Jedes Jahr wird der Mitgliederbeitrag von
+          Fr. 100.- und ein Unkostenbeitrag von 60.- fällig, welcher bis Ende
+          Monat zu bezahlen ist. Dieser ist von allen Mitgliedern zu bezahlen,
+          welche vor den Frühlingskonzerten Mitglied werden. Wird die Bezahlung
+          versäumt, behält sich das Crescendo vor, den Umtrieben entsprechende
+          Mahnspesen zu verrechnen.
         </li>
         <li>
-          <b>Der Vorstand:</b>
-          Seit der Generalversammlung im Januar 2017 sind wir nun ein Verein.
-          Der Vorstand organisiert den Orchesterbetrieb, vom
+          <b>Der Vorstand:</b> Seit der Generalversammlung im Januar 2017 sind
+          wir nun ein Verein. Der Vorstand organisiert den Orchesterbetrieb, vom
           Mitgliedermanagement bis zur Konzertorganisation. Vorstandsmitglieder
           sind vom Mitgliederbeitrag befreit. Du möchtest auch gerne in den
           Vorstand und eine Aufgabe übernehmen? Dann melde dich bei unserem
           Präsident Andrea Schmid.
         </li>
         <li>
-          <b>Austritt:</b>
-          Austritte müssen schriftlich am Vorstand (
-          <a href="mailto:vorstand@jso-crescendo.ch">
+          <b>Austritt:</b> Austritte müssen schriftlich am Vorstand (
+          <a
+            href="mailto:vorstand@jso-crescendo.ch"
+            className="text-primary-main hover:text-primary-darker"
+          >
             vorstand@jso-crescendo.ch
           </a>
           ) mitgeteilt werden. Austritte sind grundsätzlich nur nach den
