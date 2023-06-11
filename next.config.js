@@ -23,12 +23,7 @@ const nextConfig = {
         source: '/galerie/:all*',
         destination: '/',
         permanent: true,
-      },
-      {
-        source: '/intern',
-        destination: '/',
-        permanent: true,
-      },
+      }
     ];
   },
   async headers() {
