@@ -23,7 +23,10 @@ export default function Intern() {
       >
         <ul className="list-disc pl-4">
           <li className="cursor-pointer py-2 hover:text-primary-main">
-            <Link href="https://drive.google.com/drive/folders/0ANE3t78ktMbtUk9PVA" text="Google Drive" />
+            <Link
+              href="https://drive.google.com/drive/folders/0ANE3t78ktMbtUk9PVA"
+              text="Google Drive"
+            />
             <Text>Bilder, Dokumente, Noten</Text>
           </li>
           <li className="cursor-pointer py-2 hover:text-primary-main">

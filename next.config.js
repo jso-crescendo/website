@@ -23,7 +23,7 @@ const nextConfig = {
         source: '/galerie/:all*',
         destination: '/',
         permanent: true,
-      }
+      },
     ];
   },
   async headers() {
