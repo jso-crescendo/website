@@ -83,6 +83,15 @@ const nextConfig = {
           },
         ],
       },
+      {
+        source: '/canturicum/:all.pdf',
+        headers: [
+          {
+            key: 'Content-Disposition',
+            value: 'attachment',
+          }
+        ]
+      }
     ];
   },
 };
