@@ -2,6 +2,7 @@ import {Email} from '../icons/email';
 /* eslint-disable tailwindcss/no-arbitrary-value */
 import {Facebook} from '@/icons/facebook';
 import {Instagram} from '@/icons/instagram';
+import Link from 'next/link';
 import {LinkButton} from './link-button';
 import {Youtube} from '@/icons/youtube';
 
@@ -20,10 +21,10 @@ const IconLink: React.FC<{
   text: string;
   href: string;
 }> = ({icon, href, text}) => (
-  <a href={href} className="flex flex-row items-center gap-2">
+  <Link href={href} className="flex flex-row items-center gap-2">
     {icon}
     {text}
-  </a>
+  </Link>
 );
 
 const CurveSVG: React.FC = () => (
@@ -103,6 +104,14 @@ export const Footer: React.FC = () => (
           className="mt-4"
         />
       </FooterSection>
+    </div>
+    <div className="container mx-auto mb-4 flex flex-col gap-8 md:flex-row md:justify-start">
+      <Link
+        className="mb-2 font-serif text-xl hover:text-primary-main"
+        href="/intern"
+      >
+        Intern
+      </Link>
     </div>
     <div className="text-center text-sm">
       © {new Date().getFullYear()} Alle Rechte vorbehalten JSO Crescendo

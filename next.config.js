@@ -24,11 +24,6 @@ const nextConfig = {
         destination: '/',
         permanent: true,
       },
-      {
-        source: '/intern',
-        destination: '/',
-        permanent: true,
-      },
     ];
   },
   async headers() {
