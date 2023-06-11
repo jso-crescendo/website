@@ -3,10 +3,9 @@ import CanturicumChorImage from '@/images/2019_canturicum_chor.webp';
 import CanturicumImage from '@/images/2019_canturicum.webp';
 import {ConcertLocationList} from '../../components/concert-location-list';
 import {ContentContainer} from '../../components/contentContainer';
-import {Download} from '../../icons/download';
+import {DownloadButton} from '../../components/download-button';
 import {ImageSection} from '../../components/image-section';
 import KonzertImage from '@/images/2019_jubilaeumskonzert_tonhalle.webp';
-import {LinkButton} from '../../components/link-button';
 import {Text} from '../../components/text';
 
 export const metadata = {
@@ -95,12 +94,10 @@ export default function Canturicum() {
           </a>{' '}
           senden.
         </Text>
-        <LinkButton
+        <DownloadButton
           text="Anmeldung herunterladen"
           href="/canturicum/Anmeldung_Cherubini.pdf"
           type="primary"
-          iconAfter={<Download className="ml-2 h-5" />}
-          download={true}
         />
       </ImageSection>
     </ContentContainer>
