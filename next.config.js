@@ -89,9 +89,9 @@ const nextConfig = {
           {
             key: 'Content-Disposition',
             value: 'attachment',
-          }
-        ]
-      }
+          },
+        ],
+      },
     ];
   },
 };

@@ -3,7 +3,7 @@ import CanturicumChorImage from '@/images/2019_canturicum_chor.webp';
 import CanturicumImage from '@/images/2019_canturicum.webp';
 import {ConcertLocationList} from '../../components/concert-location-list';
 import {ContentContainer} from '../../components/contentContainer';
-import { Download } from '../../icons/download';
+import {Download} from '../../icons/download';
 import {ImageSection} from '../../components/image-section';
 import KonzertImage from '@/images/2019_jubilaeumskonzert_tonhalle.webp';
 import {LinkButton} from '../../components/link-button';
@@ -88,7 +88,10 @@ export default function Canturicum() {
         <Text className="pb-2">
           Anmeldung herunterladen und ausgefüllt per Email an Käthi Schmid
           Lauber (
-          <a href="mailto:kaethi.schmid@jso-crescendo.ch" className="text-primary-main">
+          <a
+            href="mailto:kaethi.schmid@jso-crescendo.ch"
+            className="text-primary-main"
+          >
             kaethi.schmid@jso-crescendo.ch
           </a>
           ) senden.
@@ -97,7 +100,7 @@ export default function Canturicum() {
           text="Anmeldung herunterladen"
           href="/canturicum/Anmeldung_Cherubini.pdf"
           type="primary"
-          iconAfter={<Download className="ml-2 h-5"/>}
+          iconAfter={<Download className="ml-2 h-5" />}
           download={true}
         />
       </ImageSection>

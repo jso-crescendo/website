@@ -1,7 +1,7 @@
 import {CONCERTS, Concert, PAST_CONCERTS} from '../../../data/concerts';
 import {Event, WithContext} from 'schema-dts';
 
-import { ConcertLocationList } from '../../../components/concert-location-list';
+import {ConcertLocationList} from '../../../components/concert-location-list';
 import {ContentContainer} from '../../../components/contentContainer';
 import DateImage from '@/images/backgrounds/harp.webp';
 import Image from 'next/image';

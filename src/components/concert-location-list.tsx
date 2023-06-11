@@ -12,7 +12,11 @@ export const ConcertLocationList: React.FC<ConcertLocationListProps> = ({
       {locations.map((d) => (
         <li key={d.dateISO}>
           {d.googleMapsLink ? (
-            <a href={d.googleMapsLink} className="hover:text-primary-main" title='Karte öffnen'>
+            <a
+              href={d.googleMapsLink}
+              className="hover:text-primary-main"
+              title="Karte öffnen"
+            >
               <span className="font-serif text-lg">{d.location}</span>
               <span className="text-sm"> - {d.dateString}</span>
             </a>
