@@ -44,10 +44,10 @@ export default function Intern() {
         <Text>
           Solltest du keinen Zugriff haben melde dich bei{' '}
           <a
-            href="mailto:florian.rorher@jso-crescendo.ch"
+            href="mailto:florian.rohrer@jso-crescendo.ch"
             className="text-primary-main hover:text-primary-darker"
           >
-            Florian Rohrer (florian.rorher@jso-crescendo.ch)
+            Florian Rohrer (florian.rohrer@jso-crescendo.ch)
           </a>
         </Text>
       </ImageSection>
