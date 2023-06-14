@@ -95,7 +95,7 @@ const ContentSecurityPolicy = `
   script-src 'self' https://analytics.jso-crescendo.ch/ https://challenges.cloudflare.com;
   connect-src 'self' https://analytics.jso-crescendo.ch https://vitals.vercel-insights.com/v1/vitals;
   frame-src 'self' https://challenges.cloudflare.com https://www.youtube-nocookie.com;
-  report-uri https://7b4e0a451e15319a60f0c0a6009f3932.report-uri.com/r/d/csp/reportOnly;
+  report-uri https://7b4e0a451e15319a60f0c0a6009f3932.report-uri.com/r/d/csp/wizard;
   object-src 'none';
   worker-src 'none';
 `;
