@@ -21,7 +21,6 @@ export default function Home() {
           src={BgImage}
           alt="Hintergrundbild Orchester"
           priority
-          quality={100}
           placeholder="blur"
           className="h-screen object-cover brightness-75"
         />
