@@ -46,6 +46,14 @@ export const CONCERTS: Concert[] = [
         name: 'Requiem',
         composer: 'Luigi Cherubini',
       },
+      {
+        name: '7.Sinfonie 2.Satz',
+        composer: 'Ludwig van Beethoven'
+      },
+      {
+        name: 'Herr, wenn ich nur dich habe',
+        composer: 'Heinrich Schütz'
+      }
     ],
     dates: [
       {
