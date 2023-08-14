@@ -47,7 +47,7 @@ export const CONCERTS: Concert[] = [
         composer: 'Luigi Cherubini',
       },
       {
-        name: '2. Satz aus der 7. Sinfonie',
+        name: '7.Sinfonie 2.Satz',
         composer: 'Ludwig van Beethoven'
       },
       {
