@@ -78,7 +78,7 @@ export default function Orchesterrichtlinien() {
           geprobt wurden und überträgst Notizen.
         </li>
         <li>
-          Noten dindest du im{' '}
+          Noten findest du im{' '}
           <a
             href="https://drive.google.com/drive/folders/0ANE3t78ktMbtUk9PVA"
             className="text-primary-main hover:text-primary-darker"
@@ -89,7 +89,9 @@ export default function Orchesterrichtlinien() {
         <li>
           Man muss sich vor jeder Probe an- oder abmelden. Dies ist, damit Käthi
           je nach Präsenz der Register die Probe planen kann.
+          <br/>
           <b>Abmeldungen</b>
+          <br/>
           <ul className="list-disc pl-4">
             <li>
               Probe bis <b>24h vor Probebeginn</b> in Spond
