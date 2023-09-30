@@ -89,9 +89,9 @@ export default function Orchesterrichtlinien() {
         <li>
           Man muss sich vor jeder Probe an- oder abmelden. Dies ist, damit Käthi
           je nach Präsenz der Register die Probe planen kann.
-          <br/>
+          <br />
           <b>Abmeldungen</b>
-          <br/>
+          <br />
           <ul className="list-disc pl-4">
             <li>
               Probe bis <b>24h vor Probebeginn</b> in Spond

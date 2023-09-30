@@ -24,6 +24,11 @@ const nextConfig = {
         destination: '/',
         permanent: true,
       },
+      {
+        source: '/canturicum',
+        destination: '/',
+        permanent: false,
+      },
     ];
   },
   async headers() {
@@ -75,15 +80,6 @@ const nextConfig = {
           {
             key: 'Cache-Control',
             value: 'no-store, must-revalidate',
-          },
-        ],
-      },
-      {
-        source: '/canturicum/Anmeldung_Cherubini.pdf',
-        headers: [
-          {
-            key: 'Content-Disposition',
-            value: 'attachment',
           },
         ],
       },

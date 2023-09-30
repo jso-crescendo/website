@@ -50,26 +50,6 @@ export default function Home() {
 
       <ContentContainer id="content">
         <ImageSection
-          title="Projektchor Canturicum"
-          image={{
-            src: CanturicumImage,
-            alt: 'Projektchor Canturicum in der Tonhalle',
-          }}
-          link={{
-            href: '/canturicum',
-            text: 'An den Herbstkonzerten mitsingen',
-          }}
-        >
-          Seit 2006 führt das JSO Crescendo regelmässig Chorwerke mit dem
-          Projektchor Canturicum auf. Dieser Chor wurde von Käthi Schmid Lauber
-          eigens dazu gegründet, im Mai 2006 die &quot;Messe solennelle&quot;
-          von Ch. Gounod aufzuführen. Der Erfolg dieses Projektes, u.a. das
-          Konzert in der ausverkauften Tonhalle, war so durchschlagend, dass
-          2007, 2009, 2012, 2015, 2018 und 2019 weitere Projekte realisiert
-          wurden. Es singen jeweils zwischen 80 und 120 Sänger:innen, aus den
-          Singwochen, Eltern, Ehemalige und Freunde vom JSO Crescendo mit.
-        </ImageSection>
-        <ImageSection
           title="Über uns"
           image={{
             src: AboutUsImage,
@@ -87,6 +67,24 @@ export default function Home() {
           Filmmusik. Weit und breit einzigartig ist das JSO Crescendo insofern,
           dass es nicht nur ein Orchester, sondern auch ein Chor ist.
         </ImageSection>
+
+        <ImageSection
+          title="Projektchor Canturicum"
+          image={{
+            src: CanturicumImage,
+            alt: 'Projektchor Canturicum in der Tonhalle',
+          }}
+        >
+          Seit 2006 führt das JSO Crescendo regelmässig Chorwerke mit dem
+          Projektchor Canturicum auf. Dieser Chor wurde von Käthi Schmid Lauber
+          eigens dazu gegründet, im Mai 2006 die &quot;Messe solennelle&quot;
+          von Ch. Gounod aufzuführen. Der Erfolg dieses Projektes, u.a. das
+          Konzert in der ausverkauften Tonhalle, war so durchschlagend, dass
+          2007, 2009, 2012, 2015, 2018 und 2019 weitere Projekte realisiert
+          wurden. Es singen jeweils zwischen 80 und 120 Sänger:innen, aus den
+          Singwochen, Eltern, Ehemalige und Freunde vom JSO Crescendo mit.
+        </ImageSection>
+
         <ImageSection
           title="Nächste Konzerte"
           image={{
