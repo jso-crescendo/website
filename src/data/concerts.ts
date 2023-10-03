@@ -1,6 +1,7 @@
-import FruehlingsKonzertImage_lg from '@/images/flyer/flyer_fruehlingskonzert_2023.webp';
-import FruehlingsKonzertImage_sm from '@/images/flyer/flyer_fruehlingkonzert_2023_sm.webp';
-import HerbstKonzertImage_sm from '@/images/2021_herbstkonzert_chor_2.webp';
+import FruehlingsKonzert23Image_lg from '@/images/flyer/flyer_fruehlingskonzert_2023.webp';
+import FruehlingsKonzert23Image_sm from '@/images/flyer/flyer_fruehlingkonzert_2023_sm.webp';
+import HerbstKonzert23Image_sm from '@/images/flyer/2023_flyer_herbstkonzert_sm.webp';
+import HerbstKonzert23Image_lg from '@/images/flyer/2023_flyer_herbstkonzert_lg.webp';
 import Naegeli_lg from '@/images/flyer/2023_hgn250_lg.webp';
 import Naegeli_sm from '@/images/flyer/2023_hgn250_md.webp';
 import {StaticImageData} from 'next/image';
@@ -35,12 +36,13 @@ export interface Concert {
 export const CONCERTS: Concert[] = [
   {
     id: 'herbstkonzerte-23',
-    lastChange: '2023-06-12T00:00:00.000Z',
+    lastChange: '2023-10-03T10:00:00.000Z',
     name: 'Herbstkonzerte',
     subtitle: 'mit dem Projektchor Canturicum',
     description:
       'Seit 2006 führt das JSO Crescendo regelmässig Chorwerke mit dem Projektchor Canturicum auf. Dieser Chor wurde von Käthi Schmid Lauber eigens dazu gegründet, im Mai 2006 die "Messe solennelle" von Ch. Gounod aufzuführen. Der Erfolg dieses Projektes, u.a. das Konzert in der ausverkauften Tonhalle, war so durchschlagend, dass 2007, 2009, 2012, 2015, 2018 und 2019 weitere Projekte realisiert wurden. Es singen jeweils zwischen 80 und 120 Sänger:innen, aus den Singwochen, Eltern, Ehemalige und Freunde vom JSO Crescendo mit.',
-    image_sm: HerbstKonzertImage_sm,
+    image_sm: HerbstKonzert23Image_sm,
+    image_lg: HerbstKonzert23Image_lg,
     program: [
       {
         name: 'Requiem',
@@ -99,8 +101,8 @@ export const PAST_CONCERTS: Concert[] = [
   {
     id: 'fruehlingskonzerte-23',
     name: 'Frühlingskonzerte',
-    image_sm: FruehlingsKonzertImage_sm,
-    image_lg: FruehlingsKonzertImage_lg,
+    image_sm: FruehlingsKonzert23Image_sm,
+    image_lg: FruehlingsKonzert23Image_lg,
     program: [
       {
         name: 'Il pirata - Sinfonia',
