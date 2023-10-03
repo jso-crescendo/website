@@ -36,7 +36,7 @@ export interface Concert {
 export const CONCERTS: Concert[] = [
   {
     id: 'herbstkonzerte-23',
-    lastChange: '2023-06-12T00:00:00.000Z',
+    lastChange: '2023-10-03T10:00:00.000Z',
     name: 'Herbstkonzerte',
     subtitle: 'mit dem Projektchor Canturicum',
     description:
