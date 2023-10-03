@@ -1,7 +1,6 @@
 import AboutUsImage from '@/images/2022_fruehling_blech.webp';
 import BgImage from '@/images/2022_waedenswil_2.webp';
 import {CONCERTS} from '../data/concerts';
-import FlyerHerbstkonzerte2023 from '@/images/flyer/2023_flyer_herbstkonzert_lg.webp';
 import {ChevronDown} from '../icons/chevron-down';
 import {ContentContainer} from '../components/contentContainer';
 import Image from 'next/image';
@@ -51,8 +50,9 @@ export default function Home() {
       <ContentContainer id="content">
         <ImageSection
           title="Herbst&shy;konzerte 2023"
+          subtitle={CONCERTS[0].subtitle}
           image={{
-            src: FlyerHerbstkonzerte2023,
+            src: CONCERTS[0].image_lg!,
             alt: 'Flyer Herbstkonzerte 2023',
             vertical: true,
             priority: true,
