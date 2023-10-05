@@ -66,6 +66,22 @@ export default function Home() {
         </ImageSection>
 
         <ImageSection
+          title="Jugend Eurythmie&shy;festival"
+          image={{
+            src: CONCERTS[0].image_lg!,
+            alt: 'Flyer Jugend Eurythmiefestival 2023',
+            vertical: true,
+            priority: true,
+          }}
+          link={{
+            href: 'https://jugendeurythmiefestival.ch/ein-sommernachtstraum/',
+            text: 'Weitere Informationen',
+          }}
+        >
+          {CONCERTS[0].description}
+        </ImageSection>
+
+        <ImageSection
           title="Über uns"
           image={{
             src: AboutUsImage,
