@@ -50,15 +50,31 @@ export default function Home() {
       <ContentContainer id="content">
         <ImageSection
           title="Herbst&shy;konzerte 2023"
-          subtitle={CONCERTS[0].subtitle}
+          subtitle={CONCERTS[1].subtitle}
           image={{
-            src: CONCERTS[0].image_lg!,
+            src: CONCERTS[1].image_lg!,
             alt: 'Flyer Herbstkonzerte 2023',
             vertical: true,
             priority: true,
           }}
           link={{
             href: '/konzerte/herbstkonzerte-23',
+            text: 'Weitere Informationen',
+          }}
+        >
+          {CONCERTS[1].description}
+        </ImageSection>
+
+        <ImageSection
+          title="Jugend Eurythmie&shy;festival"
+          image={{
+            src: CONCERTS[0].image_lg!,
+            alt: 'Flyer Jugend Eurythmiefestival 2023',
+            vertical: true,
+            priority: true,
+          }}
+          link={{
+            href: 'https://jugendeurythmiefestival.ch/ein-sommernachtstraum/',
             text: 'Weitere Informationen',
           }}
         >

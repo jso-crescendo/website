@@ -2,6 +2,8 @@ import FruehlingsKonzert23Image_lg from '@/images/flyer/flyer_fruehlingskonzert_
 import FruehlingsKonzert23Image_sm from '@/images/flyer/flyer_fruehlingkonzert_2023_sm.webp';
 import HerbstKonzert23Image_sm from '@/images/flyer/2023_flyer_herbstkonzert_sm.webp';
 import HerbstKonzert23Image_lg from '@/images/flyer/2023_flyer_herbstkonzert_lg.webp';
+import EurythmieFestivalImage_sm from '@/images/flyer/2023_flyer_eurythmiefestival_sm.webp';
+import EurythmieFestivalImage_lg from '@/images/flyer/2023_flyer_eurythmiefestival_lg.webp';
 import Naegeli_lg from '@/images/flyer/2023_hgn250_lg.webp';
 import Naegeli_sm from '@/images/flyer/2023_hgn250_md.webp';
 import {StaticImageData} from 'next/image';
@@ -34,6 +36,38 @@ export interface Concert {
 }
 
 export const CONCERTS: Concert[] = [
+  {
+    id: 'jugendeurythmiefestival-23',
+    lastChange: '2023-10-04T12:00:00.000Z',
+    name: 'Jugend Eurythmiefestival',
+    subtitle: 'begleitet durch das JSO Crescendo',
+    image_sm: EurythmieFestivalImage_sm,
+    image_lg: EurythmieFestivalImage_lg,
+    description: "80 Jugendliche widmen sich dem spätromantischen Werk Mendelssohns, der erst 17 Jahre alt war als er 1867 die Ouvertüre zu Shakespeares Komödie Ein Sommernachtstraum komponierte. Die theatralischen Szenen werden neben Deutsch auch auf Italienisch eurythmisch gestaltet. Musikalisch begleitet wird die Szenerie durch das Jugendsinfonieorchester Crescendo unter der Leitung von Käthi Schmid-Lauber.",
+    program: [
+      {
+        name: 'Ein Sommernachtstraum',
+        composer: 'Felix Mendelssohn Bartholdy und William Shakespeare',
+      },
+    ],
+    dates: [
+      {
+        location: 'Rudolf Steiner Schule Zürcher Oberland',
+        dateString: '20. Oktober 2023 19:30 Uhr',
+        dateISO: '2023-10-20T19:30:00+01:00',
+      },
+      {
+        location: 'Rudolf Steiner Schule Zürcher Oberland',
+        dateString: '21. Oktober 2023 16:00 Uhr',
+        dateISO: '2023-10-21T16:00:00+01:00',
+      },
+      {
+        location: 'Rudolf Steiner Schule Zürcher Oberland',
+        dateString: '21. Oktober 2023 19:30 Uhr',
+        dateISO: '2023-10-21T19:30:00+01:00',
+      },
+    ],
+  },
   {
     id: 'herbstkonzerte-23',
     lastChange: '2023-10-03T10:00:00.000Z',
