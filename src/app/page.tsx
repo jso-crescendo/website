@@ -50,9 +50,9 @@ export default function Home() {
       <ContentContainer id="content">
         <ImageSection
           title="Herbst&shy;konzerte 2023"
-          subtitle={CONCERTS[0].subtitle}
+          subtitle={CONCERTS[1].subtitle}
           image={{
-            src: CONCERTS[0].image_lg!,
+            src: CONCERTS[1].image_lg!,
             alt: 'Flyer Herbstkonzerte 2023',
             vertical: true,
             priority: true,
@@ -62,7 +62,7 @@ export default function Home() {
             text: 'Weitere Informationen',
           }}
         >
-          {CONCERTS[0].description}
+          {CONCERTS[1].description}
         </ImageSection>
 
         <ImageSection
