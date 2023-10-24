@@ -90,7 +90,7 @@ export default function KonzertPage({params}: {params: {id: string}}) {
           src={concert.image_lg}
           alt=""
           aria-hidden="true"
-          className="mx-auto max-h-screen rounded-lg object-contain mb-6"
+          className="mx-auto mb-6 max-h-screen rounded-lg object-contain"
           priority
           placeholder="blur"
         />

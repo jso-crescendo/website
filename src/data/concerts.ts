@@ -43,7 +43,8 @@ export const CONCERTS: Concert[] = [
     subtitle: 'begleitet durch das JSO Crescendo',
     image_sm: EurythmieFestivalImage_sm,
     image_lg: EurythmieFestivalImage_lg,
-    description: "80 Jugendliche widmen sich dem spätromantischen Werk Mendelssohns, der erst 17 Jahre alt war als er 1867 die Ouvertüre zu Shakespeares Komödie Ein Sommernachtstraum komponierte. Die theatralischen Szenen werden neben Deutsch auch auf Italienisch eurythmisch gestaltet. Musikalisch begleitet wird die Szenerie durch das Jugendsinfonieorchester Crescendo unter der Leitung von Käthi Schmid-Lauber.",
+    description:
+      '80 Jugendliche widmen sich dem spätromantischen Werk Mendelssohns, der erst 17 Jahre alt war als er 1867 die Ouvertüre zu Shakespeares Komödie Ein Sommernachtstraum komponierte. Die theatralischen Szenen werden neben Deutsch auch auf Italienisch eurythmisch gestaltet. Musikalisch begleitet wird die Szenerie durch das Jugendsinfonieorchester Crescendo unter der Leitung von Käthi Schmid-Lauber.',
     program: [
       {
         name: 'Ein Sommernachtstraum',
