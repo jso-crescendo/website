@@ -6,6 +6,7 @@ import {ContentContainer} from '../components/contentContainer';
 import Image from 'next/image';
 import {ImageSection} from '@/components/image-section';
 import KonzerteImage from '@/images/people/kaethi_2.webp';
+import {HERBSTKONZERT_23} from '../data/concerts/herbstkonzerte-23';
 
 export const metadata = {
   description:
@@ -50,9 +51,9 @@ export default function Home() {
       <ContentContainer id="content">
         <ImageSection
           title="Herbst&shy;konzerte 2023"
-          subtitle={CONCERTS[1].subtitle}
+          subtitle={HERBSTKONZERT_23.subtitle}
           image={{
-            src: CONCERTS[1].image_lg!,
+            src: HERBSTKONZERT_23.image_lg!,
             alt: 'Flyer Herbstkonzerte 2023',
             vertical: true,
             priority: true,
@@ -62,23 +63,7 @@ export default function Home() {
             text: 'Weitere Informationen',
           }}
         >
-          {CONCERTS[1].description}
-        </ImageSection>
-
-        <ImageSection
-          title="Jugend Eurythmie&shy;festival"
-          image={{
-            src: CONCERTS[0].image_lg!,
-            alt: 'Flyer Jugend Eurythmiefestival 2023',
-            vertical: true,
-            priority: true,
-          }}
-          link={{
-            href: 'https://jugendeurythmiefestival.ch/ein-sommernachtstraum/',
-            text: 'Weitere Informationen',
-          }}
-        >
-          {CONCERTS[0].description}
+          {HERBSTKONZERT_23.description}
         </ImageSection>
 
         <ImageSection
