@@ -73,7 +73,7 @@ export default function KonzertPage({params}: {params: {id: string}}) {
   const concert = getConcert(id);
   return (
     <ContentContainer>
-      <hgroup className="mb-8 text-center leading-normal ">
+      <hgroup className="mb-8 text-center leading-normal">
         <h1 className=" font-serif text-3xl md:text-4xl lg:text-5xl">
           {concert.name}
         </h1>
@@ -90,7 +90,7 @@ export default function KonzertPage({params}: {params: {id: string}}) {
           src={concert.image_lg}
           alt=""
           aria-hidden="true"
-          className="mx-auto max-h-screen rounded-lg object-contain mb-6"
+          className="mx-auto mb-6 max-h-screen rounded-lg object-contain"
           priority
           placeholder="blur"
         />

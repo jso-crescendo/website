@@ -8,6 +8,7 @@
     "start": "next start",
     "export": "next export",
     "lint": "next lint",
+    "lint:fix": "eslint src --fix",
     "prettify": "prettier --write . --ignore-path .gitignore",
     "sitemap": "sscli -v",
     "check-updates": "npx npm-check-updates",

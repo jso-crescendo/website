@@ -6,7 +6,7 @@ import {ContentContainer} from '../components/contentContainer';
 import Image from 'next/image';
 import {ImageSection} from '@/components/image-section';
 import KonzerteImage from '@/images/people/kaethi_2.webp';
-import { HERBSTKONZERT_23 } from '../data/concerts/herbstkonzerte-23';
+import {HERBSTKONZERT_23} from '../data/concerts/herbstkonzerte-23';
 
 export const metadata = {
   description:
