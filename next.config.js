@@ -4,9 +4,6 @@ const nextConfig = {
   images: {
     formats: ['image/webp'],
   },
-  experimental: {
-    serverActions: true,
-  },
   async redirects() {
     return [
       {

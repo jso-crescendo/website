@@ -5,15 +5,18 @@ import {Lora, Montserrat} from 'next/font/google';
 import {Footer} from '../components/footer';
 import {NavBar} from '@/components/nav-bar';
 import classNames from 'classnames';
+import { Metadata, Viewport } from 'next';
 
-export const metadata = {
+export const viewport: Viewport = {
+  colorScheme: 'light',
+  width: 'device-width',
+  initialScale: 1,
+}
+
+export const metadata: Metadata = {
   title: {template: '%s | JSO Crescendo', default: 'JSO Crescendo'},
   metadataBase: new URL('https://jso-crescendo.ch'),
   applicationName: 'JSO Crescendo',
-  viewport: {
-    width: 'device-width',
-    initialScale: 1,
-  },
   keywords: [
     'orchester',
     'crescendo',
@@ -21,7 +24,6 @@ export const metadata = {
     'zürich',
     'orchester mitspielen',
   ],
-  colorScheme: 'light',
   openGraph: {
     locale: 'de-CH',
     type: 'website',
