@@ -6,8 +6,8 @@ import {JUGENDEURYTHMIEFESTIVAL_23} from './2023/jugendeurythmiefestival-23';
 import {FRUEHLINGSKONZERTE_24} from './2024/fruehlingskonzerte-24';
 import {VOLKSTANZGALA_24} from './2024/volkstanzgala-24';
 import {KARFREITAGSKONZERT_24} from './2024/karfreitagskonzert-24';
-import { WEIHNACHTSGOTTESDIENST_23 } from './2023/weihnachtsgottesdienst-23';
-import { OFFENES_SINGEN_23 } from './2023/offenes-singen-23';
+import {WEIHNACHTSGOTTESDIENST_23} from './2023/weihnachtsgottesdienst-23';
+import {OFFENES_SINGEN_23} from './2023/offenes-singen-23';
 
 export interface ConcertLocation {
   location: string;

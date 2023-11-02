@@ -1,4 +1,3 @@
-
 import FruehlingsKonzert24Image_sm from './assets/fruehlingskonzerte_24_sm.webp';
 
 import {Concert} from '../..';
