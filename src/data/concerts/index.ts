@@ -4,7 +4,8 @@ import {HGN_250} from './2023/hgn-250';
 import {FRUEHLINGSKONZERTE_23} from './2023/fruehlingskonzerte-23';
 import {JUGENDEURYTHMIEFESTIVAL_23} from './2023/jugendeurythmiefestival-23';
 import {FRUEHLINGSKONZERTE_24} from './2024/fruehlingskonzerte-24';
-import { VOLKSTANZGALA_24 } from './2024/volkstanzgala-24';
+import {VOLKSTANZGALA_24} from './2024/volkstanzgala-24';
+import {KARFREITAGSKONZERT_24} from './2024/karfreitagskonzert-24';
 
 export interface ConcertLocation {
   location: string;
@@ -33,7 +34,12 @@ export interface Concert {
   program?: ProgramItem[];
 }
 
-export const CONCERTS: Concert[] = [HERBSTKONZERT_23, FRUEHLINGSKONZERTE_24, VOLKSTANZGALA_24];
+export const CONCERTS: Concert[] = [
+  HERBSTKONZERT_23,
+  KARFREITAGSKONZERT_24,
+  FRUEHLINGSKONZERTE_24,
+  VOLKSTANZGALA_24,
+];
 
 export const PAST_CONCERTS: Concert[] = [
   JUGENDEURYTHMIEFESTIVAL_23,
