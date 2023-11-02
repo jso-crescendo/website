@@ -1,12 +1,12 @@
 
-import FruehlingsKonzert23Image_sm from './assets/fruehlingskonzerte_24_sm.webp';
+import FruehlingsKonzert24Image_sm from './assets/fruehlingskonzerte_24_sm.webp';
 
 import {Concert} from '../..';
 
 export const FRUEHLINGSKONZERTE_24: Concert = {
   id: 'fruehlingskonzerte-24',
   name: 'Frühlingskonzerte',
-  image_sm: FruehlingsKonzert23Image_sm,
+  image_sm: FruehlingsKonzert24Image_sm,
   dates: [
     {
       location: 'Ref. Kirche Wädenswil',
