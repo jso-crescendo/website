@@ -7,6 +7,7 @@ import {FRUEHLINGSKONZERTE_24} from './2024/fruehlingskonzerte-24';
 import {VOLKSTANZGALA_24} from './2024/volkstanzgala-24';
 import {KARFREITAGSKONZERT_24} from './2024/karfreitagskonzert-24';
 import { WEIHNACHTSGOTTESDIENST_23 } from './2023/weihnachtsgottesdienst-23';
+import { OFFENES_SINGEN_23 } from './2023/offenes-singen-23';
 
 export interface ConcertLocation {
   location: string;
@@ -37,6 +38,7 @@ export interface Concert {
 
 export const CONCERTS: Concert[] = [
   HERBSTKONZERT_23,
+  OFFENES_SINGEN_23,
   WEIHNACHTSGOTTESDIENST_23,
   KARFREITAGSKONZERT_24,
   FRUEHLINGSKONZERTE_24,

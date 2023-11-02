@@ -10,7 +10,7 @@ export const WEIHNACHTSGOTTESDIENST_23: Concert = {
   dates: [
     {
       location: 'Ref. Kirche Wetzikon',
-      dateString: '25. Dezember 2024 10:00 Uhr',
+      dateString: '25. Dezember 2023 10:00 Uhr',
       dateISO: '2023-12-25T10:00:00+01:00',
     },
   ],
