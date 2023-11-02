@@ -1,8 +1,9 @@
 import {StaticImageData} from 'next/image';
 import {HERBSTKONZERT_23} from './herbstkonzerte-23';
 import {HGN_250} from './hgn-250';
-import {FRUEHLINGSKONZERT_23} from './fruehlingskonzerte-23';
+import {FRUEHLINGSKONZERTE_23} from './fruehlingskonzerte-23';
 import {JUGENDEURYTHMIEFESTIVAL_23} from './jugendeurythmiefestival-23';
+import { FRUEHLINGSKONZERTE_24 } from './fruehlingskonzerte-24';
 
 export interface ConcertLocation {
   location: string;
@@ -31,10 +32,10 @@ export interface Concert {
   program?: ProgramItem[];
 }
 
-export const CONCERTS: Concert[] = [HERBSTKONZERT_23];
+export const CONCERTS: Concert[] = [HERBSTKONZERT_23, FRUEHLINGSKONZERTE_24];
 
 export const PAST_CONCERTS: Concert[] = [
   JUGENDEURYTHMIEFESTIVAL_23,
   HGN_250,
-  FRUEHLINGSKONZERT_23,
+  FRUEHLINGSKONZERTE_23,
 ];

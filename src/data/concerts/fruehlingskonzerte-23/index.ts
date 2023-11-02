@@ -3,7 +3,7 @@ import FruehlingsKonzert23Image_sm from './assets/flyer_fruehlingkonzert_2023_sm
 
 import {Concert} from '..';
 
-export const FRUEHLINGSKONZERT_23: Concert = {
+export const FRUEHLINGSKONZERTE_23: Concert = {
   id: 'fruehlingskonzerte-23',
   name: 'Frühlingskonzerte',
   image_sm: FruehlingsKonzert23Image_sm,
