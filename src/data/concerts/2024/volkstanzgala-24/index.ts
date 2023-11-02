@@ -10,7 +10,7 @@ export const VOLKSTANZGALA_24: Concert = {
     {
       location: 'Kongresshaus Zürich',
       dateString: '29. Juni 2024',
-      dateISO: '2023-06-29T00:00:00+01:00',
+      dateISO: '2024-06-29T00:00:00+01:00',
     },
   ],
 };
