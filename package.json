@@ -15,9 +15,8 @@
     "lighthouse": "npx unlighthouse --mobile --samples 3 --enable-javascript --site \"jso-crescendo.ch\" "
   },
   "dependencies": {
-    "@marsidev/react-turnstile": "^0.3.1",
+    "@marsidev/react-turnstile": "^0.3.2",
     "classnames": "^2.3.2",
-    "eslint-config-next": "^13.5.4",
     "firebase-admin": "^11.11.0",
     "next": "^13.5.4",
     "react": "^18.2.0",
@@ -28,16 +27,17 @@
     "typescript": "^5.2.2"
   },
   "devDependencies": {
-    "@types/node": "^20.8.2",
-    "@types/react": "^18.2.24",
-    "@types/react-dom": "^18.2.8",
+    "@types/node": "20.8.2",
+    "@types/react": "18.2.24",
+    "@types/react-dom": "18.2.8",
     "autoprefixer": "^10.4.16",
-    "eslint": "^8.50.0",
+    "eslint": "^8.52.0",
+    "eslint-config-next": "^13.5.6",
     "eslint-plugin-tailwindcss": "^3.13.0",
     "postcss": "^8.4.31",
     "prettier": "^3.0.3",
-    "prettier-plugin-tailwindcss": "^0.5.4",
+    "prettier-plugin-tailwindcss": "^0.5.6",
     "static-sitemap-cli": "^2.2.3",
-    "tailwindcss": "^3.3.3"
+    "tailwindcss": "^3.3.5"
   }
 }
