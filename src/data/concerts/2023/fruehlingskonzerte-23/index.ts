@@ -1,7 +1,7 @@
 import FruehlingsKonzert23Image_lg from './assets/flyer_fruehlingskonzert_2023.webp';
 import FruehlingsKonzert23Image_sm from './assets/flyer_fruehlingkonzert_2023_sm.webp';
 
-import {Concert} from '..';
+import {Concert} from '../..';
 
 export const FRUEHLINGSKONZERTE_23: Concert = {
   id: 'fruehlingskonzerte-23',

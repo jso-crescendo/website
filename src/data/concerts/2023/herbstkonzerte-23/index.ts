@@ -1,6 +1,6 @@
 import HerbstKonzert23Image_sm from './assets/2023_flyer_herbstkonzert_sm.webp';
 import HerbstKonzert23Image_lg from './assets/2023_flyer_herbstkonzert_lg.webp';
-import {Concert} from '..';
+import {Concert} from '../..';
 
 export const HERBSTKONZERT_23: Concert = {
   id: 'herbstkonzerte-23',

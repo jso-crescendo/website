@@ -1,6 +1,6 @@
 import EurythmieFestivalImage_sm from './assets/2023_flyer_eurythmiefestival_sm.webp';
 import EurythmieFestivalImage_lg from './assets/2023_flyer_eurythmiefestival_lg.webp';
-import {Concert} from '..';
+import {Concert} from '../..';
 
 export const JUGENDEURYTHMIEFESTIVAL_23: Concert = {
   id: 'jugendeurythmiefestival-23',

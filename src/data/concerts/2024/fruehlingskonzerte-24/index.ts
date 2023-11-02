@@ -1,7 +1,7 @@
 
 import FruehlingsKonzert23Image_sm from './assets/fruehlingskonzerte_24_sm.webp';
 
-import {Concert} from '..';
+import {Concert} from '../..';
 
 export const FRUEHLINGSKONZERTE_24: Concert = {
   id: 'fruehlingskonzerte-24',
