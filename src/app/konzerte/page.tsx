@@ -18,13 +18,13 @@ export default function Orchester() {
 
       <section
         id="konzerte"
-        className="flex flex-col items-start justify-center gap-8 md:flex-row"
+        className="grid grid-cols-1 items-start justify-center gap-8 md:grid-cols-2 lg:grid-cols-3"
       >
         {CONCERTS.map((c) => (
           <div
             key={c.id}
             id={c.id}
-            className="block rounded-lg shadow sm:w-full md:w-1/2 lg:w-1/3"
+            className="block rounded-lg shadow"
           >
             <Image
               src={c.image_sm}
