@@ -18,14 +18,10 @@ export default function Orchester() {
 
       <section
         id="konzerte"
-        className="flex flex-col items-start justify-center gap-8 md:flex-row"
+        className="grid grid-cols-1 items-start justify-center gap-8 md:grid-cols-2 lg:grid-cols-3"
       >
         {CONCERTS.map((c) => (
-          <div
-            key={c.id}
-            id={c.id}
-            className="block rounded-lg shadow sm:w-full md:w-1/2 lg:w-1/3"
-          >
+          <div key={c.id} id={c.id} className="block rounded-lg shadow">
             <Image
               src={c.image_sm}
               alt="Konzert teaser bild"
@@ -38,20 +34,6 @@ export default function Orchester() {
                 <h2 className="font-serif text-2xl">{c.name}</h2>
                 <p className="text-sm">{c.subtitle ?? '‎'}</p>
               </hgroup>
-
-              {c.program && (
-                <>
-                  <h3 className="py-4 text-center text-lg">Programm</h3>
-                  <ul>
-                    {c.program.map((p) => (
-                      <li key={p.name} className="flex flex-col pb-2">
-                        <span className="text-base">{p.name}</span>
-                        <span className="text-sm">{p.composer}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </>
-              )}
               {c.dates && (
                 <>
                   <h3 className="py-4 text-center text-lg">
@@ -67,12 +49,27 @@ export default function Orchester() {
                   </ul>
                 </>
               )}
-              <LinkButton
-                className="mt-4"
-                type="secondary"
-                href={`/konzerte/${c.id}`}
-                text="Details ansehen"
-              />
+              {c.program && (
+                <>
+                  <h3 className="py-4 text-center text-lg">Programm</h3>
+                  <ul>
+                    {c.program.map((p) => (
+                      <li key={p.name} className="flex flex-col pb-2">
+                        <span className="text-base">{p.name}</span>
+                        <span className="text-sm">{p.composer}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </>
+              )}
+              {c.description && (
+                <LinkButton
+                  className="mt-4"
+                  type="secondary"
+                  href={`/konzerte/${c.id}`}
+                  text="Details ansehen"
+                />
+              )}
             </div>
           </div>
         ))}

@@ -1,6 +1,6 @@
 import Naegeli_lg from './assets/2023_hgn250_lg.webp';
 import Naegeli_sm from './assets/2023_hgn250_md.webp';
-import {Concert} from '..';
+import {Concert} from '../..';
 
 export const HGN_250: Concert = {
   id: 'hgn-250',

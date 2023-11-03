@@ -84,7 +84,7 @@ const nextConfig = {
         ],
       },
       {
-        source: '/:all(.*\.pdf)',
+        source: '/:all(.*.pdf)',
         headers: [
           {
             key: 'Content-Disposition',

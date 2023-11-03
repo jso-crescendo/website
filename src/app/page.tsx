@@ -6,7 +6,7 @@ import {ContentContainer} from '../components/contentContainer';
 import Image from 'next/image';
 import {ImageSection} from '@/components/image-section';
 import KonzerteImage from '@/images/people/kaethi_2.webp';
-import {HERBSTKONZERT_23} from '../data/concerts/herbstkonzerte-23';
+import {HERBSTKONZERT_23} from '../data/concerts/2023/herbstkonzerte-23';
 
 export const metadata = {
   description:
@@ -99,11 +99,11 @@ export default function Home() {
           textOnly={false}
         >
           <div className="flex flex-col gap-4 pt-4">
-            {CONCERTS.map((c) => (
+            {CONCERTS.slice(0, Math.min(CONCERTS.length, 3)).map((c) => (
               <a
                 key={c.id}
                 className="hover:text-primary-main"
-                href={`/konzerte/${c.id}`}
+                href={c.description ? `/konzerte/${c.id}` : '/konzerte'}
               >
                 <hgroup className="pb-2">
                   <h3 className="font-serif text-2xl">{c.name}</h3>
