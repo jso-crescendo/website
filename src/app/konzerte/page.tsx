@@ -34,20 +34,6 @@ export default function Orchester() {
                 <h2 className="font-serif text-2xl">{c.name}</h2>
                 <p className="text-sm">{c.subtitle ?? '‎'}</p>
               </hgroup>
-
-              {c.program && (
-                <>
-                  <h3 className="py-4 text-center text-lg">Programm</h3>
-                  <ul>
-                    {c.program.map((p) => (
-                      <li key={p.name} className="flex flex-col pb-2">
-                        <span className="text-base">{p.name}</span>
-                        <span className="text-sm">{p.composer}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </>
-              )}
               {c.dates && (
                 <>
                   <h3 className="py-4 text-center text-lg">
@@ -58,6 +44,19 @@ export default function Orchester() {
                       <li key={d.dateISO} className="flex flex-col pb-2">
                         <span className="text-base">{d.location}</span>
                         <span className="text-sm">{d.dateString}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </>
+              )}
+              {c.program && (
+                <>
+                  <h3 className="py-4 text-center text-lg">Programm</h3>
+                  <ul>
+                    {c.program.map((p) => (
+                      <li key={p.name} className="flex flex-col pb-2">
+                        <span className="text-base">{p.name}</span>
+                        <span className="text-sm">{p.composer}</span>
                       </li>
                     ))}
                   </ul>
