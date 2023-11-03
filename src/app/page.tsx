@@ -99,7 +99,7 @@ export default function Home() {
           textOnly={false}
         >
           <div className="flex flex-col gap-4 pt-4">
-            {CONCERTS.map((c) => (
+            {CONCERTS.slice(0, Math.min(CONCERTS.length, 3)).map((c) => (
               <a
                 key={c.id}
                 className="hover:text-primary-main"

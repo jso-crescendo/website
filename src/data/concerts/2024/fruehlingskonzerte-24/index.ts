@@ -14,7 +14,7 @@ export const FRUEHLINGSKONZERTE_24: Concert = {
     },
     {
       location: 'Offener St. Jakob Zürich',
-      dateString: '14. April 2023 17:00 Uhr',
+      dateString: '14. April 2024 17:00 Uhr',
       dateISO: '2024-04-14T17:00:00+01:00',
     },
   ],
