@@ -103,7 +103,7 @@ export default function Home() {
               <a
                 key={c.id}
                 className="hover:text-primary-main"
-                href={`/konzerte/${c.id}`}
+                href={c.description ? `/konzerte/${c.id}` : '/konzerte'}
               >
                 <hgroup className="pb-2">
                   <h3 className="font-serif text-2xl">{c.name}</h3>
