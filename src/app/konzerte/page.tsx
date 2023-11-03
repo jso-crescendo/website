@@ -21,11 +21,7 @@ export default function Orchester() {
         className="grid grid-cols-1 items-start justify-center gap-8 md:grid-cols-2 lg:grid-cols-3"
       >
         {CONCERTS.map((c) => (
-          <div
-            key={c.id}
-            id={c.id}
-            className="block rounded-lg shadow"
-          >
+          <div key={c.id} id={c.id} className="block rounded-lg shadow">
             <Image
               src={c.image_sm}
               alt="Konzert teaser bild"
