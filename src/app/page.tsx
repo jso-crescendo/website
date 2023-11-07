@@ -6,7 +6,6 @@ import {ContentContainer} from '../components/contentContainer';
 import Image from 'next/image';
 import {ImageSection} from '@/components/image-section';
 import KonzerteImage from '@/images/people/kaethi_2.webp';
-import {HERBSTKONZERT_23} from '../data/concerts/2023/herbstkonzerte-23';
 
 export const metadata = {
   description:
@@ -49,23 +48,6 @@ export default function Home() {
       </div>
 
       <ContentContainer id="content">
-        <ImageSection
-          title="Herbst&shy;konzerte 2023"
-          subtitle={HERBSTKONZERT_23.subtitle}
-          image={{
-            src: HERBSTKONZERT_23.image_lg!,
-            alt: 'Flyer Herbstkonzerte 2023',
-            vertical: true,
-            priority: true,
-          }}
-          link={{
-            href: '/konzerte/herbstkonzerte-23',
-            text: 'Weitere Informationen',
-          }}
-        >
-          {HERBSTKONZERT_23.description}
-        </ImageSection>
-
         <ImageSection
           title="Über uns"
           image={{
