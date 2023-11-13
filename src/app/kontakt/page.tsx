@@ -22,22 +22,17 @@ const VORSTAND = [
   {
     name: 'Larissa Kälin',
     funktion: 'Finanzen',
-    email: 'larissa.kaelin@jso-crescendo.ch',
+    email: 'finanzen@jso-crescendo.ch',
   },
   {
     name: 'Salome Kurmann',
     funktion: 'Mitglieder',
-    email: 'salome.kurmann@jso-crescendo.ch',
+    email: 'mitglieder@jso-crescendo.ch',
   },
   {
     name: 'Janine Wälty & Baldiun Dettling',
     funktion: 'Marketing und Sponsoring',
     email: 'marketing@jso-crescendo.ch',
-  },
-  {
-    name: 'Livia Pierhöfer',
-    funktion: 'Musikkomission',
-    email: 'livia.pierhoefer@jso-crescendo.ch',
   },
   {
     name: 'Florian Rohrer',
