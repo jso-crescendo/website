@@ -37,7 +37,6 @@ export interface Concert {
 }
 
 export const CONCERTS: Concert[] = [
-  OFFENES_SINGEN_23,
   WEIHNACHTSGOTTESDIENST_23,
   KARFREITAGSKONZERT_24,
   FRUEHLINGSKONZERTE_24,
@@ -45,6 +44,7 @@ export const CONCERTS: Concert[] = [
 ];
 
 export const PAST_CONCERTS: Concert[] = [
+  OFFENES_SINGEN_23,
   HERBSTKONZERT_23,
   JUGENDEURYTHMIEFESTIVAL_23,
   HGN_250,
