@@ -5,7 +5,7 @@ import {StatusCard} from '../../../components/status-card';
 import {TextField} from '../../../components/form/text-field';
 import {TurnstileWidget} from '../../../components/turnstile-widget';
 import {submitSignupRequest} from './action';
-import {experimental_useFormStatus as useFormStatus} from 'react-dom';
+import {useFormStatus} from 'react-dom';
 import {useState} from 'react';
 
 export default function ContactForm({

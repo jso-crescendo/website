@@ -6,7 +6,7 @@ import {TextArea} from '../../../components/form/text-area';
 import {TextField} from '../../../components/form/text-field';
 import {TurnstileWidget} from '../../../components/turnstile-widget';
 import {submitContactRequest} from './actions';
-import {experimental_useFormStatus as useFormStatus} from 'react-dom';
+import {useFormStatus} from 'react-dom';
 import {useState} from 'react';
 
 export default function ContactForm({

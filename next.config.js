@@ -1,11 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  // TODO: for use with docker use -> output: 'standalone',
   images: {
     formats: ['image/webp'],
-  },
-  experimental: {
-    serverActions: true,
   },
   async redirects() {
     return [
