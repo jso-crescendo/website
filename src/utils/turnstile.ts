@@ -1,6 +1,6 @@
 const TURNSTILE_ENDPOINT =
   'https://challenges.cloudflare.com/turnstile/v0/siteverify';
-  
+
 export const validateToken = async (token: string): Promise<boolean> => {
   console.info('Start validating turnstileToken');
 
