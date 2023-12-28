@@ -5,7 +5,7 @@ import {Lora, Montserrat} from 'next/font/google';
 import {Footer} from '../components/footer';
 import {NavBar} from '@/components/nav-bar';
 import classNames from 'classnames';
-import { Viewport } from 'next';
+import {Viewport} from 'next';
 
 export const metadata = {
   title: {template: '%s | JSO Crescendo', default: 'JSO Crescendo'},
@@ -26,8 +26,8 @@ export const metadata = {
 
 export const viewport: Viewport = {
   themeColor: '#ffffff',
-  colorScheme: "light"
-}
+  colorScheme: 'light',
+};
 
 const loraFont = Lora({
   variable: '--font-lora',
