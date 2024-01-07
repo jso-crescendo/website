@@ -117,7 +117,7 @@ export default function Orchester() {
         beiden Söhne sind seit Jahren Mitglieder im Crescendo. Tochter Anina
         spielte 12 Jahre als Geigerin mit, dabei prägte sie das Orchester vor
         allem in ihren sieben Jahren als Konzertmeisterin namhaft. Es ist für
-        uns alle ein riesiger Verlust,dass Anina im Frühling 2021 bei einem
+        uns alle ein riesiger Verlust, dass Anina im Frühling 2021 bei einem
         Reitunfall tödlich verunglückte.
       </ImageSection>
       <ImageSection

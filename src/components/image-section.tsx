@@ -75,7 +75,7 @@ export const ImageSection: React.FC<ImageSectionProps> = ({
             className="h-full w-full"
           />
         )
-      )}{' '}
+      )}
     </div>
     <div className="w-full lg:w-7/12">
       <hgroup>

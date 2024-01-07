@@ -31,12 +31,12 @@ const VORSTAND = [
   },
   {
     name: 'Janine Wälty & Baldiun Dettling',
-    funktion: 'Marketing und Sponsoring',
+    funktion: 'Marketing & Sponsoring',
     email: 'marketing@jso-crescendo.ch',
   },
   {
     name: 'Florian Rohrer',
-    funktion: 'Website & digitales',
+    funktion: 'Website & Digitales',
     email: 'florian.rohrer@jso-crescendo.ch',
   },
 ];
