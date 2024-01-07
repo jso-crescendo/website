@@ -160,7 +160,7 @@ export default function Orchester() {
           Ihren Beitrag.
         </Text>
         <section className="pt-4">
-          <h5 className="text-xl">Kontodaten</h5>
+          <h3 className="text-xl">Kontodaten</h3>
           <Text className="pl-2">
             Jugendorchester Crescendo
             <br />
