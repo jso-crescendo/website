@@ -11,11 +11,7 @@ export const metadata = {
 
 export default function Orchester() {
   return (
-    <ContentContainer>
-      <h1 className="mb-8 text-center font-serif text-3xl leading-normal md:text-4xl lg:text-5xl">
-        Konzerte
-      </h1>
-
+    <ContentContainer title="Konzerte">
       <section
         id="konzerte"
         className="grid grid-cols-1 items-start justify-center gap-8 md:grid-cols-2 lg:grid-cols-3"

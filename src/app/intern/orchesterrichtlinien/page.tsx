@@ -12,10 +12,7 @@ export const metadata = {
 
 export default function Orchesterrichtlinien() {
   return (
-    <ContentContainer>
-      <h1 className="text-center font-serif text-3xl leading-normal md:text-4xl lg:text-5xl">
-        Orchesterrichtlinien
-      </h1>
+    <ContentContainer title="Orchesterrichtlinien">
       <Text>
         Als Crescendianerin oder Crescendianer tragen wir alle zusammen zu einer
         angenehmen Probeatmosphäre und erfolgreichen Konzerten bei. Dabei sind

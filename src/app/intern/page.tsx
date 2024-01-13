@@ -12,10 +12,7 @@ export const metadata = {
 
 export default function Intern() {
   return (
-    <ContentContainer>
-      <h1 className="text-center font-serif text-3xl leading-normal md:text-4xl lg:text-5xl">
-        Intern
-      </h1>
+    <ContentContainer title="Intern">
       <ImageSection
         image={{src: InternImage, priority: true, alt: ''}}
         title="Wichtige Links"

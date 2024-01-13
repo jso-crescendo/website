@@ -21,10 +21,7 @@ export const metadata = {
 
 export default function Orchester() {
   return (
-    <ContentContainer>
-      <h1 className="text-center font-serif text-3xl leading-normal md:text-4xl lg:text-5xl">
-        Über das Orchester
-      </h1>
+    <ContentContainer title="Über das Orchester">
       <Image
         src={OrchesterWideImage}
         alt="Orchester in Tonhalle bei Konzert"
