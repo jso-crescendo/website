@@ -147,7 +147,7 @@ export default function Orchester() {
       >
         In den Programmheften unserer Konzerte bieten wir Platz für Ihre
         Werbung. Möchten Sie Ihr Logo oder Ihren Firmennamen in unserem
-        Programmheft abdrucken? Melden Sie sich beim uns.
+        Programmheft abdrucken? Melden Sie sich bei uns.
       </ImageSection>
       <ImageSection
         image={{src: GoennerImage, alt: 'Orchestermitglieder beim spielen'}}
