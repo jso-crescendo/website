@@ -62,7 +62,7 @@ export const Footer: React.FC = () => (
     <div className="container mx-auto mb-4 flex flex-col gap-8 md:flex-row md:justify-start">
       <FooterSection title="Kontakt">
         <IconLink
-          icon={<Email className="h-8 w-8" />}
+          icon={<Email className="size-8" />}
           text="kontakt@jso-crescendo.ch"
           href="mailto:kontakt@jso-crescendo.ch"
         />
@@ -75,17 +75,17 @@ export const Footer: React.FC = () => (
       </FooterSection>
       <FooterSection title="Folge uns">
         <IconLink
-          icon={<Instagram className="h-8 w-8" />}
+          icon={<Instagram className="size-8" />}
           text="Instagram"
           href="https://www.instagram.com/jsocrescendo"
         />
         <IconLink
-          icon={<Facebook className="h-8 w-8" />}
+          icon={<Facebook className="size-8" />}
           text="Facebook"
           href="https://www.facebook.com/jugendsinfonieorchestercrescendo/"
         />
         <IconLink
-          icon={<Youtube className="h-8 w-8" />}
+          icon={<Youtube className="size-8" />}
           text="Youtube"
           href="https://www.youtube.com/@jso-crescendo"
         />

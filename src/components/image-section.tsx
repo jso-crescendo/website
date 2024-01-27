@@ -72,7 +72,7 @@ export const ImageSection: React.FC<ImageSectionProps> = ({
             title="YouTube video player"
             allowFullScreen
             referrerPolicy="no-referrer"
-            className="h-full w-full"
+            className="size-full"
           />
         )
       )}

@@ -42,7 +42,7 @@ export const NavBar: React.FC = () => {
       </Link>
 
       <Burger
-        className="block h-6 w-6 cursor-pointer md:hidden"
+        className="block size-6 cursor-pointer md:hidden"
         onClick={toggleMenu}
         role="button"
       />
