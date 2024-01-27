@@ -38,7 +38,7 @@ export default function Home() {
         </h1>
 
         <a
-          className="absolute left-1/2 top-3/4 h-24 w-24 rounded-full border-2 text-background hover:text-neutral-200"
+          className="absolute left-1/2 top-3/4 size-24 rounded-full border-2 text-background hover:text-neutral-200"
           style={{transform: 'translate(-50%, -50%)'}}
           href="#content"
           aria-label="Zum Inhalt"

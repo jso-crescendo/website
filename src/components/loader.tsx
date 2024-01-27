@@ -5,7 +5,7 @@ export const Loader: React.FC = () => (
   >
     <svg
       aria-hidden="true"
-      className="mr-2 h-8 w-8 animate-spin fill-primary-main text-neutral-200"
+      className="mr-2 size-8 animate-spin fill-primary-main text-neutral-200"
       viewBox="0 0 100 101"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
