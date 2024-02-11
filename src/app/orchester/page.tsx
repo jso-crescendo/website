@@ -139,37 +139,6 @@ export default function Orchester() {
         der Universität mit.
       </ImageSection>
       <ImageSection
-        image={{src: SponsorenImage, alt: 'Orchestermitglieder beim spielen'}}
-        title="Sponsoren"
-      >
-        In den Programmheften unserer Konzerte bieten wir Platz für Ihre
-        Werbung. Möchten Sie Ihr Logo oder Ihren Firmennamen in unserem
-        Programmheft abdrucken? Melden Sie sich bei uns.
-      </ImageSection>
-      <ImageSection
-        image={{src: GoennerImage, alt: 'Orchestermitglieder beim spielen'}}
-        title="Gönner"
-        textOnly={false}
-      >
-        <Text>
-          Möchten Sie engagierte junge Musiker unterstützen? Wir freuen uns über
-          Ihr Interesse an der Jugend- und Kulturförderung und sind dankbar für
-          Ihren Beitrag.
-        </Text>
-        <section className="pt-4">
-          <h3 className="text-xl">Kontodaten</h3>
-          <Text className="pl-2">
-            Jugendorchester Crescendo
-            <br />
-            8000 Zürich
-            <br />
-            IBAN: CH 16 0900 0000 8005 1631 7
-            <br />
-            Konto: 80-51631-7
-          </Text>
-        </section>
-      </ImageSection>
-      <ImageSection
         image={{src: MitgliedWerdenImage, alt: 'Noten auf einem Notenständer'}}
         title="Mitglied werden"
         textOnly={false}

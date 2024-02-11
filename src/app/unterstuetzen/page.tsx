@@ -14,14 +14,7 @@ export default function Unterstuetzen() {
   return (
     <ContentContainer title="Unterstützen">
       <Text className="mb-4">
-        Das Jugendsinfonieorchester Crescendo besteht seit 34 Jahren, immer
-        unter der Leitung von Käthi Schmid Lauber. Anfangs wurde jeweils ein
-        Konzertprogramm pro Jahr einstudiert. Seit gut 15 Jahren werden aber
-        jedes Jahr zwei grosse Programme erarbeitet. Bis heute sind das mehr als
-        3000 Probestunden, 50 Probewochenenden und 130 Konzerte in der Schweiz -
-        Tendenz steigend! Im Programm stehen dabei grosse Sinfonien,
-        Solokonzerte und Filmmusik. Nicht wenige ehemalige Mitglieder trifft man
-        heute an einem Konservatorium oder bereits als Profimusiker wieder an.
+        Da bruuchts en text. Lorem ipsum dolor sit amet, consectetur adipiscing
       </Text>
       <ImageSection
         image={{src: SponsorenImage, alt: 'Orchestermitglieder beim spielen'}}
@@ -29,7 +22,7 @@ export default function Unterstuetzen() {
       >
         In den Programmheften unserer Konzerte bieten wir Platz für Ihre
         Werbung. Möchten Sie Ihr Logo oder Ihren Firmennamen in unserem
-        Programmheft abdrucken? Melden Sie sich beim uns.
+        Programmheft abdrucken? Melden sie sich bei unserem Marketingteam fü
       </ImageSection>
       <ImageSection
         image={{src: GoennerImage, alt: 'Orchestermitglieder beim spielen'}}
