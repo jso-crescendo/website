@@ -1,4 +1,5 @@
 import AboutUsImage from '@/images/2022_fruehling_blech.webp';
+import SupportCulture from '@/images/backgrounds/support_culture_2024.webp';
 import BgImage from '@/images/2022_waedenswil_2.webp';
 import {CONCERTS} from '../data/concerts';
 import {ChevronDown} from '../icons/chevron-down';
@@ -48,6 +49,25 @@ export default function Home() {
       </div>
 
       <ContentContainer id="content">
+        <ImageSection
+          title="Unterstzütze uns"
+          image={{
+            src: SupportCulture,
+            alt: 'Support Culture Migros',
+            priority: true,
+          }}
+          link={{
+            href: 'https://supportculture.migros.ch/de/vereine/jugendsinfonieorchester-crescendo/',
+            text: 'Jetzt unterstützen',
+          }}
+        >
+          Wir unternehmen gerne gemeinsam Dinge. Besonders bleibende
+          Erinnerungen entstehen bei Konzertreisen ins Ausland, die das
+          Orchester alle zwei Jahre organisiert. Wir führen einen
+          Solidaritätsfonds, der es ermöglicht, dass alle Mitglieder unabhängig
+          von ihrer finanziellen Situation an solchen Reisen und damit am
+          Vereinsleben teilnehmen können.
+        </ImageSection>
         <ImageSection
           title="Über uns"
           image={{
