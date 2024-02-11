@@ -18,4 +18,26 @@ export const FRUEHLINGSKONZERTE_24: Concert = {
       dateISO: '2024-04-14T17:00:00+01:00',
     },
   ],
+  program: [
+    {
+      name: 'Sinfonia Nr. 4',
+      composer: 'Emilie Mayer',
+    },
+    {
+      name: 'Jewish Rhapsody',
+      composer: 'Käthi Schmid Lauber',
+    },
+    {
+      name: 'Pioneer Dances',
+      composer: 'Peggy Stuart Coolidge',
+    },
+    {
+      name: 'Upon Your Heart',
+      composer: 'Eleanor Daley',
+    },
+    {
+      name: 'Neue Liebe, Neues Leben',
+      composer: 'Fanny Hensel',
+    },
+  ],
 };

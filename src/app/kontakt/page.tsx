@@ -15,8 +15,13 @@ const VORSTAND = [
     email: 'andrea.schmid@jso-crescendo.ch',
   },
   {
+    name: 'Salome Kurmann',
+    funktion: 'Vizepräsidentin & Mitglieder',
+    email: 'mitglieder@jso-crescendo.ch',
+  },
+  {
     name: 'Janine Wälty',
-    funktion: 'Vizepräsidentin',
+    funktion: 'Konzertorganisation',
     email: 'janine.waelty@jso-crescendo.ch',
   },
   {
@@ -25,12 +30,7 @@ const VORSTAND = [
     email: 'finanzen@jso-crescendo.ch',
   },
   {
-    name: 'Salome Kurmann',
-    funktion: 'Mitglieder',
-    email: 'mitglieder@jso-crescendo.ch',
-  },
-  {
-    name: 'Janine Wälty & Baldiun Dettling',
+    name: 'Simon Kurath & Alma Akka',
     funktion: 'Marketing & Sponsoring',
     email: 'marketing@jso-crescendo.ch',
   },

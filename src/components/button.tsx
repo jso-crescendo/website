@@ -35,7 +35,7 @@ export const Button: React.FC<
       <svg
         aria-hidden="true"
         role="status"
-        className="mr-3 inline h-4 w-4 animate-spin text-neutral-200"
+        className="mr-3 inline size-4 animate-spin text-neutral-200"
         viewBox="0 0 100 101"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"

@@ -19,4 +19,10 @@ export const KARFREITAGSKONZERT_24: Concert = {
       dateISO: '2024-03-29T17:00:00+01:00',
     },
   ],
+  program: [
+    {
+      name: 'Lukaspassion',
+      composer: 'Johann Sebastian Bach',
+    },
+  ],
 };
