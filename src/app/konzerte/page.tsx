@@ -55,8 +55,21 @@ export default function Orchester() {
                   <ul>
                     {c.program.map((p) => (
                       <li key={p.name} className="flex flex-col pb-2">
-                        <span className="text-base">{p.name}</span>
-                        <span className="text-sm">{p.composer}</span>
+                        <p className="text-base flex flex-col">
+                          {p.name}
+                          {p.subtitle && (
+                            <span className="text-sm font-light">
+                              {p.subtitle}
+                            </span>
+                          )}
+                        </p>
+
+                        <p className="text-sm font-medium">
+                          {p.composer}
+                        </p>
+                        {p.solist && (
+                          <p className="text-sm italic">Solist: {p.solist}</p>
+                        )}
                       </li>
                     ))}
                   </ul>
