@@ -64,9 +64,7 @@ export default function Orchester() {
                           )}
                         </p>
 
-                        <p className="text-sm font-medium">
-                          {p.composer}
-                        </p>
+                        <p className="text-sm font-medium">{p.composer}</p>
                         {p.solist && (
                           <p className="text-sm italic">Solist: {p.solist}</p>
                         )}

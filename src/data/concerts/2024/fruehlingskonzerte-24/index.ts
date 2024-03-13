@@ -25,8 +25,8 @@ export const FRUEHLINGSKONZERTE_24: Concert = {
     },
     {
       name: 'Jewish Rhapsody',
-      subtitle: "für Klarinette und Orchester",
-      solist: "Wanja Staubli",
+      subtitle: 'für Klarinette und Orchester',
+      solist: 'Wanja Staubli',
       composer: 'Käthi Schmid Lauber',
     },
     {
@@ -42,12 +42,12 @@ export const FRUEHLINGSKONZERTE_24: Concert = {
       composer: 'Fanny Hensel',
     },
     {
-      name: "Sing my child",
-      composer: "Sarah Quartel"
+      name: 'Sing my child',
+      composer: 'Sarah Quartel',
     },
     {
-      name: "March of the women",
-      composer: "Ethel Smyth"
-    }
+      name: 'March of the women',
+      composer: 'Ethel Smyth',
+    },
   ],
 };
