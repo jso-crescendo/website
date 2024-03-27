@@ -7,6 +7,7 @@ import {ContentContainer} from '../components/contentContainer';
 import Image from 'next/image';
 import {ImageSection} from '@/components/image-section';
 import KonzerteImage from '@/images/people/kaethi_2.webp';
+import {FRUEHLINGSKONZERTE_24} from '@/data/concerts/2024/fruehlingskonzerte-24';
 
 export const metadata = {
   description:
@@ -50,11 +51,26 @@ export default function Home() {
 
       <ContentContainer id="content">
         <ImageSection
+          title={FRUEHLINGSKONZERTE_24.name}
+          image={{
+            src: FRUEHLINGSKONZERTE_24.image_lg!,
+            alt: 'Flyer Frühlingskonzerte 2024',
+            priority: true,
+            vertical: true,
+            fit: true,
+          }}
+          link={{
+            href: `/konzerte/${FRUEHLINGSKONZERTE_24.id}`,
+            text: 'Mehr erfahren',
+          }}
+        >
+          {FRUEHLINGSKONZERTE_24.description}
+        </ImageSection>
+        <ImageSection
           title="Unterstzütze uns"
           image={{
             src: SupportCulture,
             alt: 'Support Culture Migros',
-            priority: true,
           }}
           link={{
             href: 'https://supportculture.migros.ch/de/vereine/jugendsinfonieorchester-crescendo/',
