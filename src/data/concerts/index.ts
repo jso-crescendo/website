@@ -38,9 +38,10 @@ export interface Concert {
   program?: ProgramItem[];
 }
 
-export const CONCERTS: Concert[] = [FRUEHLINGSKONZERTE_24, VOLKSTANZGALA_24];
+export const CONCERTS: Concert[] = [VOLKSTANZGALA_24];
 
 export const PAST_CONCERTS: Concert[] = [
+  FRUEHLINGSKONZERTE_24,
   KARFREITAGSKONZERT_24,
   WEIHNACHTSGOTTESDIENST_23,
   OFFENES_SINGEN_23,

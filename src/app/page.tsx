@@ -51,22 +51,6 @@ export default function Home() {
 
       <ContentContainer id="content">
         <ImageSection
-          title={FRUEHLINGSKONZERTE_24.name}
-          image={{
-            src: FRUEHLINGSKONZERTE_24.image_lg!,
-            alt: 'Flyer Frühlingskonzerte 2024',
-            priority: true,
-            vertical: true,
-            fit: true,
-          }}
-          link={{
-            href: `/konzerte/${FRUEHLINGSKONZERTE_24.id}`,
-            text: 'Mehr erfahren',
-          }}
-        >
-          {FRUEHLINGSKONZERTE_24.description}
-        </ImageSection>
-        <ImageSection
           title="Unterstzütze uns"
           image={{
             src: SupportCulture,
