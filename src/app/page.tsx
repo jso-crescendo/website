@@ -51,24 +51,6 @@ export default function Home() {
 
       <ContentContainer id="content">
         <ImageSection
-          title="Unterstzütze uns"
-          image={{
-            src: SupportCulture,
-            alt: 'Support Culture Migros',
-          }}
-          link={{
-            href: 'https://supportculture.migros.ch/de/vereine/jugendsinfonieorchester-crescendo/',
-            text: 'Jetzt unterstützen',
-          }}
-        >
-          Wir unternehmen gerne gemeinsam Dinge. Besonders bleibende
-          Erinnerungen entstehen bei Konzertreisen ins Ausland, die das
-          Orchester alle zwei Jahre organisiert. Wir führen einen
-          Solidaritätsfonds, der es ermöglicht, dass alle Mitglieder unabhängig
-          von ihrer finanziellen Situation an solchen Reisen und damit am
-          Vereinsleben teilnehmen können.
-        </ImageSection>
-        <ImageSection
           title="Über uns"
           image={{
             src: AboutUsImage,
