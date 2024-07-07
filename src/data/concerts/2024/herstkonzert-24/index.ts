@@ -16,13 +16,13 @@ export const HERBSTKONZERT_24: Concert = {
     },
     {
       location: 'Leonhardskirche Basel',
-      googleMapsLink: "https://maps.app.goo.gl/kxB52LrYVz1JvQFf8",
+      googleMapsLink: 'https://maps.app.goo.gl/kxB52LrYVz1JvQFf8',
       dateString: '2. November 2024 19:00 Uhr',
       dateISO: '2024-11-02T19:00:00+01:00',
     },
     {
       location: 'Kirche Oberstrasse Zürich',
-      googleMapsLink: "https://maps.app.goo.gl/FsYcETE9jSNydGJFA",
+      googleMapsLink: 'https://maps.app.goo.gl/FsYcETE9jSNydGJFA',
       dateString: '3. November 2024 16:00 Uhr',
       dateISO: '2024-11-03T16:00:00+01:00',
     },
@@ -31,6 +31,30 @@ export const HERBSTKONZERT_24: Concert = {
     {
       name: 'Sinfonie Nr. 2 A-Dur',
       composer: 'Vasily Kalinnikov',
+    },
+    {
+      name: 'Walzer aus Maskerade',
+      composer: 'Aram Khachaturian',
+    },
+    {
+      name: 'Sinfonische Suite aus Herr der Ringe',
+      composer: 'Howard Shore arr. John Whitney',
+    },
+    {
+      name: 'Bawo Thixo Somandla',
+      composer: 'traditional Xhosa',
+    },
+    {
+      name: 'Glow',
+      composer: 'Eric Whitacre',
+    },
+    {
+      name: 'The Rose',
+      composer: 'Ola Gjeilo',
+    },
+    {
+      name: 'Warum willst du andre fragen',
+      composer: 'Clara Schumann',
     },
   ],
 };

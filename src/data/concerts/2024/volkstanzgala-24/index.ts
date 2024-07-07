@@ -5,7 +5,7 @@ import {Concert} from '../..';
 export const VOLKSTANZGALA_24: Concert = {
   id: 'volkstanzgala-24',
   name: 'Eidgenössisches Trachtenfest 2024',
-  subtitle: "Volkstanzgala",
+  subtitle: 'Volkstanzgala',
   image_sm: Image_sm,
   dates: [
     {
