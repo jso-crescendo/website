@@ -1,5 +1,4 @@
 import AboutUsImage from '@/images/2022_fruehling_blech.webp';
-import SupportCulture from '@/images/backgrounds/support_culture_2024.webp';
 import BgImage from '@/images/2022_waedenswil_2.webp';
 import {CONCERTS} from '../data/concerts';
 import {ChevronDown} from '../icons/chevron-down';
@@ -7,7 +6,6 @@ import {ContentContainer} from '../components/contentContainer';
 import Image from 'next/image';
 import {ImageSection} from '@/components/image-section';
 import KonzerteImage from '@/images/people/kaethi_2.webp';
-import {FRUEHLINGSKONZERTE_24} from '@/data/concerts/2024/fruehlingskonzerte-24';
 
 export const metadata = {
   description:

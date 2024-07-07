@@ -5,7 +5,7 @@ import {Concert} from '../..';
 export const HERBSTKONZERT_24: Concert = {
   id: 'herbstkonzert-24',
   name: 'Herbstkonzerte',
-  lastChange: '2024-05-08T18:00:00+01:00',
+  lastChange: '2024-07-07T18:00:00+01:00',
   image_sm: Image_sm,
   dates: [
     {
