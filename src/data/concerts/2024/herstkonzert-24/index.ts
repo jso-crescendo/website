@@ -21,7 +21,7 @@ export const HERBSTKONZERT_24: Concert = {
       dateISO: '2024-11-02T19:00:00+01:00',
     },
     {
-      location: 'Kirche Oberstrasse Zürich',
+      location: 'Kirche Oberstrass Zürich',
       googleMapsLink: 'https://maps.app.goo.gl/FsYcETE9jSNydGJFA',
       dateString: '3. November 2024 16:00 Uhr',
       dateISO: '2024-11-03T16:00:00+01:00',
