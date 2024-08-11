@@ -6,21 +6,6 @@ const nextConfig = {
   async redirects() {
     return [
       {
-        source: '/sponsoren',
-        destination: '/orchester',
-        permanent: true,
-      },
-      {
-        source: '/galerie',
-        destination: '/',
-        permanent: true,
-      },
-      {
-        source: '/galerie/:all*',
-        destination: '/',
-        permanent: true,
-      },
-      {
         source: '/canturicum',
         destination: '/',
         permanent: false,

@@ -5,11 +5,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
   return [
     {
       url: 'https://jso-crescendo.ch',
-      lastModified: '2023-11-07T10:00:00.000Z',
+      lastModified: '2024-07-07T18:00:00.000Z',
     },
     {
       url: 'https://jso-crescendo.ch/kontakt',
-      lastModified: '2023-06-03T00:00:00.000Z',
+      lastModified: '2024-03-27T00:00:00.000Z',
     },
     {
       url: 'https://jso-crescendo.ch/newsletter',
@@ -21,7 +21,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     {
       url: 'https://jso-crescendo.ch/konzerte',
-      lastModified: '2023-11-07T00:00:00.000Z',
+      lastModified: '2024-07-07T18:00:00.000Z',
     },
     ...CONCERTS.map((c) => ({
       url: `https://jso-crescendo.ch/konzerte/${c.id}`,
