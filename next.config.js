@@ -10,6 +10,11 @@ const nextConfig = {
         destination: '/',
         permanent: false,
       },
+      {
+        source: '/hk-24',
+        destination: '/konzerte/herbstkonzert-24',
+        permanent: true,
+      },
     ];
   },
   async headers() {
