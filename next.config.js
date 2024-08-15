@@ -10,9 +10,16 @@ const nextConfig = {
         destination: '/',
         permanent: false,
       },
+      //flyer quicklink
       {
-        source: '/hk-24',
-        destination: '/konzerte/herbstkonzert-24',
+        source: '/hk-24/f',
+        destination: '/konzerte/herbstkonzert-24?utm_source=flyer&utm_campaign=hk-24',
+        permanent: true,
+      },
+      //plakat quicklink
+      {
+        source: '/hk-24/p',
+        destination: '/konzerte/herbstkonzert-24?utm_source=plakat&utm_campaign=hk-24',
         permanent: true,
       },
     ];
