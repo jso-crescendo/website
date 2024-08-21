@@ -6,6 +6,7 @@ import {ContentContainer} from '../components/contentContainer';
 import Image from 'next/image';
 import {ImageSection} from '@/components/image-section';
 import KonzerteImage from '@/images/people/kaethi_2.webp';
+import {HERBSTKONZERT_24} from '../data/concerts/2024/herstkonzert-24';
 
 export const metadata = {
   description:
@@ -49,15 +50,28 @@ export default function Home() {
 
       <ContentContainer id="content">
         <ImageSection
+          title={HERBSTKONZERT_24.name}
+          image={{
+            src: HERBSTKONZERT_24.image_lg!,
+            alt: 'Plakat Herbstkonzerte',
+            priority: true,
+            vertical: true,
+          }}
+          link={{
+            href: '/konzerte/' + HERBSTKONZERT_24.id,
+            text: 'Mehr erfahren',
+          }}
+        ></ImageSection>
+        <ImageSection
           title="Über uns"
           image={{
             src: AboutUsImage,
             alt: 'Orchester in der Tonhalle. Käthi Schmid Lauber dirigiert',
-            priority: true,
+            priority: false,
           }}
           link={{
             href: '/orchester',
-            text: 'Mehr erfahren',
+            text: 'Weitere Informationen',
           }}
         >
           Seit 34 Jahren begeistert das Jugendsinfonieorchester Crescendo unter

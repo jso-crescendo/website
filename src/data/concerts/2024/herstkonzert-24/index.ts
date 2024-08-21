@@ -1,4 +1,5 @@
 import Image_sm from './assets/herbstkonzert_24_sm.webp';
+import Image_lg from './assets/herbstkonzert_24_lg.webp';
 
 import {Concert} from '../..';
 
@@ -7,6 +8,7 @@ export const HERBSTKONZERT_24: Concert = {
   name: 'Herbstkonzerte',
   lastChange: '2024-07-07T18:00:00+01:00',
   image_sm: Image_sm,
+  image_lg: Image_lg,
   dates: [
     {
       location: 'Dreifaltigkeitskirche Tann',
