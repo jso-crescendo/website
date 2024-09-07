@@ -6,5 +6,5 @@ export const Text: React.FC<
     HTMLParagraphElement
   >
 > = ({className, ...rest}) => (
-  <p className={classNames('text-justify text-base', className)} {...rest} />
+  <p className={classNames('text-pretty text-justify text-base', className)} {...rest} />
 );

@@ -1,5 +1,6 @@
 'use client';
 
+import {EmailLink} from '../../components/email-link';
 import {StatusCard} from '../../components/status-card';
 import {useEffect} from 'react';
 
@@ -22,7 +23,7 @@ export default function Error({
       message={
         <>
           Bitte kontaktiere uns per{' '}
-          <a href="mailto:kontakt@jso-crescendo.ch">Mail</a>
+          <EmailLink email="kontakt@jso-crescendo.ch" name="Mail" />
         </>
       }
     />

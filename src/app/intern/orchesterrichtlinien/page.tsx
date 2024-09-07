@@ -4,6 +4,7 @@ import {ImageSection} from '@/components/image-section';
 import InternImage from '@/images/backgrounds/scores_1.webp';
 import NextLink from 'next/link';
 import {Text} from '../../../components/text';
+import {EmailLink} from '../../../components/email-link';
 
 export const metadata = {
   title: 'Intern',
@@ -163,15 +164,10 @@ export default function Orchesterrichtlinien() {
           Präsident Andrea Schmid.
         </li>
         <li>
-          <b>Austritt:</b> Austritte müssen schriftlich am Vorstand (
-          <a
-            href="mailto:vorstand@jso-crescendo.ch"
-            className="text-primary-main hover:text-primary-darker"
-          >
-            vorstand@jso-crescendo.ch
-          </a>
-          ) mitgeteilt werden. Austritte sind grundsätzlich nur nach den
-          Konzerten möglich.
+          <b>Austritt:</b> Austritte müssen schriftlich dem{' '}
+          <EmailLink email="vorstand@jso-crescendo.ch" name="Vorstand" />{' '}
+          mitgeteilt werden. Austritte sind grundsätzlich nur nach den Konzerten
+          möglich.
         </li>
       </ul>
     </ContentContainer>
