@@ -7,13 +7,13 @@ import {ContentContainer} from '../../components/contentContainer';
 import {EmailLink} from '../../components/email-link';
 
 export const metadata = {
-  title: 'Unterstützen',
+  title: 'So können Sie uns unterstützen',
   description: 'TODO',
 };
 
 export default function Unterstuetzen() {
   return (
-    <ContentContainer title="Unterstützen">
+    <ContentContainer title="So können Sie uns unterstützen">
       <ImageSection
         image={{src: SponsorenImage, alt: 'Orchestermitglieder beim spielen'}}
         title="Wie finanzieren wir uns?"
@@ -21,58 +21,37 @@ export default function Unterstuetzen() {
         Das Jugendsinfonieorchester Crescendo finanziert sich hauptsächlich aus
         Kollekten und Gagen bei Konzerten. Bei grösseren Anlässen wie
         Konzertreisen veranstalten wir zusätzlich Crowdfunding-Aktionen. Die
-        restlichen auslagen werden über Mitgliederbeiträge, Sponsoren und
+        restlichen Auslagen werden über Mitgliederbeiträge, Sponsoren und
         Gönnerbeiträge und anderen Spenden gedeckt.
+      </ImageSection>
+
+      <ImageSection
+        image={{src: GoennerImage, alt: 'Orchestermitglieder beim spielen'}}
+        title="Gönner"
+        link={{text: 'Jetzt Gönner:in werden', href: '/unterstuetzen/goenner'}}
+      >
+        Möchten Sie engagierte junge Musiker unterstützen? Mit einem jährlichen
+        Beitrag ab CHF 100.- können Sie Gönner:in des JSO Crescendos werden. Als
+        Dankeschön erhalten Sie neben einem jährlichen Gönnerbrief auch weitere
+        Vorteile wie Platzreservationen an unseren Konzerten.
       </ImageSection>
       <ImageSection
         image={{src: SponsorenImage, alt: 'Orchestermitglieder beim spielen'}}
         title="Sponsoren"
         textOnly={false}
+        link={{text: 'Weitere Informationen', href: '/unterstuetzen/sponsoren'}}
       >
-        <Text>
-          Bei unseren Konzerten bieten wir Ihnen die Möglichkeit in unserem
-          Programmheft zu inserieren. Wir drucken jeweils 800 Programmhefte und
-          legen dieselbe Edition an allen Konzertorten auf.
-        </Text>
-        <div className="my-2">
-          <Text>
-            Wir stellen Ihnen gerne folgende Leistungen zur Verfügung:
-          </Text>
-          <ul className="list-inside list-disc mx-2">
-            <li className="text-justify text-base">Namenserwähnung: CHF 80</li>
-            <li className="text-justify text-base">
-              Inserat A7 (1/4 Seite): CHF 120
-            </li>
-            <li className="text-justify text-base">
-              Inserat A6 (1/2 Seite): CHF 200
-            </li>
-            <li className="text-justify text-base">
-              Inserat A5 (ganze Seite): CHF 400
-            </li>
-          </ul>
-          <Text>Weitere Optionen in Absprache sind gerne möglich.</Text>
-        </div>
-        <Text>
-          Bitte melden Sie sich bei Interesse bis spätestens 4 Wochen vor den
-          Konzerten bei{' '}
-          <EmailLink
-            email="simon.kurath@jso-crescendo.ch"
-            name="Simon Kurath"
-          />
-          . Wir würden uns über Ihre Kontaktaufnahme ausserordentlich freuen —
-          vielen Dank!
-        </Text>
+        TODO
       </ImageSection>
       <ImageSection
-        image={{src: GoennerImage, alt: 'Orchestermitglieder beim spielen'}}
-        title="Gönner"
+        title="Spenden"
+        image={{src: SponsorenImage, alt: 'Orchestermitglieder beim spielen'}}
         textOnly={false}
+        link={{text: 'Einzahlungsschein herunterladen', href: '#TODO'}}
       >
-        <Text>
-          Möchten Sie engagierte junge Musiker unterstützen? Wir freuen uns über
-          Ihr Interesse an der Jugend- und Kulturförderung und sind dankbar für
-          Ihren Beitrag.
-        </Text>
+        Wenn sie uns lieber unkompliziert eine einmalige Spende zukommen lassen
+        möchten, können Sie dies jederzeit mit folgendem Einzahlungsschein tun:
+        TODO
         <section className="pt-4">
           <h3 className="text-xl">Kontodaten</h3>
           <Text className="pl-2">
