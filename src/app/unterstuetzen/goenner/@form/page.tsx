@@ -33,8 +33,22 @@ export default function GoennerForm({
       action={signup}
     >
       <legend className="pb-4 font-serif text-2xl">Anmeldeformular</legend>
-      <TextField id="firstname" name="firstname" label="Vorname" required />
-      <TextField id="lastname" name="lastname" label="Lastname" required />
+      <div className="flex flex-col lg:flex-row lg:gap-6">
+        <TextField
+          className="lg:w-1/2"
+          id="firstname"
+          name="firstname"
+          label="Vorname"
+          required
+        />
+        <TextField
+          className="lg:w-1/2"
+          id="lastname"
+          name="lastname"
+          label="Lastname"
+          required
+        />
+      </div>
       <TextField
         id="email"
         type="email"
@@ -42,7 +56,7 @@ export default function GoennerForm({
         label="Email"
         hint="Wenn sie uns ihre Email-Adresse hinterlassen, stellen wir ihnen die Rechnung digital zu."
       />
-      <div className="my-6">
+      <div className="pt-4 mb-6">
         <span className="block font-sans text-lg text-on-background">
           Adresse
         </span>
@@ -56,10 +70,21 @@ export default function GoennerForm({
         </div>
         <TextField id="street" name="street" label="Strasse" required />
         <div className="flex flex-col lg:flex-row lg:gap-6">
-          <TextField id="zip" type="number" name="zip" label="PLZ" required />
-          <div className="w-full">
-            <TextField id="city" name="city" label="Ort" required />
-          </div>
+          <TextField
+            className="w-1/3"
+            id="zip"
+            type="number"
+            name="zip"
+            label="PLZ"
+            required
+          />
+          <TextField
+            className="w-2/3"
+            id="city"
+            name="city"
+            label="Ort"
+            required
+          />
         </div>
       </div>
       <TextField

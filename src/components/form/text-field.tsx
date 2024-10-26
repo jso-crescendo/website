@@ -1,3 +1,4 @@
+import classNames from 'classnames';
 import {FormLabel} from './form-label';
 import {forwardRef} from 'react';
 
@@ -14,8 +15,11 @@ type Props = TextFieldProps &
   >;
 
 export const TextField = forwardRef<HTMLInputElement, Props>(
-  ({label, errorMessage, hint, id, required, ...inputProps}, ref) => (
-    <div className="mb-6">
+  (
+    {label, errorMessage, hint, id, required, className, ...inputProps},
+    ref,
+  ) => (
+    <div className={classNames('mb-6', className)}>
       <FormLabel id={id} label={label} required={required} />
       {hint && <span className="text-sm text-neutral-600">{hint}</span>}
       <input
