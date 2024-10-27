@@ -91,9 +91,11 @@ export default function Unterstuetzen() {
         möchten, können Sie dies jederzeit tun. Auch diese sind herzlich
         willkommen!
         <section className="pt-4">
-          <div className="flex flex-row gap-4">
-            <SpendenQr />
-            <div className="flex flex-col justify-between">
+          <div className="flex flex-col gap-4 sm:flex-row sm:justify-normal items-start">
+            <div className="aspect-square ">
+              <SpendenQr />
+            </div>
+            <div className="flex flex-col sm:justify-between">
               <h3 className="mb-2 text-xl">Kontodaten</h3>
               <Text>
                 Jugendorchester Crescendo

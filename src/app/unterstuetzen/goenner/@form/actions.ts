@@ -1,8 +1,9 @@
 'use server';
 
 import {redirect} from 'next/navigation';
-import {validateToken} from '../../../../utils/turnstile';
-import {sanitize} from '../../../../utils/escape';
+import {validateToken} from '@/utils/turnstile';
+import {sanitize} from '@/utils/escape';
+import {fieldNames} from './fieldnames';
 
 export async function signup(data: FormData) {
   const token = data.get('cf-turnstile-response')?.toString();
@@ -10,14 +11,18 @@ export async function signup(data: FormData) {
     throw new Error('turnstile token not valid');
   }
 
-  const name = sanitize(data.get('name')?.toString())!;
-  const email = sanitize(data.get('email')?.toString())!;
-  const message = sanitize(data.get('message')?.toString())!;
+  const firstname = sanitize(data.get(fieldNames.firstname)?.toString())!;
+  const lastname = sanitize(data.get(fieldNames.lastname)?.toString())!;
+  const email = sanitize(data.get(fieldNames.email)?.toString())!;
+  const street = sanitize(data.get(fieldNames.street)?.toString())!;
+  const zip = sanitize(data.get(fieldNames.zip)?.toString())!;
+  const city = sanitize(data.get(fieldNames.city)?.toString())!;
+  const amount = sanitize(data.get(fieldNames.amount)?.toString())!;
 
-  if (!name || !message) {
+  if (!firstname || !lastname || !street || !zip || !city || !amount) {
     throw new Error('missing data');
   }
 
-  console.log({name, email, message});
+  console.log({firstname, lastname, email, street, zip, city, amount});
   redirect('/unterstuetzen/goenner?ok');
 }

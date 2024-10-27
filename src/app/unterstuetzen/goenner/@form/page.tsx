@@ -7,6 +7,7 @@ import {StatusCard} from '@/components/status-card';
 import {TextField} from '@/components/form/text-field';
 import {TurnstileWidget} from '@/components/turnstile-widget';
 import {Button} from '@/components/button';
+import {fieldNames} from './fieldnames';
 
 export default function GoennerForm({
   searchParams,
@@ -38,24 +39,24 @@ export default function GoennerForm({
       <div className="flex flex-col lg:flex-row lg:gap-6">
         <TextField
           className="lg:w-1/2"
-          id="firstname"
-          name="firstname"
+          id={fieldNames.firstname}
+          name={fieldNames.firstname}
           label="Vorname"
           required
           autoFocus
         />
         <TextField
           className="lg:w-1/2"
-          id="lastname"
-          name="lastname"
+          id={fieldNames.lastname}
+          name={fieldNames.lastname}
           label="Nachname"
           required
         />
       </div>
       <TextField
-        id="email"
+        id={fieldNames.email}
+        name={fieldNames.email}
         type="email"
-        name="email"
         label="Email"
         hint="Wenn sie uns ihre Email-Adresse hinterlassen, stellen wir ihnen die Rechnung digital zu."
       />
@@ -71,36 +72,41 @@ export default function GoennerForm({
             keine Email-Adresse angegeben haben.
           </span>
         </div>
-        <TextField id="street" name="street" label="Strasse" required />
+        <TextField
+          id={fieldNames.street}
+          name={fieldNames.street}
+          label="Strasse"
+          required
+        />
         <div className="flex flex-col lg:flex-row lg:gap-6">
           <TextField
             className="w-full lg:w-1/3"
-            id="zip"
+            id={fieldNames.zip}
+            name={fieldNames.zip}
             type="number"
-            name="zip"
             label="PLZ"
             required
           />
           <TextField
             className="w-full lg:w-2/3"
-            id="city"
-            name="city"
+            id={fieldNames.city}
+            name={fieldNames.city}
             label="Ort"
             required
           />
         </div>
       </div>
       <TextField
-        id="amount"
+        id={fieldNames.amount}
+        name={fieldNames.amount}
         type="number"
         min={100}
-        name="amount"
         label="Betrag"
         required
       />
       <div className="my-2 flex justify-center">
         <TurnstileWidget
-          id="contact-form"
+          id="goenner-signup-form"
           onSuccess={() => setIsTokenSet(true)}
         />
       </div>
