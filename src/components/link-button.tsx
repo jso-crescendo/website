@@ -6,6 +6,7 @@ interface LinkProps {
   type: 'primary' | 'secondary';
   href: string | {pathname: string; hash: string};
   text: string;
+  download?: boolean;
 }
 export const LinkButton: React.FC<
   LinkProps &
@@ -16,7 +17,7 @@ export const LinkButton: React.FC<
       >,
       'href'
     >
-> = ({href, text, type, className}) => (
+> = ({href, text, type, className, download, target}) => (
   <Link
     type="button"
     className={classNames(
@@ -31,6 +32,8 @@ export const LinkButton: React.FC<
       className,
     )}
     href={href}
+    download={download}
+    target={target}
   >
     {text}
     <ArrowRight className="ml-2 h-5" />

@@ -4,6 +4,7 @@ import {LinkButton} from './link-button';
 import {Text} from './text';
 import classNames from 'classnames';
 import {toKebabCase} from '../utils/toKebabCase';
+import { HTMLAttributeAnchorTarget } from 'react';
 
 interface ImageSectionProps {
   title?: string;
@@ -24,7 +25,9 @@ interface ImageSectionProps {
   };
   link?: {
     text: string;
+    download?: boolean;
     href: string;
+    target?: HTMLAttributeAnchorTarget;
   };
   noReverse?: boolean;
 }
@@ -97,6 +100,8 @@ export const ImageSection: React.FC<ImageSectionProps> = ({
           href={link.href}
           text={link.text}
           className="float-right mt-4"
+          download={link.download}
+          target={link.target}
         />
       )}
     </div>

@@ -5,6 +5,7 @@ import GoennerImage from '@/images/2022_fruehling_blech.webp';
 import GoennerSection from './goenner/page';
 import {ContentContainer} from '../../components/contentContainer';
 import {EmailLink} from '../../components/email-link';
+import {SpendenQr} from './spenden-qr';
 
 export const metadata = {
   title: 'So können Sie uns unterstützen',
@@ -80,22 +81,34 @@ export default function Unterstuetzen() {
         title="Spenden"
         image={{src: SponsorenImage, alt: 'Orchestermitglieder beim spielen'}}
         textOnly={false}
-        link={{text: 'Einzahlungsschein herunterladen', href: '#TODO'}}
+        link={{
+          text: 'Einzahlungsschein herunterladen',
+          href: '/unterstuetzen/QRRechung_Spende_JSO_Crescendo.pdf',
+          download: true,
+          target: '_blank',
+        }}
       >
         Wenn sie uns lieber unkompliziert eine einmalige Spende zukommen lassen
         möchten, können Sie dies jederzeit tun. Auch diese sind herzlich
         willkommen!
         <section className="pt-4">
-          <h3 className="text-xl">Kontodaten</h3>
-          <Text className="pl-2">
-            Jugendorchester Crescendo
-            <br />
-            8000 Zürich
-            <br />
-            IBAN: CH 16 0900 0000 8005 1631 7
-            <br />
-            Konto: 80-51631-7
-          </Text>
+          <div className="flex flex-row gap-4">
+            <SpendenQr />
+            <div className="flex flex-col justify-between">
+              <h3 className="text-xl mb-2">Kontodaten</h3>
+              <Text>
+                Jugendorchester Crescendo
+                <br />
+                Weiherweg 8
+                <br />
+                8610 Uster
+                <br />
+                IBAN: CH 16 0900 0000 8005 1631 7
+                <br />
+                Konto: 80-51631-7
+              </Text>
+            </div>
+          </div>
         </section>
       </ImageSection>
     </ContentContainer>
