@@ -1,7 +1,7 @@
 'use client';
 
 import {ContentContainer} from '../../../components/contentContainer';
-import { EmailLink } from '../../../components/email-link';
+import {EmailLink} from '../../../components/email-link';
 import {StatusCard} from '../../../components/status-card';
 import {useEffect} from 'react';
 
@@ -24,10 +24,7 @@ export default function Error({
       message={
         <>
           Bitte kontaktiere uns per{' '}
-          <EmailLink
-            email="kontakt@jso-crescendo.ch"
-            name="Mail"
-          />
+          <EmailLink email="kontakt@jso-crescendo.ch" name="Mail" />
         </>
       }
     />

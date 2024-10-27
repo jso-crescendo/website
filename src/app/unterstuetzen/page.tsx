@@ -1,8 +1,7 @@
 import {ImageSection} from '@/components/image-section';
 import {Text} from '@/components/text';
 import SponsorenImage from '@/images/2022_fruehling_bass.webp';
-import GoennerImage from '@/images/2022_fruehling_blech.webp';
-import GoennerSection from './goenner/page';
+import {GoennerSection} from './goenner/goenner-section';
 import {ContentContainer} from '../../components/contentContainer';
 import {EmailLink} from '../../components/email-link';
 import {SpendenQr} from './spenden-qr';
@@ -52,7 +51,7 @@ export default function Unterstuetzen() {
           <Text>
             Wir stellen Ihnen gerne folgende Leistungen zur Verfügung:
           </Text>
-          <ul className="list-inside list-disc mx-2">
+          <ul className="mx-2 list-inside list-disc">
             <li className="text-justify text-base">Namenserwähnung: CHF 80</li>
             <li className="text-justify text-base">
               Inserat A7 (1/4 Seite): CHF 120
@@ -95,7 +94,7 @@ export default function Unterstuetzen() {
           <div className="flex flex-row gap-4">
             <SpendenQr />
             <div className="flex flex-col justify-between">
-              <h3 className="text-xl mb-2">Kontodaten</h3>
+              <h3 className="mb-2 text-xl">Kontodaten</h3>
               <Text>
                 Jugendorchester Crescendo
                 <br />

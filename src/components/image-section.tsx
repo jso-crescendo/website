@@ -4,7 +4,7 @@ import {LinkButton} from './link-button';
 import {Text} from './text';
 import classNames from 'classnames';
 import {toKebabCase} from '../utils/toKebabCase';
-import { HTMLAttributeAnchorTarget } from 'react';
+import {HTMLAttributeAnchorTarget} from 'react';
 
 interface ImageSectionProps {
   title?: string;

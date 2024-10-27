@@ -1,6 +1,6 @@
 'use client';
 
-import { EmailLink } from '../../components/email-link';
+import {EmailLink} from '../../components/email-link';
 import {StatusCard} from '../../components/status-card';
 import {useEffect} from 'react';
 

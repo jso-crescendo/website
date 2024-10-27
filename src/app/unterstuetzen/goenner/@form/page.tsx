@@ -59,7 +59,7 @@ export default function GoennerForm({
         label="Email"
         hint="Wenn sie uns ihre Email-Adresse hinterlassen, stellen wir ihnen die Rechnung digital zu."
       />
-      <div className="pt-4 mb-6">
+      <div className="mb-6 pt-4">
         <span className="block font-sans text-lg text-on-background">
           Adresse
         </span>
@@ -74,7 +74,7 @@ export default function GoennerForm({
         <TextField id="street" name="street" label="Strasse" required />
         <div className="flex flex-col lg:flex-row lg:gap-6">
           <TextField
-            className="lg:w-1/3 w-full"
+            className="w-full lg:w-1/3"
             id="zip"
             type="number"
             name="zip"
@@ -82,7 +82,7 @@ export default function GoennerForm({
             required
           />
           <TextField
-            className="lg:w-2/3 w-full"
+            className="w-full lg:w-2/3"
             id="city"
             name="city"
             label="Ort"

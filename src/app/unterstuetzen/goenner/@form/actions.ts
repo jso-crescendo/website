@@ -1,8 +1,8 @@
 'use server';
 
 import {redirect} from 'next/navigation';
-import { validateToken } from '../../../../utils/turnstile';
-import { sanitize } from '../../../../utils/escape';
+import {validateToken} from '../../../../utils/turnstile';
+import {sanitize} from '../../../../utils/escape';
 
 export async function signup(data: FormData) {
   const token = data.get('cf-turnstile-response')?.toString();

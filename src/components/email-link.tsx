@@ -5,7 +5,7 @@ interface EmailLinkProps {
 export const EmailLink: React.FC<EmailLinkProps> = ({email, name}) => (
   <a
     href={`mailto:${email}`}
-    className="text-primary-main hover:text-primary-darker text-nowrap"
+    className="text-nowrap text-primary-main hover:text-primary-darker"
   >
     {name ? (
       <>
