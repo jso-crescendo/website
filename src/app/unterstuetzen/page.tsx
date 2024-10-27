@@ -2,7 +2,7 @@ import {ImageSection} from '@/components/image-section';
 import {Text} from '@/components/text';
 import SponsorenImage from '@/images/2022_fruehling_bass.webp';
 import GoennerImage from '@/images/2022_fruehling_blech.webp';
-
+import GoennerSection from './goenner/page';
 import {ContentContainer} from '../../components/contentContainer';
 import {EmailLink} from '../../components/email-link';
 
@@ -25,16 +25,13 @@ export default function Unterstuetzen() {
         Gönnerbeiträge und anderen Spenden gedeckt.
       </ImageSection>
 
-      <ImageSection
-        image={{src: GoennerImage, alt: 'Orchestermitglieder beim spielen'}}
-        title="Gönner:innen"
-        link={{text: 'Jetzt Gönner:in werden', href: '/unterstuetzen/goenner'}}
-      >
-        Möchten Sie engagierte junge Musiker unterstützen? Mit einem jährlichen
-        Beitrag ab CHF 100.- können Sie Gönner:in des JSO Crescendos werden. Als
-        Dankeschön erhalten Sie neben einem jährlichen Gönnerbrief auch weitere
-        Vorteile wie Platzreservationen an unseren Konzerten.
-      </ImageSection>
+      <GoennerSection
+        noReverse={false}
+        link={{
+          text: 'Zum Gönner:innen Anmeldeformular',
+          href: '/unterstuetzen/goenner#anmeldeformular',
+        }}
+      />
       <ImageSection
         image={{
           src: SponsorenImage,

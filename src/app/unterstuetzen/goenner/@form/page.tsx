@@ -27,11 +27,14 @@ export default function GoennerForm({
 
   return (
     <form
+      id="anmeldeformular"
       name="goenner-anmeldeformular"
       className="w-full rounded-lg p-4 shadow-md lg:w-1/2"
       action={signup}
     >
-      <legend className="pb-4 font-serif text-2xl">Gönner:innen Anmeldeformular</legend>
+      <legend className="pb-4 font-serif text-2xl">
+        Gönner:innen Anmeldeformular
+      </legend>
       <div className="flex flex-col lg:flex-row lg:gap-6">
         <TextField
           className="lg:w-1/2"
