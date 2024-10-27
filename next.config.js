@@ -24,11 +24,12 @@ const nextConfig = {
           '/konzerte/herbstkonzert-24?utm_source=plakat&utm_campaign=hk-24',
         permanent: true,
       },
+      // programmheft hk-24 quicklink
       {
         source: '/goenner',
         destination:
-          '/unterstuetzen?utm_source=programmheft&utm_campaign=hk-24#goenner',
-        permanent: true,
+          '/unterstuetzen/goenner?utm_source=programmheft&utm_campaign=hk-24#anmeldeformular',
+        permanent: false,
       },
     ];
   },
