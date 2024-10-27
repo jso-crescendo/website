@@ -1,11 +1,7 @@
 import {ImageSection} from '@/components/image-section';
-import {Text} from '@/components/text';
-import SponsorenImage from '@/images/2022_fruehling_bass.webp';
-import GoennerImage from '@/images/2022_fruehling_blech.webp';
-import {ContentContainer} from '../../../components/contentContainer';
-import {PageTitle} from '../../../components/page-title';
+import GoennerImage from '@/images/goenner/chair_with_flute_lg.webp';
 import React from 'react';
-
+import {Text} from '@/components/text';
 export const metadata = {
   title: 'Gönner',
 };
@@ -15,10 +11,10 @@ const GoennerOption: React.FC<{
   amount: string;
   perks: string[];
 }> = ({title, amount, perks}) => (
-  <section>
-    <h3>{title}</h3>
-    <span>{amount}</span>
-    <ul>
+  <section className="w-full lg:w-1/3 bg-[#C96618] bg-opacity-35 p-4 rounded-lg">
+    <h3 className="font-serif text-2xl font-semibold">{title}</h3>
+    <span className="text-sm text-neutral-700">{amount}</span>
+    <ul className="list-disc list-outside mt-4 ml-4">
       {perks.map((perk) => (
         <li key={perk}>{perk}</li>
       ))}
@@ -28,41 +24,63 @@ const GoennerOption: React.FC<{
 
 export default function Goenner() {
   return (
-    <ContentContainer>
-      <PageTitle>
-        <span>Wollen auch Sie uns unterstützen?</span>
-        <span>&mdash;</span>
-        <span>Jetzt Gönner:in werden</span>
-      </PageTitle>
-      <div>
-        <GoennerOption
-          title="Mezzoforte"
-          amount="ab 100.-"
-          perks={[
-            'jährlicher Gönner:innenbrief',
-            'einige Flyer per Post vor den Konzerten',
-          ]}
-        />
-        <GoennerOption
-          title="Forte"
-          amount="ab 150.-"
-          perks={[
-            'jährlicher Gönner:innenbrief',
-            'einige Flyer per Post vor den Konzerten',
-            '2 reservierte Plätze an einem Konzert Ihrer Wahl',
-          ]}
-        />
-        <GoennerOption
-          title="Fortissimo"
-          amount="200.- oder mehr"
-          perks={[
-            'jährlicher Gönner:innenbrief',
-            'einige Flyer per Post vor den Konzerten',
-            '4 reservierte Plätze an einem Konzert Ihrer Wahl',
-            'namentliche Erwähnung im Programmheft (sofern gewünscht)',
-          ]}
-        />
-      </div>
-    </ContentContainer>
+    <>
+      <ImageSection
+        title="Jetzt Gönner:in werden"
+        image={{
+          src: GoennerImage,
+          alt: 'Eine Geige und eine Flöte liegen auf einem schwarzen Klappstuhl.',
+          vertical: true,
+          priority: true,
+        }}
+        noReverse={true}
+        textOnly={false}
+      >
+        <Text>
+          Gönnerbeiträge und Spenden sind eine wichtige Grundlage für die
+          Zukunft unseres Orchesters. Als Gönner:in erhalten sie jährlich einen
+          Gönner:innenbrief, in dem wir Ihnen von unseren Jahres-Highlights
+          berichten. Ausserdem senden wir Ihnen vor unseren Konzerten einige
+          Flyer per Post zu. Ausserdem können Sie sich Sitzplatzreservationen an
+          unseren Konzerten und Namenserwähnungen in unseren Programmheften
+          sichers, sofern Sie dies wünschen. Unterstützen Sie uns mit einem
+          jährlichen Gönnerbeitrag Ihrer Wahl:
+        </Text>
+        <section className="p-4 rounded-lg shadow-md mb-8 mt-4">
+          <h2 className="font-serif text-2xl lg:text-3xl mb-2">
+            Ihre Vorteile
+          </h2>
+          <div className="flex flex-col lg:flex-row gap-4">
+            <GoennerOption
+              title="Mezzoforte"
+              amount="ab 100.-"
+              perks={[
+                'jährlicher Gönner:innenbrief',
+                'einige Flyer per Post vor den Konzerten',
+              ]}
+            />
+            <GoennerOption
+              title="Forte"
+              amount="ab 150.-"
+              perks={[
+                'jährlicher Gönner:innenbrief',
+                'einige Flyer per Post vor den Konzerten',
+                '2 reservierte Plätze an einem Konzert Ihrer Wahl',
+              ]}
+            />
+            <GoennerOption
+              title="Fortissimo"
+              amount="200.- oder mehr"
+              perks={[
+                'jährlicher Gönner:innenbrief',
+                'einige Flyer per Post vor den Konzerten',
+                '4 reservierte Plätze an einem Konzert Ihrer Wahl',
+                'namentliche Erwähnung im Programmheft (sofern gewünscht)',
+              ]}
+            />
+          </div>
+        </section>
+      </ImageSection>
+    </>
   );
 }

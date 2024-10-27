@@ -7,7 +7,6 @@ import {StatusCard} from '../../../../components/status-card';
 import {TextField} from '../../../../components/form/text-field';
 import {TurnstileWidget} from '../../../../components/turnstile-widget';
 import {Button} from '../../../../components/button';
-import {FormLabel} from '../../../../components/form/form-label';
 
 export default function GoennerForm({
   searchParams,
@@ -71,7 +70,7 @@ export default function GoennerForm({
         <TextField id="street" name="street" label="Strasse" required />
         <div className="flex flex-col lg:flex-row lg:gap-6">
           <TextField
-            className="w-1/3"
+            className="lg:w-1/3 w-full"
             id="zip"
             type="number"
             name="zip"
@@ -79,7 +78,7 @@ export default function GoennerForm({
             required
           />
           <TextField
-            className="w-2/3"
+            className="lg:w-2/3 w-full"
             id="city"
             name="city"
             label="Ort"
