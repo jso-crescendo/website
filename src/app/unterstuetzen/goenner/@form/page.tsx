@@ -3,10 +3,10 @@
 import {signup} from './actions';
 import {useFormStatus} from 'react-dom';
 import {useState} from 'react';
-import {StatusCard} from '../../../../components/status-card';
-import {TextField} from '../../../../components/form/text-field';
-import {TurnstileWidget} from '../../../../components/turnstile-widget';
-import {Button} from '../../../../components/button';
+import {StatusCard} from '@/components/status-card';
+import {TextField} from '@/components/form/text-field';
+import {TurnstileWidget} from '@/components/turnstile-widget';
+import {Button} from '@/components/button';
 
 export default function GoennerForm({
   searchParams,
@@ -42,6 +42,7 @@ export default function GoennerForm({
           name="firstname"
           label="Vorname"
           required
+          autoFocus
         />
         <TextField
           className="lg:w-1/2"
