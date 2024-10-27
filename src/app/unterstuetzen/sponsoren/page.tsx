@@ -3,6 +3,7 @@ import {Text} from '@/components/text';
 import SponsorenImage from '@/images/2022_fruehling_bass.webp';
 import GoennerImage from '@/images/2022_fruehling_blech.webp';
 import {ContentContainer} from '../../../components/contentContainer';
+import { EmailLink } from '../../../components/email-link';
 
 export const metadata = {
   title: 'So können Sie uns unterstützen',

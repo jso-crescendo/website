@@ -19,8 +19,8 @@ export default function GoennerForm({
     return (
       <StatusCard
         intent="success"
-        title="Erfolg"
-        message="Vielen Dank für deine Nachricht."
+        title="Erfolgreich angemeldet"
+        message="Wir haben Ihre Anmeldung erhalten und stellen Ihnen in den nächsten Tagen die Rechnung zu. Vielen Dank!"
       />
     );
   }
@@ -31,7 +31,7 @@ export default function GoennerForm({
       className="w-full rounded-lg p-4 shadow-md lg:w-1/2"
       action={signup}
     >
-      <legend className="pb-4 font-serif text-2xl">Anmeldeformular</legend>
+      <legend className="pb-4 font-serif text-2xl">Gönner:innen Anmeldeformular</legend>
       <div className="flex flex-col lg:flex-row lg:gap-6">
         <TextField
           className="lg:w-1/2"
@@ -44,7 +44,7 @@ export default function GoennerForm({
           className="lg:w-1/2"
           id="lastname"
           name="lastname"
-          label="Lastname"
+          label="Nachname"
           required
         />
       </div>

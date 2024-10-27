@@ -2,8 +2,10 @@ import {ImageSection} from '@/components/image-section';
 import GoennerImage from '@/images/goenner/chair_with_flute_lg.webp';
 import React from 'react';
 import {Text} from '@/components/text';
+
 export const metadata = {
   title: 'Gönner',
+  description: 'TODO',
 };
 
 const GoennerOption: React.FC<{
@@ -55,7 +57,7 @@ export default function Goenner() {
               title="Mezzoforte"
               amount="ab 100.-"
               perks={[
-                'jährlicher Gönner:innenbrief',
+                'Gönner:innenbrief',
                 'einige Flyer per Post vor den Konzerten',
               ]}
             />
@@ -63,18 +65,18 @@ export default function Goenner() {
               title="Forte"
               amount="ab 150.-"
               perks={[
-                'jährlicher Gönner:innenbrief',
+                'Gönner:innenbrief',
                 'einige Flyer per Post vor den Konzerten',
-                '2 reservierte Plätze an einem Konzert Ihrer Wahl',
+                '2 reservierte Plätze an einem unserer Konzerte Ihrer Wahl',
               ]}
             />
             <GoennerOption
               title="Fortissimo"
               amount="200.- oder mehr"
               perks={[
-                'jährlicher Gönner:innenbrief',
+                'Gönner:innenbrief',
                 'einige Flyer per Post vor den Konzerten',
-                '4 reservierte Plätze an einem Konzert Ihrer Wahl',
+                '4 reservierte Plätze an einem unserer Konzerte Ihrer Wahl',
                 'namentliche Erwähnung im Programmheft (sofern gewünscht)',
               ]}
             />
