@@ -100,6 +100,7 @@ export default function GoennerForm({
         id={fieldNames.amount}
         name={fieldNames.amount}
         type="number"
+        step="0.05"
         min={100}
         label="Betrag"
         required

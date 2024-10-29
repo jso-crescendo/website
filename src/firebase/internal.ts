@@ -19,5 +19,6 @@ export const COLLECTION_NAMES = {
   CONTACT_REQUESTS: PREFIX + 'contact-requests',
   SINUP_REQUESTS: PREFIX + 'newsletter-signup-requests',
   NEWSLETTER_CONTACTS: PREFIX + 'newsletter-contacts',
+  GOENNER_SIGNUPS: PREFIX + 'goenner-signups',
   MAIL: PREFIX + 'mail',
 };
