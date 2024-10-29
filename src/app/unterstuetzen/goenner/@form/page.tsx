@@ -8,12 +8,11 @@ import {TextField} from '@/components/form/text-field';
 import {TurnstileWidget} from '@/components/turnstile-widget';
 import {Button} from '@/components/button';
 import {fieldNames} from './fieldnames';
+import {useSearchParams} from 'next/navigation';
 
-export default function GoennerForm({
-  searchParams,
-}: {
-  searchParams: {[key: string]: string | string[] | undefined};
-}) {
+export default function GoennerForm() {
+  const searchParams = useSearchParams();
+
   const [isTokenSet, setIsTokenSet] = useState(false);
 
   if (Object.keys(searchParams).includes('ok')) {
