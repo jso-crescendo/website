@@ -1,21 +1,21 @@
 'use client';
 
 import {signup} from './actions';
-import {useFormStatus} from 'react-dom';
+import {useFormState, useFormStatus} from 'react-dom';
 import {useState} from 'react';
 import {StatusCard} from '@/components/status-card';
 import {TextField} from '@/components/form/text-field';
 import {TurnstileWidget} from '@/components/turnstile-widget';
 import {Button} from '@/components/button';
 import {fieldNames} from './fieldnames';
-import {useSearchParams} from 'next/navigation';
 
 export default function GoennerForm() {
-  const searchParams = useSearchParams();
-
+  const [{signupSuccess}, submit] = useFormState(signup, {
+    signupSuccess: false,
+  });
   const [isTokenSet, setIsTokenSet] = useState(false);
 
-  if (Object.keys(searchParams).includes('ok')) {
+  if (signupSuccess) {
     return (
       <StatusCard
         intent="success"
@@ -30,7 +30,7 @@ export default function GoennerForm() {
       id="anmeldeformular"
       name="goenner-anmeldeformular"
       className="w-full rounded-lg p-4 shadow-md lg:w-1/2"
-      action={signup}
+      action={submit}
     >
       <legend className="pb-4 font-serif text-2xl">
         Gönner:innen Anmeldeformular

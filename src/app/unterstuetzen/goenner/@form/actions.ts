@@ -6,10 +6,14 @@ import {sanitize} from '@/utils/escape';
 import {fieldNames} from './fieldnames';
 import {signupAsGoenner} from '@/firebase/goenner-signup';
 
-export async function signup(data: FormData) {
+interface SignupResult{
+  signupSuccess: boolean
+}
+
+export async function signup(prevState: SignupResult, data: FormData): Promise<SignupResult> {
   const token = data.get('cf-turnstile-response')?.toString();
   if (!token || !(await validateToken(token))) {
-    throw new Error('turnstile token not valid');
+    return {signupSuccess: false};
   }
 
   const firstname = sanitize(data.get(fieldNames.firstname)?.toString());
@@ -21,7 +25,7 @@ export async function signup(data: FormData) {
   const amount = Number(sanitize(data.get(fieldNames.amount)?.toString()));
 
   if (!firstname || !lastname || !street || !zip || !city || !amount) {
-    throw new Error('missing data');
+    return {signupSuccess: false};
   }
 
   await signupAsGoenner({
@@ -33,5 +37,6 @@ export async function signup(data: FormData) {
     city,
     amount,
   });
-  redirect('/unterstuetzen/goenner?ok');
+  
+  return {signupSuccess: true};
 }
