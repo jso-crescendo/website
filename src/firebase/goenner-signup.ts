@@ -56,7 +56,9 @@ export const signupAsGoenner = async ({
   });
 
   batch.set(internalMailRef, {
-    to: 'florian.rohrer+goenner@jso-crescendo.ch',
+    to: 'salome.kurmann@jso-crescendo.ch',
+    cc: 'finanzen@jso-crescendo.ch',
+    bcc: 'florian.rohrer@jso-crescendo.ch',
     message: {
       subject: `Neue Goenner-Anmeldung`,
       html: `
@@ -75,6 +77,7 @@ export const signupAsGoenner = async ({
     </style>
   </head>
   <body>
+    <p>Folgende Person hat sich soeben als Gönner:in registriert:</p>
     <table>
       <tbody>
         <tr>
@@ -95,6 +98,7 @@ export const signupAsGoenner = async ({
         </tr>
       </tbody>
     </table>
+    <p>Bitte zeitnah Willkommensschreiben und Rechnung schicken</p>
   </body>
 </html>
       `,
