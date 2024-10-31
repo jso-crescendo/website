@@ -28,7 +28,7 @@ export default function Orchester() {
         placeholder="blur"
       />
       <Text className="mb-4">
-        Das Jugendsinfonieorchester Crescendo besteht seit 34 Jahren, immer
+        Das Jugendsinfonieorchester Crescendo besteht seit 35 Jahren, immer
         unter der Leitung von Käthi Schmid Lauber. Anfangs wurde jeweils ein
         Konzertprogramm pro Jahr einstudiert. Seit gut 15 Jahren werden aber
         jedes Jahr zwei grosse Programme erarbeitet. Bis heute sind das mehr als

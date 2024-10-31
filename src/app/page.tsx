@@ -10,7 +10,7 @@ import {HERBSTKONZERT_24} from '../data/concerts/2024/herstkonzert-24';
 
 export const metadata = {
   description:
-    'Seit 34 Jahren begeistert das Jugendsinfonieorchester Crescendo unter der Leitung von Käthi Schmid Lauber mit seinen aussergewöhnlichen Konzerten.',
+    'Seit 35 Jahren begeistert das Jugendsinfonieorchester Crescendo unter der Leitung von Käthi Schmid Lauber mit seinen aussergewöhnlichen Konzerten.',
 };
 
 export default function Home() {
@@ -74,7 +74,7 @@ export default function Home() {
             text: 'Weitere Informationen',
           }}
         >
-          Seit 34 Jahren begeistert das Jugendsinfonieorchester Crescendo unter
+          Seit 35 Jahren begeistert das Jugendsinfonieorchester Crescendo unter
           der Leitung von Käthi Schmid Lauber mit seinen aussergewöhnlichen
           Konzerten. Im Programm stehen dabei grosse Sinfonien, Solokonzerte und
           Filmmusik. Weit und breit einzigartig ist das JSO Crescendo insofern,
