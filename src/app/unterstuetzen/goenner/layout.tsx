@@ -8,7 +8,7 @@ export default async function Layout(props: {
     <ContentContainer title="Wollen auch Sie uns unterstützen?">
       {props.children}
       <section className="mt-8 flex flex-row justify-center">
-       {props.form}
+        {props.form}
       </section>
     </ContentContainer>
   );

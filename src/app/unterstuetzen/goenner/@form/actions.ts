@@ -6,11 +6,14 @@ import {sanitize} from '@/utils/escape';
 import {fieldNames} from './fieldnames';
 import {signupAsGoenner} from '@/firebase/goenner-signup';
 
-interface SignupResult{
-  signupSuccess: boolean
+interface SignupResult {
+  signupSuccess: boolean;
 }
 
-export async function signup(prevState: SignupResult, data: FormData): Promise<SignupResult> {
+export async function signup(
+  prevState: SignupResult,
+  data: FormData,
+): Promise<SignupResult> {
   const token = data.get('cf-turnstile-response')?.toString();
   if (!token || !(await validateToken(token))) {
     return {signupSuccess: false};
@@ -37,6 +40,6 @@ export async function signup(prevState: SignupResult, data: FormData): Promise<S
     city,
     amount,
   });
-  
+
   return {signupSuccess: true};
 }

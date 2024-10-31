@@ -94,7 +94,7 @@ export default function Unterstuetzen() {
         möchten, können Sie dies jederzeit tun. Auch diese sind herzlich
         willkommen!
         <section className="pt-4">
-          <div className="flex flex-col gap-4 sm:flex-row sm:justify-normal items-start">
+          <div className="flex flex-col items-start gap-4 sm:flex-row sm:justify-normal">
             <div className="aspect-square ">
               <SpendenQr />
             </div>
