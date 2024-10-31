@@ -1,6 +1,8 @@
 import {ImageSection} from '@/components/image-section';
 import {Text} from '@/components/text';
-import SponsorenImage from '@/images/2022_fruehling_bass.webp';
+import FinanzenImage from '@/images/2024_fruehling_blech_xl.webp';
+import SponsorenImage from '@/images/2023_konzertreise_blaeser_xl.webp';
+import SpendenImage from '@/images/2024_fruehling_holz_xl.webp';
 import {GoennerSection} from './goenner/goenner-section';
 import {ContentContainer} from '../../components/contentContainer';
 import {EmailLink} from '../../components/email-link';
@@ -15,7 +17,7 @@ export default function Unterstuetzen() {
   return (
     <ContentContainer>
       <ImageSection
-        image={{src: SponsorenImage, alt: 'Orchestermitglieder beim spielen'}}
+        image={{src: FinanzenImage, alt: 'Orchestermitglieder beim spielen'}}
         title="Wie finanzieren wir uns?"
       >
         Das Jugendsinfonieorchester Crescendo finanziert sich hauptsächlich aus
@@ -78,7 +80,7 @@ export default function Unterstuetzen() {
       </ImageSection>
       <ImageSection
         title="Spenden"
-        image={{src: SponsorenImage, alt: 'Orchestermitglieder beim spielen'}}
+        image={{src: SpendenImage, alt: 'Orchestermitglieder beim spielen'}}
         textOnly={false}
         link={{
           text: 'Einzahlungsschein herunterladen',

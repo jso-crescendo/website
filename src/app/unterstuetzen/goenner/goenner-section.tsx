@@ -1,5 +1,5 @@
 import {ImageSection} from '@/components/image-section';
-import GoennerImage from '@/images/goenner/chair_with_flute_lg.webp';
+import GoennerImage from '@/images/goenner/chair_with_flute_xl.webp';
 import React from 'react';
 import {Text} from '@/components/text';
 /* eslint-disable tailwindcss/no-arbitrary-value */
