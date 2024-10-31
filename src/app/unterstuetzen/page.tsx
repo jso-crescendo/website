@@ -10,7 +10,8 @@ import {SpendenQr} from './spenden-qr';
 
 export const metadata = {
   title: 'So können Sie uns unterstützen',
-  description: 'TODO',
+  description:
+    'Gönnerbeiträge und Spenden sind eine wichtige Grundlage für die Zukunft unseres Orchesters. Als Sponsor:in oder Gönner:in können sie uns auf verschiedene Weisen unterstützen.',
 };
 
 export default function Unterstuetzen() {
