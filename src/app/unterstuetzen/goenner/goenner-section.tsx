@@ -33,6 +33,7 @@ export const GoennerSection: React.FC<{
       alt: 'Eine Geige und eine Flöte liegen auf einem schwarzen Klappstuhl.',
       vertical: true,
       priority: true,
+      noShadow: true,
     }}
     textOnly={false}
     noReverse={noReverse}

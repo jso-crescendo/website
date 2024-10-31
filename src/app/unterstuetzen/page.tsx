@@ -18,7 +18,11 @@ export default function Unterstuetzen() {
   return (
     <ContentContainer>
       <ImageSection
-        image={{src: FinanzenImage, alt: 'Orchestermitglieder beim spielen'}}
+        image={{
+          src: FinanzenImage,
+          alt: '3 Orchestermitglieder spielen Trompete bei einem Konzert',
+          priority: true,
+        }}
         title="Wie finanzieren wir uns?"
       >
         Das Jugendsinfonieorchester Crescendo finanziert sich hauptsächlich aus
@@ -38,7 +42,7 @@ export default function Unterstuetzen() {
       <ImageSection
         image={{
           src: SponsorenImage,
-          alt: 'Orchestermitglieder beim spielen',
+          alt: 'Eine Gruppe von Orchestermitgliedern posiert mit ihren Instrumenten',
           vertical: true,
         }}
         title="Sponsorenwerbung"
@@ -81,7 +85,10 @@ export default function Unterstuetzen() {
       </ImageSection>
       <ImageSection
         title="Spenden"
-        image={{src: SpendenImage, alt: 'Orchestermitglieder beim spielen'}}
+        image={{
+          src: SpendenImage,
+          alt: 'Eine Gruppe von Orchestermitgliedern spielen Fagott und Klarinette',
+        }}
         textOnly={false}
         link={{
           text: 'Einzahlungsschein herunterladen',

@@ -17,6 +17,7 @@ interface ImageSectionProps {
     priority?: boolean;
     vertical?: boolean;
     fit?: boolean;
+    noShadow?: boolean;
   };
   video?: {
     type: 'youtube';
@@ -64,7 +65,7 @@ export const ImageSection: React.FC<ImageSectionProps> = ({
           alt={image.alt}
           priority={image.priority}
           className={classNames(
-            'rounded-lg  drop-shadow-lg',
+            {'rounded-lg  drop-shadow-lg': !image.noShadow},
             image?.fit ? 'object-fit' : 'object-cover',
           )}
           placeholder="blur"
