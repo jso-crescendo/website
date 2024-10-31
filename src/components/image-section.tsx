@@ -4,9 +4,10 @@ import {LinkButton} from './link-button';
 import {Text} from './text';
 import classNames from 'classnames';
 import {toKebabCase} from '../utils/toKebabCase';
+import {HTMLAttributeAnchorTarget} from 'react';
 
 interface ImageSectionProps {
-  title: string;
+  title?: string;
   subtitle?: string;
   textOnly?: boolean;
   children?: React.ReactNode;
@@ -16,6 +17,7 @@ interface ImageSectionProps {
     priority?: boolean;
     vertical?: boolean;
     fit?: boolean;
+    noShadow?: boolean;
   };
   video?: {
     type: 'youtube';
@@ -24,7 +26,9 @@ interface ImageSectionProps {
   };
   link?: {
     text: string;
+    download?: boolean;
     href: string;
+    target?: HTMLAttributeAnchorTarget;
   };
   noReverse?: boolean;
 }
@@ -40,7 +44,7 @@ export const ImageSection: React.FC<ImageSectionProps> = ({
   noReverse,
 }) => (
   <section
-    id={toKebabCase(title)}
+    id={title && toKebabCase(title)}
     className={classNames(
       'flex flex-col items-center justify-between gap-8 pb-8 pt-4 lg:flex-row',
       {'lg:even:flex-row-reverse': !noReverse},
@@ -61,7 +65,7 @@ export const ImageSection: React.FC<ImageSectionProps> = ({
           alt={image.alt}
           priority={image.priority}
           className={classNames(
-            'rounded-lg  drop-shadow-lg',
+            {'rounded-lg  drop-shadow-lg': !image.noShadow},
             image?.fit ? 'object-fit' : 'object-cover',
           )}
           placeholder="blur"
@@ -82,10 +86,14 @@ export const ImageSection: React.FC<ImageSectionProps> = ({
       )}
     </div>
     <div className="w-full lg:w-7/12">
-      <hgroup>
-        <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl">{title}</h2>
-        {subtitle && <p className="pb-4 text-lg">{subtitle}</p>}
-      </hgroup>
+      {title && (
+        <hgroup>
+          <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl">
+            {title}
+          </h2>
+          {subtitle && <p className="pb-4 text-lg">{subtitle}</p>}
+        </hgroup>
+      )}
       {textOnly ? <Text>{children}</Text> : children}
       {link && (
         <LinkButton
@@ -93,6 +101,8 @@ export const ImageSection: React.FC<ImageSectionProps> = ({
           href={link.href}
           text={link.text}
           className="float-right mt-4"
+          download={link.download}
+          target={link.target}
         />
       )}
     </div>

@@ -4,6 +4,7 @@ import {ImageSection} from '@/components/image-section';
 import InternImage from '@/images/backgrounds/scores_1.webp';
 import NextLink from 'next/link';
 import {Text} from '../../components/text';
+import {EmailLink} from '../../components/email-link';
 
 export const metadata = {
   title: 'Intern',
@@ -12,10 +13,7 @@ export const metadata = {
 
 export default function Intern() {
   return (
-    <ContentContainer>
-      <h1 className="text-center font-serif text-3xl leading-normal md:text-4xl lg:text-5xl">
-        Intern
-      </h1>
+    <ContentContainer title="Intern">
       <ImageSection
         image={{src: InternImage, priority: true, alt: ''}}
         title="Wichtige Links"
@@ -43,12 +41,10 @@ export default function Intern() {
 
         <Text>
           Solltest du keinen Zugriff haben melde dich bei{' '}
-          <a
-            href="mailto:florian.rohrer@jso-crescendo.ch"
-            className="text-primary-main hover:text-primary-darker"
-          >
-            Florian Rohrer (florian.rohrer@jso-crescendo.ch)
-          </a>
+          <EmailLink
+            email="florian.rohrer@jso-crescendo.ch"
+            name="Florian Rohrer"
+          />
         </Text>
       </ImageSection>
     </ContentContainer>

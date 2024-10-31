@@ -20,6 +20,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: '2023-06-03T00:00:00.000Z',
     },
     {
+      url: 'https://jso-crescendo.ch/unterstuetzen',
+      lastModified: '2024-10-31T22:00:00.000Z',
+    },
+    {
+      url: 'https://jso-crescendo.ch/unterstuetzen/goenner',
+      lastModified: '2024-10-31T22:00:00.000Z',
+    },
+    {
       url: 'https://jso-crescendo.ch/konzerte',
       lastModified: '2024-07-07T18:00:00.000Z',
     },

@@ -56,6 +56,7 @@ export const NavBar: React.FC = () => {
           {[
             ['Orchester', '/orchester'],
             ['Konzerte', '/konzerte'],
+            ['Unterstützen', '/unterstuetzen'],
             ['Kontakt', '/kontakt'],
           ].map(([name, href]) => (
             <li key={name} onClick={toggleMenu}>

@@ -13,14 +13,23 @@ const nextConfig = {
       //flyer quicklink
       {
         source: '/hk-24/f',
-        destination: '/konzerte/herbstkonzert-24?utm_source=flyer&utm_campaign=hk-24',
+        destination:
+          '/konzerte/herbstkonzert-24?utm_source=flyer&utm_campaign=hk-24',
         permanent: true,
       },
       //plakat quicklink
       {
         source: '/hk-24/p',
-        destination: '/konzerte/herbstkonzert-24?utm_source=plakat&utm_campaign=hk-24',
+        destination:
+          '/konzerte/herbstkonzert-24?utm_source=plakat&utm_campaign=hk-24',
         permanent: true,
+      },
+      // programmheft hk-24 quicklink
+      {
+        source: '/goenner',
+        destination:
+          '/unterstuetzen/goenner?utm_source=programmheft&utm_campaign=hk-24#anmeldeformular',
+        permanent: false,
       },
     ];
   },

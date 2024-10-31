@@ -1,8 +1,8 @@
 'use client';
 
-import {EmailLink} from '../../components/email-link';
-import {StatusCard} from '../../components/status-card';
 import {useEffect} from 'react';
+import {StatusCard} from '@/components/status-card';
+import {EmailLink} from '@/components/email-link';
 
 export default function Error({
   error,

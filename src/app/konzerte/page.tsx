@@ -11,11 +11,7 @@ export const metadata = {
 
 export default function Orchester() {
   return (
-    <ContentContainer>
-      <h1 className="mb-8 text-center font-serif text-3xl leading-normal md:text-4xl lg:text-5xl">
-        Konzerte
-      </h1>
-
+    <ContentContainer title="Konzerte">
       <section
         id="konzerte"
         className="grid grid-cols-1 items-start justify-center gap-8 md:grid-cols-2 lg:grid-cols-3"
@@ -55,7 +51,7 @@ export default function Orchester() {
                   <ul>
                     {c.program.map((p) => (
                       <li key={p.name} className="flex flex-col pb-2">
-                        <p className="text-base flex flex-col">
+                        <p className="flex flex-col text-base">
                           {p.name}
                           {p.subtitle && (
                             <span className="text-sm font-light">

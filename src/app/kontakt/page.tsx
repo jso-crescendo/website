@@ -49,9 +49,8 @@ export const metadata = {
 
 export default function Kontakt() {
   return (
-    <ContentContainer>
+    <ContentContainer title="Kontak&shy;tie&shy;ren sie uns">
       <section className="flex flex-col items-center pb-8">
-        <h1 className="font-serif text-5xl">Kontak&shy;tie&shy;ren sie uns</h1>
         <Text className="lg:w-1/2 lg:text-center">
           Unser Vorstand steht Ihnen gerne zur Verfügung und beantwortet Ihre
           Anfragen per Kontaktformular oder E-Mail. Bei spezifischen Fragen

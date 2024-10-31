@@ -21,10 +21,7 @@ export const metadata = {
 
 export default function Orchester() {
   return (
-    <ContentContainer>
-      <h1 className="text-center font-serif text-3xl leading-normal md:text-4xl lg:text-5xl">
-        Über das Orchester
-      </h1>
+    <ContentContainer title="Über das Orchester">
       <Image
         src={OrchesterWideImage}
         alt="Orchester in Tonhalle bei Konzert"
@@ -140,37 +137,6 @@ export default function Orchester() {
         Neben ihrem Studium ist sie als Lehrerin für Gymivorbereitungskurse und
         Nachhilfe tätig und wirkt beim Dictionnaire d’Ancien Gascon (DAGél) an
         der Universität mit.
-      </ImageSection>
-      <ImageSection
-        image={{src: SponsorenImage, alt: 'Orchestermitglieder beim spielen'}}
-        title="Sponsoren"
-      >
-        In den Programmheften unserer Konzerte bieten wir Platz für Ihre
-        Werbung. Möchten Sie Ihr Logo oder Ihren Firmennamen in unserem
-        Programmheft abdrucken? Melden Sie sich bei uns.
-      </ImageSection>
-      <ImageSection
-        image={{src: GoennerImage, alt: 'Orchestermitglieder beim spielen'}}
-        title="Gönner"
-        textOnly={false}
-      >
-        <Text>
-          Möchten Sie engagierte junge Musiker unterstützen? Wir freuen uns über
-          Ihr Interesse an der Jugend- und Kulturförderung und sind dankbar für
-          Ihren Beitrag.
-        </Text>
-        <section className="pt-4">
-          <h3 className="text-xl">Kontodaten</h3>
-          <Text className="pl-2">
-            Jugendorchester Crescendo
-            <br />
-            8000 Zürich
-            <br />
-            IBAN: CH 16 0900 0000 8005 1631 7
-            <br />
-            Konto: 80-51631-7
-          </Text>
-        </section>
       </ImageSection>
       <ImageSection
         image={{src: MitgliedWerdenImage, alt: 'Noten auf einem Notenständer'}}
