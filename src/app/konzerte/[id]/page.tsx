@@ -8,11 +8,12 @@ import Image from 'next/image';
 import {ImageSection} from '../../../components/image-section';
 import ProgrammImage from '@/images/backgrounds/scores_2.webp';
 import {Text} from '../../../components/text';
+import {notFound} from 'next/navigation';
 
 const ALL_CONCERTS = CONCERTS.concat(PAST_CONCERTS);
 
-const getConcert = (id: string): Concert => {
-  const concert = ALL_CONCERTS.filter((c) => c.id === id)[0];
+const getConcert = (id: string): Concert | undefined => {
+  const concert = ALL_CONCERTS.find((c) => c.id === id);
 
   return concert;
 };
@@ -59,7 +60,12 @@ export async function generateStaticParams() {
 }
 
 export async function generateMetadata({params}: {params: {id: string}}) {
-  const {name, description} = getConcert(params.id);
+  const concert = getConcert(params.id);
+  if (!concert) {
+    notFound();
+  }
+
+  const {name, description} = concert;
   const isPast = isPastConcert(params.id);
   return {
     title: name,
@@ -71,6 +77,10 @@ export async function generateMetadata({params}: {params: {id: string}}) {
 export default function KonzertPage({params}: {params: {id: string}}) {
   const {id} = params;
   const concert = getConcert(id);
+  if (!concert) {
+    notFound();
+  }
+
   return (
     <ContentContainer>
       <hgroup className="mb-8 text-center leading-normal">
