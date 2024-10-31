@@ -9,6 +9,9 @@ import {KARFREITAGSKONZERT_24} from './2024/karfreitagskonzert-24';
 import {WEIHNACHTSGOTTESDIENST_23} from './2023/weihnachtsgottesdienst-23';
 import {OFFENES_SINGEN_23} from './2023/offenes-singen-23';
 import {HERBSTKONZERT_24} from './2024/herstkonzert-24';
+import {OFFENES_SINGEN_24} from './2024/offenes-singen-24';
+import {WEIHNACHTSGOTTESDIENST_24} from './2024/weihnachtsgottesdienst-24';
+import {FRUEHLINGSKONZERTE_25} from './2025/fruehlingskonzerte-25';
 
 export interface ConcertLocation {
   location: string;
@@ -39,7 +42,12 @@ export interface Concert {
   program?: ProgramItem[];
 }
 
-export const CONCERTS: Concert[] = [HERBSTKONZERT_24];
+export const CONCERTS: Concert[] = [
+  HERBSTKONZERT_24,
+  OFFENES_SINGEN_24,
+  WEIHNACHTSGOTTESDIENST_24,
+  FRUEHLINGSKONZERTE_25,
+];
 
 export const PAST_CONCERTS: Concert[] = [
   VOLKSTANZGALA_24,
