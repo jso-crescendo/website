@@ -45,7 +45,7 @@ export const GoennerSection: React.FC<{
       Gönner:innenbrief, in dem wir Ihnen von unseren Jahres-Highlights
       berichten. Ausserdem senden wir Ihnen vor unseren Konzerten einige Flyer
       per Post zu. Ausserdem können Sie sich Sitzplatzreservationen an unseren
-      Konzerten und Namenserwähnungen in unseren Programmheften sichers, sofern
+      Konzerten und Namenserwähnungen in unseren Programmheften sichern, sofern
       Sie dies wünschen. Unterstützen Sie uns mit einem jährlichen Gönnerbeitrag
       Ihrer Wahl:
     </Text>
