@@ -1,4 +1,4 @@
-import {CONCERTS, Concert, PAST_CONCERTS} from '../../../data/concerts';
+import {ALL_CONCERTS, PAST_CONCERTS, Concert} from '../../../data/concerts';
 import {Event, WithContext} from 'schema-dts';
 
 import {ConcertLocationList} from '../../../components/concert-location-list';
@@ -9,8 +9,6 @@ import {ImageSection} from '../../../components/image-section';
 import ProgrammImage from '@/images/backgrounds/scores_2.webp';
 import {Text} from '../../../components/text';
 import {notFound} from 'next/navigation';
-
-const ALL_CONCERTS = CONCERTS.concat(PAST_CONCERTS);
 
 const getConcert = (id: string): Concert | undefined => {
   const concert = ALL_CONCERTS.find((c) => c.id === id);
