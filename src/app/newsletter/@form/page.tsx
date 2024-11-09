@@ -6,13 +6,14 @@ import {TextField} from '../../../components/form/text-field';
 import {TurnstileWidget} from '../../../components/turnstile-widget';
 import {submitSignupRequest} from './action';
 import {useFormStatus} from 'react-dom';
-import {useState} from 'react';
+import { useState, use } from 'react';
 
-export default function ContactForm({
-  searchParams,
-}: {
-  searchParams: {[key: string]: string | string[] | undefined};
-}) {
+export default function ContactForm(
+  props: {
+    searchParams: Promise<{[key: string]: string | string[] | undefined}>;
+  }
+) {
+  const searchParams = use(props.searchParams);
   const [isTokenSet, setIsTokenSet] = useState(false);
 
   if (Object.keys(searchParams).includes('ok')) {
