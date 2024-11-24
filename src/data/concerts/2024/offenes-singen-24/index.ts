@@ -9,8 +9,8 @@ export const OFFENES_SINGEN_24: Concert = {
   dates: [
     {
       location: 'Grossmünster Zürich',
-      dateString: '1. Dezember 2024 17:00 Uhr',
-      dateISO: '2024-12-01T17:00:00+01:00',
+      dateString: '1. Dezember 2024 16:00 Uhr',
+      dateISO: '2024-12-01T16:00:00+01:00',
     },
   ],
 };
