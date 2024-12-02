@@ -37,7 +37,6 @@
     "postcss": "^8.4.33",
     "prettier": "^3.4.1",
     "prettier-plugin-tailwindcss": "^0.5.11",
-    "static-sitemap-cli": "^2.2.3",
     "tailwindcss": "^3.4.1"
   },
   "overrides": {
