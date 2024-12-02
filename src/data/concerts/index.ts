@@ -43,12 +43,12 @@ export interface Concert {
 }
 
 export const CONCERTS: Concert[] = [
-  OFFENES_SINGEN_24,
   WEIHNACHTSGOTTESDIENST_24,
   FRUEHLINGSKONZERTE_25,
 ];
 
 export const PAST_CONCERTS: Concert[] = [
+  OFFENES_SINGEN_24,
   HERBSTKONZERT_24,
   VOLKSTANZGALA_24,
   FRUEHLINGSKONZERTE_24,
@@ -62,4 +62,3 @@ export const PAST_CONCERTS: Concert[] = [
 ];
 
 export const ALL_CONCERTS = CONCERTS.concat(PAST_CONCERTS);
-
