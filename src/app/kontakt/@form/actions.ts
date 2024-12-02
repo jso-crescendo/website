@@ -1,14 +1,20 @@
 'use server';
 
-import {createContactRequest} from '../../../firebase/contact-request';
-import {redirect} from 'next/navigation';
-import {sanitize} from '../../../utils/escape';
-import {validateToken} from '../../../utils/turnstile';
+import {createContactRequest} from '@/firebase/contact-request';
+import {sanitize} from '@/utils/escape';
+import {validateToken} from '@/utils/turnstile';
 
-export async function submitContactRequest(data: FormData) {
+interface ContactRequestResult {
+  success: boolean;
+}
+
+export async function submitContactRequest(
+  prevState: ContactRequestResult,
+  data: FormData,
+): Promise<ContactRequestResult> {
   const token = data.get('cf-turnstile-response')?.toString();
   if (!token || !(await validateToken(token))) {
-    throw new Error('turnstile token not valid');
+    return {success: false};
   }
 
   const name = sanitize(data.get('name')?.toString())!;
@@ -16,9 +22,9 @@ export async function submitContactRequest(data: FormData) {
   const message = sanitize(data.get('message')?.toString())!;
 
   if (!name || !message) {
-    throw new Error('missing data');
+    return {success: false};
   }
 
   await createContactRequest({name, email, message});
-  redirect('/kontakt?ok');
+  return {success: true};
 }

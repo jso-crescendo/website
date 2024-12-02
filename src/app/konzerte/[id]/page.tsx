@@ -1,13 +1,13 @@
-import {ALL_CONCERTS, PAST_CONCERTS, Concert} from '../../../data/concerts';
+import {ALL_CONCERTS, PAST_CONCERTS, Concert} from '@/data/concerts';
 import {Event, WithContext} from 'schema-dts';
 
-import {ConcertLocationList} from '../../../components/concert-location-list';
-import {ContentContainer} from '../../../components/contentContainer';
+import {ConcertLocationList} from '@/components/concert-location-list';
+import {ContentContainer} from '@/components/contentContainer';
 import DateImage from '@/images/backgrounds/harp.webp';
 import Image from 'next/image';
-import {ImageSection} from '../../../components/image-section';
+import {ImageSection} from '@/components/image-section';
 import ProgrammImage from '@/images/backgrounds/scores_2.webp';
-import {Text} from '../../../components/text';
+import {Text} from '@/components/text';
 import {notFound} from 'next/navigation';
 
 const getConcert = (id: string): Concert | undefined => {

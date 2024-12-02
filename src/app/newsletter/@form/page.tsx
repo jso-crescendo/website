@@ -1,22 +1,20 @@
 'use client';
 
-import {Button} from '../../../components/button';
-import {StatusCard} from '../../../components/status-card';
-import {TextField} from '../../../components/form/text-field';
-import {TurnstileWidget} from '../../../components/turnstile-widget';
+import {Button} from '@/components/button';
+import {StatusCard} from '@/components/status-card';
+import {TextField} from '@/components/form/text-field';
+import {TurnstileWidget} from '@/components/turnstile-widget';
 import {submitSignupRequest} from './action';
 import {useFormStatus} from 'react-dom';
-import { useState, use } from 'react';
+import {useState, useActionState} from 'react';
 
-export default function ContactForm(
-  props: {
-    searchParams: Promise<{[key: string]: string | string[] | undefined}>;
-  }
-) {
-  const searchParams = use(props.searchParams);
+export default function ContactForm() {
+  const [{success}, submit] = useActionState(submitSignupRequest, {
+    success: false,
+  });
   const [isTokenSet, setIsTokenSet] = useState(false);
 
-  if (Object.keys(searchParams).includes('ok')) {
+  if (success) {
     return (
       <StatusCard
         intent="success"
@@ -30,7 +28,7 @@ export default function ContactForm(
     <form
       name="newsletterFormular"
       className="w-full rounded-lg p-4 shadow-md lg:w-1/2"
-      action={submitSignupRequest}
+      action={submit}
     >
       <legend className="pb-4 font-serif text-2xl">Anmeldung Newsletter</legend>
       <TextField id="name" name="name" label="Name" required />

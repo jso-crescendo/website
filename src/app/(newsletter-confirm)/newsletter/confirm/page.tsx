@@ -1,5 +1,5 @@
-import {StatusCard} from '../../../../components/status-card';
-import {confirmCode} from '../../../../firebase/email-signup';
+import {StatusCard} from '@/components/status-card';
+import {confirmCode} from '@/firebase/email-signup';
 
 export const metadata = {
   title: 'Email bestätigen',

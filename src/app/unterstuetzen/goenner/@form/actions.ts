@@ -1,6 +1,5 @@
 'use server';
 
-import {redirect} from 'next/navigation';
 import {validateToken} from '@/utils/turnstile';
 import {sanitize} from '@/utils/escape';
 import {fieldNames} from './fieldnames';
