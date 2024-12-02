@@ -1,9 +1,6 @@
 'use client';
 
-import {
-  Turnstile,
-  TurnstileProps,
-} from '@marsidev/react-turnstile';
+import {Turnstile, TurnstileProps} from '@marsidev/react-turnstile';
 
 export const TurnstileWidget: React.FC<
   {

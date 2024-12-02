@@ -1,7 +1,7 @@
 'use client';
 
 import {signup} from './actions';
-import { useFormStatus } from 'react-dom';
+import {useFormStatus} from 'react-dom';
 import {useActionState, useState} from 'react';
 import {StatusCard} from '@/components/status-card';
 import {TextField} from '@/components/form/text-field';

@@ -14,8 +14,8 @@
   // Use 'postCreateCommand' to run commands after the container is created.
   "postCreateCommand": "npm install",
   "features": {
-    "ghcr.io/devcontainers/features/git-lfs:1": {},
-  },
+    "ghcr.io/devcontainers/features/git-lfs:1": {}
+  }
 
   // Configure tool-specific properties.
   // "customizations": {},

@@ -62,4 +62,3 @@ export const PAST_CONCERTS: Concert[] = [
 ];
 
 export const ALL_CONCERTS = CONCERTS.concat(PAST_CONCERTS);
-
