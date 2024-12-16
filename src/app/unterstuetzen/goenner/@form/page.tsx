@@ -1,8 +1,8 @@
 'use client';
 
 import {signup} from './actions';
-import {useFormState, useFormStatus} from 'react-dom';
-import {useState} from 'react';
+import {useFormStatus} from 'react-dom';
+import {useActionState, useState} from 'react';
 import {StatusCard} from '@/components/status-card';
 import {TextField} from '@/components/form/text-field';
 import {TurnstileWidget} from '@/components/turnstile-widget';
@@ -10,7 +10,7 @@ import {Button} from '@/components/button';
 import {fieldNames} from './fieldnames';
 
 export default function GoennerForm() {
-  const [{signupSuccess}, submit] = useFormState(signup, {
+  const [{signupSuccess}, submit] = useActionState(signup, {
     signupSuccess: false,
   });
   const [isTokenSet, setIsTokenSet] = useState(false);

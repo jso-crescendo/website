@@ -1,4 +1,4 @@
-import {Spinner} from '../../../../icons/spinner';
+import {Spinner} from '@/icons/spinner';
 
 export default function Loading() {
   return (

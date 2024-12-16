@@ -1,9 +1,12 @@
-import {Turnstile} from '@marsidev/react-turnstile';
+'use client';
 
-export const TurnstileWidget: React.FC<{
-  id: string;
-  onSuccess: (token: string) => void;
-}> = ({id, onSuccess}) => (
+import {Turnstile, TurnstileProps} from '@marsidev/react-turnstile';
+
+export const TurnstileWidget: React.FC<
+  {
+    id: string;
+  } & Pick<TurnstileProps, 'onSuccess'>
+> = ({id, onSuccess}) => (
   <>
     <Turnstile
       id={id}

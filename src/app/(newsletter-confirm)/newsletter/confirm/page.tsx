@@ -1,16 +1,15 @@
-import {StatusCard} from '../../../../components/status-card';
-import {confirmCode} from '../../../../firebase/email-signup';
+import {StatusCard} from '@/components/status-card';
+import {confirmCode} from '@/firebase/email-signup';
 
 export const metadata = {
   title: 'Email bestätigen',
   robots: 'noindex',
 };
 
-export default async function Confirm({
-  searchParams,
-}: {
-  searchParams: {[key: string]: string | string[] | undefined};
+export default async function Confirm(props: {
+  searchParams: Promise<{[key: string]: string | string[] | undefined}>;
 }) {
+  const searchParams = await props.searchParams;
   const code = searchParams['code'];
   if (!code || !(await confirmCode(code.toString()))) {
     return (

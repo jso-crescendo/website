@@ -1,10 +1,10 @@
-import {ArrowLink} from '../../../icons/arrow-link';
-import {ContentContainer} from '../../../components/contentContainer';
+import {ArrowLink} from '@/icons/arrow-link';
+import {ContentContainer} from '@/components/contentContainer';
 import {ImageSection} from '@/components/image-section';
 import InternImage from '@/images/backgrounds/scores_1.webp';
 import NextLink from 'next/link';
-import {Text} from '../../../components/text';
-import {EmailLink} from '../../../components/email-link';
+import {Text} from '@/components/text';
+import {EmailLink} from '@/components/email-link';
 
 export const metadata = {
   title: 'Intern',

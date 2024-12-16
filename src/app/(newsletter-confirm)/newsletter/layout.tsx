@@ -1,4 +1,4 @@
-import {ContentContainer} from '../../../components/contentContainer';
+import {ContentContainer} from '@/components/contentContainer';
 
 export default async function Layout(props: {children: React.ReactNode}) {
   return (

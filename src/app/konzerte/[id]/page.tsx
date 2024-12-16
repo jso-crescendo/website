@@ -1,13 +1,13 @@
-import {ALL_CONCERTS, PAST_CONCERTS, Concert} from '../../../data/concerts';
+import {ALL_CONCERTS, PAST_CONCERTS, Concert} from '@/data/concerts';
 import {Event, WithContext} from 'schema-dts';
 
-import {ConcertLocationList} from '../../../components/concert-location-list';
-import {ContentContainer} from '../../../components/contentContainer';
+import {ConcertLocationList} from '@/components/concert-location-list';
+import {ContentContainer} from '@/components/contentContainer';
 import DateImage from '@/images/backgrounds/harp.webp';
 import Image from 'next/image';
-import {ImageSection} from '../../../components/image-section';
+import {ImageSection} from '@/components/image-section';
 import ProgrammImage from '@/images/backgrounds/scores_2.webp';
-import {Text} from '../../../components/text';
+import {Text} from '@/components/text';
 import {notFound} from 'next/navigation';
 
 const getConcert = (id: string): Concert | undefined => {
@@ -57,7 +57,8 @@ export async function generateStaticParams() {
   return ALL_CONCERTS.map((c) => ({id: c.id}));
 }
 
-export async function generateMetadata({params}: {params: {id: string}}) {
+export async function generateMetadata(props: {params: Promise<{id: string}>}) {
+  const params = await props.params;
   const concert = getConcert(params.id);
   if (!concert) {
     notFound();
@@ -72,7 +73,10 @@ export async function generateMetadata({params}: {params: {id: string}}) {
   };
 }
 
-export default function KonzertPage({params}: {params: {id: string}}) {
+export default async function KonzertPage(props: {
+  params: Promise<{id: string}>;
+}) {
+  const params = await props.params;
   const {id} = params;
   const concert = getConcert(id);
   if (!concert) {
