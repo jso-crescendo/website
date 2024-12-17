@@ -1,0 +1,20 @@
+name: Publish Sitemap
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  delay_and_publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Wait for 10 minutes
+        run: sleep 600
+
+      - name: Run publish-sitemap script
+        run: ./publish-sitemap.sh
