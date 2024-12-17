@@ -23,8 +23,8 @@ export interface ConcertLocation {
 export interface ProgramItem {
   name: string;
   subtitle?: string;
-  solist?: string;
   composer: string;
+  subComposer?: string;
 }
 
 export interface Concert {

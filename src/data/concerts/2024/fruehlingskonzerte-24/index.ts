@@ -34,8 +34,8 @@ export const FRUEHLINGSKONZERTE_24: Concert = {
     {
       name: 'Jewish Rhapsody',
       subtitle: 'für Klarinette und Orchester',
-      solist: 'Wanja Staubli',
       composer: 'Käthi Schmid Lauber',
+      subComposer: 'Solist: Wanja Staubli',
     },
     {
       name: 'Pioneer Dances',

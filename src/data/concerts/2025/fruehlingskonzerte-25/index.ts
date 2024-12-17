@@ -20,4 +20,39 @@ export const FRUEHLINGSKONZERTE_25: Concert = {
       dateISO: '2025-04-13T16:00:00+01:00',
     },
   ],
+  program: [
+    {
+      name: "The Hebrides, Op. 26 «Fingal's Cave»",
+      composer: 'Felix Mendelssohn Bartholdy',
+    },
+    {
+      name: 'Prince Igor: Polovtsian Dances',
+      composer: 'Alexander Borodin',
+    },
+    {
+      name: 'Weep, o mine eyes',
+      composer: 'John Bennet',
+    },
+    {
+      name: 'Gesungene Frühlingstrilogie',
+      composer: 'Fanny Hensel, Käthi Schmid Lauber, Richard Strauss',
+    },
+    {
+      name: 'And the Swallow',
+      composer: 'Caroline Shaw',
+    },
+    {
+      name: "Dont't Stop Me Now",
+      composer: 'Queen',
+    },
+    {
+      name: 'The Cliffs of Moher',
+      composer: 'Mario Bürki',
+      subComposer: 'Arrangiert: Patrick Müller',
+    },
+    {
+      name: 'Bacchanale aus «Samson et Dalila»',
+      composer: 'Camille Saint-Saëns',
+    },
+  ],
 };
