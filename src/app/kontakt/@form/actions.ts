@@ -21,7 +21,7 @@ export async function submitContactRequest(
   const email = sanitize(data.get('email')?.toString())!;
   const message = sanitize(data.get('message')?.toString())!;
 
-  if (!name || !message) {
+  if (!name || !email || !message) {
     return {success: false};
   }
 

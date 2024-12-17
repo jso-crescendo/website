@@ -33,7 +33,7 @@ export default function ContactForm() {
     >
       <legend className="pb-4 font-serif text-2xl">Kontaktformular</legend>
       <TextField id="name" name="name" label="Name" required />
-      <TextField id="email" type="email" name="email" label="Email" />
+      <TextField id="email" type="email" name="email" label="Email" required />
       <TextArea
         id="message"
         name="message"
