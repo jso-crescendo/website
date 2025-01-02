@@ -42,7 +42,7 @@ export const FRUEHLINGSKONZERTE_25: Concert = {
       composer: 'Caroline Shaw',
     },
     {
-      name: "Dont't Stop Me Now",
+      name: "Don't Stop Me Now",
       composer: 'Queen',
     },
     {
