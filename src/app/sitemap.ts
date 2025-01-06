@@ -17,7 +17,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     {
       url: 'https://jso-crescendo.ch/orchester',
-      lastModified: '2024-10-31T22:00:00.000Z',
+      lastModified: '2025-01-06T22:00:00.000Z',
     },
     {
       url: 'https://jso-crescendo.ch/unterstuetzen',
