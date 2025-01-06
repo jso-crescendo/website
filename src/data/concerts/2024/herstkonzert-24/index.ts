@@ -59,4 +59,21 @@ export const HERBSTKONZERT_24: Concert = {
       composer: 'Clara Schumann',
     },
   ],
+  quickLinks: [
+    {
+      url: '/hk-24/f',
+      utmSource: 'flyer',
+      utmCampaign: 'hk-24',
+    },
+    {
+      url: '/hk-24/p',
+      utmSource: 'plakat',
+      utmCampaign: 'hk-24',
+    },
+    {
+      url: '/hk-24',
+      utmSource: 'none',
+      utmCampaign: 'hk-24',
+    },
+  ],
 };

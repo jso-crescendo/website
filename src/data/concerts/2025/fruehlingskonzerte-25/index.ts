@@ -55,4 +55,21 @@ export const FRUEHLINGSKONZERTE_25: Concert = {
       composer: 'Camille Saint-Saëns',
     },
   ],
+  quickLinks: [
+    {
+      url: '/fk-25/f',
+      utmSource: 'flyer',
+      utmCampaign: 'fk-25',
+    },
+    {
+      url: '/fk-25/p',
+      utmSource: 'plakat',
+      utmCampaign: 'fk-25',
+    },
+    {
+      url: '/fk-25',
+      utmSource: 'none',
+      utmCampaign: 'fk-25',
+    },
+  ],
 };

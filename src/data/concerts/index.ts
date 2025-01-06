@@ -27,6 +27,12 @@ export interface ProgramItem {
   subComposer?: string;
 }
 
+export interface QuickLink {
+  url: string;
+  utmSource: string;
+  utmCampaign: string;
+}
+
 export interface Concert {
   id: string;
   name: string;
@@ -40,11 +46,10 @@ export interface Concert {
   image_lg?: StaticImageData;
   dates?: ConcertLocation[];
   program?: ProgramItem[];
+  quickLinks?: QuickLink[];
 }
 
-export const CONCERTS: Concert[] = [
-  FRUEHLINGSKONZERTE_25,
-];
+export const CONCERTS: Concert[] = [FRUEHLINGSKONZERTE_25];
 
 export const PAST_CONCERTS: Concert[] = [
   WEIHNACHTSGOTTESDIENST_24,
