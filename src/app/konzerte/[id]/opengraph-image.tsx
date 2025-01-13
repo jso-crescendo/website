@@ -2,8 +2,10 @@ import {ImageResponse} from 'next/og';
 import {Logo} from '@/icons/logo';
 import {promises as fs, existsSync} from 'fs';
 import path from 'path';
-import {getConcert} from '@/data/concerts';
-
+import {ALL_CONCERTS, getConcert} from '@/data/concerts';
+export async function generateStaticParams() {
+  return ALL_CONCERTS.map((c) => ({id: c.id}));
+}
 export default async function Image(props: {params: Promise<{id: string}>}) {
   const params = await props.params;
   const concert = getConcert(params.id);
