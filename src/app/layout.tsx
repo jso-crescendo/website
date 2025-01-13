@@ -21,6 +21,8 @@ export const metadata = {
   openGraph: {
     locale: 'de-CH',
     type: 'website',
+    siteName: "JSO Crescendo",
+    url: 'https://jso-crescendo.ch',
   },
 };
 
