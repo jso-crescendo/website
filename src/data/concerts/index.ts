@@ -47,6 +47,17 @@ export interface Concert {
   dates?: ConcertLocation[];
   program?: ProgramItem[];
   quickLinks?: QuickLink[];
+  openGraphImage?: {
+    /**
+     * the foldername to generate the path to the image
+     */
+    year: number;
+
+    /**
+     * the filename of the image. must me PNG
+     */
+    name: string;
+  };
 }
 
 export const CONCERTS: Concert[] = [FRUEHLINGSKONZERTE_25];
@@ -67,3 +78,13 @@ export const PAST_CONCERTS: Concert[] = [
 ];
 
 export const ALL_CONCERTS = CONCERTS.concat(PAST_CONCERTS);
+
+export const getConcert = (id: string): Concert | undefined => {
+  const concert = ALL_CONCERTS.find((c) => c.id === id);
+
+  return concert;
+};
+
+export const isPastConcert = (id: string): boolean => {
+  return PAST_CONCERTS.filter((c) => c.id === id).length > 0;
+};
