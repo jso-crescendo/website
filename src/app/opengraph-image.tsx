@@ -13,11 +13,11 @@ export default async function Image() {
           alignItems: 'center',
           justifyContent: 'center',
           backgroundColor: '#fdfdfd',
-          color: "#212121"
+          color: '#212121',
         }}
       >
-        <Logo noTitle={true} width={1000}/>
+        <Logo noTitle={true} width={1000} />
       </div>
-    )
+    ),
   );
 }

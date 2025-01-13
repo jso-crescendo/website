@@ -1,13 +1,15 @@
 import React, {SVGAttributes} from 'react';
 
-export const Logo: React.FC<SVGAttributes<SVGElement> & {noTitle?: boolean}> = ({noTitle, ...props}) => (
+export const Logo: React.FC<
+  SVGAttributes<SVGElement> & {noTitle?: boolean}
+> = ({noTitle, ...props}) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     viewBox="0 0 207.74552 77.94992"
     fill="currentColor"
     {...props}
   >
-    {!noTitle &&<title>Crescendo Logo</title>}
+    {!noTitle && <title>Crescendo Logo</title>}
     <path d="M28.047 21.375c-.953-.469-1.813-.656-2.891-.656-5.312 0-5.765 6.203-5.765 10.203 0 3.859.609 9.875 5.734 9.875 1.078 0 2-.235 2.922-.781v-3.344c-.578.422-1.031.734-1.844.734-3.047 0-3.125-4.859-3.125-6.828 0-2.078.078-6.437 3.203-6.469.813.032 1.313.344 1.688.922h.078Zm0 0" />
     <path d="M34.289 21.031H30.68v19.453h3.656v-12.25c0-2.468.844-3.968 3.547-3.968l.609.031v-3.578c-2 0-3.281 1-4.125 2.703h-.078Zm0 0" />
     <path d="M44.156 28.891c0-1.5-.156-4.938 2.125-4.938 2.188 0 2.188 3.438 2.188 4.938Zm8.016 2.578v-.578c0-4-.61-10.172-5.891-10.172-5.359 0-5.812 6.203-5.812 10.172 0 4.125.5 9.906 5.922 9.906 4.093 0 5.671-3.281 5.671-6.859h-3.359c0 1.5-.344 3.624-2.265 3.624-2.36 0-2.282-4.468-2.282-6.093Zm0 0" />
