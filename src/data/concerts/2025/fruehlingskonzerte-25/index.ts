@@ -72,4 +72,8 @@ export const FRUEHLINGSKONZERTE_25: Concert = {
       utmCampaign: 'fk-25',
     },
   ],
+  openGraphImage: {
+    year: 2025,
+    name: 'opengraph-image',
+  },
 };
