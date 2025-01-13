@@ -80,7 +80,7 @@ export default function Orchester() {
         Momente.
       </ImageSection>
       <KaethiSection />
-    {/* <NoelieSection /> */}
+      {/* <NoelieSection /> */}
       <ImageSection
         image={{src: MitgliedWerdenImage, alt: 'Noten auf einem Notenständer'}}
         title="Mitglied werden"
