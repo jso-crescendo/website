@@ -37,7 +37,8 @@ export interface Concert {
   id: string;
   name: string;
   subtitle?: string;
-  description?: string;
+  seoDescription?: string;
+  description?: string | JSX.Element;
   /**
    * used for sitemap. ISO-String
    */

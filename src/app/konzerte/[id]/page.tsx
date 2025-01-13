@@ -60,11 +60,11 @@ export async function generateMetadata(props: {params: Promise<{id: string}>}) {
     notFound();
   }
 
-  const {name, description} = concert;
+  const {name, seoDescription, description} = concert;
   const isPast = isPastConcert(params.id);
   return {
     title: name,
-    description,
+    description: seoDescription || description,
     robots: isPast ? 'noindex' : undefined,
   };
 }
