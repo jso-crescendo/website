@@ -18,6 +18,7 @@ import {notFound} from 'next/navigation';
 
 const getJSONLD = ({
   name,
+  seoDescription,
   description,
   image_sm,
   image_lg,
@@ -26,7 +27,7 @@ const getJSONLD = ({
   '@context': 'https://schema.org',
   '@type': 'MusicEvent',
   name: `JSO Crescendo ${name}`,
-  description,
+  description: seoDescription || description,
   eventAttendanceMode: 'https://schema.org/OfflineEventAttendanceMode',
   eventStatus: 'https://schema.org/EventScheduled',
   startDate: dates?.find((_) => true)?.dateISO,
@@ -62,6 +63,7 @@ export async function generateMetadata(props: {params: Promise<{id: string}>}) {
 
   const {name, seoDescription, description} = concert;
   const isPast = isPastConcert(params.id);
+
   return {
     title: name,
     description: seoDescription || description,
@@ -104,6 +106,7 @@ export default async function KonzertPage(props: {
         />
       )}
       {concert.description && <Text>{concert.description}</Text>}
+      {concert.descriptionElement && concert.descriptionElement}
       {concert.program && (
         <ImageSection
           title="Programm"

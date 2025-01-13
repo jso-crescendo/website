@@ -58,7 +58,7 @@ export const FRUEHLINGSKONZERTE_25: Concert = {
   ],
   seoDescription:
     'Das JSO Crescendo präsentiert ein vielseitiges Frühlingsprogramm, das von Mendelssohns atmosphärischen «Hebriden» und Borodins kraftvollen Polowetzer Tänzen über Chorgesang und zeitgenössische Werke bis hin zu Mario Bürkis beeindruckendem «The Cliffs of Moher» und Saint-Saëns’ mitreißender «Bacchanale» reicht. Ein musikalisches Erlebnis voller Vielfalt und Energie erwartet Sie!',
-  description: (
+  descriptionElement: (
     <>
       In diesem Frühjahr präsentiert das JSO Crescendo ein abwechslungsreiches
       Programm. Von Felix Mendelssohn Bartholdys atmosphärischer Ouvertüre «Die
@@ -67,12 +67,12 @@ export const FRUEHLINGSKONZERTE_25: Concert = {
       Polowetzer Tänzen, die das Publikum in eine andere Welt entführen,
       verspricht das Programm ein abwechslungsreiches Hörerlebnis.
       <br />
-      Mit John Bennets "Weep, o mine eyes" und der "Gesungenen
-      Frühlingstrilogie", die Werke von Fanny Hensel, Käthi Schmid Lauber und
+      Mit John Bennets «Weep, o mine eyes» und der «Gesungenen
+      Frühlingstrilogie», die Werke von Fanny Hensel, Käthi Schmid Lauber und
       Richard Strauss vereint, kommen auch Freunde des Chorgesangs auf ihre
       Kosten. Zeitgenössische Klänge erklingen in Caroline Shaws einfühlsamem
-      «And the Swallow», während der mitreissende Queen-Hit «Don’t Stop Me Now»
-      das Programm mit rockiger Energie bereichert.
+      «And the Swallow», während der mitreissende Queen-Hit «Don&apos;t Stop Me
+      Now» das Programm mit rockiger Energie bereichert.
       <br />
       Mario Bürkis «The Cliffs of Moher» fängt die majestätische Schönheit und
       wilde Kraft der beeindruckenden irischen Steilküste musikalisch ein und

@@ -33,12 +33,18 @@ export interface QuickLink {
   utmCampaign: string;
 }
 
-export interface Concert {
+type WithDescription =
+  | {seoDescription?: never; description?: string; descriptionElement?: never}
+  | {
+      seoDescription: string;
+      description?: never;
+      descriptionElement: React.ReactNode;
+    };
+
+export type Concert = WithDescription & {
   id: string;
   name: string;
   subtitle?: string;
-  seoDescription?: string;
-  description?: string | JSX.Element;
   /**
    * used for sitemap. ISO-String
    */
@@ -59,7 +65,7 @@ export interface Concert {
      */
     name: string;
   };
-}
+};
 
 export const CONCERTS: Concert[] = [FRUEHLINGSKONZERTE_25];
 
