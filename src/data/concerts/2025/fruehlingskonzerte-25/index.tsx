@@ -104,4 +104,5 @@ export const FRUEHLINGSKONZERTE_25: Concert = {
     year: 2025,
     name: 'opengraph-image',
   },
+  showOnHomepage: true,
 };

@@ -12,7 +12,7 @@ import {HERBSTKONZERT_24} from './2024/herstkonzert-24';
 import {OFFENES_SINGEN_24} from './2024/offenes-singen-24';
 import {WEIHNACHTSGOTTESDIENST_24} from './2024/weihnachtsgottesdienst-24';
 import {FRUEHLINGSKONZERTE_25} from './2025/fruehlingskonzerte-25';
-import { isBefore } from 'date-fns';
+import {isBefore} from 'date-fns';
 
 export interface ConcertLocation {
   location: string;
@@ -66,8 +66,8 @@ export type Concert = WithDescription & {
      */
     name: string;
   };
+  showOnHomepage?: boolean;
 };
-
 
 export const ALL_CONCERTS = [
   FRUEHLINGSKONZERTE_25,
@@ -83,18 +83,19 @@ export const ALL_CONCERTS = [
   JUGENDEURYTHMIEFESTIVAL_23,
   HGN_250,
   FRUEHLINGSKONZERTE_23,
-]; 
-
+];
 
 export const isPastConcert = (id: string): boolean => {
   return PAST_CONCERTS.filter((c) => c.id === id).length > 0;
 };
 
 export const PAST_CONCERTS: Concert[] = ALL_CONCERTS.filter((concert) =>
-  concert.dates?.every((date) => isBefore(new Date(date.dateISO), new Date()))
+  concert.dates?.every((date) => isBefore(new Date(date.dateISO), new Date())),
 );
 
-export const CONCERTS: Concert[] = ALL_CONCERTS.filter(c => !isPastConcert(c.id));
+export const CONCERTS: Concert[] = ALL_CONCERTS.filter(
+  (c) => !isPastConcert(c.id),
+);
 
 export const getConcert = (id: string): Concert | undefined => {
   const concert = ALL_CONCERTS.find((c) => c.id === id);
