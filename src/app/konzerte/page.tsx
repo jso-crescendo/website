@@ -69,7 +69,7 @@ export default function Orchester() {
                   </ul>
                 </>
               )}
-              {c.description && (
+              {c.description || c.descriptionElement && (
                 <LinkButton
                   className="mt-4"
                   type="secondary"
