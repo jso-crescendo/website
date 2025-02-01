@@ -1,4 +1,5 @@
-import FruehlingsKonzert25Image_sm from './assets/flyer_placeholder_sm.webp';
+import FruehlingsKonzert25Image_sm from './assets/flyer-fk-25_sm.webp';
+import FruehlingsKonzert25Image_lg from './assets/plakat-fk-25_lg.webp';
 
 import {Concert} from '../..';
 
@@ -6,7 +7,8 @@ export const FRUEHLINGSKONZERTE_25: Concert = {
   id: 'fruehlingskonzerte-25',
   name: 'Frühlingskonzerte',
   image_sm: FruehlingsKonzert25Image_sm,
-  lastChange: '2025-01-13T22:00:00+01:00',
+  image_lg: FruehlingsKonzert25Image_lg,
+  lastChange: '2025-01-26T22:00:00+01:00',
   dates: [
     {
       location: 'Reformierte Kirche Wald ZH',
@@ -102,4 +104,5 @@ export const FRUEHLINGSKONZERTE_25: Concert = {
     year: 2025,
     name: 'opengraph-image',
   },
+  showOnHomepage: true,
 };

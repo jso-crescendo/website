@@ -48,6 +48,26 @@ export default function Home() {
       </div>
 
       <ContentContainer id="content">
+        {CONCERTS.filter((c) => c.showOnHomepage).map((c) => (
+          <ImageSection
+            key={c.id}
+            title={c.name}
+            image={{
+              src: c.image_lg!,
+              alt: `Plakat für ${c.name}`,
+              priority: true,
+              vertical: true,
+              fit: true,
+            }}
+            link={{
+              href: '/konzerte/' + c.id,
+              text: 'Mehr erfahren',
+            }}
+          >
+            {c.seoDescription}
+          </ImageSection>
+        ))}
+
         <ImageSection
           title="Über uns"
           image={{
@@ -85,7 +105,11 @@ export default function Home() {
               <a
                 key={c.id}
                 className="hover:text-primary-main"
-                href={c.description ? `/konzerte/${c.id}` : '/konzerte'}
+                href={
+                  c.description || c.descriptionElement
+                    ? `/konzerte/${c.id}`
+                    : '/konzerte'
+                }
               >
                 <hgroup className="pb-2">
                   <h3 className="font-serif text-2xl">{c.name}</h3>

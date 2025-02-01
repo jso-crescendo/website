@@ -5,7 +5,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   return [
     {
       url: 'https://jso-crescendo.ch',
-      lastModified: '2024-12-17T22:00:00.000Z',
+      lastModified: new Date(),
     },
     {
       url: 'https://jso-crescendo.ch/kontakt',

@@ -5,6 +5,7 @@ export default function robots(): MetadataRoute.Robots {
     rules: {
       userAgent: '*',
       allow: '/',
+      disallow: '/*.webp',
     },
     sitemap: ' https://jso-crescendo.ch/sitemap.xml',
   };

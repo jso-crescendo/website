@@ -69,14 +69,15 @@ export default function Orchester() {
                   </ul>
                 </>
               )}
-              {c.description && (
-                <LinkButton
-                  className="mt-4"
-                  type="secondary"
-                  href={`/konzerte/${c.id}`}
-                  text="Details ansehen"
-                />
-              )}
+              {c.description ||
+                (c.descriptionElement && (
+                  <LinkButton
+                    className="mt-4"
+                    type="secondary"
+                    href={`/konzerte/${c.id}`}
+                    text="Details ansehen"
+                  />
+                ))}
             </div>
           </div>
         ))}
