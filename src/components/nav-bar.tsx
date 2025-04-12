@@ -63,6 +63,9 @@ export const NavBar: React.FC = () => {
               <NavLink href={href} text={name} />
             </li>
           ))}
+          <li onClick={toggleMenu}>
+            <CTAavLink href="/griechenland" text="Crowdfunding Griechenland" />
+          </li>
         </ul>
       </div>
     </nav>
