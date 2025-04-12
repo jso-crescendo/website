@@ -21,4 +21,5 @@ export const COLLECTION_NAMES = {
   NEWSLETTER_CONTACTS: PREFIX + 'newsletter-contacts',
   GOENNER_SIGNUPS: PREFIX + 'goenner-signups',
   MAIL: PREFIX + 'mail',
+  CROWDFUNDING_SIGNUPS: PREFIX + 'crowdfunding-signups',
 };
