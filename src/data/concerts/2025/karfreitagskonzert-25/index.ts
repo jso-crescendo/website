@@ -6,7 +6,7 @@ export const KARFREITAGSKONZERT_25: Concert = {
   id: 'karfreitagskonzert25',
   name: 'Karfreitagskonzert',
   subtitle: 'mit der Kantorei Wetzikon',
-  lastChange: '2024-04-01T12:00:00+01:00',
+  lastChange: '2025-04-12T15:00:00+01:00',
   image_sm: Image_sm,
   dates: [
     {
