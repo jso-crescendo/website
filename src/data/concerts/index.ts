@@ -13,6 +13,7 @@ import {OFFENES_SINGEN_24} from './2024/offenes-singen-24';
 import {WEIHNACHTSGOTTESDIENST_24} from './2024/weihnachtsgottesdienst-24';
 import {FRUEHLINGSKONZERTE_25} from './2025/fruehlingskonzerte-25';
 import {isBefore} from 'date-fns';
+import {KARFREITAGSKONZERT_25} from './2025/karfreitagskonzert-25';
 
 export interface ConcertLocation {
   location: string;
@@ -70,6 +71,7 @@ export type Concert = WithDescription & {
 };
 
 export const ALL_CONCERTS = [
+  KARFREITAGSKONZERT_25,
   FRUEHLINGSKONZERTE_25,
   WEIHNACHTSGOTTESDIENST_24,
   OFFENES_SINGEN_24,
@@ -83,7 +85,15 @@ export const ALL_CONCERTS = [
   JUGENDEURYTHMIEFESTIVAL_23,
   HGN_250,
   FRUEHLINGSKONZERTE_23,
-];
+].sort((a, b) => {
+  const aDate = a.dates?.[0]?.dateISO
+    ? new Date(a.dates[0].dateISO)
+    : new Date(0);
+  const bDate = b.dates?.[0]?.dateISO
+    ? new Date(b.dates[0].dateISO)
+    : new Date(0);
+  return aDate.getTime() - bDate.getTime();
+});
 
 export const isPastConcert = (id: string): boolean => {
   return PAST_CONCERTS.filter((c) => c.id === id).length > 0;
