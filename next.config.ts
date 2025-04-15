@@ -16,18 +16,12 @@ const nextConfig: NextConfig = {
         destination: '/unterstuetzen/goenner',
         permanent: true,
       },
-      /*{
-        source: '/konzertreise-griechenland',
-        destination:
-          'https://wemakeit.com/projects/konzertreise-jso-crescendo-2025',
-        permanent: false,
-      },
       {
         source: '/griechenland',
         destination:
           'https://wemakeit.com/projects/konzertreise-jso-crescendo-2025',
         permanent: false,
-      },*/
+      },
     ];
   },
   async headers() {
