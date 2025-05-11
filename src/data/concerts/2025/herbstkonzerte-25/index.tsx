@@ -3,10 +3,10 @@ import Image_sm from './assets/herbstkonzert_25_sm.webp';
 import {Concert} from '../..';
 
 export const HERBSTKONZERTE_25: Concert = {
-  id: 'herbstkonzert-25',
+  id: 'herbstkonzerte-25',
   name: 'Herbstkonzerte',
   image_sm: Image_sm,
-  lastChange: '2025-04-12T15:00:00+01:00',
+  lastChange: '2025-05-11T13:00:00+01:00',
   dates: [
     {
       location: 'Hinwil',
@@ -20,8 +20,8 @@ export const HERBSTKONZERTE_25: Concert = {
     },
     {
       location: 'Zürich – Kirche Oberstrass',
-      dateString: '2. November 2025',
-      dateISO: '2025-11-02T00:00:00+01:00',
+      dateString: '2. November 2025 16:00 Uhr',
+      dateISO: '2025-11-02T16:00:00+01:00',
     },
   ],
 };
