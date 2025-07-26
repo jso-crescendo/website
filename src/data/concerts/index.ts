@@ -15,6 +15,7 @@ import {FRUEHLINGSKONZERTE_25} from './2025/fruehlingskonzerte-25';
 import {isBefore} from 'date-fns';
 import {KARFREITAGSKONZERT_25} from './2025/karfreitagskonzert-25';
 import {HERBSTKONZERTE_25} from './2025/herbstkonzerte-25';
+import {GRIECHENLAND_25} from './2025/konzertreise-griechenland';
 
 export interface ConcertLocation {
   location: string;
@@ -73,6 +74,7 @@ export type Concert = WithDescription & {
 
 export const ALL_CONCERTS = [
   HERBSTKONZERTE_25,
+  GRIECHENLAND_25,
   KARFREITAGSKONZERT_25,
   FRUEHLINGSKONZERTE_25,
   WEIHNACHTSGOTTESDIENST_24,
