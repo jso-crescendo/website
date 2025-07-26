@@ -12,7 +12,7 @@ export const GRIECHENLAND_25: Concert = {
   image_lg: Plakat,
   showOnHomepage: true,
   seoDescription:
-    'Für zwei touren wir durch Griechenland! Erleben Sie sechs Konzerte auf der Peloponnes-Halbinsel und dem Festland.',
+    'Für zwei Wochen touren wir durch Griechenland! Erleben Sie sechs Konzerte auf der Peloponnes-Halbinsel und dem Festland.',
   descriptionElement: (
     <>
       <Image
