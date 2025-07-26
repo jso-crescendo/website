@@ -1,6 +1,5 @@
 import AboutUsImage from '@/images/2022_fruehling_blech.webp';
 import BgImage from '@/images/2022_waedenswil_2.webp';
-import Griechenland from '@/images/griechenland_sm.webp';
 import {CONCERTS} from '../data/concerts';
 import {ChevronDown} from '../icons/chevron-down';
 import {ContentContainer} from '../components/contentContainer';
@@ -68,32 +67,6 @@ export default function Home() {
             {c.seoDescription}
           </ImageSection>
         ))}
-
-        <ImageSection
-          title="Konzertreise nach Griechenland"
-          video={{
-            type: 'youtube',
-            videoId: 'ZY2RuXYF-Pc',
-            vertical: false,
-          }}
-          link={{
-            href: '/griechenland',
-            text: 'Zum Crowdfunding',
-            target: '_blank',
-          }}
-        >
-          Diesen Sommer geht es für uns nach Griechenland & unser
-          Konzertreisekässeli braucht Ihre Hilfe!
-          <br />
-          Haben Sie schon immer davon geträumt, eine Gesangsstunde bei Käthi zu
-          nehmen? Oder haben Sie ein Liederwunsch für unsere nächsten Konzerte?
-          Vielleicht möchten Sie lieber eine handgeschriebene Postkarte aus
-          Griechenland erhalten - oder einmal selbst das Crescendo dirigieren?
-          <br />
-          Jetzt ist Ihre Chance! Machen Sie an unserem <b>Crowdfunding</b> bis
-          am <b>01.06.2025</b> mit und sichern Sie sich exklusive Geschenke und
-          Mitbringsel aus Griechenland - nur solange der Vorrat reicht!
-        </ImageSection>
 
         <ImageSection
           title="Über uns"
