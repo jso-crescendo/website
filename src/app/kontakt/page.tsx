@@ -16,23 +16,28 @@ const VORSTAND = [
   },
   {
     name: 'Salome Kurmann',
-    funktion: 'Vizepräsidentin & Mitglieder',
-    email: 'mitglieder@jso-crescendo.ch',
+    funktion: 'Vizepräsidentin & Gönner & Mitglieder',
+    email: 'salome.kurmann@jso-crescendo.ch',
   },
   {
-    name: 'Janine Wälty',
+    name: 'Fabienne Spitzer',
     funktion: 'Konzertorganisation',
-    email: 'janine.waelty@jso-crescendo.ch',
+    email: 'fabienne.spitzer@jso-crescendo.ch',
+  },
+  {
+    name: 'Sinja Sennhauser',
+    funktion: 'Konzertorganisation',
+    email: 'sinja.sennhauser@jso-crescendo.ch',
   },
   {
     name: 'Larissa Kälin',
     funktion: 'Finanzen',
-    email: 'finanzen@jso-crescendo.ch',
+    email: 'larissa.kaelin@jso-crescendo.ch',
   },
   {
-    name: 'Simon Kurath & Alma Akka',
+    name: 'Simon Kurath',
     funktion: 'Marketing & Sponsoring',
-    email: 'marketing@jso-crescendo.ch',
+    email: 'simon.kurath@jso-crescendo.ch',
   },
   {
     name: 'Florian Rohrer',
