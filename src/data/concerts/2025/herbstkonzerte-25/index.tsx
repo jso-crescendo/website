@@ -34,4 +34,21 @@ export const HERBSTKONZERTE_25: Concert = {
       dateISO: '2025-11-02T16:00:00+01:00',
     },
   ],
+  quickLinks: [
+    {
+      url: '/hk-25/f',
+      utmSource: 'flyer',
+      utmCampaign: 'hk-25',
+    },
+    {
+      url: '/hk-25/p',
+      utmSource: 'plakat',
+      utmCampaign: 'hk-25',
+    },
+    {
+      url: '/hk-25',
+      utmSource: 'none',
+      utmCampaign: 'hk-25',
+    },
+  ],
 };
