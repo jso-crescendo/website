@@ -15,6 +15,7 @@ export const HERBSTKONZERTE_25: Concert = {
     {
       name: 'Cellokonzert in F-Dur',
       composer: 'Marie Jaëll',
+      subComposer: 'Solist: Jonas Kreienbühl',
     },
   ],
   dates: [
