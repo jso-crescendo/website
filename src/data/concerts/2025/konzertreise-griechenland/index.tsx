@@ -31,7 +31,7 @@ export const GRIECHENLAND_25: Concert = {
       />
     </>
   ),
-  lastChange: '2025-07-26T23:00:00+01:00',
+  lastChange: '2025-09-12T23:00:00+01:00',
   dates: [
     {
       location: 'Κάστρο Χλεμούτσι, KYLLINI',
@@ -85,10 +85,6 @@ export const GRIECHENLAND_25: Concert = {
     {
       name: 'Konzert für Klavier und Orchester Nr. 1 in C-Dur',
       composer: 'Ludwig van Beethoven',
-    },
-    {
-      name: 'Mamma Mia Medley',
-      composer: 'ABBA arr. Roy Phillippe',
     },
   ],
 };

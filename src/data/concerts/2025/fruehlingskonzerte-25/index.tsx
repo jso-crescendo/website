@@ -59,7 +59,7 @@ export const FRUEHLINGSKONZERTE_25: Concert = {
     },
   ],
   seoDescription:
-    'Das JSO Crescendo präsentiert ein vielseitiges Frühlingsprogramm, das von Mendelssohns atmosphärischen «Hebriden» und Borodins kraftvollen Polowetzer Tänzen über Chorgesang und zeitgenössische Werke bis hin zu Mario Bürkis beeindruckendem «The Cliffs of Moher» und Saint-Saëns’ mitreißender «Bacchanale» reicht. Ein musikalisches Erlebnis voller Vielfalt und Energie erwartet Sie!',
+    'Das JSO Crescendo präsentiert ein vielseitiges Frühlingsprogramm, das von Mendelssohns atmosphärischen «Hebriden» und Borodins kraftvollen Polowetzer Tänzen über Chorgesang und zeitgenössische Werke bis hin zu Mario Bürkis beeindruckendem «The Cliffs of Moher» und Saint-Saëns’ mitreissender «Bacchanale» reicht. Ein musikalisches Erlebnis voller Vielfalt und Energie erwartet Sie!',
   descriptionElement: (
     <>
       In diesem Frühjahr präsentiert das JSO Crescendo ein abwechslungsreiches

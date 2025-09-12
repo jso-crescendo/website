@@ -1,6 +1,5 @@
 import {
   ALL_CONCERTS,
-  PAST_CONCERTS,
   Concert,
   getConcert,
   isPastConcert,
@@ -15,6 +14,7 @@ import {ImageSection} from '@/components/image-section';
 import ProgrammImage from '@/images/backgrounds/scores_2.webp';
 import {Text} from '@/components/text';
 import {notFound} from 'next/navigation';
+import {Metadata} from 'next';
 
 const getJSONLD = ({
   name,
@@ -54,7 +54,9 @@ export async function generateStaticParams() {
   return ALL_CONCERTS.map((c) => ({id: c.id}));
 }
 
-export async function generateMetadata(props: {params: Promise<{id: string}>}) {
+export async function generateMetadata(props: {
+  params: Promise<{id: string}>;
+}): Promise<Metadata> {
   const params = await props.params;
   const concert = getConcert(params.id);
   if (!concert) {
@@ -118,6 +120,9 @@ export default async function KonzertPage(props: {
               <li key={p.name}>
                 <span className="font-serif text-lg">{p.name}</span>
                 <span className="text-sm"> - {p.composer}</span>
+                {p.subComposer && (
+                  <span className="text-sm"> {p.subComposer}</span>
+                )}
               </li>
             ))}
           </ol>
