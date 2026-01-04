@@ -1,0 +1,7 @@
+{
+    "base": "https://jso-crescendo.ch",
+    "root": "out",
+    "format": "xml",
+    "changefreq": ["**,weekly"],
+    "priority": ["**,1","galerie/**,0.5"]
+}

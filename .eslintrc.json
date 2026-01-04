@@ -1,0 +1,9 @@
+{
+  "root": true,
+  "extends": ["next/core-web-vitals", "plugin:tailwindcss/recommended"],
+  "rules": {
+    "tailwindcss/no-arbitrary-value": "error",
+    "tailwindcss/no-custom-classname": "error",
+    "react/display-name": "off"
+  }
+}
