@@ -15,7 +15,7 @@
     "lighthouse": "npx unlighthouse --mobile --samples 3 --enable-javascript --site \"jso-crescendo.ch\" "
   },
   "dependencies": {
-    "@marsidev/react-turnstile": "^1.3.0",
+    "@marsidev/react-turnstile": "^1.4.1",
     "classnames": "^2.5.1",
     "date-fns": "^4.1.0",
     "firebase-admin": "^12.0.0",
