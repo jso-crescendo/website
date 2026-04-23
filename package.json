@@ -1,0 +1,50 @@
+{
+  "name": "jso-crescendo-website",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev --turbopack",
+    "build": "next build",
+    "start": "next start",
+    "export": "next export",
+    "lint": "biome check src/",
+    "lint:fix": "biome check --write src/",
+    "format": "biome format --write src/",
+    "sitemap": "sscli -v",
+    "check-updates": "bunx npm-check-updates",
+    "lighthouse": "bunx unlighthouse --mobile --samples 3 --enable-javascript --site \"jso-crescendo.ch\" "
+  },
+  "dependencies": {
+    "@marsidev/react-turnstile": "^1.5.0",
+    "@tailwindcss/postcss": "^4.2.4",
+    "classnames": "^2.5.1",
+    "date-fns": "^4.1.0",
+    "firebase-admin": "^13.8.0",
+    "next": "^16.2.4",
+    "react": "19.2.5",
+    "react-dom": "19.2.5",
+    "schema-dts": "^2.0.0",
+    "server-only": "^0.0.1",
+    "sharp": "^0.34.5",
+    "typescript": "^6.0.3"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^2.4.13",
+    "@types/node": "25.6.0",
+    "@types/react": "19.2.14",
+    "@types/react-dom": "19.2.3",
+    "autoprefixer": "^10.5.0",
+    "postcss": "^8.5.10",
+    "tailwindcss": "^4.2.4"
+  },
+  "overrides": {
+    "@types/react": "19.2.14",
+    "@types/react-dom": "19.2.3",
+    "@tootallnate/once": "3.0.1",
+    "lodash": "4.18.1",
+    "uuid": "14.0.0"
+  },
+  "trustedDependencies": [
+    "protobufjs"
+  ]
+}
