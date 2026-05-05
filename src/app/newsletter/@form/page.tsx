@@ -1,0 +1,60 @@
+'use client';
+
+import {useActionState, useState} from 'react';
+import {useFormStatus} from 'react-dom';
+import {Button} from '@/components/button';
+import {TextField} from '@/components/form/text-field';
+import {StatusCard} from '@/components/status-card';
+import {TurnstileWidget} from '@/components/turnstile-widget';
+import {submitSignupRequest} from './action';
+
+export default function ContactForm() {
+  const [{success}, submit] = useActionState(submitSignupRequest, {
+    success: false,
+  });
+  const [isTokenSet, setIsTokenSet] = useState(false);
+
+  if (success) {
+    return (
+      <StatusCard
+        intent="success"
+        title="Anmeldung erfolgreich"
+        message="Sie erhalten in Kürze eine Bestätigungsemail"
+      />
+    );
+  }
+
+  return (
+    <form
+      name="newsletterFormular"
+      className="w-full rounded-lg p-4 shadow-md lg:w-1/2"
+      action={submit}
+    >
+      <legend className="pb-4 font-serif text-2xl">Anmeldung Newsletter</legend>
+      <TextField id="name" name="name" label="Name" required />
+      <TextField id="email" type="email" name="email" label="Email" required />
+      <div className="my-2 flex justify-center">
+        <TurnstileWidget
+          id="newsletter-form"
+          onSuccess={() => setIsTokenSet(true)}
+        />
+      </div>
+      <SubmitButton enabled={isTokenSet} />
+    </form>
+  );
+}
+
+const SubmitButton = ({enabled}: {enabled: boolean}) => {
+  const {pending} = useFormStatus();
+
+  return (
+    <Button
+      type="submit"
+      text="Absenden"
+      variant="primary"
+      className="float-right"
+      loading={pending}
+      disabled={!enabled}
+    />
+  );
+};
