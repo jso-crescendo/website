@@ -21,6 +21,7 @@ import {WEIHNACHTSGOTTESDIENST_25} from './2025/weihnachtsgottesdienst-25';
 import {FRUEHLINGSKONZERTE_26} from './2026/fruehlingskonzerte-26';
 import {HERBSTKONZERTE_26} from './2026/herbstkonzerte-26';
 import {JUGENDEURYTHMIEFESTIVAL_26} from './2026/jugendeurythmiefestival-26';
+import {BREIL_GLISCHA_26} from './2026/breil-glischa-26';
 
 export interface ConcertLocation {
   location: string;
